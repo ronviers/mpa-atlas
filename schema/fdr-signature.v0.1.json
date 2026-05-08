@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ronviers/mpa-atlas/schema/fdr-signature.v0.1.json",
+  "title": "MPA FDR Signature",
+  "description": "MPA-RFC-2 v0.1. Per-object FDR signature: parametric-plot shape + regime-conditional universality-invariant tuple, measured at a declared observer kernel. Cross-class universality bounds beyond schema (RFC-2 §3 inv 3 within-class) are substrate-specific and live in driver tolerances.",
+  "type": "object",
+  "required": [
+    "object_ref",
+    "regime_class",
+    "parametric_plot",
+    "universality_tuple",
+    "observer_kernel",
+    "measurement_envelope"
+  ],
+  "properties": {
+    "object_ref": { "type": "string" },
+    "regime_class": { "enum": ["c", "s", "r", "k_frust"] },
+    "parametric_plot": {
+      "type": "object",
+      "required": ["samples"],
+      "properties": {
+        "samples": {
+          "type": "array",
+          "minItems": 1
+        }
+      }
+    },
+    "universality_tuple": {
+      "type": "object",
+      "properties": {
+        "X_c": { "type": "number", "minimum": 0, "maximum": 1 },
+        "alpha_s": { "type": "number" },
+        "P_s": { "type": "number", "minimum": 0, "maximum": 1 },
+        "X_r": { "type": "number", "minimum": 0, "maximum": 1 },
+        "N_f": { "type": "number", "minimum": -1, "maximum": 0 }
+      }
+    },
+    "observer_kernel": {},
+    "measurement_envelope": {}
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "regime_class": { "const": "c" } } },
+      "then": { "properties": { "universality_tuple": { "required": ["X_c"] } } }
+    },
+    {
+      "if": { "properties": { "regime_class": { "const": "s" } } },
+      "then": { "properties": { "universality_tuple": { "required": ["alpha_s", "P_s"] } } }
+    },
+    {
+      "if": { "properties": { "regime_class": { "const": "r" } } },
+      "then": { "properties": { "universality_tuple": { "required": ["X_r"] } } }
+    },
+    {
+      "if": { "properties": { "regime_class": { "const": "k_frust" } } },
+      "then": { "properties": { "universality_tuple": { "required": ["N_f"] } } }
+    }
+  ]
+}

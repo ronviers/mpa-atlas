@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ronviers/mpa-atlas/schema/spec-object.v0.2.json",
+  "title": "MPA Spec Object",
+  "description": "MPA-RFC-1 v0.2. Substrate-neutral declaration of dynamical structure a substrate must realize. RFC §3 invariants beyond shape (capacity, tower-convergence, scale-monotonicity, sign-canonicity) are validated mechanically by tooling, not at the schema layer.",
+  "type": "object",
+  "required": ["V", "E", "Gamma", "D", "tau_obs", "P", "demand_envelope"],
+  "properties": {
+    "V": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/vertex" }
+    },
+    "E": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/edge" }
+    },
+    "Gamma": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/subgraph" }
+    },
+    "D": { "$ref": "#/$defs/drive" },
+    "tau_obs": { "$ref": "#/$defs/tau_obs" },
+    "P": { "$ref": "#/$defs/persistence" },
+    "demand_envelope": { "$ref": "#/$defs/demand" }
+  },
+  "$defs": {
+    "vertex": {
+      "type": "object",
+      "required": ["id", "trail_vector_type", "regime_target"],
+      "properties": {
+        "id": { "type": "string" },
+        "trail_vector_type": { "type": "string" },
+        "regime_target": { "enum": ["c", "s", "r", "*"] },
+        "lambda": {},
+        "local_drive": {},
+        "band_keying": {}
+      }
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "endpoints", "shear", "reciprocity"],
+      "properties": {
+        "id": { "type": "string" },
+        "endpoints": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "shear": { "type": "number" },
+        "reciprocity": { "type": "string" },
+        "band_keying": {}
+      }
+    },
+    "subgraph": {
+      "type": "object",
+      "required": ["id", "members", "flag"],
+      "properties": {
+        "id": { "type": "string" },
+        "members": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "flag": { "enum": ["prescribed_frust", "forbidden_frust", "unspecified"] },
+        "k_frust_value": {},
+        "band_keying": {}
+      }
+    },
+    "drive": {
+      "type": "object",
+      "required": ["form"],
+      "properties": {
+        "form": { "enum": ["point", "interval", "schedule", "tower"] }
+      }
+    },
+    "tau_obs": {
+      "type": "object",
+      "required": ["form"],
+      "properties": {
+        "form": { "enum": ["point", "band", "multi_band"] }
+      }
+    },
+    "persistence": {
+      "type": "object",
+      "properties": {
+        "tower": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "D_n": { "type": "number" },
+              "ε_n": { "type": "number" },
+              "epsilon_n": { "type": "number" },
+              "S_n": {},
+              "complexity_wall": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    },
+    "demand": {
+      "type": "object",
+      "required": ["per_object"],
+      "properties": {
+        "per_object": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["object_id", "signatures_required", "precision", "observer_positions"],
+            "properties": {
+              "object_id": { "type": "string" },
+              "signatures_required": { "type": "array" },
+              "precision": {},
+              "observer_positions": { "type": "array" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
