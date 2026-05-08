@@ -1,3 +1,12 @@
+# v9 (operational source of truth)
+
+**Status:** Live. Every protocol revision and dev workflow reads from this file.
+**Companion:** [`v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md`](v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md) — public-facing prose-and-prior-art version. Refreshed from this file periodically; allowed to lag between refreshes. Do not lean on it for operational lookups.
+
+If the two files disagree, this file wins.
+
+---
+
 ## Setting
 Boolean = $D \to \infty$ limit, where $D = \Phi^*/\kappa$ (work supplied / dissipation scale). MPA is the finite-$D$ generalization. Maintaining a proposition costs work; cut the work, structure dissolves. Substrate classes are characterised by the $(\Phi^*, \kappa)$ envelopes their realizers can produce, intersected with the $D$ values the spec asks for.
 **Primitives**: trail vector (kernel-weighted history while proposition active), drive $D$, observer kernel $\tau_{obs}$.

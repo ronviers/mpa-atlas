@@ -1,7 +1,7 @@
 # MPA-RFC-1: Spec Object
 
 **Status:** Draft v0.2 — first thin-RFC pass
-**Targets:** [v9 framework](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md)
+**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). The unabridged prose-and-prior-art version is at [`v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md`](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md); refresh-from-compressed cadence; allowed to lag; not authoritative for operational lookups.
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-S](MPA-RFC-S_Scale-Management_Block-In.md), RFC-2 / RFC-3 / RFC-V / RFC-RI (forthcoming)
 
 ---
@@ -78,19 +78,19 @@ Diagnostics from operations §4 surface other conditions (Theorem-9 joint-commit
 
 ## 6. Pointer
 
-v9 carries the formal derivation:
+[v9 (compressed)](../framework/v9_compressed.md) carries the formal derivation. Sections in the compressed file:
 
 | What | Where |
 |---|---|
-| Vertex regime semantics ($c$/$s$/$r$, $\lambda$ axis) | v9 §Three typed objects |
-| Operator algebra $\Sigma = \{C, S, K, R\}$ | v9 §Operators |
-| Composite catalogue | v9 §Composite catalogue |
-| Capacity bound | v9 §Capacity |
-| FDR signatures per regime / subgraph | v9 §Fluctuation-dissipation signatures |
-| Substrate-conditional reading rules | v9 Appendix F |
-| Compression Axiom / meta-ledger flow | v9 §Compression Axiom |
-| Tower convergence / Complexity Wall | v9 Appendix G |
-| Joint-commitment threshold (Theorem 9) | v9 Appendix J |
+| Vertex regime semantics ($c$/$s$/$r$, $\lambda$ axis) | §Three typed objects |
+| Operator algebra $\Sigma = \{C, S, K, R\}$ | §Operators |
+| Composite catalogue | §Composite catalogue |
+| Capacity bound | §Capacity |
+| FDR signatures per regime / subgraph | §Fluctuation-dissipation signatures |
+| Substrate-conditional reading rules | §Substrate-conditional reading rules |
+| Compression Axiom / meta-ledger flow | §Compression Axiom / meta-ledger flow |
+| Tower convergence / Complexity Wall | §Compression Axiom (Convergent Tower paragraph) |
+| Joint-commitment threshold (Theorem 9) | §Deformation calculus (Theorem 9 row) |
 
 ---
 
