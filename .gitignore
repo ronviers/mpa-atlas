@@ -1,0 +1,9 @@
+dev_profile.json
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+__pycache__/
+*.pyc
