@@ -504,7 +504,8 @@ Settled: operating envelope is declared, calibration verifies, out-of-envelope g
 ## 11. Open Questions and Honest Bounds
 
 Consolidated map of where this block-in is firm and where it isn't.
- add the demand-bounded sufficiency principle to the architectural block-in's "Open questions (carried forward)" → promote to "Newly opened or sharpened," with a note that it should land in RFC-1 v0.2's foundational principles section. That way it's captured in the artifact stack before it can drift back out.
+
+> **Note (v0.2 framing):** RFC-S as written is sized at standards-body weight — the §12 scope estimate projects 170-200 pages at full ICC-v4-comparable resolution. Under the architectural block-in v0.2's thin-RFC discipline, this is the wrong target. A thin-RFC pass on RFC-S is now on the next-session priority list (see [Architectural Block-In §Next session priorities](../architecture/MPA_Architectural_Block-In.md)). Half a page per major object (connection space, gamut, intents, mapping, profile, pipeline, validation), pointing at v9 for rigor, with the five-intent enumeration and round-trip protocol as the load-bearing pieces. The current document is preserved as the "honest scope" reference — it documents what *would* be required at standards-body weight, which is precisely the thing thin-RFC discipline declines to import. *It was never brittle if it never broke.*
 
 ### 11.1 What I think is settled
 

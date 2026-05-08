@@ -1,8 +1,8 @@
 # MPA Architectural Block-In
 
-**Status:** v0.1 — block-in level (broad strokes, not detailed specification)
+**Status:** v0.2 — block-in level (broad strokes, not detailed specification). v0.2 promotes three additional principles to foundational status: demand-bounded sufficiency, singular working-space path, thin-RFC discipline.
 **Purpose:** Capture the architectural commitments made this session at a resolution sufficient for the next session to work from
-**Companion artifacts:** [RFC-1 draft 0.1 (Spec Object)](../rfcs/MPA-RFC-1_Spec-Object.md); [RFC-S Block-In (Scale Management)](../rfcs/MPA-RFC-S_Scale-Management_Block-In.md); [v9 framework](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md)
+**Companion artifacts:** [RFC-1 (Spec Object)](../rfcs/MPA-RFC-1_Spec-Object.md); [RFC-S Block-In (Scale Management)](../rfcs/MPA-RFC-S_Scale-Management_Block-In.md); [v9 framework](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md)
 
 ---
 
@@ -25,6 +25,77 @@ A block-in, in the VFX sense: the architecture sketched at low resolution coveri
 **Observer-driven scale management** as the model for handling MPA's intrinsic multi-scale structure. Scale is not a property of objects in the spec; it is a property of the observer's framing. As $\tau_{obs}$ moves, the canonical representation auto-remaps so the framework stays in a tractable regime. The artist works always in a workable space because the camera handles scale management.
 
 These are coupled disciplines. Working-space neutrality without scale management gets a clean canonical representation that fights you the moment you cross scales. Scale management without working-space neutrality gets smooth scale handling but no shared substrate-neutral layer to do work in. Together they're the foundation.
+
+---
+
+## Foundational principles (consolidated)
+
+The architectural commitments below are load-bearing. RFCs do not re-derive them; they declare adherence and let mechanical validation enforce. The block-in carries the long-form treatment; the RFCs carry the operational consequences.
+
+### 1. Color-management discipline (substrate-neutral working space)
+
+Three layers — substrate-native, canonical representation, realizer-output — with declared, named, versioned, swappable transforms between them. The canonical representation is substrate-neutral by construction. (Body of this document, "The three-layer architecture.")
+
+### 2. Observer-driven scale management
+
+$\tau_{obs}$ is the camera. Canonical representation is observer-relative; cross-scale composition is camera motion, not transform invocation. No scale-class taxonomy baked into the framework. (Body of this document, "The observer is the scale manager.")
+
+### 3. Demand-bounded sufficiency — *the MPA is not the bottleneck*
+
+Precedent: a CD samples at 44.1 kHz because human ears stop hearing past ~20 kHz, not because that's the maximum the medium could support. The format is sized to the demand, not to maximal fidelity to the source.
+
+The framework commits to *enough* representation for the demand placed on it, not maximal faithfulness to the substrate. Drivers declare a demand envelope (which signatures must read at which precision at which observer positions); the canonical representation is sized to it. Past the envelope, the framework is silent — not because it can't carry more, but because the demand doesn't ask for more.
+
+Consequence: MPA is not the bottleneck on substrate fidelity. Substrates carry whatever fidelity they carry; the framework reads only what the demand needs. Drivers don't claim unbounded fidelity; they declare an envelope they're calibrated for.
+
+Lands in: RFC-1's foundational principles section (as a principle); RFC-1 §3 invariant 7 (every spec object declares a demand envelope); RFC-S §2 with a parallel subsection on the demand side; the driver profile schema (drivers declare a demand envelope they cover).
+
+### 4. Singular working-space path
+
+Within an RFC version, exactly one canonical-representation shape. Plurality lives where it legitimately belongs:
+
+- **Drivers** — substrate-conditional plurality. One driver per substrate class.
+- **Realizer-interface intent flags** — user-intent-conditional plurality. A small, deliberate enumeration (analog of color management's perceptual / relative / absolute / saturation), explicitly declared in the realizer-interface RFC, never grown organically.
+- **Version succession** — time-conditional plurality. RFC-1 v0.1 → v0.2 → v1.0. Versioning, not branching. No RFC-1A vs RFC-1B at any moment.
+
+Not at the working-space layer. Workstations, DCC apps, and color management protocols carry decades of dropdown baggage because they grew up serving constituencies; we have no constituencies and we refuse to grow the baggage. The framing the user named: *peel*, not scrape — peel away the legacy paths down to the singular working path.
+
+Lands in: every RFC's structure (one shape per version); RFC-V (one canonical name per concept, no synonyms); CI-level checks once they exist (reject specs that introduce alternative working-space shapes within a version).
+
+### 5. Thin-RFC discipline — *it was never brittle if it never broke*
+
+Exchange surfaces are written at gross-underengineering resolution by design. Not less rigorous, not phoned-in: deliberately thin where standards bodies are thick, because the forces that thicken standards bodies' protocols don't apply to us yet:
+
+- No legacy interop. There is no v8.5 we owe compatibility to.
+- No multi-stakeholder negotiation. Single program, single author per artifact.
+- No defensive MUST/SHOULD/MAY granularity needed at N=1 implementer.
+- No edge-case enumeration upfront. The algebra is in v9; the protocol declares invariants and lets v9 carry the cases.
+
+What the protocols *do* contain:
+1. **Object** — what artifact this governs (1 sentence)
+2. **Shape** — typed declaration / schema
+3. **Invariants** — numbered list, ≤7 where possible
+4. **Operations** — what you can do with it, what they preserve
+5. **Falsifiers** — what makes a candidate invalid
+6. **Pointer** — which v9 sections carry the formal derivation
+
+Half a page per object is the target; growth past it is debt that requires explicit justification (a comment naming what force pushed past brevity, with a revert-when-force-passes commitment).
+
+Justification: brittleness is a measurement against actual stress. A thin protocol that holds under the stress it actually encounters is correctly underspecified, not negligently so. *It was never brittle if it never broke.* When something breaks, we thicken the relevant spot — that spot only, that break only, with a debt-marker. The defensive instincts that grew ICC v4 to ~120 pages are real; we don't import them prophylactically.
+
+Failure modes acknowledged: Markdown / HTTP/1.0 / CSV are warnings — short spec + thin substrate = ambiguity everywhere. We avoid this trap because **v9 is rigorous**: the protocols can be thin because the framework underneath is dense. v9 (~80 pages) carries the rigor; the RFCs carry the contract. Together they're the right total weight, distributed correctly.
+
+Lands in: every RFC structure (six-field template); explicit page-budget targets per RFC; the RFC review discipline (reject growth past budget without debt-marker).
+
+### Coupling between principles
+
+The five principles are coupled, not independent:
+
+- **Demand-bounded sufficiency** sets *how much* the framework commits to per object.
+- **Singular working-space path** sets *how many shapes* of representation exist (one).
+- **Thin-RFC discipline** sets *how much exchange contract* governs the shape (minimum for sufficiency).
+
+Sufficiency without the singular path: the framework still has to negotiate which shape is in scope. Singular path without sufficiency: the one shape is over-specified. Either without thin-RFC discipline: the protocol bloats to defend a shape and a sufficiency claim that don't need defending yet. Together they form a compact discipline: one shape, sized to demand, contracted thinly.
 
 ---
 
@@ -152,8 +223,12 @@ Two intervention points (paste-ready instructions provided in chat earlier this 
 - Per-regime universality invariants (the cross-substrate transfer evidence is the strongest signal so far)
 - Formal coarse-graining map at RG-literature rigor
 
-**From this session (newly opened or sharpened):**
-- *Demand-bounded sufficiency.* Promoted to a foundational principle alongside color-management discipline and observer-driven scale management. The CD-and-human-ears precedent: the canonical representation must be sufficient for the demands placed on it, not maximally faithful to the substrate. **The MPA is not the bottleneck** — the framework commits to *enough* resolution per object, not *all* available resolution. Lands in RFC-1 v0.2's foundational principles section; gets a parallel subsection in RFC-S §2 on the demand side; threads into the driver profile schema (drivers declare the demand envelope they're calibrated for, not unbounded fidelity claims).
+**From this session and follow-ons (newly opened or sharpened, now promoted to foundational principles — see "Foundational principles (consolidated)" above):**
+- *Demand-bounded sufficiency.* Now principle #3.
+- *Singular working-space path.* Now principle #4. *Peel*, not scrape — the workstations-traverse-narrow-paths observation, applied to protocols.
+- *Thin-RFC discipline.* Now principle #5. Gross-underengineering-by-design at exchange surfaces. Half a page per object as target. *It was never brittle if it never broke.*
+
+**From this session (still open):**
 - *Auto-remap mechanics:* substrate-specific logic lives in drivers, but is there a universal *form* the substrate-specific logic takes? Color management has a small set of mathematical structures — matrices, 3D LUTs, perceptual models — that all transforms instance. MPA's might too, but we don't know yet.
 - *Reference-target standardization:* who decides which substrates are reference targets, on what criteria, with what versioning?
 - *Conversion-gain measurement:* how to operationalize "this driver clarifies substrate behavior" as a falsifiable criterion?
@@ -184,18 +259,19 @@ Two intervention points (paste-ready instructions provided in chat earlier this 
 In recommended order:
 
 1. **Apply v9 notation correction.** Small, paste-ready.
-2. **RFC-1 v0.2.** Incorporate architectural framing (color management + observer-driven scale management) as a foundational section. Tighten §6 (observer kernel) and §7 (persistence profile) to reflect camera/trajectory reading. Update other sections so observer-relativity is a load-bearing property rather than implicit fact.
-3. **Surface-code reference driver write-up.** v9 Appendix F + §5 Figure 1 supply the content; the write-up makes it the canonical reference driver against which others are validated. Includes scope, translation field, signature target outputs, versioning.
-4. **RFC-2 outline.** FDR-signature contract. Includes conversion-gain-as-criterion and round-trip discipline. Outline-level is sufficient for the next session to evaluate scope.
-5. **Habit-extinction reference target characterization.** What data is canonical, what observer-position range the driver supports, what signature targets are expected. Sets up the second reference driver work.
+2. **RFC-1 v0.2** — *test of thin-RFC discipline.* Incorporate the five foundational principles as a foundational section. Rewrite the body against the six-field template (Object / Shape / Invariants / Operations / Falsifiers / Pointer). Target: ≤2 pages including appendices. If RFC-1 — the heaviest case, foundational and fully fielded — fits, the rest of the RFC sequence will fit easily.
+3. **RFC-S thin pass.** RFC-S v0.1 is a 5,800-word block-in scoped at standards-body weight (170-200 page projection). Under thin-RFC discipline, it should rewrite to half a page or so per major object (connection space, gamut, intents, mapping, profile, pipeline, validation). The intent enumeration and round-trip protocol are the load-bearing pieces; everything else points at them or at v9.
+4. **Surface-code reference driver write-up.** v9 Appendix F + §5 Figure 1 supply the content; the write-up makes it the canonical reference driver against which others are validated. Scope, translation field, demand envelope, signature target outputs, versioning.
+5. **RFC-2 outline.** FDR-signature contract. Thin-RFC form from the start.
+6. **Habit-extinction reference target characterization.** What data is canonical, what observer-position range the driver supports, what signature targets are expected.
 
-Items 1–2 should land before items 3–5; the latter depend on the former being stable.
+Items 1–3 should land before items 4–6; the latter depend on the former being stable.
 
 ---
 
 ## Closing note
 
-The session moved from "build the translator" to "specify the input contract first" to "specify the input contract with color-management and scale-management discipline." Each shift was a tightening; none was a redirection. The architecture as it now stands is the same shape v9 had been pointing at, with the implicit principles made explicit and load-bearing. RFC-1 v0.2 will be the artifact that ties the three commitments — strategic ordering, working-space discipline, observer-driven scale management — together at the spec-object level. Subsequent RFCs build outward from that foundation.
+The session moved from "build the translator" to "specify the input contract first" to "specify the input contract with color-management and scale-management discipline." A follow-on session sharpened it further with three more principles — demand-bounded sufficiency, the singular working-space path, and thin-RFC discipline — none of which redirects the program; each is a tightening that closes off a way the framework could grow weight it doesn't need. The architecture as it now stands is the same shape v9 had been pointing at, with the implicit principles made explicit and load-bearing. RFC-1 v0.2 ties the five commitments together at the spec-object level and tests whether the thin-RFC discipline holds for the foundational object. Subsequent RFCs build outward from that foundation.
 
 The framework has firmed up substantially this session. The next session inherits a coherent architecture rather than a collection of tightening proposals.
 

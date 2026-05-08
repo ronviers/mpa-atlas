@@ -1,405 +1,156 @@
-# MPA-RFC-1: Spec Object Input Contract
+# MPA-RFC-1: Spec Object
 
-**Status:** Draft 0.1
-**Target:** MPA v9-revised
-**Series:** Input contract specification for the MPA substrate translator
-**Companion documents (planned):** RFC-2 (FDR-signature contract), RFC-3 (consistency & completeness), RFC-V (reference vocabulary)
-
----
-
-## 0. Scope and voice
-
-This document specifies the **input contract for the MPA spec object** — the typed configuration `(V, E, Γ, D, τ_obs, P)` that any driver must populate for MPA's compilation machinery to operate. It does *not* specify FDR-signature measurement protocols, cross-field consistency invariants, or the realizer-side compilation logic. Those are deferred to companion RFCs.
-
-Voice is early-RFC: precise where precision is earned by existing v9 commitments, explicit where the framework is still under negotiation. Provisional choices are marked **[Provisional]** and consolidated in §9. Where v9 is silent, this document declares a default and flags the alternative; the alternative is not foreclosed.
-
-The spec object is the *artist register's* output and the *compiler's* input. It contains nothing about how the substrate produces the dynamics; it contains only what MPA must know to verify the spec is coherent and to emit realizer targets.
+**Status:** Draft v0.2 — first thin-RFC pass
+**Targets:** [v9 framework](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md)
+**Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-S](MPA-RFC-S_Scale-Management_Block-In.md), RFC-2 / RFC-3 / RFC-V / RFC-RI (forthcoming)
 
 ---
 
-## 1. Top-level structure
+## 0. Foundational principles
 
-A spec object is the tuple:
+This RFC inherits five principles from the [Architectural Block-In](../architecture/MPA_Architectural_Block-In.md). Declared, not re-derived:
+
+1. **Color-management discipline.** Three layers (substrate-native / canonical / realizer-output); transforms declared, named, versioned, swappable.
+2. **Observer-driven scale management.** $\tau_{obs}$ is the camera; canonical representation is observer-relative.
+3. **Demand-bounded sufficiency.** Canonical representation is sized to the demand placed on it. **The MPA is not the bottleneck.**
+4. **Singular working-space path.** Within an RFC version, exactly one shape. Plurality lives in drivers, intent flags, and version succession — not at the working-space layer.
+5. **Thin-RFC discipline.** Exchange surfaces are written at gross-underengineering resolution. *It was never brittle if it never broke.* Edge cases live in v9; cross-cutting decisions live in the architectural block-in; defensive enumeration lives in mechanical validation.
+
+---
+
+## 1. Object
+
+A **spec object** declares, substrate-neutrally, what dynamical structure a substrate must realize. It is the artifact mpa-character emits and the artifact a driver populates. Realizer search consumes it downstream.
+
+## 2. Shape
 
 ```
-S = (V, E, Γ, D, τ_obs, P)
+S = (V, E, Γ, D, τ_obs, P, ⟨demand-envelope⟩)
 ```
 
-| Symbol | Name | Purpose |
+| Symbol | Name | Content |
 |---|---|---|
-| `V` | Vertex set | Trail-vector-bearing propositions with regime targets |
-| `E` | Edge set | Pairwise (or directed) shear relations |
-| `Γ` | Subgraph flag set | k_frust prescribed / forbidden / unspecified per declared subgraph |
-| `D` | Drive specification | Dimensionless drive — point, interval, schedule, or tower |
-| `τ_obs` | Observer kernel | Timescale band(s) at which the spec must read |
-| `P` | Persistence profile | Sequence `{(D_n, ε_n, S_n)}` declaring contraction tolerances and structural survival per ascent |
+| `V` | Vertex set | Trail-bearing propositions with regime targets ($c$/$s$/$r$/`*`) |
+| `E` | Edge set | Pairwise shear $\gamma_{AB}$ in canonical sign convention |
+| `Γ` | Subgraph flags | `prescribed_frust` / `forbidden_frust` / `unspecified` per declared subgraph |
+| `D` | Drive | One of: `point` · `interval` · `schedule(τ_obs)` · `tower {D_n}` |
+| `τ_obs` | Observer kernel | One of: `point` · `band` · `multi-band` |
+| `P` | Persistence profile | Sequence $\{(D_n, \varepsilon_n, S_n)\}_{n=0}^{N}$ |
+| `⟨demand-envelope⟩` | Demand declaration | Per object: which signatures, at which precision, at which observer positions |
 
-A spec object is **complete** for MPA's purposes iff each of the six elements is populated to the depth required by the declarations made elsewhere in the spec (see §8 for cross-field invariants and the completeness criterion).
+The schema is canonical: a payload conforming to the schema is a valid spec object by definition. The schema itself is in [Appendix A](#appendix-a-schema).
 
-A driver written against this RFC produces a spec object plus the substrate-class reading rules (Appendix F-style). The reading rules are *not* part of the spec object — they live in the realizer interface layer.
+## 3. Invariants
 
----
+A spec object is **valid** iff all of:
 
-## 2. Vertices (V)
+1. **Type-closure.** Every vertex / edge / subgraph references types defined in v9 §Operators and §Composite catalogue.
+2. **Sign-canonicity.** All $\gamma$ values use canonical spec-layer sign ($\gamma<0$ cooperative, $\gamma\approx 0$ orthogonal, $\gamma>0$ conflicting). Substrate-native sign inversions happen at the driver layer, never inside the spec object. (See v9 Appendix F.1 for the Markovian-substrate convention.)
+3. **Observer-relativity.** All quantities read at the declared $\tau_{obs}$. Multi-band declarations name each band explicitly.
+4. **Scale-monotonicity.** Vertex regimes follow $c \to s \to r$ as $\tau_{obs}$ widens (no inverse transitions). $\gamma$ does not strengthen at wider $\tau_{obs}$.
+5. **Capacity-respect.** $|\Gamma^*| \le \sqrt{2D / \alpha\,\gamma_{\min}\,d_{\text{avg}}}$ at the operating point (v9 §Capacity).
+6. **Tower-convergence.** When $P$ declares $N \ge 1$ ascents, $\varepsilon_n < 1$ at each ascent — *or* the spec explicitly declares a Complexity Wall at ascent $n$ (v9 Appendix G).
+7. **Demand-envelope-declaration.** Every spec object carries a non-empty demand envelope. The framework promises no resolution beyond what the envelope demands.
 
-A vertex declaration is:
+## 4. Operations
 
-```
-vertex {
-    id: <unique string within V>
-    trail_vector_type: <type signature>
-    regime_target: c | s | r | *
-    lambda_constraint: <optional explicit range>
-    local_drive: <optional D override>
-    band_keying: <optional τ_obs subset>
-}
-```
+| Operation | Signature | Preserves |
+|---|---|---|
+| Validate | $S \to \{\text{valid}, \text{diagnostics}[]\}$ | Invariants 1–7 |
+| Theorem-9 mechanical check | $S \to \text{diagnostics}[]$ | Joint-commitment feasibility per edge ($\gamma_{AB}>0 \wedge D < \gamma_{AB}$ flagged; v9 Theorem 9) |
+| Capacity check | $S \to \text{diagnostics}[]$ | Invariant 5 at operating point |
+| Compile to realizer targets | $S \times \text{intent-flag} \to \text{realizer-interface-document}$ | (Per RFC-RI) |
 
-### 2.1 Trail vector type
+Operations are intent-neutral except compilation, which carries an intent declared at the realizer-interface boundary (RFC-RI). Operator actions on the canonical representation ($C, S, K, R$ from v9 §Operators) are intent-neutral by construction — they preserve canonical-representation invariants because the algebra is closed.
 
-v9 treats trail vectors as kernel-weighted histories supporting weighted sums (operator C: `d_{A⊕B} = w_A·d_A + w_B·d_B`) and normalized differences (operator K: `δ = d̂_A − d̂_B`). This implies an inner-product structure.
+## 5. Falsifiers
 
-**[Provisional]** RFC commits to: trail vectors are elements of a real inner-product space of declared finite dimension `d`. The trail vector type is `(d ∈ ℤ⁺, inner_product = "euclidean")` by default. Substrates whose native trail object is non-Euclidean (e.g., complex-valued amplitudes prior to projection, manifold-valued states) must declare an explicit inner-product structure or a map to a Euclidean image.
+A spec object is **invalid** if any of:
 
-**Cross-vertex compatibility.** When operator C is applied to two vertices `A`, `B` with differing trail-vector types, the spec must declare the merge map `(T_A, T_B) → T_{A⊕B}`. If types agree, default-merged. **[Open — §9]**
+- Schema violation (Appendix A).
+- Sign-convention violation ($\gamma$ supplied in non-canonical sign).
+- Cross-band non-monotonicity (vertex transitions $r \to c$, or $\gamma$ strengthens with $\tau_{obs}$ widening).
+- Subgraph flag conflict (`prescribed_frust` and `forbidden_frust` on overlapping members).
+- Drive form / persistence profile mismatch (`tower` form $D$ without paired persistence profile, or vice versa).
+- Missing or empty demand envelope.
 
-### 2.2 Regime target
+Diagnostics from operations §4 surface other conditions (Theorem-9 joint-commitment infeasibility, capacity overrun) as **flags, not necessarily failures** — a spec author may intend the regime; the diagnostic surfaces it for resolution.
 
-`regime_target ∈ {c, s, r, *}` where `*` denotes unassigned.
+## 6. Pointer
 
-- A vertex with `regime_target = *` is admissible only if no element of the persistence profile (§7) requires this vertex's regime to be invariant under the flow.
-- Total assignment is preferred. Partial assignment with `*` is permitted but produces an "incomplete-regime" diagnostic at compile time.
-- **[Provisional]** Regime assignment is per-(vertex × τ_obs band): a vertex may carry different regime targets at different bands, subject to the scale-relativity invariants in §8.
+v9 carries the formal derivation:
 
-### 2.3 Stability axis λ
-
-v9 defines:
-
-| Regime | λ range |
+| What | Where |
 |---|---|
-| c | λ ≪ −D |
-| s | \|λ\| ≲ D |
-| r | λ ≫ D |
-
-The notation `≪` and `≫` is informal. **[Provisional]** RFC commits to sharp interval boundaries at the spec layer:
-
-- c: λ ∈ (−∞, −D]
-- s: λ ∈ (−D, +D)
-- r: λ ∈ [+D, +∞)
-
-where `D` is the drive at the vertex's `band_keying` band (or the global drive if unspecified). Operational tolerance — how far past the boundary a measured λ must lie before the regime reads as the next type — is a realizer-side question and lives in RFC-2's signature-fitting protocol, not here.
-
-λ is dimensionless (D is dimensionless; λ is in the same units).
-
-### 2.4 Local drive
-
-A vertex may declare a `local_drive` value or interval distinct from the global D. Used for mentor pumping, focused gardens, and other spatial drive heterogeneity.
-
-- Local drive must lie within the global D specification's range, or be tagged as an explicit exception (e.g., a mentor-pump vertex sitting at higher local D than global).
-- When a vertex sits in overlapping local-drive regions, **[Provisional]** the rule is pointwise max (drive accumulates additively in regions, then takes the largest declared value at any point). **[Open — §9]**
-
-### 2.5 Band keying
-
-Optional. If the spec is multi-band (§6), each vertex may key its declarations (regime target, λ constraint) to a subset of the τ_obs bands in scope. Default: all declarations apply at all bands in scope.
+| Vertex regime semantics ($c$/$s$/$r$, $\lambda$ axis) | v9 §Three typed objects |
+| Operator algebra $\Sigma = \{C, S, K, R\}$ | v9 §Operators |
+| Composite catalogue | v9 §Composite catalogue |
+| Capacity bound | v9 §Capacity |
+| FDR signatures per regime / subgraph | v9 §Fluctuation-dissipation signatures |
+| Substrate-conditional reading rules | v9 Appendix F |
+| Compression Axiom / meta-ledger flow | v9 §Compression Axiom |
+| Tower convergence / Complexity Wall | v9 Appendix G |
+| Joint-commitment threshold (Theorem 9) | v9 Appendix J |
 
 ---
 
-## 3. Edges (E)
+## Appendix A: Schema
 
-An edge declaration is:
+Schema is the canonical exchange shape. The full machine-readable schema lives at [`schema/spec-object.v0.2.json`](../schema/spec-object.v0.2.json) (forthcoming) as a JSON Schema document. The schema declaration encodes the table in §2 plus per-field type constraints; it is the single source of truth for what a valid payload looks like. Any prose interpretation of the schema in this document is non-authoritative; the schema file is.
+
+Until the schema file ships, the field-level structure below is provisional and the table in §2 is operational.
 
 ```
-edge {
-    id: <unique string within E>
-    endpoints: (vertex_id, vertex_id)
-    shear: γ_AB
-    reciprocity: reciprocal | directed
-    band_keying: <optional τ_obs subset>
-}
+vertex      = { id, trail_vector_type, regime_target, lambda?, local_drive?, band_keying? }
+edge        = { id, endpoints, shear, reciprocity, band_keying? }
+subgraph    = { id, members, flag, k_frust_value?, band_keying? }
+drive       = { form, value | range | schedule | tower }
+tau_obs     = { form, value | band | multi_band, units }
+persistence = { tower: [ { D_n, ε_n, S_n } ... ] }
+demand      = { per_object: [ { object_id, signatures_required, precision, observer_positions } ... ] }
 ```
 
-### 3.1 Endpoints
+## Appendix B: Demand envelope
 
-Default unordered (reciprocal). Declaring `directed` makes the endpoint pair ordered and requires both `γ_{AB}` and `γ_{BA}` to be specified separately. Directed edges invoke the **non-reciprocal coupling extension axis** (v9 §8); spec compilation against a non-extension realizer fails on directed edges.
+Every spec object declares, per object, the signatures required and the precision asked for at each observer position. The framework — and any driver calibrated against this RFC — commits to no fidelity beyond what the envelope declares.
 
-### 3.2 Shear γ_AB
+This is the operational consequence of demand-bounded sufficiency. Drivers calibrate against an envelope; mpa-character emits envelopes sized to the spec author's actual demands. The envelope is *the* place where "enough, no more" is encoded as a deliberate design commitment rather than an implicit policy.
 
-γ is a real number in **D-units** (dimensionless). Sign convention at the spec layer:
+The envelope's internal structure is left thin pending RFC-2 (signatures contract) — once RFC-2 fixes the signature shape, the envelope's `signatures_required` and `precision` fields canonicalize against it.
 
-- γ < 0: cooperative (joint commitment is below-cost vs. independent commitment)
-- γ ≈ 0: orthogonal (joint commitment costs as independent)
-- γ > 0: conflicting (joint commitment incurs additional cost γ in D-units)
+## Appendix C: What this RFC does not specify
 
-**[Provisional]** RFC commits to this sign convention as the **canonical spec-layer sign**. Substrates whose native shear measurement carries opposite sign (e.g., overdamped Langevin / Markovian substrates per Appendix F.1) perform sign inversion **at the substrate-class reading rule layer**, not at the spec object. The spec object always uses canonical signs.
+- FDR-signature measurement protocols → RFC-2
+- Cross-field consistency invariants beyond §3 → RFC-3
+- Realizer-interface document format and intent-flag enumeration → RFC-RI
+- Substrate-conditional reading rules → drivers (v9 Appendix F is the canonical surface-code reference)
+- Trail-class metric → open in v9; deferred until RFC-3 needs it concretely
 
-The shear value γ_AB is the per-edge contribution to the joint-commitment budget evaluated against the operating drive D at the edge's band.
+## Appendix D: Open
 
-### 3.3 γ = 0 vs. edge absence
+Items the next revision absorbs as needed:
 
-**[Provisional]** RFC distinguishes:
-
-- `γ = 0`: positive orthogonality claim. This pair is required to read as orthogonal under the FDR-signature contract at the edge's band(s). Contributes to consistency checks.
-- Edge absence: no claim about the pair. No consistency obligation incurred.
-
-These are not equivalent. A driver that wants to assert "these vertices have no relationship" should declare `γ = 0` with appropriate band keying; a driver that wants to leave the relationship unspecified should omit the edge.
-
-### 3.4 Band keying
-
-Edge γ values may differ across τ_obs bands (γ scales with τ_obs per v9). Edge declarations may key to specific bands. The monotonicity relation across bands is part of the consistency contract (§8, deferred to RFC-3).
+1. Trail-class metric — open in v9. RFC-1 uses the operator-norm convention informally; concretization deferred.
+2. $\lambda = \pm D$ boundary behavior — sharp at the spec layer; FDR behavior at the boundary is RFC-2's.
+3. Trail-vector cross-vertex compatibility under operator $C$ — explicit declaration required on type mismatch; default-merge on type match. More permissive defaults, if any, deferred.
+4. $C$ vs. $\mathcal{C}$ notation collision (try-merge operator vs. compression operator). RFC-V will canonicalize. Pending RFC-V, RFC-1 uses bare $C$ for the operator and $\mathcal{C}_n$ for the n-th compression operator (typographic convention only).
+5. Local-drive combinator in overlapping mentor-pump regions. Pointwise max is the working assumption; substrate evidence may revise.
 
 ---
 
-## 4. Subgraphs (Γ)
+## Versioning
 
-A subgraph declaration is:
-
-```
-subgraph {
-    id: <unique string within Γ>
-    members: <set of vertex_ids and edge_ids>
-    flag: prescribed_frust | forbidden_frust | unspecified
-    topological_invariant: <optional k_frust value or set>
-    band_keying: <optional τ_obs subset>
-}
-```
-
-### 4.1 Flag semantics
-
-- `prescribed_frust`: the subgraph is required to carry `k_frust ≠ 0` at the bands in scope. The cycle's c-edge constituency is τ_obs-dependent (vertex regimes shift with band); k_frust as a topological invariant is τ_obs-invariant per v9, but the *condition for the invariant to apply* (constituent vertices in c, edges with conflicting shear product around the cycle) is band-dependent.
-- `forbidden_frust`: the subgraph is required to be frustration-free (`k_frust = 0`). This is the "frustration-free closure" declaration referenced in the synthesizer doc.
-- `unspecified`: no claim. Default if subgraph is declared but no flag supplied (rare; usually subgraphs are declared *because* a flag is being asserted).
-
-### 4.2 Topological invariant declaration
-
-For `prescribed_frust`, the spec may optionally declare a specific `k_frust` value or an admissible set. If unspecified, any nonzero `k_frust` satisfies the flag.
-
-The form of `k_frust` itself — whether an integer, an element of a topological group, a tuple over a hypergraph (extension axis: higher-order frustration) — is substrate-determined and lives in the realizer interface layer. The spec object asserts the existence and (optionally) the value/set; it does not specify the realization.
-
-### 4.3 Overlapping flags
-
-A vertex or edge may participate in multiple subgraphs. Constraints combine by conjunction. Conflicting constraints (one subgraph requires `prescribed_frust`, another requires `forbidden_frust` on overlapping members) produce a compile-time diagnostic and reject the spec until resolved.
-
-### 4.4 Band keying
-
-Subgraph flags may apply at a subset of τ_obs bands. A single subgraph may carry `prescribed_frust` at one band and `unspecified` at another, reflecting that the cycle's c-edge constituency holds at one observation scale and not another.
-
----
-
-## 5. Drive (D)
-
-D is dimensionless: `D = Φ*/κ` per v9. The spec layer specifies D only; the realizer produces `(Φ*, κ)` envelopes; compilation intersects.
-
-### 5.1 Form
-
-The drive specification takes one of four forms:
-
-| Form | Structure | Use |
+| Version | Status | Change |
 |---|---|---|
-| `point` | single scalar D | Single fixed operating drive |
-| `interval` | D ∈ [D_low, D_high] | Range of admissible drives |
-| `schedule` | D(τ_obs) | Drive varies across τ_obs bands |
-| `tower` | {D_n}_{n=0}^{N} | Drive sequence over meta-ledger ascents (paired with persistence profile) |
+| v0.1 | superseded | Initial draft, standards-body shape (~400 lines) |
+| **v0.2** | **current** | Rewrite under thin-RFC discipline. Foundational principles section. Six-field template applied. Demand envelope promoted to invariant. Sub-2-page target. |
 
-A spec may use exactly one form.
+**Compatibility.** Any future change to the spec-object tuple (adding / removing fields) requires a v1.0+ revision with explicit migration notes. Drivers declare which RFC-1 version they target; cross-version compatibility is not assumed.
 
-### 5.2 Tower form
+## Page-budget self-check
 
-When `tower` is selected, the drive sequence is paired one-to-one with the persistence profile's ascent levels (§7). Constraint between levels: per v9, the contraction `ε_n < 1` on each ascent bounds `D_{n+1}` relative to `D_n`. The exact bound is part of the consistency contract (RFC-3); the spec declares the requested D_n values, the consistency contract validates against ε_n.
+Target: ≤3 pages for the spec object (the foundational, fully-fielded object — the heaviest RFC in the sequence). Body §0–§6 runs ~95 lines (≈2 pages); appendices A–D add ~50 lines (≈1 page). **Pass.**
 
-### 5.3 Realizer envelope handshake
+For comparison: v0.1 ran ~400 lines and was still incomplete in the foundational-principles dimension. v0.2 carries strictly more architectural content in 38% of the prose, by removing re-derivation, [Provisional] tags, and defensive enumeration that v9 (rigor) and the architectural block-in (cross-cutting decisions) carry instead.
 
-The spec layer never specifies `Φ*` or `κ` directly. The realizer interface document (companion to RFC-1) specifies:
-
-- The realizer's reachable D set, derived from `(Φ*, κ)` envelope
-- Whether the realizer can hit point / interval / schedule / tower forms
-- Substrate-class-tagged
-
-Compilation: requested D set ∩ realizer D set. Empty intersection produces a compilation failure with diagnostic specifying which D values are unreachable.
-
-### 5.4 Local distributions
-
-In addition to the global D specification, vertices may declare `local_drive` overrides (§2.4). The global D specifies the *base* drive; local declarations specify perturbations or overrides. For mentor pumping and focused gardens, local distributions are the natural carrier.
-
----
-
-## 6. Observer Kernel (τ_obs)
-
-### 6.1 Form
-
-τ_obs takes one of three forms:
-
-| Form | Structure | Use |
-|---|---|---|
-| `point` | single timescale, band width substrate-determined | Single-scale spec |
-| `band` | τ_obs ∈ [τ_low, τ_high] | Explicit band |
-| `multi-band` | list `{τ_obs^(i)}` with declarations keyed per band | Multi-scale spec |
-
-**[Provisional]** Default band width for `point` form is one decade in log-time, centered on the declared τ_obs.
-
-### 6.2 Units
-
-The spec layer must declare τ_obs units. Two acceptable forms:
-
-- **Substrate-dimensionless ratio:** `τ_obs / τ_microscopic` where `τ_microscopic` is the substrate's natural fastest timescale. Preferred for substrate-neutral specs.
-- **Physical units:** seconds, ms, etc. Acceptable when the substrate class is bound. The realizer interface document declares the unit conversion at substrate binding.
-
-v9 leaves the unit implicit. **[Provisional]** RFC requires explicit declaration.
-
-### 6.3 Operational meaning
-
-At a declared band, every spec element keyed to that band must satisfy its FDR-signature target (RFC-2) over an integration window whose width lies within the band. "The spec must read at this band" means: a measurement protocol with kernel width in the band must produce signatures matching the declarations.
-
-For `band` form, the declaration must hold over *every* kernel width in the interval. For `multi-band`, declarations are per-band and may differ.
-
-### 6.4 Multi-band semantics
-
-When a single spec element (vertex, edge, subgraph) carries declarations at multiple bands, the declarations must be self-consistent under scale-relativity:
-
-- Vertex regime monotonicity: a vertex may transition c → s → r as τ_obs widens, but not r → c (a trail decohered at narrow band cannot recohere at wide band). Inverse transitions are flagged.
-- Edge γ monotonicity: γ generally weakens at wider τ_obs (specific monotonic relation deferred to RFC-3).
-- Subgraph k_frust: invariant across bands by topology, but the flag's *applicability* is band-keyed because the cycle's c-edge constituency is band-dependent.
-
-### 6.5 Interaction with persistence profile
-
-Each ascent `n` of the persistence profile is associated with a τ_obs band `τ_obs^(n)`. Ascending the meta-ledger corresponds to widening the kernel; the band sequence `{τ_obs^(n)}` is monotonic non-decreasing. A spec that declares both multi-band τ_obs and a persistence profile must align the bands with the ascent levels explicitly.
-
----
-
-## 7. Persistence Profile (P)
-
-The persistence profile is the spec's commitment to what survives the meta-ledger flow, at what contraction cost, at each ascent level.
-
-### 7.1 Sequence structure
-
-```
-P = {(D_n, ε_n, S_n)}_{n=0}^{N}
-```
-
-- `D_n`: drive at level `n`. If drive (§5) is specified as `tower`, these match.
-- `ε_n`: contraction tolerance at ascent `n`.
-- `S_n`: survival declaration — set of structural objects required to be invariant under the n-th compression step.
-
-### 7.2 ε_n definition
-
-**[Provisional]** `ε_n = ‖C_n‖_op` where `C_n: Trail-class space at level n → Trail-class space at level n+1` is the compression map, and `‖·‖_op` is the operator norm with respect to the trail-class metric.
-
-Required: `ε_n ∈ [0, 1)` for the tower to converge at ascent `n`. `ε_n ≥ 1` declares a Complexity Wall at level `n` per v9 Appendix G — the tower diverges beyond this point and the spec is asserting that no further coarse-graining is possible.
-
-The trail-class metric itself is **[Open — §9]**. v9 flags this as an open problem ("metric on trail-class space"). RFC-1 inherits the openness; RFC-3 will revisit when the consistency contract requires concretization.
-
-### 7.3 Sequence length N
-
-The spec declares one of:
-
-- **bounded:** specific finite `N`
-- **unbounded:** require `ε_n < 1` for all `n`, with `N` substrate-determined
-- **substrate-deferred:** `N` reported by realizer; spec accepts whatever the realizer produces
-
-**[Provisional]** Default: substrate-deferred.
-
-### 7.4 Survival declarations S_n
-
-`S_n` is a set of structural objects required to be invariant at ascent `n`. Object types admissible in `S_n`:
-
-- Vertex regime classes (e.g., "all vertices declared c at the level-n band must remain c at level n+1")
-- Specific subgraph flags (e.g., "this prescribed_frust subgraph must persist")
-- Specific edges (e.g., "this γ < 0 cooperative edge must persist")
-
-Survival semantics: an object `o ∈ S_n` is "preserved at ascent `n`" iff `C_n(o)` lies within `ε_n` distance of an object of the same type at level `n+1`, under the trail-class metric.
-
-`k_frust` declarations are invariant under the flow (per v9), so a `prescribed_frust` subgraph appearing in `S_0` is preserved at every ascent without re-declaration. Declaring it in `S_n` for `n > 0` is redundant but harmless.
-
-### 7.5 Substrate-incomplete reporting
-
-When the substrate's data does not span enough scales to populate `{D_n, ε_n}` up to declared `N`, compilation produces an `insufficient_ascent_data` diagnostic listing:
-
-- The highest `n` for which data is available
-- Which `S_n` declarations remain unverified above that level
-- Whether the spec is rejected (bounded N, data short of N) or accepted with caveat (substrate-deferred N)
-
-**This is a feature, not a failure.** Per the strategic ordering, MPA must be able to declare "the substrate does not give us enough scales to verify this level." A driver that cannot populate the persistence profile to the required depth is the correct output, not a defect.
-
----
-
-## 8. Cross-field invariants (preview of RFC-3)
-
-The spec object's elements are not independent. The full enumeration of cross-field consistency invariants is deferred to RFC-3. This section establishes the categories the consistency contract must cover.
-
-### 8.1 Drive ↔ Persistence
-
-If drive is specified as `tower` and persistence profile uses `{(D_n, ε_n)}`, the D_n values must agree across both. Mismatch: compilation failure.
-
-### 8.2 Drive ↔ Edges (Theorem 9 mechanical check)
-
-For each edge with `γ_AB > 0`, if `D < γ_AB` at the edge's band, the pair `(A, B)` admits no joint commitment (v9 Theorem 9). Compilation flags this mechanically.
-
-This is a **diagnostic, not necessarily a failure.** A spec may intend the regime where joint commitment is forbidden — gridlock-as-stability, deliberate frustration. The diagnostic surfaces the situation; the spec author resolves.
-
-### 8.3 Vertex regime ↔ τ_obs
-
-Multi-band regime declarations must respect monotonicity (§6.4). Non-monotonic declarations are flagged at compile time as scale-relativity violations.
-
-### 8.4 Edge γ at multi-band
-
-Multi-band edges must respect monotonic relation between γ values across bands. Specifics: RFC-3.
-
-### 8.5 Persistence profile ↔ subgraphs
-
-Subgraphs with `prescribed_frust` must appear in `S_0` to be verifiable (k_frust is invariant; once declared at n=0, preserved up the tower).
-
-### 8.6 Capacity envelope check
-
-Per v9: `|Γ*| ≤ √(2D / α·γ_min·d_avg)` on classically consistent graphs. Subgraph declarations exceeding this envelope at the declared D are flagged. Specifics: RFC-3.
-
----
-
-## 9. Open questions
-
-Consolidated list of items left open by this RFC.
-
-1. **Trail-class metric.** v9 flags this as open. ε_n's precise meaning depends on a metric choice. RFC-1 uses the operator-norm convention; RFC-3 will revisit.
-2. **Boundary behavior at λ = ±D.** Provisional sharp cutoffs at the spec layer; FDR signature behavior at the boundary deferred to RFC-2. Whether the boundary is measure-zero or carries structural content is open.
-3. **Multi-band signature interactions.** When a vertex must read c at band 1 and s at band 2, does the FDR-signature contract require both signatures in distinct experimental protocols or in a single multi-band protocol? Affects realizer interface design.
-4. **Reciprocity default.** Whether default-reciprocal survives once non-reciprocal coupling becomes first-class (extension axis activation).
-5. **Trail vector cross-vertex compatibility.** When operator C merges differently-typed vertices, the merge map must be declared. RFC-1 requires explicit declaration on type mismatch and default-merges on type match. Whether a more permissive default exists is open.
-6. **ε_n on what map.** The contraction operator C_n acts on trail vectors, trail-class equivalence classes, or some other object. Pinned down at the trail-class level provisionally; RFC-3 to confirm.
-7. **Local D in overlapping mentor pumps.** Provisional rule: pointwise max. Whether additive or some other combinator is correct depends on substrate physics; RFC-3 with substrate input.
-8. **Band width default for `point` form τ_obs.** Provisional: one decade log-time. May need substrate-conditional override.
-9. **k_frust object structure.** Spec asserts existence and (optionally) value; the algebraic structure of k_frust (integer? group element? hypergraph tuple?) is realizer-side. RFC-1 leaves this unspecified at the spec layer.
-
- add the demand-bounded sufficiency principle to the architectural block-in's "Open questions (carried forward)" → promote to "Newly opened or sharpened," with a note that it should land in RFC-1 v0.2's foundational principles section. That way it's captured in the artifact stack before it can drift back out.
-
----
-
-## A. Reference vocabulary (placeholder for RFC-V)
-
-This RFC uses v9's vocabulary verbatim where possible. Items requiring future canonicalization in RFC-V:
-
-- Trail-class metric (currently unnamed)
-- Tower-level naming convention (currently `n = 0, 1, ..., N`; whether to adopt physical-RG conventions or stay neutral is open)
-- Contraction operator notation (`C_n` here vs. `C` in v9; v9's `C` may collide with operator C in `Σ = {C, S, K, R}`)
-
-The collision between operator `C` (try-merge) and contraction operator `C` is real and unresolved in v9. **[Provisional]** RFC-1 uses `C_n` for the n-th contraction (compression) operator and reserves bare `C` for the try-merge operator. RFC-V will canonicalize.
-
----
-
-## B. Versioning notes
-
-**This document:** MPA-RFC-1, draft 0.1.
-
-**Target framework version:** MPA v9-revised (per Substrate_Synthesizer.md and v9_compressed.md).
-
-**Compatibility statement:** Any future MPA revision that changes the typed objects (vertex regimes, edge shear, subgraph flag, drive form, observer kernel structure, persistence profile structure) requires a corresponding MPA-RFC-1 revision with explicit migration notes.
-
-**Driver compatibility:** Drivers (substrate-class translation rules) declare which MPA-RFC version they target. Drivers targeting MPA-RFC-1 v0.x may be incompatible with future v1.0+ without migration.
-
----
-
-## C. What this RFC is not
-
-- **Not the FDR-signature contract.** Measurement protocols, signature curve shapes, fitting tolerances, and canonical perturbations live in RFC-2.
-- **Not the consistency contract.** Cross-field invariants, the full Theorem-9 enumeration, capacity envelope checks, and compile-time diagnostic catalog live in RFC-3.
-- **Not the realizer interface document.** Substrate-class reading rules (Appendix F-style), `(Φ*, κ)` envelope formats, signature-target documents for third-party consumption live in the companion realizer interface RFC.
-- **Not the translator tool design.** The translator consumes drivers conforming to this RFC; its internal design is downstream.
-
-The intent of this layering is the discipline the strategic ordering called for: **specify MPA's input shape before building anything that consumes it.**
+The remaining RFCs (RFC-2 / RFC-3 / RFC-V / RFC-RI) target ≤1 page each — half a page where the object admits it. The spec object is the only RFC where ≤3 is the right target, because it is the foundational object. Growth past these targets in any RFC carries a debt-marker naming the force that pushed past brevity, with a revert-when-force-passes commitment.
