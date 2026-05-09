@@ -48,7 +48,9 @@ The framework commits to *enough* representation for the demand placed on it, no
 
 Consequence: MPA is not the bottleneck on substrate fidelity. Substrates carry whatever fidelity they carry; the framework reads only what the demand needs. Drivers don't claim unbounded fidelity; they declare an envelope they're calibrated for.
 
-Lands in: RFC-1's foundational principles section (as a principle); RFC-1 §3 invariant 7 (every spec object declares a demand envelope); RFC-S §2 with a parallel subsection on the demand side; the driver profile schema (drivers declare a demand envelope they cover).
+**Bidirectionality.** DBS operates in both directions. *Forward:* declared demand → framework sizes the canonical representation (specs and drivers do this; RFC-1 §3 invariant 7 enforces non-empty demand envelopes). *Backward:* a tool pointed at an unknown dataset → framework declares what it can't characterize and what would be needed, rather than failing silently or pretending coverage. The forward direction is the protocol surface. The backward direction is operational discipline for tools, composed from the same mechanical ingredients — driver-profile gamut declarations (RFC-S §4), RFC-3 cross-artifact predicates surfacing gaps, v9 §Substrate-conditional reading rules + reference-drivers/ as characterization templates. *Informed silence, not dumb silence.* When future protocol tools point the framework at substrates outside any driver's envelope, they should articulate the gap (which class, which fields, what calibration would be needed), not produce a generic failure.
+
+Lands in: RFC-1's foundational principles section (as a principle); RFC-1 §3 invariant 7 (every spec object declares a demand envelope); RFC-S §2 with a parallel subsection on the demand side; the driver profile schema (drivers declare a demand envelope they cover); planned protocol tooling (which carries the backward direction operationally — no new RFC needed).
 
 ### 4. Singular working-space path
 
@@ -209,19 +211,20 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 
 ## v9 corrections needed
 
-Two intervention points (paste-ready instructions provided in chat earlier this session):
+**Closed:**
+1. **Notation disambiguation** ($C$ vs $\mathcal{C}$) — closed in v9 §Operators (notation paragraph) + §Compression Axiom (paragraph corrected; previously-corrupted LaTeX rendering fixed). Cross-RFC closure: [RFC-V v0.1 §4](../rfcs/MPA-RFC-V_Reference-Vocabulary.md) makes the disambiguation rule official.
 
-1. **Notation disambiguation** between operator $C$ (try-merge, $\in \Sigma$) and compression operator $\mathcal{C}$ (Compression Axiom). v9 distinguishes typographically but doesn't state the convention. Small, paste-ready.
-2. **Architectural framing layer-in** — observer-as-camera and working-space-discipline — as principles in the body of v9. This is heavier than the notation fix and should wait until RFC-1 v0.2 is stable, then back-port the language to v9.
+**Pending:**
+2. **Architectural framing layer-in** — observer-as-camera and working-space-discipline as principles in the body of v9. Was gated on RFC-1 v0.2 stability (now ✓ stable; RFC-S v0.2 also stable). Unblocked. Hygiene: back-port the foundational-principles language to v9 so v9 declares them rather than just being the rigor source the RFCs declare *about*.
 
 ---
 
 ## Open questions (carried forward)
 
-**From v9 (still open):**
-- Metric on trail-class space (required for $\varepsilon_n$ to have a precise meaning beyond operator-norm convention)
-- Per-regime universality invariants (the cross-substrate transfer evidence is the strongest signal so far)
-- Formal coarse-graining map at RG-literature rigor
+**From v9 (closed):**
+- Metric on trail-class space — closed in v9 §Compression Axiom (spectral-gap form: $\rho$ = leading-eigenmode amplitude). $\rho$ is distinct from $\varepsilon_n$: $\rho$ is the trail-class metric, $\varepsilon_n$ the contraction rate.
+- Per-regime universality invariants — closed in v9 §Fluctuation-dissipation signatures ($\{X_c, \alpha_s, P_s, X_r, N_f\}$). $\alpha_s$ and $P_s$ are the load-bearing cross-substrate observables instanced by surface-code Cugliandolo–Kurchan.
+- Formal coarse-graining map at RG-literature rigor — two-tier closure in v9 §Compression Axiom. Operationally closed (Banach contraction sufficient for all theorems above); Wilson–Kadanoff structural equivalence is a classification conjecture with explicit proof strategy (locality / blocking / conjugacy). Open only at the structural-proof level.
 
 **From this session and follow-ons (newly opened or sharpened, now promoted to foundational principles — see "Foundational principles (consolidated)" above):**
 - *Demand-bounded sufficiency.* Now principle #3.
@@ -232,8 +235,10 @@ Two intervention points (paste-ready instructions provided in chat earlier this 
 - *Auto-remap mechanics:* substrate-specific logic lives in drivers, but is there a universal *form* the substrate-specific logic takes? Color management has a small set of mathematical structures — matrices, 3D LUTs, perceptual models — that all transforms instance. MPA's might too, but we don't know yet.
 - *Reference-target standardization:* who decides which substrates are reference targets, on what criteria, with what versioning?
 - *Conversion-gain measurement:* how to operationalize "this driver clarifies substrate behavior" as a falsifiable criterion?
-- *Intent flags for realizer outputs:* full enumeration deferred. At least four candidates parallel to color's perceptual / relative / absolute / saturation. What's the analog set for MPA?
 - *Versioning protocol depth:* RFC-V will canonicalize, but the substantive question is which artifacts are versioned (the canonical representation? individual drivers? individual realizers? the RFC sequence?). Decision deferred but flagged as bake-in risk.
+
+**From this session (closed):**
+- *Intent flags for realizer outputs:* closed by RFC-S §3 — five-intent enumeration (regime-preserving / drive-faithful / capacity-preserving / persistence-preserving / signature-preserving). Five rather than four because MPA's persistence axis has no color analog (I4 unique). The intent determines the gamut-mapping operation; composition rule is union-of-preserved-invariants without conflict (RFC-S §3, with composition algebra past the union rule still open in RFC-S Appendix B.2).
 
 ---
 
@@ -241,31 +246,33 @@ Two intervention points (paste-ready instructions provided in chat earlier this 
 
 | Artifact | Status | Location |
 |---|---|---|
-| RFC-1 draft 0.1 (Spec Object) | Produced; needs revision | [`rfcs/MPA-RFC-1_Spec-Object.md`](../rfcs/MPA-RFC-1_Spec-Object.md) |
-| RFC-S block-in (Scale Management) | Block-in level | [`rfcs/MPA-RFC-S_Scale-Management_Block-In.md`](../rfcs/MPA-RFC-S_Scale-Management_Block-In.md) |
-| v9 correction notes | Paste-ready (held in chat history) | — |
-| Architectural block-in | This document | [`architecture/MPA_Architectural_Block-In.md`](MPA_Architectural_Block-In.md) |
-| RFC-2 (FDR signatures) | Not started | — |
-| RFC-3 (consistency & completeness) | Not started | — |
-| RFC-V (vocabulary) | Not started | — |
-| Realizer interface RFC | Not started | — |
-| Surface-code reference driver | Not started; v9 has the by-hand version | — |
+| v9 compressed | Stable; self-contained (free-standing); trail-class metric + per-regime universality invariants integrated; RG-closure two-tier framing | [`framework/v9_compressed.md`](../framework/v9_compressed.md) |
+| Architectural block-in (this document) | Stable; updated through v0.2 closures | [`architecture/MPA_Architectural_Block-In.md`](MPA_Architectural_Block-In.md) |
+| RFC-S thin-pass handoff | Stable | [`architecture/handoff_RFC-S_thin-pass.md`](handoff_RFC-S_thin-pass.md) |
+| RFC-1 (Spec Object) | v0.2 thin-pass stable | [`rfcs/MPA-RFC-1_Spec-Object.md`](../rfcs/MPA-RFC-1_Spec-Object.md) |
+| RFC-2 (FDR signatures) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-2_FDR-Signatures.md`](../rfcs/MPA-RFC-2_FDR-Signatures.md) |
+| RFC-3 (consistency & completeness) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-3_Consistency-Completeness.md`](../rfcs/MPA-RFC-3_Consistency-Completeness.md) |
+| RFC-S (Scale Management) | v0.2 thin-pass stable; v0.1 block-in preserved as honest-scope reference | [`rfcs/MPA-RFC-S_Scale-Management.md`](../rfcs/MPA-RFC-S_Scale-Management.md) |
+| RFC-V (Reference Vocabulary) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-V_Reference-Vocabulary.md`](../rfcs/MPA-RFC-V_Reference-Vocabulary.md) |
+| RFC-RI (Realizer Interface) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-RI_Realizer-Interface.md`](../rfcs/MPA-RFC-RI_Realizer-Interface.md) |
+| Surface-code reference driver | v0.1 stable; hand-built from v9 | [`reference-drivers/surface-code-qec.md`](../reference-drivers/surface-code-qec.md) |
 | Habit-extinction reference target | Identified, not characterized | — |
+| Schema files (spec-object, fdr-signature, driver-profile, realizer-interface) | Stable; committed at `2f3e27f` | `schema/` |
 
 ---
 
 ## Next session priorities
 
+The original priority list (items 1–6) is fully landed: v9 notation correction ✓; RFC-1 v0.2 ✓; RFC-S thin pass ✓; surface-code reference driver ✓; RFC-2 ✓. RFC-V, RFC-RI, RFC-3 also produced at thin-pass weight. The constellation now has full protocol coverage; remaining work is substrate-research, hygiene, and tooling rather than protocol design.
+
 In recommended order:
 
-1. **Apply v9 notation correction.** Small, paste-ready.
-2. **RFC-1 v0.2** — *test of thin-RFC discipline.* Incorporate the five foundational principles as a foundational section. Rewrite the body against the six-field template (Object / Shape / Invariants / Operations / Falsifiers / Pointer). Target: ≤2 pages including appendices. If RFC-1 — the heaviest case, foundational and fully fielded — fits, the rest of the RFC sequence will fit easily.
-3. **RFC-S thin pass.** RFC-S v0.1 is a 5,800-word block-in scoped at standards-body weight (170-200 page projection). Under thin-RFC discipline, it should rewrite to half a page or so per major object (connection space, gamut, intents, mapping, profile, pipeline, validation). The intent enumeration and round-trip protocol are the load-bearing pieces; everything else points at them or at v9.
-4. **Surface-code reference driver write-up.** v9 Appendix F + §5 Figure 1 supply the content; the write-up makes it the canonical reference driver against which others are validated. Scope, translation field, demand envelope, signature target outputs, versioning.
-5. **RFC-2 outline.** FDR-signature contract. Thin-RFC form from the start.
-6. **Habit-extinction reference target characterization.** What data is canonical, what observer-position range the driver supports, what signature targets are expected.
+1. **Habit-extinction reference target characterization.** Behavioral-domain reference paralleling the surface-code QEC driver. Subject-history protocols, deprivation level, signature targets per phase (acquisition / extinction / spontaneous-recovery / reinstatement). Substantive substrate research; benefits from concrete data choices upfront.
+2. **v9 architectural-framing back-port** (v9 corrections item 2). Add observer-as-camera and the five foundational principles to v9's body so v9 declares them rather than just being the rigor source the RFCs declare *about*. Hygiene; medium-weight; unblocked since RFC-1 v0.2 + RFC-S v0.2 are stable.
+3. **Schema files** (`schema/spec-object.v0.2.json`, `fdr-signature.v0.1.json`, `driver-profile.v0.2.json`, `realizer-interface.v0.1.json`). Mechanical translation of each RFC's §2 Shape. Useful for tooling and external validation.
+4. **Operational still-open items.** Auto-remap form (RFC-S Appendix B.1), reference-target governance, conversion-gain measurement, versioning protocol depth — all operational discipline rather than protocol-layer; resolution likely emerges from accumulated substrate experience rather than further protocol work.
 
-Items 1–3 should land before items 4–6; the latter depend on the former being stable.
+Items 1 and 4 advance through reality contact (more substrates measured, more drivers written). Items 2 and 3 advance through pure work and can be done at any time.
 
 ---
 

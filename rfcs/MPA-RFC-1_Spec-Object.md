@@ -2,7 +2,7 @@
 
 **Status:** Draft v0.2 — first thin-RFC pass
 **Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). The unabridged prose-and-prior-art version is at [`v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md`](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md); refresh-from-compressed cadence; allowed to lag; not authoritative for operational lookups.
-**Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-S](MPA-RFC-S_Scale-Management_Block-In.md), RFC-2 / RFC-3 / RFC-V / RFC-RI (forthcoming)
+**Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md), [RFC-3 v0.1](MPA-RFC-3_Consistency-Completeness.md), [RFC-V v0.1](MPA-RFC-V_Reference-Vocabulary.md), [RFC-RI v0.1](MPA-RFC-RI_Realizer-Interface.md)
 
 ---
 
@@ -59,7 +59,7 @@ A spec object is **valid** iff all of:
 | Validate | $S \to \{\text{valid}, \text{diagnostics}[]\}$ | Invariants 1–7 |
 | Theorem-9 mechanical check | $S \to \text{diagnostics}[]$ | Joint-commitment feasibility per edge ($\gamma_{AB}>0 \wedge D < \gamma_{AB}$ flagged; v9 Theorem 9) |
 | Capacity check | $S \to \text{diagnostics}[]$ | Invariant 5 at operating point |
-| Compile to realizer targets | $S \times \text{intent-flag} \to \text{realizer-interface-document}$ | (Per RFC-RI) |
+| Compile to realizer targets | $S \times \text{intent-flag} \to \text{realizer-interface-document}$ | Per [RFC-RI](MPA-RFC-RI_Realizer-Interface.md) |
 
 Operations are intent-neutral except compilation, which carries an intent declared at the realizer-interface boundary (RFC-RI). Operator actions on the canonical representation ($C, S, K, R$ from v9 §Operators) are intent-neutral by construction — they preserve canonical-representation invariants because the algebra is closed.
 
@@ -96,9 +96,7 @@ Diagnostics from operations §4 surface other conditions (Theorem-9 joint-commit
 
 ## Appendix A: Schema
 
-Schema is the canonical exchange shape. The full machine-readable schema lives at [`schema/spec-object.v0.2.json`](../schema/spec-object.v0.2.json) (forthcoming) as a JSON Schema document. The schema declaration encodes the table in §2 plus per-field type constraints; it is the single source of truth for what a valid payload looks like. Any prose interpretation of the schema in this document is non-authoritative; the schema file is.
-
-Until the schema file ships, the field-level structure below is provisional and the table in §2 is operational.
+Schema is the canonical exchange shape. The full machine-readable schema lives at [`schema/spec-object.v0.2.json`](../schema/spec-object.v0.2.json) as a JSON Schema document. The schema declaration encodes the table in §2 plus per-field type constraints; it is the single source of truth for what a valid payload looks like. Any prose interpretation of the schema in this document is non-authoritative; the schema file is.
 
 ```
 vertex      = { id, trail_vector_type, regime_target, lambda?, local_drive?, band_keying? }
@@ -130,11 +128,11 @@ The envelope's internal structure is left thin pending RFC-2 (signatures contrac
 
 Items the next revision absorbs as needed:
 
-1. Trail-class metric — open in v9. RFC-1 uses the operator-norm convention informally; concretization deferred.
-2. $\lambda = \pm D$ boundary behavior — sharp at the spec layer; FDR behavior at the boundary is RFC-2's.
-3. Trail-vector cross-vertex compatibility under operator $C$ — explicit declaration required on type mismatch; default-merge on type match. More permissive defaults, if any, deferred.
-4. $C$ vs. $\mathcal{C}$ notation collision (try-merge operator vs. compression operator). RFC-V will canonicalize. Pending RFC-V, RFC-1 uses bare $C$ for the operator and $\mathcal{C}_n$ for the n-th compression operator (typographic convention only).
-5. Local-drive combinator in overlapping mentor-pump regions. Pointwise max is the working assumption; substrate evidence may revise.
+1. $\lambda = \pm D$ boundary behavior — sharp at the spec layer; FDR behavior at the boundary is RFC-2's.
+2. Trail-vector cross-vertex compatibility under operator $C$ — explicit declaration required on type mismatch; default-merge on type match. More permissive defaults, if any, deferred.
+3. Local-drive combinator in overlapping mentor-pump regions. Pointwise max is the working assumption; substrate evidence may revise.
+
+(Closures: trail-class metric in v9 §Compression Axiom — $\rho([A],[B]) = \lim_n \epsilon^{-n}\|\mathcal{C}^n(d_A-d_B)\|$, distinct from $\varepsilon_n = \|\mathcal{C}_n\|_{op}$. $C$ vs. $\mathcal{C}$ notation collision in [RFC-V v0.1 §4](MPA-RFC-V_Reference-Vocabulary.md).)
 
 ---
 
