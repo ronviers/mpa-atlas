@@ -76,23 +76,21 @@ When you notice yourself reaching for one of these, that's a signal: stop, name 
 4. **If the force is actual:** thicken that spot only. Add a debt-marker comment naming the break and the revert condition. Do not generalize the fix beyond the break.
 5. **Update this document** if a new resistible-force pattern emerges from real experience.
 
-## Handoff lifecycle discipline
+## Handoff convention
 
-`architecture/handoff_*.md` files are *transient* — planning artifacts for pending work. Content that outlives the handoff (architectural commitments, framework reasoning, design rationale, domain-general failure modes, conventions, worked examples of discipline) belongs in its real home — CLAUDE.md, block-in, RFC, code — not in a transient-named file. A future session reading `architecture/` won't grep `handoff_*` for spec content.
+Single handoff per repo at [`docs/handoff_next_session.md`](docs/handoff_next_session.md), matching the mpa-* family convention (mpa-brain, mpa-visualizer, mpa-bridge use the same path; mpc-* family uses a top-level `HANDOFF.md`). Multiple parallel pending items live as "Open item N" subsections within the single file (mpa-brain pattern), not as separate handoff files.
 
-Three rules across the lifecycle:
+**Three rules across the lifecycle:**
 
-1. **Creation.** A handoff contains only: goal, what to do for THIS task, completion criteria, effort estimate, task-specific failure modes. Anything broader belongs in its real home; the handoff cites it.
+1. **Creation.** A handoff contains only transient content: goal, what to do for THIS task, completion criteria, effort estimate, task-specific failure modes. Architectural commitments / framework reasoning / design rationale / domain-general failure modes / conventions / worked examples of discipline are durable — they live in their real home (this CLAUDE.md, the block-in, the RFC, the code) and the handoff cites them. **A handoff lives in the repo whose state it describes** — handoffs for `mpa-bridge` work live in `mpa-bridge/docs/`, not here.
 
-2. **Consumption.** Before working from a handoff, scan it actively: "what here would I need if this handoff didn't exist?" Anything answering yes is in the wrong file. Absorb to the right home before starting the work.
+2. **Consumption.** Before working from a handoff, scan it actively: "what here would I need in a future session if this handoff didn't exist?" Anything answering yes is in the wrong file — absorb it into its real home before starting the work.
 
-3. **Completion.** Delete the handoff in the same commit that lands its deliverable. Absorb any remaining durable content first.
+3. **Completion of an Open item.** Delete the item's section from the handoff in the same commit that lands its deliverable. Absorb any remaining durable content first. When the last open item closes, delete the handoff file.
 
-**Audit at session start.** First action: list `architecture/handoff_*.md` and ask of each — deliverable still missing? If no, absorb-then-delete. If yes but the doc reads like it carries content beyond the pending work, restructure before doing the work.
+**Audit at session start.** First action: open `docs/handoff_next_session.md` and ask of each Open item — deliverable still missing? If no, absorb-then-delete. If yes but the section reads like it carries content beyond the pending work, restructure before doing the work.
 
-**Smell trigger: ≤700 words per handoff.** Mechanical: `wc -w architecture/handoff_*.md`. Not a hard gate — over-budget triggers the consumption-time scan. At 2026-05-08 the active handoffs ran 661 / 663 / 1073 / 1220 / 1345; the over-budget three were verified as describing rich pending work and earned their words. The same check on `handoff_RFC-S_thin-pass.md` (well over budget at completion time, deleted this session) would have surfaced it immediately.
-
-**Origin.** Added 2026-05-08 after three completed handoffs (`handoff_schema_files`, `handoff_RFC-S_thin-pass`, `handoff_unblock_runs_and_ops`) accumulated in `architecture/` because their closing commits landed the deliverable but didn't delete the planning doc. The first version of this section was completion-time-only and reactive; the lifecycle framing surfaces orphan content earlier, and the word-budget makes the smell automatic.
+**Origin.** Convention adopted 2026-05-08 after the prior multi-file `architecture/handoff_*.md` pattern accumulated five parallel handoffs, three of which described `mpa-bridge` state (locality violation) and two of which carried completed work (lifecycle violation). The single-file convention matches what every other `mp[ac]-*` repo already does.
 
 ## Scope (what this discipline governs and does not)
 
