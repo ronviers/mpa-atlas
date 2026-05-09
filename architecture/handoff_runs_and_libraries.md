@@ -2,7 +2,7 @@
 
 **Status:** Planning document for accumulating real-case experience and a working library of example artifacts via [mpa-bridge](https://github.com/ronviers/mpa-bridge).
 **Audience:** A future Claude (or human) running mpa-bridge against real cases (substrates, specs, data) and capturing the results as durable artifacts.
-**Companion:** [handoff_operations_manual.md](handoff_operations_manual.md) (must land first for runs to be reproducible), [handoff_unblock_runs_and_ops.md](handoff_unblock_runs_and_ops.md) (acute blocker), [handoff_protocol-tool.md](handoff_protocol-tool.md).
+**Companion:** [handoff_operations_manual.md](handoff_operations_manual.md) (must land first for runs to be reproducible), [handoff_protocol-tool.md](handoff_protocol-tool.md).
 
 ---
 
@@ -91,6 +91,13 @@ The library that accumulates is also the on-ramp for any future contributor: rea
 ## Related
 
 - [`handoff_operations_manual.md`](handoff_operations_manual.md) — must land first.
-- [`handoff_unblock_runs_and_ops.md`](handoff_unblock_runs_and_ops.md) — names the acute blocker (mpa-atlas uncommitted state).
 - [`handoff_habit-extinction_reference-driver.md`](handoff_habit-extinction_reference-driver.md) — when habit-extinction lands, cross-substrate cases (item 2) get richer; v0.2 trigger.
 - [`handoff_protocol-tool.md`](handoff_protocol-tool.md) §"Completion criteria" — v0.1 / v0.2 readiness gates that runs validate or surface gaps in.
+
+## Inherited soft blockers
+
+The unblock handoff (deleted on completion of the acute blocker, 2026-05-08) flagged three soft blockers that runs absorb rather than close:
+
+- **No CI on either repo.** Add `pytest -q` to mpa-bridge and schema-validation to mpa-atlas once runs produce artifacts that benefit from CI protection.
+- **Compile prompt's I1..I5 mapping is unverified.** Round-trip against hand-built reference per intent surfaces this; closing happens via runs, not by adding more prose.
+- **Compile may cite RFC sections that don't exist.** Tighten `compile_.py` SYSTEM_PROMPT with "do not invent section numbers; quote verbatim or omit"; or post-validate by extracting cited RFC references and grep-checking. Defer the post-validator until runs surface a real harm case.

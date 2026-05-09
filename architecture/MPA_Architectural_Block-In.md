@@ -248,7 +248,6 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 |---|---|---|
 | v9 compressed | Stable; self-contained (free-standing); trail-class metric + per-regime universality invariants integrated; RG-closure two-tier framing | [`framework/v9_compressed.md`](../framework/v9_compressed.md) |
 | Architectural block-in (this document) | Stable; updated through v0.2 closures | [`architecture/MPA_Architectural_Block-In.md`](MPA_Architectural_Block-In.md) |
-| RFC-S thin-pass handoff | Stable | [`architecture/handoff_RFC-S_thin-pass.md`](handoff_RFC-S_thin-pass.md) |
 | RFC-1 (Spec Object) | v0.2 thin-pass stable | [`rfcs/MPA-RFC-1_Spec-Object.md`](../rfcs/MPA-RFC-1_Spec-Object.md) |
 | RFC-2 (FDR signatures) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-2_FDR-Signatures.md`](../rfcs/MPA-RFC-2_FDR-Signatures.md) |
 | RFC-3 (consistency & completeness) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-3_Consistency-Completeness.md`](../rfcs/MPA-RFC-3_Consistency-Completeness.md) |

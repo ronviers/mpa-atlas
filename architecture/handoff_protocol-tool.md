@@ -121,5 +121,4 @@ Without the tool, the protocol is prose. With the tool, the protocol is checkabl
 ## Related
 
 - `handoff_v9_architectural-backport.md` — adds the foundational principles to v9's body. Independent; no coordination needed.
-- `handoff_schema_files.md` — produces the JSON Schema files this tool reads. Should land before the tool is built (or in parallel; tool can stub schema validation initially).
 - `handoff_habit-extinction_reference-driver.md` — second reference driver. Tool can be v0.1 with one reference; v0.2 with two.

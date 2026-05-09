@@ -2,7 +2,7 @@
 
 **Status:** Planning document for the operations manual — user-facing how-to-use guide for [mpa-bridge](https://github.com/ronviers/mpa-bridge).
 **Audience:** A future Claude (or human) who needs to run mpa-bridge against real specs / drivers / data and document the experience for future runs.
-**Companion:** [handoff_protocol-tool.md](handoff_protocol-tool.md) (the spec for mpa-bridge), [handoff_runs_and_libraries.md](handoff_runs_and_libraries.md) (the parallel handoff that stress-tests the manual), [handoff_unblock_runs_and_ops.md](handoff_unblock_runs_and_ops.md) (what blocks both).
+**Companion:** [handoff_protocol-tool.md](handoff_protocol-tool.md) (the spec for mpa-bridge), [handoff_runs_and_libraries.md](handoff_runs_and_libraries.md) (the parallel handoff that stress-tests the manual).
 
 ---
 
@@ -58,5 +58,4 @@ Without an operations manual, every new run requires the user (or a future Claud
 ## Related
 
 - [`handoff_runs_and_libraries.md`](handoff_runs_and_libraries.md) — the parallel handoff. Operations manual makes runs reproducible; runs stress-test the manual.
-- [`handoff_unblock_runs_and_ops.md`](handoff_unblock_runs_and_ops.md) — names what blocks both.
 - [`handoff_protocol-tool.md`](handoff_protocol-tool.md) — the spec mpa-bridge implements; the operations manual is the spec's reader-side companion.

@@ -76,6 +76,16 @@ When you notice yourself reaching for one of these, that's a signal: stop, name 
 4. **If the force is actual:** thicken that spot only. Add a debt-marker comment naming the break and the revert condition. Do not generalize the fix beyond the break.
 5. **Update this document** if a new resistible-force pattern emerges from real experience.
 
+## Handoff completion discipline
+
+When a handoff's deliverable lands, **delete the handoff in the same commit that lands the deliverable.** `architecture/handoff_*.md` answers "what work remains"; if the answer is "done," the file shouldn't exist. Stale handoffs read as live to-do lists, propagate stale companion-links and "(forthcoming)" tags into the RFCs and READMEs that reference them, and load future sessions with phantom work.
+
+If a handoff carries reference value beyond planning (worked example, design rationale, failure-mode catalog), **absorb the durable content into the artifact it informed before deleting** — the RFC, the block-in, the code's CLAUDE.md, this CLAUDE.md. Don't keep the planning shell as a "preserved record"; the lessons live in the artifacts that survive.
+
+**Audit at session start.** First action of every session: list `architecture/handoff_*.md` and ask of each: "is the deliverable still missing?" If no, the file is in the wrong shape — absorb-then-delete before doing anything else. This is the cheapest moment to catch debris; ten minutes here saves a slow drift toward an architecture/ directory that no longer matches the repo's actual state.
+
+This discipline closed three completed handoffs at session 2026-05-08 (`handoff_schema_files`, `handoff_RFC-S_thin-pass`, `handoff_unblock_runs_and_ops`); the same drift had accumulated each because the closing commit landed the deliverable but didn't clean up the planning doc.
+
 ## Scope (what this discipline governs and does not)
 
 **Governs:**
@@ -94,7 +104,7 @@ If unsure whether something is a protocol or a meta-document: protocols specify 
 ## Background
 
 - [Architectural Block-In v0.2](architecture/MPA_Architectural_Block-In.md) — foundational principles section (five principles, including thin-RFC discipline as #5).
-- [RFC-S thin-pass handoff](architecture/handoff_RFC-S_thin-pass.md) — worked example of the discipline applied to a section that resists thinning. Names what's available (RG flow, Banach fixed-point, compactification, inverse limits, asymptotic analysis), what's reserve (sheaves, coalgebras, operads), and what's still hard.
+- [RFC-S v0.2](rfcs/MPA-RFC-S_Scale-Management.md) — worked example of the discipline applied to a section that resisted thinning. RG flow as foundational structure (§0.6); compactification absorbs edge cases (§6); sheaves and coalgebras flagged as Tier-3 reserve (Appendix C). The v0.1 block-in is preserved at `MPA-RFC-S_Scale-Management_Block-In.md` as honest-scope reference.
 - [v9 compressed](framework/v9_compressed.md) — operational source of truth. RFCs point here for rigor.
 
 ## Origin

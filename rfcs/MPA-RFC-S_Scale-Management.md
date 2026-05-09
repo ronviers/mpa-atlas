@@ -2,7 +2,7 @@
 
 **Status:** Draft v0.2 — first thin-RFC pass. (v0.1 preserved at [`MPA-RFC-S_Scale-Management_Block-In.md`](MPA-RFC-S_Scale-Management_Block-In.md) as honest-scope reference; not authoritative.)
 **Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). Compression Axiom + operator algebra are the load-bearing imports.
-**Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md), [thin-pass handoff](../architecture/handoff_RFC-S_thin-pass.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md), [RFC-RI v0.1](MPA-RFC-RI_Realizer-Interface.md)
+**Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md), [RFC-RI v0.1](MPA-RFC-RI_Realizer-Interface.md)
 
 ---
 
