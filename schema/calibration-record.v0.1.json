@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ronviers/mpa-atlas/schema/calibration-record.v0.1.json",
+  "title": "MPA Calibration Record",
+  "description": "MPA-RFC-C v0.2 §2. Per-experiment certification that a substrate is in the operating envelope of an RFC-S §4 driver profile, with measured values for the canonical primitives (L, G_0, tau_obs_canonical, gamma_AB) and round-trip validation evidence. Sealed and immutable; re-calibration produces a successor record.",
+  "type": "object",
+  "required": [
+    "driver_profile_ref",
+    "measurements",
+    "validation",
+    "retirement_triggers",
+    "seal"
+  ],
+  "properties": {
+    "driver_profile_ref": {
+      "type": "object",
+      "required": ["substrate_class", "profile_version"],
+      "properties": {
+        "substrate_class": { "type": "string" },
+        "profile_version": { "type": "string" }
+      }
+    },
+    "measurements": {
+      "type": "object",
+      "required": ["L", "G_0", "tau_obs_canonical", "gamma_AB"],
+      "properties": {
+        "L": {
+          "type": "object",
+          "required": ["value", "uncertainty", "sop_ref", "cessation_trace_ref"],
+          "properties": {
+            "value": { "type": "number" },
+            "uncertainty": { "type": "number" },
+            "sop_ref": { "type": "string" },
+            "cessation_trace_ref": { "type": "string" }
+          }
+        },
+        "G_0": {
+          "type": "object",
+          "required": ["value", "uncertainty", "sop_ref", "extrapolation_evidence_ref"],
+          "properties": {
+            "value": { "type": "number" },
+            "uncertainty": { "type": "number" },
+            "sop_ref": { "type": "string" },
+            "extrapolation_evidence_ref": { "type": "string" }
+          }
+        },
+        "tau_obs_canonical": {
+          "type": "object",
+          "required": ["value", "valid_range", "sop_ref", "sweep_evidence_ref"],
+          "properties": {
+            "value": { "type": "number" },
+            "valid_range": {
+              "type": "array",
+              "items": { "type": "number" },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "sop_ref": { "type": "string" },
+            "sweep_evidence_ref": { "type": "string" }
+          }
+        },
+        "gamma_AB": {
+          "type": "object",
+          "description": "Pairwise cross-saturation coefficients, keyed by '(A,B)' pair string. Open-typed body so substrate-class pair conventions are admissible.",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["value", "uncertainty", "sop_ref", "linearity_evidence_ref"],
+            "properties": {
+              "value": { "type": "number" },
+              "uncertainty": { "type": "number" },
+              "sop_ref": { "type": "string" },
+              "linearity_evidence_ref": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["reference_dataset_ref", "forward_residuals", "backward_residuals", "per_intent_metric_pass"],
+      "properties": {
+        "reference_dataset_ref": { "type": "string" },
+        "forward_residuals": { "type": "object" },
+        "backward_residuals": { "type": "object" },
+        "per_intent_metric_pass": {
+          "type": "object",
+          "patternProperties": {
+            "^I[1-5]$": {
+              "type": "object",
+              "required": ["passed"],
+              "properties": {
+                "passed": { "type": "boolean" },
+                "metric_value": { "type": "number" },
+                "threshold": { "type": "number" }
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "retirement_triggers": {
+      "type": "object",
+      "required": [
+        "L_drift_max",
+        "G_0_drift_max",
+        "gamma_drift_max",
+        "cessation_failure_rule",
+        "drive_excursion_rule",
+        "regime_drift_rule",
+        "substrate_native_drift_clock_ref"
+      ],
+      "properties": {
+        "L_drift_max": { "type": "number" },
+        "G_0_drift_max": { "type": "number" },
+        "gamma_drift_max": { "type": "number" },
+        "cessation_failure_rule": { "type": "string" },
+        "drive_excursion_rule": { "type": "string" },
+        "regime_drift_rule": { "type": "string" },
+        "substrate_native_drift_clock_ref": { "type": "string" }
+      }
+    },
+    "seal": {
+      "type": "object",
+      "required": ["calibration_authority", "calibration_date", "substrate_state_hash", "profile_version_pinned"],
+      "properties": {
+        "calibration_authority": { "type": "string" },
+        "calibration_date": { "type": "string" },
+        "substrate_state_hash": { "type": "string" },
+        "profile_version_pinned": { "type": "string" }
+      }
+    },
+    "supersedes": {
+      "type": ["string", "null"],
+      "description": "Hash or identifier of the prior calibration record this one retires-and-supersedes. Null on the initial record."
+    }
+  }
+}

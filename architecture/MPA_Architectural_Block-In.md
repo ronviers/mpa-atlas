@@ -2,7 +2,7 @@
 
 **Status:** v0.2 — block-in level (broad strokes, not detailed specification). v0.2 promotes three additional principles to foundational status: demand-bounded sufficiency, singular working-space path, thin-RFC discipline.
 **Purpose:** Capture the architectural commitments made this session at a resolution sufficient for the next session to work from
-**Companion artifacts:** [RFC-1 (Spec Object)](../rfcs/MPA-RFC-1_Spec-Object.md); [RFC-S Block-In (Scale Management)](../rfcs/MPA-RFC-S_Scale-Management_Block-In.md); [v9 framework](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md)
+**Companion artifacts:** [RFC-1 (Spec Object)](../rfcs/MPA-RFC-1_Spec-Object.md); [RFC-S Block-In (Scale Management)](../rfcs/MPA-RFC-S_Scale-Management_Block-In.md); [v9 framework](../framework/v9_unabridged.md)
 
 ---
 
@@ -213,9 +213,9 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 
 **Closed:**
 1. **Notation disambiguation** ($C$ vs $\mathcal{C}$) — closed in v9 §Operators (notation paragraph) + §Compression Axiom (paragraph corrected; previously-corrupted LaTeX rendering fixed). Cross-RFC closure: [RFC-V v0.1 §4](../rfcs/MPA-RFC-V_Reference-Vocabulary.md) makes the disambiguation rule official.
+2. **Architectural framing layer-in** — closed in v9 §"Foundational principles" (frame section after §Setting; ½-page declaration, points back here for long-form). v9 now declares all five principles rather than only being the rigor source the RFCs declare *about*. Closed 2026-05-10.
 
-**Pending:**
-2. **Architectural framing layer-in** — observer-as-camera and working-space-discipline as principles in the body of v9. Was gated on RFC-1 v0.2 stability (now ✓ stable; RFC-S v0.2 also stable). Unblocked. Hygiene: back-port the foundational-principles language to v9 so v9 declares them rather than just being the rigor source the RFCs declare *about*.
+**Pending:** (none)
 
 ---
 
@@ -254,9 +254,11 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 | RFC-S (Scale Management) | v0.2 thin-pass stable; v0.1 block-in preserved as honest-scope reference | [`rfcs/MPA-RFC-S_Scale-Management.md`](../rfcs/MPA-RFC-S_Scale-Management.md) |
 | RFC-V (Reference Vocabulary) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-V_Reference-Vocabulary.md`](../rfcs/MPA-RFC-V_Reference-Vocabulary.md) |
 | RFC-RI (Realizer Interface) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-RI_Realizer-Interface.md`](../rfcs/MPA-RFC-RI_Realizer-Interface.md) |
-| Surface-code reference driver | v0.1 stable; hand-built from v9 | [`reference-drivers/surface-code-qec.md`](../reference-drivers/surface-code-qec.md) |
-| Habit-extinction reference target | Identified, not characterized | — |
-| Schema files (spec-object, fdr-signature, driver-profile, realizer-interface) | Stable; committed at `2f3e27f` | `schema/` |
+| RFC-C (Calibration) | v0.2 thin-pass stable; v0.1 superseded (six-phase script collapsed to calibration-record object) | [`rfcs/MPA-RFC-C-Calibration.md`](../rfcs/MPA-RFC-C-Calibration.md) |
+| Surface-code reference driver | v0.1 stable; calibration section absorbed from RFC-C v0.1 §1.1 (2026-05-10) | [`reference-drivers/surface-code-qec.md`](../reference-drivers/surface-code-qec.md) |
+| Structural-glass reference driver | v0.1 stable; calibration section absorbed from RFC-C v0.1 §1.2 (2026-05-10) | [`reference-drivers/structural-glass.md`](../reference-drivers/structural-glass.md) |
+| Habit-extinction reference target | Identified, not characterized; queued behind mpa-view bootstrap | — |
+| Schema files (spec-object, fdr-signature, driver-profile, realizer-interface, calibration-record) | Stable; calibration-record added 2026-05-10 | `schema/` |
 
 ---
 
@@ -267,11 +269,12 @@ The original priority list (items 1–6) is fully landed: v9 notation correction
 In recommended order:
 
 1. **Habit-extinction reference target characterization.** Behavioral-domain reference paralleling the surface-code QEC driver. Subject-history protocols, deprivation level, signature targets per phase (acquisition / extinction / spontaneous-recovery / reinstatement). Substantive substrate research; benefits from concrete data choices upfront.
-2. **v9 architectural-framing back-port** (v9 corrections item 2). Add observer-as-camera and the five foundational principles to v9's body so v9 declares them rather than just being the rigor source the RFCs declare *about*. Hygiene; medium-weight; unblocked since RFC-1 v0.2 + RFC-S v0.2 are stable.
-3. **Schema files** (`schema/spec-object.v0.2.json`, `fdr-signature.v0.1.json`, `driver-profile.v0.2.json`, `realizer-interface.v0.1.json`). Mechanical translation of each RFC's §2 Shape. Useful for tooling and external validation.
-4. **Operational still-open items.** Auto-remap form (RFC-S Appendix B.1), reference-target governance, conversion-gain measurement, versioning protocol depth — all operational discipline rather than protocol-layer; resolution likely emerges from accumulated substrate experience rather than further protocol work.
+2. **Schema files** (`schema/spec-object.v0.2.json`, `fdr-signature.v0.1.json`, `driver-profile.v0.2.json`, `realizer-interface.v0.1.json`). Mechanical translation of each RFC's §2 Shape. Useful for tooling and external validation.
+3. **Operational still-open items.** Auto-remap form (RFC-S Appendix B.1), reference-target governance, conversion-gain measurement, versioning protocol depth — all operational discipline rather than protocol-layer; resolution likely emerges from accumulated substrate experience rather than further protocol work.
 
-Items 1 and 4 advance through reality contact (more substrates measured, more drivers written). Items 2 and 3 advance through pure work and can be done at any time.
+Items 1 and 3 advance through reality contact (more substrates measured, more drivers written). Item 2 advances through pure work and can be done at any time.
+
+(v9 architectural-framing back-port closed 2026-05-10 — see "v9 corrections needed" item 2.)
 
 ---
 
