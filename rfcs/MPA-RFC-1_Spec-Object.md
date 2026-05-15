@@ -1,7 +1,7 @@
 # MPA-RFC-1: Spec Object
 
 **Status:** Draft v0.2 — first thin-RFC pass
-**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). The unabridged prose-and-prior-art version is at [`v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md`](../framework/v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md); refresh-from-compressed cadence; allowed to lag; not authoritative for operational lookups.
+**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). The unabridged prose-and-prior-art version is at [`v9_unabridged.md`](../framework/v9_unabridged.md); refresh-from-compressed cadence; allowed to lag; not authoritative for operational lookups.
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md), [RFC-3 v0.1](MPA-RFC-3_Consistency-Completeness.md), [RFC-V v0.1](MPA-RFC-V_Reference-Vocabulary.md), [RFC-RI v0.1](MPA-RFC-RI_Realizer-Interface.md)
 
 ---

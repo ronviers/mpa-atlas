@@ -181,7 +181,7 @@ Each regime leaves a distinct trace in the parametric fluctuation-dissipation pl
 
 - *Reset* ($r$, vertex): unit slope. Equilibrium holds.
 - *Committed* ($c$, vertex): $X \ll 1$. Suppressed response; narrow horizontal locus close to the $\Delta C$ axis. Deep memory means fluctuations accumulate while response stays small.
-- *Suspended* ($s$, vertex): aging diagonal that bends away from FDT and plateaus at long times. This is the Cugliandolo–Kurchan aging signature (Cugliandolo and Kurchan, *Phys. Rev. Lett.* 71, 173 (1993); reviewed in Crisanti and Ritort, *J. Phys. A* 36, R181 (2003)) — the standard non-equilibrium FDR shape of glassy and metastable-while-driven systems.
+- *Suspended* ($s$, vertex): aging diagonal that bends away from FDR and plateaus at long times. This is the Cugliandolo–Kurchan aging signature (Cugliandolo and Kurchan, *Phys. Rev. Lett.* 71, 173 (1993); reviewed in Crisanti and Ritort, *J. Phys. A* 36, R181 (2003)) — the standard non-equilibrium FDR shape of glassy and metastable-while-driven systems.
 - *Frustration* ($k_{\text{frust}}$, subgraph): transient *negative* response — the active energy pumped into a frustrated loop produces an anti-correlation between spontaneous fluctuation and driven response that does not occur in uncoupled systems. This is a global, loop-level effect; the signature is the shape of the *cycle's* response, not of any single proposition's, and it is the standard loop-level negative-response observable in spin-glass response-function theory.
 
 The frustration signature is the framework's most distinctive observable, and the type of object it attaches to matters: it is read off subgraph-level dynamics, not vertex-level dynamics, and only on substrates whose interaction graph carries the obstruction.
@@ -356,7 +356,7 @@ Let $C(t,t') = \langle d_A(t) \cdot d_A(t') \rangle$ be the two-time autocorrela
 $$X(t,t') \;=\; \frac{R(t,t')}{(\partial_{t'} C(t,t')) / \kappa},$$
 where the $\kappa$ in the denominator is the bath-coupled dissipation scale standing in for $k_B T$ under the Einstein/Kubo identification $\kappa = k_B T \cdot \xi_{sub}$. The four signatures attach to objects of distinct type:
 
-- **$r$ (vertex):** $X = 1$. Equilibrium FDT.
+- **$r$ (vertex):** $X = 1$. Equilibrium FDR.
 - **$c$ (vertex):** $X \ll 1$. Deep memory suppresses response relative to fluctuation.
 - **$s$ (vertex):** $X$ is time-dependent. The aging diagonal of Cugliandolo–Kurchan (*Phys. Rev. Lett.* 71, 173 (1993)), reviewed in Crisanti and Ritort (*J. Phys. A* 36, R181 (2003)), and validated cross-substrate on the surface code at sub-threshold operation (this paper, §5).
 - **$k_{\text{frust}}$ (subgraph):** $X$ is transiently negative — destructive shear around a topologically obstructed cycle means perturbation of the loop drives the system opposite to its spontaneous fluctuation direction. Test condition on the surface code: errors that close a frustrated loop on the syndrome graph.

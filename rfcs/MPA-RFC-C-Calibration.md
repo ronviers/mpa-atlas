@@ -1,7 +1,9 @@
+this is ron. this document had been deprecated and should be moved to a location for such things
+
 # MPA-RFC-C: Calibration
 
 **Status:** Draft v0.2 — first thin-RFC pass. (v0.1 standards-body draft superseded; preserved in commit history.)
-**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md), [character (compressed, operational)](../framework/character_compressed.md). The chit unit `ln(G₀/L)` and the fraying sequence `c → s → k → r` are the load-bearing imports.
+**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md), [character (compressed, operational)](../framework/cdv1_compressed.md). The chit unit `ln(G₀/L)` and the fraying sequence `c → s → k → r` are the load-bearing imports.
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md).
 
 ---
@@ -74,7 +76,7 @@ A calibration record is **invalid** if any of:
 
 ## 6. Pointer
 
-[v9 (compressed)](../framework/v9_compressed.md) and [character (compressed)](../framework/character_compressed.md) carry the formal derivation:
+[v9 (compressed)](../framework/v9_compressed.md) and [character (compressed)](../framework/cdv1_compressed.md) carry the formal derivation:
 
 | What | Where |
 |---|---|

@@ -2,6 +2,8 @@
 
 Working in this repo means working under **thin-RFC discipline.** This document names it explicitly so future sessions don't accidentally revert to standards-body defaults. Read this before touching any RFC.
 
+**Companion: program-wide testing methodology.** [`H:/mpa-central/METHODOLOGY.md`](H:/mpa-central/METHODOLOGY.md) is the four-cut testing discipline applied across all mpa repos. The thin-RFC discipline below governs RFC text in this repo; METHODOLOGY.md governs what counts as MPA testing work program-wide. Both share the same brittleness instinct: thin where standards bodies are thick.
+
 ---
 
 ## Principle
@@ -49,12 +51,16 @@ See [RFC-1 v0.2](rfcs/MPA-RFC-1_Spec-Object.md) for the canonical instance.
 
 The thin protocols work because the rigor is elsewhere:
 
-- **v9 compressed** → formal derivation, operator algebra, theorems, capacity bounds, FDR signatures, Compression Axiom
+- **v9 compressed** → operator algebra, theorems, capacity bounds, FDR signatures, Compression Axiom — the *claims*, densely stated
+- **v9 receipts** → line-keyed justifications behind the compressed claims (citation, composition, bespoke proof shard, or `unrecovered` marker). The file that makes unabridged reconstruction tractable.
+- **cdv1 compressed / cdv1 receipts** → same pattern for the Character projection (continuous physical economics of sustained NESS traversal). The structural projection (v9) and Character projection are complementary readings of the same NESS-substrate phenomenology — both apply to any substrate (glass, QEC, brain, behavioral, future).
 - **Architectural block-in** → cross-cutting decisions, the five foundational principles, multi-RFC framing
 - **Mechanical validation** (FDR round-trip checks, Theorem-9 checks, capacity envelope checks) → enforcement
 - **The RFC itself** → exchange contract, nothing else
 
-If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in v9 or the block-in, not here.
+If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in v9 (claims) / receipts (derivations) / block-in (decisions), not here.
+
+**Receipts discipline.** When a session proves, derives, or composes a result that becomes a line in `v9_compressed.md` or `cdv1_compressed.md`, append a justification entry to the matching receipts file *in the same session*. Discipline rules (workflow, type tags, keying) live in [`framework/v9_receipts.md`](framework/v9_receipts.md). Lines whose proof tree is genuinely lost get an honest `unrecovered` marker — no fabricated reconstructions.
 
 ## Forces pushing toward heavyweight (resist)
 
@@ -76,22 +82,6 @@ When you notice yourself reaching for one of these, that's a signal: stop, name 
 4. **If the force is actual:** thicken that spot only. Add a debt-marker comment naming the break and the revert condition. Do not generalize the fix beyond the break.
 5. **Update this document** if a new resistible-force pattern emerges from real experience.
 
-## Handoff convention
-
-Single handoff per repo at [`docs/handoff_next_session.md`](docs/handoff_next_session.md), matching the mpa-* family convention (mpa-brain, mpa-visualizer, mpa-bridge use the same path; mpc-* family uses a top-level `HANDOFF.md`). Multiple parallel pending items live as "Open item N" subsections within the single file (mpa-brain pattern), not as separate handoff files.
-
-**Three rules across the lifecycle:**
-
-1. **Creation.** A handoff contains only transient content: goal, what to do for THIS task, completion criteria, effort estimate, task-specific failure modes. Architectural commitments / framework reasoning / design rationale / domain-general failure modes / conventions / worked examples of discipline are durable — they live in their real home (this CLAUDE.md, the block-in, the RFC, the code) and the handoff cites them. **A handoff lives in the repo whose state it describes** — handoffs for `mpa-bridge` work live in `mpa-bridge/docs/`, not here.
-
-2. **Consumption.** Before working from a handoff, scan it actively: "what here would I need in a future session if this handoff didn't exist?" Anything answering yes is in the wrong file — absorb it into its real home before starting the work.
-
-3. **Completion of an Open item.** Delete the item's section from the handoff in the same commit that lands its deliverable. Absorb any remaining durable content first. When the last open item closes, delete the handoff file.
-
-**Audit at session start.** First action: open `docs/handoff_next_session.md` and ask of each Open item — deliverable still missing? If no, absorb-then-delete. If yes but the section reads like it carries content beyond the pending work, restructure before doing the work.
-
-**Origin.** Convention adopted 2026-05-08 after the prior multi-file `architecture/handoff_*.md` pattern accumulated five parallel handoffs, three of which described `mpa-bridge` state (locality violation) and two of which carried completed work (lifecycle violation). The single-file convention matches what every other `mp[ac]-*` repo already does.
-
 ## Scope (what this discipline governs and does not)
 
 **Governs:**
@@ -100,8 +90,10 @@ Single handoff per repo at [`docs/handoff_next_session.md`](docs/handoff_next_se
 - Protocol-adjacent operational documents
 
 **Does not govern:**
-- **v9 compressed** — the source of rigor. Allowed to be long because that's where derivation lives. Maintained dense, not thin.
-- **v9 unabridged** — public-facing prose-and-prior-art document. Lives in `framework/`. Allowed to lag and to be long.
+- **v9 compressed** — the source of structural-domain claims. Allowed to be dense. Maintained dense, not thin.
+- **v9 receipts** — line-keyed justifications behind the compressed claims. Append-only; grows with proof activity.
+- **v9 unabridged** — public-facing prose-and-prior-art document. Lives in `framework/`. Allowed to lag and to be long. Reconstructible from compressed + receipts.
+- **cdv1 compressed / cdv1 receipts / cdv1 unabridged** — same three-suffix pattern for the Character projection (compressed claim-only, receipts line-keyed justifications, unabridged paper).
 - **Architectural block-in** — meta-document, allowed to grow as principles consolidate. (But each principle inside should be tight.)
 - **READMEs, handoffs** — operational meta, written for clarity over brevity. (Still: short is better.)
 
@@ -111,7 +103,11 @@ If unsure whether something is a protocol or a meta-document: protocols specify 
 
 - [Architectural Block-In v0.2](architecture/MPA_Architectural_Block-In.md) — foundational principles section (five principles, including thin-RFC discipline as #5).
 - [RFC-S v0.2](rfcs/MPA-RFC-S_Scale-Management.md) — worked example of the discipline applied to a section that resisted thinning. RG flow as foundational structure (§0.6); compactification absorbs edge cases (§6); sheaves and coalgebras flagged as Tier-3 reserve (Appendix C). The v0.1 block-in is preserved at `MPA-RFC-S_Scale-Management_Block-In.md` as honest-scope reference.
-- [v9 compressed](framework/v9_compressed.md) — operational source of truth. RFCs point here for rigor.
+- [v9 compressed](framework/v9_compressed.md) — structural-domain operational source of truth. RFCs point here for rigor.
+- [v9 receipts](framework/v9_receipts.md) — line-keyed justifications for v9 compressed claims.
+- [cdv1 compressed](framework/cdv1_compressed.md) — Character-projection operational source of truth. Continuous physical economics of sustained NESS traversal: chit unit, universal two-mode kernel, heat-tax tower, gFDR signatures, five leading-order posits, eleven cross-register identities. Claim-only; substrate-neutral.
+- [cdv1 receipts](framework/cdv1_receipts.md) — line-keyed justifications for cdv1 compressed claims.
+- [cdv1 unabridged](framework/cdv1_unabridged.md) — public-facing prose-and-prior-art version of the Character projection. Rebuilt from compressed + receipts; allowed to lag between rebuilds.
 
 ## Origin
 

@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ronviers/mpa-atlas/schema/driver-profile.v2.0.json",
+  "title": "MPA Driver Profile (v2)",
+  "description": "First production-targeted driver-profile schema. v2 supersedes the v0.x bootstrap series (v0.x preserved as reference but is not authoritative for production consumers). The seven-section structure remains from RFC-S v0.2 §4; v2's new content is a pinned `translation_field` shape, derived from mpa-auditor §Q13 (forward-only architecture) and the three reference-substrate-class instances in mpa-conform's seed corpus. Substrate-specific values (envelope axes, intent operations, reference_outputs payloads) remain open-typed; only the cross-substrate exchange contract is pinned.",
+  "type": "object",
+  "required": [
+    "header",
+    "operating_envelope",
+    "gamut",
+    "translation_field",
+    "intents",
+    "reference_outputs",
+    "metadata"
+  ],
+  "properties": {
+    "header": {
+      "type": "object",
+      "required": [
+        "profile_version",
+        "target_rfc_versions",
+        "substrate_class",
+        "characterization_date",
+        "authority",
+        "validation_history"
+      ],
+      "properties": {
+        "profile_version": { "type": "string" },
+        "target_rfc_versions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "substrate_class": { "type": "string" },
+        "characterization_date": { "type": "string" },
+        "authority": { "type": "string" },
+        "validation_history": { "type": "array" },
+        "regime_classifier_axis": {
+          "description": "Which axis the substrate walks to traverse c→s→r. 'drive': regime classified by drive level relative to threshold (e.g. LEDs by V vs V_th, lasers by pump vs threshold). 'damping': regime classified by Q at structural resonance (e.g. RLC, voice coil actuators, viscoelastic). Sets the substrate-conditional interpretation of cdv1 §3 limit-point status: drive-axis carries irreducible thermodynamic s-window floor (nkT/q for diodes; Schawlow–Townes broadening for lasers); damping-axis carries measurement-limited width that vanishes in the deterministic limit (F-003-rlc Q=0.5 zero).",
+          "enum": ["drive", "damping", "use-case-dependent"]
+        }
+      }
+    },
+    "operating_envelope": {
+      "type": "object",
+      "description": "Substrate-declared envelope: initial_conditions, parameter_ranges, measurement_protocol — what calibration must verify. Field-level structure is open per RFC-S §4 because the envelope axes vary per substrate class. The seed corpus instances axes as a named map (e.g. {T: {values:[...], units:'Tc-relative'}}) plus n_cells and xdot_choices arrays; v2 does not pin this shape, but consumers can expect 'axes' (object) and 'xdot_choices' (array of strings) on every v2 profile."
+    },
+    "gamut": {
+      "type": "object",
+      "description": "RG-trajectory image in canonical-representation space. May include s_window_width_formula (string, substrate-physics formula for δ) and s_window_width_floor (number, V or substrate-natural units; numerical value at characterization conditions). For drive-axis substrates these characterize the irreducible thermodynamic floor on the s-window; for damping-axis substrates they characterize the measurement-noise-limited floor (0 in the deterministic limit)."
+    },
+    "translation_field": {
+      "type": "object",
+      "description": "Forward map only (canonical → substrate-native). The backward map is structurally ill-posed (rank-deficiency, conditioning failure, observable insufficiency all live on the backward side) and never built. See mpa-auditor §Q13 forward-only architecture; RFC-S §4 'translation_field' section; RFC-S Appendix B item 1 (tangent-flow / continuous-form deferred). v2 ships the discrete lookup_table shape only.",
+      "required": ["direction", "shape", "rule"],
+      "properties": {
+        "direction": {
+          "const": "forward",
+          "description": "v2 is forward-only by architecture, not as a parameter. Any future 'backward' value requires a v3 schema with a paired ill-posedness-reporting contract."
+        },
+        "shape": {
+          "enum": ["lookup_table"],
+          "description": "v2 ships lookup_table. tangent-flow / continuous-form are RFC-S Appendix B item 1, deferred until a substrate's drift actually forces them."
+        },
+        "description": {
+          "type": "string",
+          "description": "Free-text. The seed-corpus convention is to cite the Q13 reference and the leading-order method here."
+        },
+        "rule": {
+          "type": "array",
+          "minItems": 1,
+          "description": "One entry per (operating_point × xdot_choice) cell. Cardinality is operating_envelope.n_cells × |operating_envelope.xdot_choices|.",
+          "items": { "$ref": "#/$defs/translation_rule" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "intents": {
+      "type": "object",
+      "patternProperties": {
+        "^I[1-5]$": {
+          "type": "object",
+          "required": ["supported"],
+          "properties": {
+            "supported": { "type": "boolean" },
+            "note": { "type": "string" }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "reference_outputs": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Per-cell reference outputs the curator path commits. Item shape is open at v2 (the seed corpus uses {data_upload_id, data_upload_path, operating_point, xdot_choice, tier}); v2 pins only that the array is non-empty so round-trip validation per RFC-S §5 has at least one anchor."
+    },
+    "metadata": { "type": "object" }
+  },
+  "$defs": {
+    "translation_rule": {
+      "type": "object",
+      "required": ["operating_point", "xdot_choice", "canonical"],
+      "properties": {
+        "operating_point": { "$ref": "#/$defs/operating_point" },
+        "xdot_choice": {
+          "type": "string",
+          "description": "Substrate-native ẋ-choice this rule entry maps from. Must appear in operating_envelope.xdot_choices."
+        },
+        "canonical": { "$ref": "#/$defs/canonical_point" }
+      },
+      "additionalProperties": false
+    },
+    "operating_point": {
+      "type": "object",
+      "description": "Identifies a cell in the substrate's operating envelope. `label` and `gt` are cross-substrate; the substrate-specific axis values (T, p_base, h_field, scenario, etc.) ride additionalProperties — the union shape used by the seed corpus (with nulls for irrelevant axes) is one valid convention; a substrate may also omit irrelevant keys entirely.",
+      "required": ["label", "gt"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Human-readable operating-point identifier. Must match the corresponding reference_outputs entries."
+        },
+        "gt": {
+          "enum": ["c", "s", "r", "k"],
+          "description": "Ground-truth regime at this operating point. cdv1 §3: c = committed/cooperative, s = sustained/critical, r = relaxed/below-threshold, k = k_frust closed-chain frustration."
+        }
+      },
+      "additionalProperties": true
+    },
+    "canonical_point": {
+      "type": "object",
+      "description": "Canonical-coordinate target the forward map projects to. `chit` is the load-bearing required field; the other three are co-required by the seed-corpus convention because they cover the cdv1 universal-two-mode-kernel parameters that the auditor's inversion engine reads. Additional canonical fields (further cdv1 API-slot values per mpa-auditor §Q6) ride additionalProperties.",
+      "required": ["chit", "gamma_AB", "k_frust", "method"],
+      "properties": {
+        "chit": {
+          "type": "number",
+          "description": "Canonical drive coordinate. cdv1 §3 chit unit. Sign convention is substrate-class-conditional and declared by the leading-order method (e.g. chit = Tc - T for ck-glassy; chit = ln(p_threshold/p_base) for surface-code-qec)."
+        },
+        "gamma_AB": {
+          "type": "number",
+          "description": "Cross-coupling. cdv1 §Universal two-mode kernel. Sign: < 0 cooperative, > 0 competitive, 0 = decoupled."
+        },
+        "k_frust": {
+          "type": "boolean",
+          "description": "Whether this operating point carries a k_frust closed-chain frustration subgraph. cdv1 §3 / RFC-S §1."
+        },
+        "method": {
+          "type": "string",
+          "description": "Provenance of this canonical assignment. The seed corpus convention is a short prose form: 'leading_order: <formula>' for curator-path assignments, with a free form reserved for measurement-anchored values once the researcher path lands."
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

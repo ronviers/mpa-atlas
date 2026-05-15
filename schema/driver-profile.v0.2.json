@@ -33,11 +33,18 @@
         "substrate_class": { "type": "string" },
         "characterization_date": { "type": "string" },
         "authority": { "type": "string" },
-        "validation_history": { "type": "array" }
+        "validation_history": { "type": "array" },
+        "regime_classifier_axis": {
+          "description": "Which axis the substrate walks to traverse c→s→r. 'drive': regime classified by drive level relative to threshold (e.g. LEDs by V vs V_th, lasers by pump vs threshold). 'damping': regime classified by Q at structural resonance (e.g. RLC, voice coil actuators, viscoelastic). Sets the substrate-conditional interpretation of cdv1 §3 limit-point status: drive-axis carries irreducible thermodynamic s-window floor (nkT/q for diodes; Schawlow–Townes broadening for lasers); damping-axis carries measurement-limited width that vanishes in the deterministic limit (F-003-rlc Q=0.5 zero).",
+          "enum": ["drive", "damping", "use-case-dependent"]
+        }
       }
     },
     "operating_envelope": { "type": "object" },
-    "gamut": { "type": "object" },
+    "gamut": {
+      "type": "object",
+      "description": "RG-trajectory image in canonical-representation space. May include s_window_width_formula (string, substrate-physics formula for δ) and s_window_width_floor (number, V or substrate-natural units; numerical value at characterization conditions). For drive-axis substrates these characterize the irreducible thermodynamic floor on the s-window; for damping-axis substrates they characterize the measurement-noise-limited floor (0 in the deterministic limit)."
+    },
     "translation_field": { "type": "object" },
     "intents": {
       "type": "object",

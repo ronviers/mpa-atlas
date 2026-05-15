@@ -1,6 +1,6 @@
 # Structural-Glass Reference Driver
 
-**Status:** v0.1 — first reference driver for the structural-glass substrate class. Hand-built from [v9 §Fluctuation-dissipation signatures](../framework/v9_compressed.md) (aging-class identification) and [character §gFDR signatures](../framework/character_compressed.md) (Cugliandolo–Kurchan diagonal as the $s$-regime signature).
+**Status:** v0.1 — first reference driver for the structural-glass substrate class. Hand-built from [v9 §Fluctuation-dissipation signatures](../framework/v9_compressed.md) (aging-class identification) and [character §gFDR signatures](../framework/cdv1_compressed.md) (Cugliandolo–Kurchan diagonal as the $s$-regime signature).
 **Targets:** [RFC-1 v0.2](../rfcs/MPA-RFC-1_Spec-Object.md), [RFC-S v0.2](../rfcs/MPA-RFC-S_Scale-Management.md), [RFC-C v0.2](../rfcs/MPA-RFC-C-Calibration.md).
 **Schema:** [`schema/driver-profile.v0.2.json`](../schema/driver-profile.v0.2.json) for the profile; [`schema/calibration-record.v0.1.json`](../schema/calibration-record.v0.1.json) for per-experiment calibration. This is the markdown companion; field structure mirrors RFC-S §4.
 

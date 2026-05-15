@@ -1,15 +1,28 @@
 # v9 (operational source of truth)
 
 **Status:** Live. Every protocol revision and dev workflow reads from this file.
-**Companion:** [`v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md`](v9_MPA_A_Driven-Dissipative_Synthesis_with_Boolean_Limit.md) — public-facing prose-and-prior-art version. Refreshed from this file periodically; allowed to lag between refreshes. Do not lean on it for operational lookups.
+**Companions:**
+- [`v9_receipts.md`](v9_receipts.md) — line-keyed justifications for the compressed claims. Append-only during prove-as-you-go work; the file that makes unabridged reconstruction tractable.
+- [`v9_unabridged.md`](v9_unabridged.md) — public-facing prose-and-prior-art version. Refreshed from this file (+ receipts) periodically; allowed to lag. Do not lean on it for operational lookups.
 
-If the two files disagree, this file wins.
+If this file disagrees with the unabridged, this file wins. If this file disagrees with receipts, treat as bug.
 
 ---
 
 ## Setting
 Boolean = $D \to \infty$ limit, where $D = \Phi^*/\kappa$ (work supplied / dissipation scale). MPA is the finite-$D$ generalization. Maintaining a proposition costs work; cut the work, structure dissolves. Substrate classes are characterised by the $(\Phi^*, \kappa)$ envelopes their realizers can produce, intersected with the $D$ values the spec asks for.
 **Primitives**: trail vector (kernel-weighted history while proposition active), drive $D$, observer kernel $\tau_{obs}$.
+
+## Foundational principles
+Five architectural commitments govern the framework. Long-form treatment: [Architectural Block-In](../architecture/MPA_Architectural_Block-In.md) §"Foundational principles (consolidated)". Declared here so v9 carries them rather than only being the rigor source the RFCs declare *about*.
+
+1. **Color-management discipline.** Three layers — substrate-native, canonical representation, realizer-output — with declared, named, versioned, swappable transforms between them. The canonical representation is substrate-neutral by construction.
+2. **Observer-driven scale management.** $\tau_{obs}$ is the camera. The canonical representation is observer-relative; cross-scale composition is camera motion, not transform invocation. No scale-class taxonomy baked into the framework. §Scale-relativity is the operational consequence.
+3. **Demand-bounded sufficiency.** The framework commits to *enough* representation for the demand placed on it, not maximal faithfulness to substrate. Drivers declare a demand envelope; canonical representation is sized to it; past the envelope the framework is silent. MPA is not the bottleneck on substrate fidelity.
+4. **Singular working-space path.** Within a version, exactly one canonical-representation shape. Plurality lives in drivers (substrate-conditional), realizer-interface intent flags (user-intent-conditional), and version succession (time-conditional) — never at the working-space layer. *Peel*, not scrape.
+5. **Thin-RFC discipline.** Exchange surfaces written at gross-underengineering resolution by design; v9 carries the rigor underneath, the RFCs carry the contract. *It was never brittle if it never broke.* Does not govern v9 itself.
+
+The five are coupled (Block-In §"Coupling between principles"). They constrain the RFC sequence and the driver/realizer architecture; they do not constrain the operator algebra or capacity claims that follow, which are upstream of the protocol layer.
 
 ## Three typed objects
 **Vertex regime** (single trail, stability axis $\lambda_A$):
@@ -75,7 +88,7 @@ Sparse: $\sim D$. Dense: $\sim\sqrt{D}$ — the Hopfield ceiling (Amit–Gutfreu
 
 ## Fluctuation-dissipation signatures
 Parametric plot $\chi(\tau)$ vs $C(0)-C(\tau)$:
-- $r$ (vertex): unit slope (FDT)
+- $r$ (vertex): unit slope (FDR)
 - $c$ (vertex): $X \ll 1$, suppressed response, narrow horizontal locus
 - $s$ (vertex): aging diagonal, plateaus at long times — Cugliandolo–Kurchan
 - $k_{\text{frust}}$ (subgraph): transient **negative** response (loop-level, spin-glass response theory)
@@ -89,7 +102,7 @@ Signatures attach to objects of distinct type. $X \gg 1$ excluded by dissipative
 | $c$ | $X_c = \lim_\tau \chi(\tau)/(C(0)-C(\tau)) = 0$ | suppression / narrow horizontal locus |
 | $s$ | $\alpha_s = $ slope of aging segment in $\chi$ vs $(C(0)-C)$ | CK ratio |
 | $s$ | $P_s = \lim_\tau C(\tau)/C(0)$ | plateau height |
-| $r$ | $X_r = \lim_\tau \chi(\tau)/(C(0)-C(\tau)) = 1$ | unit-slope FDT |
+| $r$ | $X_r = \lim_\tau \chi(\tau)/(C(0)-C(\tau)) = 1$ | unit-slope FDR |
 | $k_{\text{frust}}$ | $N_f = \int_T \min(0,\chi)\,d\tau \big/ \int_T \lvert\chi\rvert\,d\tau$ | transient-negative fraction |
 
 Universal within universality class; substrate-dependent corrections fall off with system size, temperature, and finite-time effects. $\alpha_s$ and $P_s$ are the load-bearing cross-substrate observables; the rest are within-class structural identifiers.
