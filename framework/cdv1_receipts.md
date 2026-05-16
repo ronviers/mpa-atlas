@@ -16,17 +16,28 @@
 **Bespoke step:** Identification of v9's stability axis $\lambda_A$ with the laser linearization eigenvalue. The bridge enables the entire chit ↔ regime mapping in §2-3. Verifiable: substitute $G_0 - L$ for $-\lambda_A$ in v9's three regime conditions, recover the chit threshold table in §1.
 
 ### §2 — chit definition: $\ln(G_0/L)$ (choice of log)
-**Type:** bespoke.
-**Shard:** Three independent reasons motivate the log:
-(i) **symmetry across threshold** — $G_0 = L \Rightarrow$ chit = 0; sign tracks above/below;
-(ii) **additivity across compositions of independent gain stages** — multiplicative ratios become additive;
-(iii) **$\ln 2$ alignment with Landauer** for the Bit/Chit pairing in §6.
-None of the three individually forces the log, but together they rule out $(G_0 - L)$, $(G_0/L - 1)$, and other affine alternatives. If a future result wants a different functional form, the burden is rebutting all three.
+**Type:** composition.
+**Cite:** Crooks (rate-ratio fluctuation theorem, 1999); Schnakenberg (network thermodynamics; cycle affinities as log-rate-ratios, 1976); Onsager (1931) / DeDonder (chemical-reaction affinity as log of forward/reverse rate ratio, 1936); Shannon (logarithm as the unique additive composition for independent systems, 1948); Landauer ($k_BT\ln 2$ per bit erasure, 1961).
+**Bespoke step:** Application of the Crooks/Schnakenberg/DeDonder log-rate-ratio affinity to a sustained-NESS gain/loss pair $(G_0, L)$. The three "independent" reasons (threshold symmetry, additivity across compositions, $\ln 2$ Landauer alignment) are the three classical faces of the same affinity structure — Crooks/Schnakenberg in stochastic thermodynamics, Shannon's additivity axiom in information theory, Landauer in computation. cdv1 §The chit unit already states this consolidation; receipts now match.
 
-### §6 — heat-tax relation: $L_{n+1} = L_{n+1}^{(0)} + \alpha \langle \sigma_n \rangle$
-**Type:** bespoke.
+### §6 — heat-tax relation: $L_{n+1} = L_{n+1}^{(0)} + \alpha \langle \sigma_n \rangle
+**Type:** composition.
 **Shard:** Each meta-ledger ascent coarse-grains a level-$n$ flow whose Harada–Sasa entropy production rate $\langle \sigma_n \rangle$ becomes ambient noise to level $n+1$. The decay rate at $n+1$ inherits this noise additively, attenuated by $\alpha$ (the ledger attenuation factor dictated by $\mathcal{C}$). Thermodynamic conjugate to v9's informational tower: v9 bounds informational compression, this bounds the heat compression cannot avoid.
-**Open:** Closed-form $\alpha(\epsilon)$. Conjecture: $\alpha \propto (1 - \epsilon)$, so as compression saturates ($\epsilon \to 1$), the heat tax inflates without bound — Complexity-Wall coincidence between informational and thermodynamic divergence. Not derived.
+**Closure:** Closed-form $\alpha(\epsilon) = \alpha_0(1-\epsilon)$ derived in §6 — $\alpha(\epsilon)$ closed form (Landauer pin) below.
+
+### §6.5 — Meta-ledger flow construction (closes v9 receipts §RG closure Tier 2)
+**Type:** composition.
+**Cite:** Mori–Zwanzig projection (cdv1 §9 — universal two-mode kernel); Haken slaving (cdv1 §17 — pattern formation); heat-tax recursion (cdv1 §6); Landauer-pinned coupling (cdv1 §6); Wilson–Polchinski functional RG (standard).
+**Bespoke step:** Construction of v9's abstract compression operator $\mathcal{C}$ as the level-to-level map on the space of slow-manifold generators, induced by MZ projection + heat-tax substitution into the universal two-mode kernel. The continuous flow $T_\nu$ between integer levels is the integration of the running-coupling β-functions in level-coordinate $\nu$; no principal branch of $\ln\mathcal{C}$ is required because the continuous generator is constructed directly rather than recovered from a discrete operator. The Banach Reference Isometry $\phi$ (Banach substrate proposal §6 local coinage) is the slow-manifold projection $\Pi_{\text{slow}}$. $\epsilon$ is the leading IR linear-stability eigenvalue of $D\mathcal{A}_{n+1}/D\mathcal{A}_n|_{\mathcal{M}_2}$, derived from the Landauer-pinned heat-tax coefficient.
+
+**Closes v9 receipts §RG closure Tier 2 (Wilson–Kadanoff structural equivalence)** at type-identity: both this flow and Wilson–Polchinski functional RG are running-coupling flows on a space of generators with an IR-attracting fixed point. The three-step proof strategy from v9 §Compression Axiom maps directly onto the construction:
+- (i) Locality factorization: spectral gap of $\mathcal{C}$ at the IR fixed point gives $\mathcal{O}(\epsilon^b)$ cross-window decay (Banach contraction restricted to $\mathcal{T}/\!\sim$).
+- (ii) Block-variable capacity preservation: heat-tax substitution coarse-grains the universal two-mode kernel into its own form at level $n+1$; the capacity bound transports under coarse-graining by standard RG arguments on the same kernel.
+- (iii) Conjugating isometry: $\phi = \Pi_{\text{slow}}$ by construction.
+
+**Substrate scope.** Markovian / spectral-gap regime ($\beta_{\text{mem}} = 1$) is the proven scope. Non-Markovian Caputo $\beta_{\text{mem}} < 1$ uses fractional-RG generalization — same construction with Mittag-Leffler-rescaled β-functions on the space of generators; Hurst-class conservation under coarse-graining is the per-substrate-class verification residual.
+
+**Open** (substrate-conditional, downgraded from foundational): specific functional form of the β-functions on the space of generators is substrate-conditional and reads off from each substrate's heat-tax coefficients. Closed-form bounds on $\beta_{\text{mem}}$-renormalization in the fractional case is the remaining classification residual.
 
 ### §7 — Theorem 9 via adiabaticity
 **Type:** composition.
@@ -40,9 +51,10 @@ None of the three individually forces the log, but together they rule out $(G_0 
 **Bespoke step:** Identification of the four bifurcation regimes (deep cooperative, asymmetric slaving, decoupled, competitive exclusion) with v9's named pair-types in the Composite catalogue. Recovers the catalogue as fixed points of a single field equation — the load-bearing claim that v9's discrete pair structure is the kernel's phase portrait, not an independent enumeration.
 
 ### §10 — $k_{\text{frust}}$ as derived (not asserted) topological invariant
-**Type:** bespoke.
-**Shard:** For $N \ge 3$ modes coupled in a closed obstructive-$\gamma$ chain, the field equations have no stationary synchronized fixed point. Cross-saturation terms $\gamma_{ij}\rho_i\rho_j$ continuously conflict; the system is forced into a cyclic pumping–fraying trajectory where some mode's chit goes negative each cycle. Time-averaged maintenance budget diverges. Drive-independence follows because the cross-saturation conflict is internal to the kernel mathematics, not an absolute-resource shortage. This *recovers* v9's "topological invariant, not resolvable by $D$" assertion as a *consequence* of the kernel rather than a separate axiom.
-**Open:** Quantitative bounds on cycle period and time-averaged divergence rate as functions of $N$ and $\gamma$ topology.
+**Type:** composition.
+**Cite:** May–Leonard (cyclic three-species Lotka–Volterra; heteroclinic cycle with no interior equilibrium, 1975); Hofbauer–Sigmund (*Evolutionary Games and Population Dynamics*, 1998 — comprehensive treatment of cyclic attractors); Toulouse (frustration in spin glasses, 1977); Harary (structural balance of signed graphs, 1953); Mézard–Parisi–Zecchina (sharp threshold for sign-frustrated cycles in random $k$-SAT, 2002).
+**Bespoke step:** Application of the May–Leonard / Hofbauer–Sigmund heteroclinic-cycle result to the §9 universal two-mode kernel extended to $N \ge 3$ modes with obstructive sign-product on the $\gamma$-cycle. The "no stationary synchronized fixed point + cyclic pumping-fraying + drive-independence" structure is exactly the cyclic Lotka–Volterra heteroclinic attractor with the obstructive-$\gamma$ cycle replacing rock-paper-scissors dominance. This recovers v9's "topological invariant, not resolvable by $D$" assertion as a structural consequence of the kernel + Harary structural balance, not a separate axiom.
+**Open:** Quantitative bounds on cycle period and time-averaged divergence rate as functions of $N$ and $\gamma$ topology — folds into §16's Schnakenberg $J_{ss}(N, \gamma\text{-graph})$ open item, both close together.
 
 ### §5 — $\eta(\Gamma^*)$ closed form
 **Type:** open.
@@ -70,7 +82,7 @@ None of the three individually forces the log, but together they rule out $(G_0 
 **Type:** composition.
 **Cite:** Crooks (1999); Seifert (*Stochastic Thermodynamics*, 2012); Schnakenberg (1976); Barato–Seifert (TUR, 2015); Horowitz–Gingrich (2020); Sagawa–Ueda (2010).
 **Bespoke step:** Recognition that the chit's $\ln(G_0/L)$ form is the Crooks rate-ratio entropy production structure — the three independent reasons in receipts §2 (threshold symmetry / additivity / $\ln 2$ Landauer alignment) are three faces of the same rate-ratio log structure rather than independent justifications. Trajectory entropy production reading of §3 fraying as the *typical* trajectory, with fraying-resistance trajectories exponentially rare in $|\sigma|$ (detailed fluctuation theorem). TUR applied to maintenance current as the framework's first explicit precision-cost constraint, composing with §6's inherited-noise channel via the level-$n$ TUR. Schnakenberg cycle decomposition as the precise quantitative content of §10's drive-independent divergent maintenance claim — cycle currents in topologically obstructed cycles are forced regardless of $D$. Sagawa–Ueda extended second law as the quantitative form of §2's Bit/Chit conjugacy: bit-readout holdings can sustain at lower chit by paying via mutual information $\Delta I$, sharpening "two faces of one thermodynamic ledger" into $\langle\sigma\rangle \ge -\Delta I$.
-**Open:** Closed-form Schnakenberg cycle currents for each Composite catalogue row (§12); TUR-tightness as substrate-class universality observable (§12).
+**Closure:** Closed-form Schnakenberg cycle currents per Composite catalogue row addressed in §16 — Schnakenberg cycle currents (master-equation embedding + continuous-orbit form) below.
 
 ### §17 — Information-theoretic content (information theory)
 **Type:** composition.
@@ -116,8 +128,10 @@ $$\eta(\Gamma^*) = 1 - B(c,\rho), \qquad B(c,\rho) = \frac{\rho^c/c!}{\sum_{k=0}
 (Erlang's loss formula). Limits: $\rho \ll c \Rightarrow B\to 0,\ \eta\to 1$ (sparse, no blocking); $\rho \to c \Rightarrow B\to 1,\ \eta\to 0$ (Hopfield ceiling). The substrate-conditional split inherits from §22: hard-wall substrates (QEC at logical-error onset) replace $B$ by the indicator $\mathbb{1}[|\Gamma^*|\ge c]$ — one error breaks the code, no probabilistic blocking; soft-edge substrates (behavioral) carry $B$ as written. Closes v9 `§Capacity` `unrecovered` by composition: v9's static $\sqrt{D}$ ceiling is the $c$ parameter; the dynamic side is Erlang-B blocking on top of it. Not novel — the framework already named Erlang-B as the form; this entry pins the explicit composition.
 **Open:** The $\rho$ ↔ kernel-parameter mapping (which combination of $G_{\text{total}}$, $\gamma$, $d_{\text{avg}}$, and arrival statistics constitutes the offered load) is substrate-conditional; closed form awaits substrate-class characterization.
 
-### §6 — $\alpha(\epsilon)$ closed form (Landauer pin of the conjecture)
-**Type:** bespoke (closure of the conjecture in §6 entry above).
+### §6 — $\alpha(\epsilon) closed form (Landauer pin of the conjecture)
+**Type:** composition.
+**Cite:** Landauer ($k_BT\ln 2$ per bit erasure, 1961); Bennett (reversible computation; Landauer in conditional limits, 1973, 1982); Sagawa–Ueda (information-thermodynamics inequalities, 2010, 2012); Esposito–Van den Broeck ("three faces of the second law"; efficiency-at-maximum-power and the $(1-\eta)$ dilution structure, 2010).
+**Bespoke step:** Application of standard Landauer dilution-by-retained-fraction to the heat-tax tower's per-level compression. At level $n$ the compression operator $\mathcal{C}_n$ retains $\epsilon$ of informational mass $\Phi_n$ and erases $(1-\epsilon)$; the erasure produces Landauer heat $\ge (1-\epsilon)\Phi_n k_BT_n\ln 2$ per ascent and contributes entropy production rate $\langle\sigma_n\rangle \ge (1-\epsilon)\Phi_n\ln 2 / \tau_n$. The conductivity $\alpha$ routing $\langle\sigma_n\rangle$ as ambient noise into $L_{n+1}$ inherits the $(1-\epsilon)$ prefactor: at $\epsilon\to 1^-$ no information is erased, no Landauer heat is produced, no heat-tax can be incurred. Hence $\alpha(\epsilon) = \alpha_0(1-\epsilon)$. Cumulative tower tax to depth $N$ is the standard geometric series $\sum_{n=0}^{N-1}(1-\epsilon)\epsilon^n = 1-\epsilon^N \xrightarrow{N\to\infty} 1$ for $\epsilon<1$, divergent at $\epsilon=1$. Closes the Complexity Wall as thermodynamic singularity by the canonical Landauer-dilution structure rather than a framework-specific construction.
 **Shard:** Pin for $\alpha \propto (1-\epsilon)$. At meta-ledger level $n$, the compression operator $\mathcal{C}_n$ retains fraction $\epsilon$ of level-$n$ informational mass $\Phi_n$ and erases fraction $(1-\epsilon)$. By Landauer, that erasure produces heat $\ge (1-\epsilon)\Phi_n k_B T_n \ln 2$ per ascent and contributes entropy production rate $\langle\sigma_n\rangle \ge (1-\epsilon)\Phi_n \ln 2 / \tau_n$ where $\tau_n$ is the level-$n$ turnover timescale. The conductivity $\alpha$ that routes $\langle\sigma_n\rangle$ as ambient noise into $L_{n+1}$ must carry the $(1-\epsilon)$ prefactor: at $\epsilon\to 1^-$ no information is erased, no Landauer heat is produced, no heat-tax can be incurred. Hence
 $$\alpha(\epsilon) = \alpha_0\,(1-\epsilon)$$
 with $\alpha_0$ a substrate-conditional thermal-conductivity constant (units: loss rate per entropy-production rate). Cumulative tower tax to depth $N$:
@@ -139,28 +153,24 @@ $$K_{AB} = -\gamma_{AB}\,\frac{\sqrt{\rho_A\rho_B}}{\rho_{\text{sat}}}\,\frac{1}
 The geometric-mean-amplitude factor $\sqrt{\rho_A\rho_B}/\rho_{\text{sat}}$ is the dimensionally-correct coupling carrier. The $(1+4Q^2)^{-1/2}$ susceptibility crossover interpolates the two regimes the framework already names: weak-coupling/$c$-regime ($Q\gg 1$) recovers the standard $1/(2Q)$ Kuramoto suppression, $K_{AB}\approx -\gamma_{AB}\sqrt{\rho_A\rho_B}/(2Q\rho_{\text{sat}})$; strong-coupling/$s$-regime ($Q\lesssim 1$) gives direct phase locking, $K_{AB}\approx -\gamma_{AB}\sqrt{\rho_A\rho_B}/\rho_{\text{sat}}$. Sign convention follows v9: $\gamma_{AB}<0$ (cooperative) ⇒ $K_{AB}>0$ ⇒ in-phase lock; $\gamma_{AB}>0$ (competitive) ⇒ $K_{AB}<0$ ⇒ anti-phase lock. Closes cdv1_compressed §Phase-locking's explicitly-flagged "deep-cooperative requires separate treatment" — the deep-cooperative regime is the $Q\lesssim 1$ limit, covered by the same closed form rather than a separate one.
 
 ### §16 — Schnakenberg cycle currents per Composite catalogue row (master-equation embedding + continuous-orbit form)
-**Type:** bespoke + composition.
-**Cite:** Seifert (*Stochastic Thermodynamics*, 2012); Qian (cycle-current / NESS thermodynamics on continuous orbits, 2001); Schnakenberg (1976); Doi–Peliti field-theory embedding (standard).
-**Shard:** Closes §16's "closed-form Schnakenberg cycle currents for each Composite catalogue row" open item via **two complementary closures**: the master-equation embedding (discrete-microstate reading, establishes Schnakenberg applies even off limit-cycle rows) and the continuous-orbit form (Langevin-on-ring, the discipline-native Character-projection reading for limit-cycle rows).
+**Type:** composition.
+**Cite:** Schnakenberg (network thermodynamics; cycle decomposition of NESS, 1976); Seifert (*Stochastic Thermodynamics, Fluctuation Theorems and Molecular Machines*, Reports on Progress in Physics 75, 126001, 2012); Qian (cycle-current / NESS thermodynamics on continuous orbits, 2001); Gallavotti–Cohen (fluctuation theorem for entropy production, 1995); Lebowitz–Spohn (large-deviation framework for cycle currents, 1999); Doi–Peliti (field-theory embedding of master equations, standard); May–Leonard (cyclic Lotka–Volterra as cycle-current archetype, 1975).
+**Bespoke step:** Application of Schnakenberg cycle decomposition through *two complementary readings* of the §9 universal two-mode kernel.
 
-**Embedding closure (discrete reading).** The cycle affinity is *not* a log-ratio of bare $\gamma$ values — $\gamma$ are kernel parameters, not transition rates. A symmetric-$\gamma$ frustrated 3-cycle written naively as $\ln(\gamma_{AB}\gamma_{BC}\gamma_{CA}/\gamma_{BA}\gamma_{CB}\gamma_{AC})$ gives $\ln(1)=0$, contradicting drive-independent cycle current; non-reciprocal cases with negative sign-product give $\ln$ of a negative number. Schnakenberg operates on the **master-equation graph** induced by the §9 kernel's Doi–Peliti / chemical-reaction-network embedding, with elementary reactions $\{n_i\to n_i\pm 1\}$ carrying compound rates that are functions of $\gamma_{ij}$ and the $n_j$. Cycles live in the state graph, not the mode graph; the obstructive sign-product determines which compound rates fall into $\Pi_+$ vs $\Pi_-$.
+**Embedding reading.** Schnakenberg operates on the master-equation graph induced by the kernel's Doi–Peliti embedding (elementary reactions $\{n_i\to n_i\pm 1\}$ with compound rates as functions of $\gamma_{ij}$ and the $n_j$), not on the raw mode graph. The naive "$\ln(\gamma_{AB}\gamma_{BC}\gamma_{CA}/\gamma_{BA}\gamma_{CB}\gamma_{AC})$" affinity contradicts drive-independence and gives $\ln(\text{negative number})$ in non-reciprocal cases; cycles live in the state graph. The obstructive sign-product determines which compound rates fall into $\Pi_+$ vs $\Pi_-$.
 
-**Orbit closure (continuous reading).** For the §13/§14 limit-cycle attractors (rows 6 and 7), parameterize the orbit by phase $\theta\in[0,2\pi)$ with deterministic phase velocity $v(\theta)$ from the kernel and effective diffusion $D(\theta)$ from bath noise. Standard Langevin-on-ring stochastic thermodynamics gives steady-state cycle current $J_{ss}$ and orbit affinity
-$$\mathcal{A} = \oint \frac{v(\theta)}{D(\theta)}\,d\theta = \ln\!\frac{\mathcal{P}_+}{\mathcal{P}_-}$$
-(by the steady-state fluctuation theorem). Entropy production for the frustrated limit cycle:
-$$\sigma_{\text{frust}} = J_{ss}\oint \frac{v(\theta)}{D(\theta)}\,d\theta.$$
-Topology guarantees $v(\theta)$ does not integrate to zero; drive-independence enters because $v/D$ inherits scale structure set by the obstructive $\gamma$-graph and bath, not by overall drive amplitude.
+**Orbit reading.** For limit-cycle rows (§13/§14), the Langevin-on-ring form $\mathcal{A} = \oint v(\theta)/D(\theta)\,d\theta = \ln(\mathcal{P}_+/\mathcal{P}_-)$ gives the orbit affinity via the steady-state fluctuation theorem (Gallavotti–Cohen / Lebowitz–Spohn). Topology guarantees $v(\theta)$ does not integrate to zero; drive-independence enters because $v/D$ inherits scale structure set by the obstructive $\gamma$-graph and bath, not by overall drive amplitude.
 
 Per Composite-catalogue row:
 
 | Row | Topology | Cycle current |
 |---|---|---|
 | 1–5 (no cycle) | Tree | $J_C=0$; $\langle\sigma\rangle$ from edge flow alone |
-| 6 ($k_{\text{frust}}$) | Topologically obstructed orbit | $\sigma_{\text{frust}} = J_{ss}\oint v(\theta)/D(\theta)\,d\theta$, drive-independent |
+| 6 ($k_{\text{frust}}$) | Topologically obstructed orbit (May–Leonard archetype) | $\sigma_{\text{frust}} = J_{ss}\oint v(\theta)/D(\theta)\,d\theta$, drive-independent |
 | 7 (oscillatory–$c$) | Hopf limit cycle | $J_{\text{cycle}}=\omega_{RO}/2\pi$; affinity $=\ln(\rho_{\max}/\rho_{\min})$ per cycle |
 
-The continuous-orbit form is discipline-native (Character continuous traversal); the embedding form establishes Schnakenberg applies even for non-limit-cycle rows. Closes §10's "drive-independent cycle current" claim's mechanism by giving it explicit functional content.
-**Open:** Closed-form $J_{ss}(N,\gamma\text{-graph})$ at given amplitudes — folds the §10 quantitative-bounds item into one open closure.
+The continuous-orbit reading is discipline-native (Character continuous traversal); the embedding reading establishes Schnakenberg applies even off limit-cycle rows. Closes §10's "drive-independent cycle current" mechanism by giving it functional content via standard machinery.
+**Open:** Closed-form $J_{ss}(N, \gamma\text{-graph})$ at given amplitudes — folds in §10's quantitative-bounds item; both close together.
 
 ### §20 — Lyapunov function for non-frustrated multi-mode topologies (relative-entropy form)
 **Type:** composition.

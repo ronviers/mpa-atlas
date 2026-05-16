@@ -98,6 +98,8 @@ Two substrate-effect axes propagate level-$n$ activity to level $n+1$:
 
 Heat-tax coupling pinned by Landauer: $\alpha_\sigma(\epsilon) = \alpha_{\sigma,0}\,(1-\epsilon)$, where $\alpha_{\sigma,0}$ is a substrate-conditional thermal-conductivity constant. Cumulative tower tax to depth $N$ is $\propto 1-\epsilon^N$. The Complexity Wall is a *cumulative-mass* thermodynamic singularity at $\epsilon \to 1$: per-level Landauer heat vanishes there (no erasure, no cost), while cumulative informational mass $\Phi_{\text{total}} = \Phi^{(0)}/(1-\epsilon)$ diverges; the singularity lives in the cumulative mass, not in per-level conductivity.
 
+**Meta-ledger flow in continuous register.** The heat-tax recursion is the level-to-level map on the space of slow-manifold generators. Construction: at level $n$, Mori–Zwanzig projection (§Universal two-mode kernel) onto the slow manifold yields generator $\mathcal{A}_n = \Pi_{\text{slow}}\mathcal{A}_n^{\text{full}}\Pi_{\text{slow}}$. The heat-tax substitution $L_{n+1} \leftarrow L_{n+1}^{(0)} + \alpha_\sigma\langle\sigma_n\rangle + \alpha_\Sigma\langle\Sigma_n\rangle$ into the level-$(n+1)$ kernel induces $\mathcal{A}_n \mapsto \mathcal{A}_{n+1}$. This is a Wilson–Polchinski-style functional RG on the space of generators; the continuous level-coordinate $\nu$ integrates the running-coupling β-functions across non-integer levels. The compression rate $\epsilon$ is the leading IR linear-stability eigenvalue of $D\mathcal{A}_{n+1}/D\mathcal{A}_n|_{\mathcal{M}_2}$, Landauer-pinned to the substrate's thermal-conductivity coefficient via $\alpha_\sigma(\epsilon) = \alpha_{\sigma,0}(1-\epsilon)$. The slow-manifold projection $\Pi_{\text{slow}}$ is the level-projection operator: it is what v9 §Compression Axiom names abstractly as the conjugating isometry $\phi$ in the Wilson–Kadanoff structural-equivalence statement.
+
 Sustained level-$n+1$ coherence requires $\ln(G_{0,n+1}/L_{n+1}) > 0$. Fraying at level $n$ inflates $L_{n+1}$ via three independent channels:
 
 1. $\alpha_\sigma\langle\sigma_n\rangle$ heat-tax spike (this section).
@@ -189,7 +191,7 @@ $\gamma_s$ is the substrate's slow-resource turnover rate (population decay in l
 
 **Recovery profile is a third probe-class signature** alongside spontaneous FDR (steady-state stochastic) and load-driven fraying (sustained-load trajectory).
 
-**Slow-manifold reading of $s$-aging.** At threshold, leading eigenvalue's real part vanishes; dynamics collapse onto centre manifold. CK aging signature *is* the slow-manifold trace: $P_s$ = slow-manifold fixed-point amplitude; $\alpha_s$ = slow eigenvalue's residual scaling against saturating gain.
+**Slow-manifold reading of $s$-aging.** At threshold, leading eigenvalue's real part vanishes; dynamics collapse onto centre manifold. CK aging signature *is* the slow-manifold trace: $P_s$ = slow-manifold fixed-point amplitude; $\alpha_s$ = slow eigenvalue's residual scaling against saturating gain. The same projection $\Pi_{\text{slow}}$ that isolates the $s$-regime centre manifold is the level-projection operator for the meta-ledger ascent (§Heat-tax tower) — the slow-manifold reading of $s$-aging and the meta-ledger flow's compression operator are the same projection at two scales (within-level dynamics vs. level-to-level transport).
 
 **Bifurcation summary** (codimension-1 explicit in framework):
 

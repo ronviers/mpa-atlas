@@ -55,17 +55,33 @@ When a session proves, derives, or composes a result that becomes a line in comp
 
 ### §Compression Axiom — $\epsilon = \|\mathcal{C}\|_{op} < 1$ contraction
 **Type:** composition.
-**Cite:** Banach fixed-point theorem (standard); Wilson–Kadanoff RG block-spin (standard); Krzakala et al. 2007 cavity-method frozen core (inline).
-**Bespoke step:** Application of Banach contraction to the meta-ledger ascent operator $\mathcal{C}$. Once granted, closure conditions (operator norm < 1 ⇒ geometric convergence ⇒ Convergent Tower) follow. Tier 1 results (Convergent Tower, capacity bound, FDR signatures) are load-bearing on this step. Tier 2 (Wilson–Kadanoff structural equivalence) is open by compressed's own admission.
+**Cite:** Banach fixed-point theorem (standard); Wilson–Polchinski functional RG on space of generators (standard); cdv1 §Universal two-mode kernel (Mori–Zwanzig projection); cdv1 §Pattern formation (Haken slaving); cdv1 §Heat-tax tower (level-to-level map + Landauer pinning); Krzakala et al. 2007 (cavity-method frozen core, inline).
+**Bespoke step:** Naming of cdv1's heat-tax tower flow on the space of slow-manifold generators as the compression operator $\mathcal{C}$ in v9's abstract register (cdv1 receipts §6.5). Once the cdv1 construction is in place, v9's Banach contraction $\epsilon < 1$ follows as IR linear-stability of $D\mathcal{A}_{n+1}/D\mathcal{A}_n|_{\mathcal{M}_2}$; the closure conditions (geometric convergence ⇒ Convergent Tower, capacity bound, FDR signatures) follow as before.
+**Status:** Tier 1 (load-bearing) closes by composition. Tier 2 (Wilson–Kadanoff structural equivalence) closes by type-identity — see §RG closure entry below, now transitioned from open to closed.
+
+### §Asymptotic closure — no exact 0 or 1 in framework predictions at non-asymptotic operating points
+**Type:** structural invariant + survey.
+**Cite:** v9 §Boolean section ("$\mathcal{M}_2$ terminal attractor; repeated compression contracts toward $\mathcal{M}_2$ geometrically"); v9 §Compression Axiom ($\varepsilon < 1$ strict; Complexity Wall as $\varepsilon \to 1$ singularity); cdv1 §The chit unit ("Limit-point status. chit = 0 is a critical limit, not an attainable operating state. Substrates approach it asymptotically from either side"); cdv1 §gFDR signatures ($X_c \ll 1$ in deep $c$; $X_r$ unit slope at equilibrium); cdv1 §Universal two-mode kernel ($\beta_{\text{mem}} = 1$ Markovian limit).
+**Bespoke step:** Survey of every candidate exact-0/1 value in v9 + cdv1 (16 candidates audited 2026-05-15) resolves consistently: each is either an asymptotic limit (named explicitly with $\ll$, $\approx$, $\to$, or open-interval notation), a normalization convention (arbitrary scale, not a framework prediction), or a categorical label derived from continuous parameters where the categorical boundary is itself singular. No counterexample found across v9 + cdv1. The structural commitment is therefore that MPA carries no exact 0 or 1 at any non-asymptotic operating point, and this is a load-bearing identity of the continuous-physics framework. The only conceivable falsifier is at cosmic heat death (where equilibrium FDR would predict $X_r = 1$ exactly); standard cosmology has heat death as $t \to \infty$, never exactly reached, so the falsifier exists in principle but at the asymptotic boundary of physical reachability. Survey table archived at `mpa-conform/docs/asymptotic-closure-proposal.md` §Survey.
 
 ### §Trail-class metric — $\rho([A],[B]) = \lim_n \epsilon^{-n}\,\|\mathcal{C}^n(d_A - d_B)\|$
-**Type:** bespoke.
-**Shard:** Well-definedness rests on the spectral gap (isolated leading eigenvalue $\epsilon$ of $\mathcal{C}$). Faster-decaying modes vanish under $\epsilon^{-n}$ rescaling, leaving only the leading-eigenmode amplitude of $d_A - d_B$. Distinct from $\varepsilon_n = \|\mathcal{C}_n\|_{op}$, which measures rate of compression at level $n$ rather than distance between trail classes. At the Complexity Wall the spectral gap closes; $\rho$ is undefined there by construction.
+**Type:** composition.
+**Cite:** Krein–Rutman theorem (1948) for positive contracting operators; von Mises power iteration (1929) for the rescaled-limit construction; Kato "Perturbation Theory for Linear Operators" (1966) for spectral projection and exceptional points; Heiss (2004) / Berry (2004) for non-Hermitian-degeneracy phenomenology near gap closure.
+**Bespoke step:** Identification of $\rho$ as the Krein–Rutman dominant-eigenmode amplitude. Well-definedness rests on the spectral gap (isolated leading eigenvalue $\epsilon$ of $\mathcal{C}$). Faster-decaying modes vanish under $\epsilon^{-n}$ rescaling, leaving only the leading-eigenmode amplitude of $d_A - d_B$. Distinct from $\varepsilon_n = \|\mathcal{C}_n\|_{op}$, which measures rate of compression at level $n rather than distance between trail classes. At the Complexity Wall the spectral gap closes; $\rho$ is undefined there by construction.
 **Open:** Closed-form behavior of $\rho$ as the spectral gap closes. Does it diverge? Does the gap close gracefully?
+**Connection to slow-manifold projection (added).** With $\mathcal{C}$ constructed via cdv1's heat-tax + MZ + slow-manifold construction (§Compression Axiom entry above), the trail-class metric $\rho$ is the natural metric on the slow-manifold-projected trail space $\Pi_{\text{slow}}\mathcal{T}$. The $\epsilon^{-n}$ rescaling that defines the metric is dual to the IR linear-stability eigenvalue $\epsilon$ of the level-to-level map — distance between trail classes is measured by the leading-eigenmode amplitude that survives all faster-decaying modes' suppression.
 
 ### §RG closure — Tier 2 (Wilson–Kadanoff structural equivalence)
-**Type:** open.
-**Status:** Compressed itself flags this as a classification conjecture with a three-step proof strategy: (i) trail-norm locality factorizes over $\tau_{obs}$-windows with exponentially small cross-terms; (ii) block variables $D_k$ at scale $b$ satisfy $D^{(b)} = f(b, D)$ with the same capacity bound; (iii) an isometry $\phi$ on $\mathcal{T}$ conjugates $\mathcal{C}$ to block-averaging on the slow manifold. Not load-bearing; framework runs on Tier 1 (Banach contraction).
+**Type:** composition (closed; previously open).
+**Cite:** cdv1 receipts §6.5 — Meta-ledger flow construction; cdv1 §Heat-tax tower; cdv1 §Universal two-mode kernel; cdv1 §Pattern formation; Wilson–Polchinski functional RG (standard).
+**Bespoke step:** Type-identity between v9's meta-ledger flow and Wilson–Kadanoff/Wilson–Polchinski functional RG established via cdv1's construction. Both are running-coupling flows on a space of generators with an IR-attracting fixed point ($\mathcal{M}_2$). The three-step proof strategy maps directly:
+- (i) Locality factorization: spectral gap of $\mathcal{C}$ at the IR fixed point gives $\mathcal{O}(\epsilon^b)$ cross-window decay.
+- (ii) Block-variable capacity preservation: heat-tax substitution coarse-grains the universal two-mode kernel into its own form at level $n+1$, transporting the capacity bound by standard RG arguments.
+- (iii) Conjugating isometry: $\phi = \Pi_{\text{slow}}$ by construction (MZ + Haken slaving).
+
+The framework is no longer running on Tier 1 alone; structural equivalence is grounded in cdv1's continuous-physics construction.
+**Substrate scope:** Markovian / spectral-gap regime ($\beta_{\text{mem}} = 1$) is proven scope. Non-Markovian Caputo $\beta_{\text{mem}} < 1$ uses fractional-RG generalization (Mittag-Leffler-rescaled β-functions); per-substrate-class Hurst-class conservation under coarse-graining is the verification residual.
+**Open** (substrate-conditional, downgraded from foundational): specific functional form of the β-functions on the space of generators per substrate class.
 
 ### §Deformation calculus — Theorem 9
 **Type:** unrecovered.
@@ -73,9 +89,9 @@ When a session proves, derives, or composes a result that becomes a line in comp
 **Note:** Character §7 recovers Theorem 9 as the discrete-time limit of the adiabaticity bound — that's an *alternative* justification path, not a reconstruction of the original. Cross-link if the alternative holds up under closer reading.
 
 ### §Substrate-conditional reading — F.1 Markovian sign caveat
-**Type:** bespoke.
-**Shard:** Stiff/Markovian substrates (overdamped Langevin, syndrome streams) produce kernel-width artefact: the trail vector responds to the *derivative* of the stimulus rather than its level (in $\dot x = -\partial U/\partial x + \xi$, response sign tracks $\partial U/\partial x$ not $U$). Sign-flip of $\gamma_{AB}$ readings is the consequence; $|\gamma|$ + FDR shape are the invariants that survive the artefact. Confirmed against the surface-code substrate.
-**Cite:** Standard overdamped-Langevin response theory (Risken).
+**Type:** composition.
+**Cite:** Risken "The Fokker-Planck Equation" (1989) for overdamped-Langevin response theory; Sekimoto "Stochastic Energetics" (2010); Seifert "Stochastic thermodynamics, fluctuation theorems and molecular machines" (Reports on Progress in Physics 75, 126001, 2012). The kernel-width artefact is textbook for the stiff / overdamped limit; empirical support spans colloidal physics, polymer dynamics, syndrome streams, neural mean-field models.
+**Bespoke step:** Identification of $\gamma_{AB}$ sign as the framework-register variable that flips under the kernel-width artefact, and $|\gamma|$ + FDR shape as the substrate-class-invariant readings that survive. Confirmed against the surface-code substrate.
 
 ### §Surface-code identification
 **Type:** empirical.
