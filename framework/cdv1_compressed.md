@@ -153,7 +153,7 @@ Multi-mode pattern selection for $N \ge 3$ admits chimera states (§Phase-lockin
 
 ## Topological drain $k_{\text{frust}}$
 
-$N \ge 3$ closed chain with obstructive $\gamma$ topology has no stationary synchronised fixed point. Cross-saturation conflict is internal to the kernel mathematics; drive-independent. Recovers v9's "not resolvable by $D$" assertion as kernel consequence rather than separate axiom.
+$N \ge 3$ closed chain with obstructive $\gamma$ topology admits no *equilibrium* (detailed-balance) steady state: its stationary state is irreducibly a NESS carrying a drive-independent, topologically-forced Schnakenberg cycle current. **This broken-detailed-balance circulation — not deterministic fixed-point non-existence — is the defining invariant** (§Framework-primitives §8 triality's underlying fact). The deterministic flow realises it in two sub-regimes by the sign of the relaxation eigenvalue's real part: a *stable circulating focus* (Re $<0$, complex spectrum — spirals into a NESS that still circulates) or a *repelling focus + attracting limit cycle* (Re $>0$; §Stability). Cross-saturation conflict is internal to the kernel mathematics; drive-independent. Recovers v9's "not resolvable by $D$" assertion as kernel consequence rather than separate axiom.
 
 **Six-register reading of one phenomenon:**
 
@@ -161,10 +161,10 @@ $N \ge 3$ closed chain with obstructive $\gamma$ topology has no stationary sync
 2. Hopf-unstable spiral with attracting limit cycle (§Stability): cooperative fixed point repels; system on attracting orbit.
 3. Frustrated sync (§Phase-locking): pairwise lock-attempts broken by topological obstruction, re-form around different weakest mode.
 4. Schnakenberg cycle current with divergent action (§Thermodynamic and informational accounting): $J_C\ln(\prod_+k/\prod_-k)$ forced regardless of $D$.
-5. Non-existence of Lyapunov function $\mathcal{V}$ (§Active modulation): no positive-definite decreasing scalar.
+5. Non-existence of a *gradient* Lyapunov $\mathcal{V}$ (§Active modulation): the flow has an irreducible circulating part — a stability-Lyapunov may exist (a stable focus has one), but no free-energy whose gradient *is* the dynamics (detailed balance is broken).
 6. Priority-queue inversion (§Load-handling): asymmetric load absorption with no symmetric back-flow.
 
-These six register-readings collapse at the topology level to one fact (no $P_{ss}$ exists in the excised parameter region); see §Framework primitives consolidation §8 for the topological triality.
+These six register-readings collapse at the topology level to one fact (the stationary state is irreducibly a circulating NESS — broken detailed balance); see §Framework primitives consolidation §8 for the topological triality.
 
 gFDR signature: transient negative response $N_f$ in loop-level apparatus.
 
@@ -180,6 +180,8 @@ The §Bridge eigenvalue's real part sets the regime; its full complex structure 
 | $s$ | $\zeta \to 1$ critical | algebraic settling (= CK aging diagonal long-time tail) | centre manifold at threshold |
 | $r$ | $\zeta > 1$ overdamped | bath relaxation; no oscillator | stable origin |
 | $k_{\text{frust}}$ | repelling cooperative focus | cyclic, no return | attracting limit cycle |
+
+*$k_{\text{frust}}$ sub-regimes.* The repelling-focus + limit-cycle row is the Re$\,>0$ case; a frustrated loop whose amplitude is saturation-clamped is the Re$\,<0$ case — a *stable* focus with **complex** eigenvalues that still circulates (a NESS, $J\neq0$). Both are $k_{\text{frust}}$; the complex spectrum (irreducible rotation), not the sign of Re, is the signature (§Topological drain).
 
 $Q = \omega_{RO}/(2\gamma_{RO})$: cycles-of-headroom observable, conjugate to chit. Chit reads *whether* threshold is cleared; $Q$ reads *how many cycles* of natural oscillation that headroom buys.
 
@@ -472,10 +474,10 @@ Not reducible to each other; substrate may carry one, two, or all three at diffe
 
 **7. $r$-coupling between heat-tax channels 2 and 3.** Channels 2 ($\alpha_\Sigma\langle\Sigma_n\rangle$, scales as $1+Cr^2$) and 3 ($r$-drop sync degradation) share $r$ as driver in *opposing* directions. Substrate active-coupling $C$ (sign: contractile $>0$ / extensile $<0$ / isotropic $\approx 0$) determines balance.
 
-**8. $k_{\text{frust}}$ topological triality.** Three co-implied measurement protocols, one underlying fact (no $P_{ss}$ exists in the excised parameter region):
+**8. $k_{\text{frust}}$ topological triality.** Three co-implied measurement protocols, one underlying fact — **the stationary state is irreducibly a NESS: a topologically-forced, drive-independent circulating current (broken detailed balance)**:
 
-- Dynamical: no stationary fixed point.
-- Informational-geometric: no Fisher geodesic traverses the region — homotopy obstruction.
+- Dynamical: no *equilibrium* (detailed-balance) steady state; the stationary state circulates (the relaxation spectrum is complex). [The earlier "no stationary fixed point" was too strong — a stable circulating focus *is* a fixed point and is genuine $k_{\text{frust}}$; see §Topological drain sub-regimes.]
+- Informational-geometric: no Fisher geodesic / scalar potential generates the circulating flux — homotopy obstruction.
 - Thermodynamic: drive-independent Schnakenberg cycle current forced by orbit topology.
 
 Identity at the underlying-topology level; substrate-specific measurement signatures differ across registers.
