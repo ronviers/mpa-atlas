@@ -1,22 +1,27 @@
 # MPA-Character (operational source of truth)
 
-**Status:** Claim-only operational source of truth, extracted from [`cdv1_unabridged.md`](cdv1_unabridged.md) (the paper). On any disagreement of claim content, this file wins.
+**Status:** Claim-only operational source of truth, under falsifiability discipline: every claim states a predicted measurement on a named substrate (or substrate class) and is mpa-legal (dynamical quantities flow with the operating point; no inert constants in places the physics requires flow).
 
 **Companions:**
-- [`cdv1_unabridged.md`](cdv1_unabridged.md) — public-facing prose-and-prior-art paper. Carries derivations, integrative narrative, paper-grade citations, appendices. Allowed to lag this file by at most one closure.
-- [`cdv1_receipts.md`](cdv1_receipts.md) — line-keyed justifications. Append-only during prove-as-you-go work.
+- `cdv1_unabridged.md` — prose-and-prior-art paper. Allowed to lag this file by at most one closure.
+- `cdv1_receipts.md` — line-keyed justifications and falsifier formalisations.
+- `FALSIFICATION.md` — the open attack front. Read this when asking *what are we trying to break?*
 
-If this file disagrees with [`v9_compressed.md`](v9_compressed.md) on shared primitives, treat as bug. If this file disagrees with receipts, treat as bug.
+If this file disagrees with `v9_compressed.md` on shared primitives, treat as bug. If this file disagrees with receipts on a falsifier formalisation, treat as bug.
 
-**Scope.** Continuous physical economics of sustained NESS traversal — what a structure is *being* against a bath. v9 specifies topology, edge shears $\gamma_{AB}$, and discrete operator algebra; character specifies the driven-dissipative dynamics that traverse it.
+**Scope.** Continuous physical economics of sustained NESS traversal — what a structure is *being* against a bath. v9 specifies topology, edge shears $\gamma_{AB}$, and discrete operator algebra; this file specifies the driven-dissipative dynamics that traverse it.
 
 ---
 
 ## Setting and primitives
 
-A coherence is a macroscopic pattern of continuation maintained against natural dissolution. A holding is the continuous extraction of entropy or application of work that maintains it.
+A **coherence** is a macroscopic pattern of continuation maintained against natural dissolution. A **holding** is the continuous extraction of entropy or application of work that maintains it.
 
-**Primitives.** Maintenance budget $G_0$ (unsaturated active work supplied per unit time, scales with $D$; laser-analogue small-signal gain). Decay rate $L$ (spontaneous relaxation rate to bath; cavity loss).
+**Substrate primitives.** Maintenance budget $G_0$ (unsaturated active work supplied per unit time, scales with $D$; laser-analogue small-signal gain). Decay rate $L$ (spontaneous relaxation rate to bath; cavity loss). Signed edge structure $\gamma_{AB}$ on the mode graph (inherited from v9).
+
+**Derived primitive (operational anchor): $\text{chit} = \ln(G_0/L)$** — headroom above threshold. The framework's operational content keys to chit.
+
+**Topological invariant: $k_{\text{frust}}$.** Receipts §10 lists $k_{\text{frust}}$ as derived (heteroclinic-cycle consequence of the universal kernel + Harary structural balance). Its operational content — *the stationary state is irreducibly a NESS: a topologically-forced circulating current (broken detailed balance)* — survived the R1/R2/R3 falsification ladder (Receipts §846 PROMOTED; FALSIFICATION.md Finding 4). The operational content stands at the level of v9 §Three typed objects + the refinement below; elevation to a numbered framework primitive awaits a real cross-substrate instance (§Open items). See §k_frust drain for content.
 
 ## Bridge to v9
 
@@ -34,28 +39,27 @@ $G_0/L$ and $\lambda_A/D$ are different coordinates on the same regime structure
 
 $$\text{chit} = \ln(G_0/L)$$
 
-The log form is required by stochastic thermodynamics: $\ln(k_+/k_-)$ is the Crooks rate-ratio entropy production per stochastic transition. Three earlier-cited reasons (threshold symmetry, additivity, $\ln 2$ Landauer alignment) are three faces of the same rate-ratio structure, not independent justifications.
+The log form is required by stochastic thermodynamics: $\ln(k_+/k_-)$ is the Crooks rate-ratio entropy production per stochastic transition.
 
-**Markovian / orbit-affinity faces.** The rate-ratio reading is the Markovian specialisation of a per-orbit reading: $\text{chit}_{\text{orbit}} = \oint v(\theta)/D(\theta)\,d\theta$ — the continuous-orbit Schnakenberg affinity. The two faces agree at $\beta_{\text{mem}}=1$ (Markovian limit); for non-Markovian (Caputo-memory) substrates the orbit-affinity face is canonical.
+**Markovian / orbit-affinity faces.** The rate-ratio reading is the Markovian specialisation of a per-orbit reading: $\text{chit}_{\text{orbit}} = \oint v(\theta)/D(\theta)\,d\theta$ — the continuous-orbit Schnakenberg affinity. The two faces agree at $\beta_{\text{mem}}=1$; for non-Markovian (Caputo-memory) substrates the orbit-affinity face is canonical.
 
 **Saturation.** In sustained NESS, saturated gain clamps to loss: $G_{sat} = L$. Chit measures the *unsaturated* excess — headroom above threshold, not operating point.
 
-**Threshold behaviour.** chit $\gg 0 \Rightarrow c$; chit $\to 0^+ \Rightarrow s$ (visible strain, Schawlow–Townes broadening, aging-FDR signature); chit $< 0 \Rightarrow r$.
-Limit-point status. chit = 0 is a critical limit, not an attainable operating state. Substrates approach it asymptotically from either side; the s-regime is a finite window around the limit, never the limit itself. s-window width: drive-axis substrates carry irreducible thermodynamic floor (kT/q); damping-axis vanishes in deterministic limit (F-003-rlc Q=0.5 zero).
+**Threshold behaviour.** chit $\gg 0 \Rightarrow c$; chit $\to 0^+ \Rightarrow s$; chit $< 0 \Rightarrow r$.
+
+**Limit-point status.** chit $= 0$ is a critical limit, not an attainable operating state. Substrates approach it asymptotically; the $s$-regime is a finite window around the limit. Width: drive-axis substrates carry irreducible thermodynamic floor ($kT/q$); damping-axis vanishes in deterministic limit (F-003-rlc $Q=0.5$ zero).
 
 ## Fraying sequence
 
-Load monotonically reduces the chit. Sequence under continuous environmental load (demand-load reduces $G_0$; decay-load raises $L$):
+Load monotonically reduces the chit:
 
 > Saturated holding (chit $\gg 0$, $c$, resilient) → visible strain (chit $\to 0^+$, $s$) → mode-hopping (chit $\approx 0$, $s$ multistability) → sub-threshold collapse (chit $< 0$, $r$).
 
-Trajectory entropy production reading: anomalous fraying-resistance trajectories are exponentially rare in $|\sigma|$ (detailed fluctuation theorem $P(\sigma)/P(-\sigma) = e^\sigma$). The fraying sequence is the *typical* trajectory, not a worst case.
+Detailed fluctuation theorem $P(\sigma)/P(-\sigma) = e^\sigma$: anomalous fraying-resistance trajectories are exponentially rare in $|\sigma|$. The fraying sequence is the *typical* trajectory.
 
 ## gFDR signatures
 
 Coherences are path-dependent NESS; equilibrium FDR fails. The Apparatus reads spontaneous fluctuations $C(\tau)$ and response $\chi(\tau)$. Harada–Sasa: integrated FDR-violation = steady-state entropy production rate $\langle\sigma\rangle$.
-
-**Per-regime invariants** (inherited from v9 §FDR signatures, restated in chit register):
 
 | Regime | Chit | Invariant | Reading |
 |---|---|---|---|
@@ -63,13 +67,19 @@ Coherences are path-dependent NESS; equilibrium FDR fails. The Apparatus reads s
 | $s$ | $\to 0^+$ | $\alpha_s$ slope of aging segment | CK ratio |
 | $s$ | $\to 0^+$ | $P_s = \lim_\tau C(\tau)/C(0)$ | plateau height |
 | $r$ | $< 0$ | $X_r = 1$ | unit-slope FDR |
-| $k_{\text{frust}}$ | non-stationary | $N_f$ transient-negative fraction | spin-glass loop signature |
+| $k_{\text{frust}}$ | non-stationary | drive-independent cycle affinity; complex Jacobian spectrum | spin-glass loop signature; see §k_frust drain |
 
 $\alpha_s$ and $P_s$ are the load-bearing cross-substrate observables.
 
-**Surface-code identification.** Distance-3 rotated memory-Z syndrome streams trace clean $s$-aging at sub-threshold operation, placing surface-code QEC in the Cugliandolo–Kurchan universality class. The framework's most direct cross-substrate empirical content; chit reading of the $s \to r$ migration is the Apparatus's primary cross-substrate test.
+**$s$-regime FDR is two-step** (Receipts §gFDR staged candidate). Quasi-equilibrium ($X=1$) on short lags; FDR-violated aging ($X<1$, slope $\alpha_s$) on long lags. A short-lag $X=1$ reading alone does not place a substrate in $r$ — the long-lag aging segment is the c/s/r discriminator. (Survived 2026-05-20 on driven-critical RFIM: $X=0.118$ via self-overlap + staggered-field estimator. Not the collective magnetisation, which is soft-mode-dominated near criticality and gives unstable $X$.)
 
-**Substrate-conditional reading rules** (inherited from v9 §F): Markovian sign caveat ($\gamma$-sign inversion on stiff substrates); detection-event preprocessing for non-local readouts.
+**Surface-code identification (load-bearing positive instance).** Distance-3 rotated memory-Z syndrome streams trace clean $s$-aging at sub-threshold operation; placing surface-code QEC in the Cugliandolo–Kurchan universality class. The $s \to r$ migration across the physical-error threshold is the framework's primary cross-substrate test. Falsifier (Receipts §4): (a) syndrome FDR shows unit slope sub-threshold (no CK signature); or (b) FDR shape persists unchanged across threshold crossing.
+
+**Substrate-conditional reading rules** (inherited from v9 §F):
+- *Markovian sign caveat:* stiff/Markovian substrates invert $\gamma$ signs (kernel-width artefact); use $|\gamma|$ + FDR shape jointly. For $k_{\text{frust}}$-bearing content this is chirality-flipping (sign reverses); chit-axis content is preserved.
+- *Detection-event preprocessing:* for non-local readouts, $e_i(t) = s_i(t) \oplus s_i(t-1)$; trail by EMA against detection events.
+
+**Apparatus measurement notes** (from FALSIFICATION.md). Do not infer X from a single linear FDR slope on aging loci — it biases up (kww_oracle calibration: prescribed $X=0.2$ reads 0.47 via single-slope vs 0.26 via segmented fit). The 5-vector inversion (q_EA, $\tau_\alpha$, $\beta_{\text{KWW}}$, $\tau_\beta$, $X$) is owed; until landed, X-bearing verdicts read at the raw FDR-locus-slope layer, where the grinder is faithful (validated to ~2% on two_temp_ou prescribed-X cells).
 
 ## Capacity dynamics
 
@@ -77,171 +87,172 @@ v9 supplies the static structural ceiling $|\Gamma^*| \le \sqrt{2D/(\alpha\,\gam
 
 $$\sum_{i \in \Gamma^*} L_i \le G_{total}\,\eta(\Gamma^*)$$
 
-with cross-saturation efficiency $\eta(\Gamma^*) \in (0,1]$, $\eta \to 0$ at the $\sqrt{D}$ Hopfield ceiling. Same wall, dynamic side. Violation forces sparsification or sub-threshold phase transition.
+with cross-saturation efficiency $\eta(\Gamma^*) \in (0,1]$, $\eta \to 0$ at the $\sqrt{D}$ Hopfield ceiling. Violation forces sparsification or sub-threshold phase transition.
 
-**Erlang-B closure.** Standard finite-capacity queueing gives the soft-edge form via Erlang-B blocking probabilities:
+**Erlang-B closure.**
 $$\eta(\Gamma^*) = 1 - B(c,\rho), \qquad B(c,\rho) = \frac{\rho^c/c!}{\sum_{k=0}^c \rho^k/k!}$$
 with $c = \lfloor|\Gamma^*|_{\text{crit}}\rfloor$ and $\rho$ the effective offered load on the mode-slot pool.
 
-*Soft vs hard scope.* For soft-substrate Erlang-B, $\eta = 1 - B(c,c) \in (0,1)$ at $\rho = c$ (finite blocking, smooth crossover); $\eta \to 0$ only as $\rho \to \infty$. Hard-wall substrates (surface code at logical-error onset) replace $B$ by the indicator $\mathbb{1}[|\Gamma^*|\ge c]$ — one error breaks the code; $\eta \to 0$ abruptly at $\rho = c$. The hard/soft split is itself a substrate-class fingerprint.
+**Hard-vs-soft falsifier per substrate class** (Receipts §5/§22). Soft substrates: $\eta = 1 - B(c,\rho)$, smooth crossover. Hard-wall substrates (surface code at logical-error onset): $\eta = \mathbb{1}[|\Gamma^*| \ge c]$ — one error breaks the code. Falsifier: behavioral/cognitive substrate exhibiting sharp Hopfield-snapping instead of Erlang-B tails; or QEC-class substrate showing soft Erlang-B blocking instead of abrupt threshold.
 
-## Heat-tax tower (vertical thermodynamic ledger)
+## Heat-tax tower
 
 v9's Compression Axiom contracts informational structure ($\epsilon = \|\mathcal{C}\|_{op} < 1$). Character routes the thermodynamic exhaust:
 
 $$L_{n+1} = L_{n+1}^{(0)} + \alpha_\sigma\langle\sigma_n\rangle + \alpha_\Sigma\langle\Sigma_n\rangle$$
 
-Two substrate-effect axes propagate level-$n$ activity to level $n+1$:
-
+Two effect axes propagate level-$n$ activity to level $n+1$:
 - $\alpha_\sigma\langle\sigma_n\rangle$: heat from level-$n$ flow as ambient noise to level $n+1$.
-- $\alpha_\Sigma\langle\Sigma_n\rangle$: active stress from level-$n$ maintenance work as mechanical/informational/structural stress on level $n+1$.
+- $\alpha_\Sigma\langle\Sigma_n\rangle$: active stress from level-$n$ maintenance as mechanical/informational/structural stress on level $n+1$.
 
-Heat-tax coupling pinned by Landauer: $\alpha_\sigma(\epsilon) = \alpha_{\sigma,0}\,(1-\epsilon)$, where $\alpha_{\sigma,0}$ is a substrate-conditional thermal-conductivity constant. Cumulative tower tax to depth $N$ is $\propto 1-\epsilon^N$. The Complexity Wall is a *cumulative-mass* thermodynamic singularity at $\epsilon \to 1$: per-level Landauer heat vanishes there (no erasure, no cost), while cumulative informational mass $\Phi_{\text{total}} = \Phi^{(0)}/(1-\epsilon)$ diverges; the singularity lives in the cumulative mass, not in per-level conductivity.
+Heat-tax coupling Landauer-pinned: $\alpha_\sigma(\epsilon) = \alpha_{\sigma,0}(1-\epsilon)$. Cumulative tower tax to depth $N$ scales as $1-\epsilon^N$; at $\epsilon \to 1$ per-level Landauer heat vanishes (no erasure) while cumulative informational mass $\Phi_{\text{total}} = \Phi^{(0)}/(1-\epsilon)$ diverges — the **Complexity Wall** lives in the cumulative mass.
 
-**Meta-ledger flow in continuous register.** The heat-tax recursion is the level-to-level map on the space of slow-manifold generators. Construction: at level $n$, Mori–Zwanzig projection (§Universal two-mode kernel) onto the slow manifold yields generator $\mathcal{A}_n = \Pi_{\text{slow}}\mathcal{A}_n^{\text{full}}\Pi_{\text{slow}}$. The heat-tax substitution $L_{n+1} \leftarrow L_{n+1}^{(0)} + \alpha_\sigma\langle\sigma_n\rangle + \alpha_\Sigma\langle\Sigma_n\rangle$ into the level-$(n+1)$ kernel induces $\mathcal{A}_n \mapsto \mathcal{A}_{n+1}$. This is a Wilson–Polchinski-style functional RG on the space of generators; the continuous level-coordinate $\nu$ integrates the running-coupling β-functions across non-integer levels. The compression rate $\epsilon$ is the leading IR linear-stability eigenvalue of $D\mathcal{A}_{n+1}/D\mathcal{A}_n|_{\mathcal{M}_2}$, Landauer-pinned to the substrate's thermal-conductivity coefficient via $\alpha_\sigma(\epsilon) = \alpha_{\sigma,0}(1-\epsilon)$. The slow-manifold projection $\Pi_{\text{slow}}$ is the level-projection operator: it is what v9 §Compression Axiom names abstractly as the conjugating isometry $\phi$ in the Wilson–Kadanoff structural-equivalence statement.
+**Meta-ledger flow construction** (Receipts §6.5). The recursion is the level-to-level map on the space of slow-manifold generators: at level $n$, Mori–Zwanzig projection $\Pi_{\text{slow}}$ onto the slow manifold yields $\mathcal{A}_n$; heat-tax substitution into level-$(n+1)$ induces $\mathcal{A}_n \mapsto \mathcal{A}_{n+1}$. Wilson–Polchinski-style functional RG on the space of generators; $\epsilon$ is the leading IR linear-stability eigenvalue. $\Pi_{\text{slow}}$ *is* the conjugating isometry $\phi$ of v9's Wilson–Kadanoff structural-equivalence statement.
 
-Sustained level-$n+1$ coherence requires $\ln(G_{0,n+1}/L_{n+1}) > 0$. Fraying at level $n$ inflates $L_{n+1}$ via three independent channels:
-
-1. $\alpha_\sigma\langle\sigma_n\rangle$ heat-tax spike (this section).
+**Three independent fraying channels.** Sustained level-$(n+1)$ coherence requires $\ln(G_{0,n+1}/L_{n+1}) > 0$. Fraying at level $n$ inflates $L_{n+1}$ via:
+1. $\alpha_\sigma\langle\sigma_n\rangle$ heat-tax spike (above).
 2. $\alpha_\Sigma\langle\Sigma_n\rangle$ active-stress spike (§Collective hydrodynamics).
 3. $r_n$ drop in level-$n$ collective sync, raising $L_{n+1}^{(0)}$ via lost cooperative gain-sharing (§Phase-locking).
 
-Three measurement registers of one queueing-theoretic mechanism: by the Cobham/Kleinrock priority-queue mapping (§Load-handling), all three channels are faces of Cobham wait-time inflation $W_{n+1}=W_0/[(1-u_n)(1-u_{n+1})]$ across tower-level priority classes. The $u\to 1$ queueing singularity is coincident with the $\epsilon\to 1$ Complexity Wall; for rate-distortion-optimal encoding, $u_n = \epsilon_n$ (one of the framework's five leading-order posits; §Load-handling) — the queueing and informational singularities collapse to one parameter. Sub-optimal substrates experience $r$-regime collapse via $u\to 1$ *before* reaching the informational Wall ($\epsilon\to 1$); the overhead $\Delta_n = u_n - \epsilon_n \ge 0$ is a substrate-class fingerprint. **Sub-optimal substrates die thermodynamically before they die informationally** — the four-aspect Wall is a single parameter only at the optimal limit.
+By the Cobham/Kleinrock priority-queue mapping (§Load-handling), all three are faces of Cobham wait-time inflation $W_{n+1}=W_0/[(1-u_n)(1-u_{n+1})]$ across tower-level priority classes. The $u\to 1$ queueing singularity is coincident with $\epsilon\to 1$; for rate-distortion-optimal encoding $u_n = \epsilon_n$ (posit P4 below).
 
-**Channels 2 and 3 share $r$ as driver.** Toner–Tu gives active-stress correction $f(r) = Cr^2$, so the active-stress channel scales as $1+Cr^2$ in level-$n$ sync; the cooperative-gain channel is triggered by $r$-drop. The substrate-class active-coupling $C$ (sign: contractile $>0$, extensile $<0$, isotropic $\approx 0$) determines the balance. Three channels remain independent failure paths but two share $r$ as a common driver in opposing directions.
+**Channels 2 and 3 share $r$ as driver in opposing directions.** Toner–Tu gives active-stress correction $f(r) = Cr^2$, so the active-stress channel scales as $1+Cr^2$ in level-$n$ sync; the cooperative-gain channel is triggered by $r$-drop. Substrate active-coupling $C$ (contractile $>0$, extensile $<0$, isotropic $\approx 0$) determines balance.
 
 ## Operators in continuous register
 
 v9's discrete operators have continuous-traversal shadows.
 
-**$C_{\text{Character}}$ (merge).** Adiabatic deformation from $\gamma_{AB} \approx 0$ (decoupled) to $\gamma_{AB} \ll 0$ (cooperative) while sustaining NESS. Adiabaticity bound: deformation rate slow vs $L$. Failure mode: forced non-adiabatic merge spikes $\sigma$, drops one or both modes sub-threshold.
+**$C_{\text{Character}}$ (merge).** Adiabatic deformation from $\gamma_{AB} \approx 0$ to $\gamma_{AB} \ll 0$ while sustaining NESS. Adiabaticity bound: deformation rate slow vs $L$. Failure mode: forced non-adiabatic merge spikes $\sigma$, drops one or both modes sub-threshold. Information-geometric reading: merge succeeds iff a Fisher-information geodesic stays on the above-threshold manifold. Discrete shadow recovers v9 Theorem 9 in the sharp-threshold limit: $\Delta_C(A,B) = 1$ iff $\gamma_{AB} > 0 \land D < \gamma_{AB}$.
 
-Information-geometric reading: merge succeeds iff a Fisher-information geodesic from $\gamma_{AB} \approx 0$ to $\gamma_{AB} \ll 0$ stays on the above-threshold manifold (does not exit through chit-zero). Adiabaticity bound = geodesic-tangent constraint.
-
-Discrete shadow recovers v9 Theorem 9 as the sharp-threshold limit: $\Delta_C(A,B) = 1$ iff $\gamma_{AB} > 0 \land D < \gamma_{AB}$.
-
-**$R_{\text{Character}}$ (sever).** Quench trajectory: choke $G_0$ (demand-load) or open mode to bath ($L\uparrow$, decay-load). Native edge dissolution — $\gamma_{AB}\rho_A\rho_B$ vanishes as $\rho_A \to 0$, no separate graph-edit. Continuous dissipation registers as a $\sigma$ spike during collapse; v9 Landauer bound is the asymptotic discrete limit.
+**$R_{\text{Character}}$ (sever).** Quench trajectory: choke $G_0$ (demand-load) or open mode to bath ($L\uparrow$, decay-load). Native edge dissolution — $\gamma_{AB}\rho_A\rho_B$ vanishes as $\rho_A \to 0$. v9 Landauer bound is the asymptotic discrete limit.
 
 ## Universal two-mode kernel
 
 $$\frac{\partial \rho_A}{\partial t} = (G_{0,A} - L_A)\rho_A - \gamma_{AB}\,\rho_A\rho_B + \mathcal{D}[\rho_A,\rho_B;\gamma_{AB}]$$
 
-(symmetric for $\rho_B$; sign convention: $\gamma_{AB}<0$ contributes positively to $\partial_t \rho_A$.) The $\mathcal{D}$-kernel admits three increasingly general closures.
+(symmetric for $\rho_B$; $\gamma_{AB}<0$ contributes positively to $\partial_t \rho_A$.) The $\mathcal{D}$-kernel admits three closures.
 
-*Lamb stationary closure.* Gain renormalisation $G_{0,A}^{\text{eff}} = G_{0,A}/(1+\sum_{j\ne A}\rho_j/\rho_{\text{sat}})$ — Lamb multi-mode laser saturation — absorbs ambient bath occupancy in the two-mode reduction.
+*Lamb stationary closure.* $G_{0,A}^{\text{eff}} = G_{0,A}/(1+\sum_{j\ne A}\rho_j/\rho_{\text{sat}})$ — multi-mode laser saturation.
 
-*Dynamic bath inversion.* Non-stationary bath: $B(t)\in[0,1]$ promoted to dynamical coordinate; Mori–Zwanzig projection-out gives non-Markovian history integral; fast-bath limit $\gamma_B\to\infty$ recovers Lamb stationary form. $\gamma_B^{-1}$ identifies as bath-server service time in the §Load-handling Cobham mapping.
+*Dynamic bath inversion.* $B(t)\in[0,1]$ promoted to dynamical coordinate; Mori–Zwanzig projection-out gives non-Markovian history integral; fast-bath limit $\gamma_B\to\infty$ recovers Lamb. $\gamma_B^{-1}$ identifies as bath-server service time in the §Load-handling Cobham mapping.
 
-*Caputo fractional memory.* For glassy / $s$-regime aging substrates: Mittag-Leffler kernel $\Gamma_{AB}(\tau) = \Gamma_0\,E_{\beta_{\text{mem}}}(-(\tau/\tau_c)^{\beta_{\text{mem}}})$ with Caputo exponent $\beta_{\text{mem}}\in(0,1]$. $\beta_{\text{mem}}=1$ gives exponential memory ($c$-regime); $\beta_{\text{mem}}<1$ gives power-law decay (glassy / $s$-regime aging substrates).
+*Caputo fractional memory.* For glassy / $s$-regime aging: Mittag-Leffler kernel $\Gamma_{AB}(\tau) = \Gamma_0\,E_{\beta_{\text{mem}}}(-(\tau/\tau_c)^{\beta_{\text{mem}}})$, $\beta_{\text{mem}}\in(0,1]$. $\beta_{\text{mem}}=1$ exponential; $\beta_{\text{mem}}<1$ power-law decay.
 
-**Three-way identity (substrate-class conditional).** Under the *common-exponent substrate-class condition* — the substrate's slow-resource memory kernel and load-arrival process share a single anomalous-diffusion exponent — the CK $s$-regime aging-diagonal slope $\alpha_s$, the Caputo memory exponent $\beta_{\text{mem}}$, and the anomalous heavy-traffic queueing exponent are *the same parameter* measured in three registers:
+**Three-register identity for $s$-regime exponent** (substrate-class conditional). Under the *common-exponent condition* — substrate's slow-resource memory kernel and load-arrival process share a single anomalous-diffusion exponent —
 $$\alpha_s = \beta_{\text{mem}} = \text{anomalous heavy-traffic exponent}.$$
-The identity composes Pottier (non-Markovian FDR identifying Caputo $\beta_{\text{mem}}$ with the aging slope, presupposing the memory kernel governing slow-resource dynamics is Caputo $\tau^{-\beta_{\text{mem}}}$) with Norros (fractional-Brownian heavy-traffic generalises $1/(1-\rho)$ to $1/(1-\rho)^{\beta_{\text{mem}}}$, presupposing self-similar arrival process). The two registers concern distinct substrate-side processes (memory kernel vs arrival process); the identity holds only when both are governed by a common Hurst-class index. Substrate classes where the FDR exponent and the queueing-tail exponent are measured to differ falsify the condition.
+Composes Pottier (non-Markovian FDR identifying Caputo $\beta_{\text{mem}}$ with the aging slope) with Norros (fractional-Brownian heavy-traffic generalises $1/(1-\rho)$ to $1/(1-\rho)^{\beta_{\text{mem}}}$).
 
-**Composite catalogue recovered as kernel attractors.** Sweeping $\gamma_{AB}$ as control parameter:
+**Falsifier (Receipts §22, reframed per FALSIFICATION.md Finding 3).** The original mm1_queue falsifier ($\alpha_s = \frac{1}{2}$ at $\rho \to 1$) is *mis-specified* — a category error mixing planes: $\frac{1}{2}$ is the reflected-BM time-scaling (Hurst) exponent in the C-vs-lag plane; $\alpha_s$ is the FDR effective-temperature slope in the $\chi$-vs-C plane. Two reframed routes: (i) measure C-decay-time scaling vs $(1-\rho)$ in the C-vs-lag plane — where the $\frac{1}{2}$ lives — on Markovian vs non-Markovian queues; predicted exponent matches the substrate's memory class. (ii) Extend the sampling window to $\sim(1-\rho)^{-2}$ on M/M/1 (Markovian, reversible) and verify $X\approx 1$ (reversibility), not aging $X<1$. The structural tension — "heavy-traffic M/M/1 maps to $s$-regime, but reversibility forces $X=1$" — is the sharp form of this test; the cleaner instance is `ising_equilibrium` (equilibrium critical slowing must read $X=1$). Predicted measurement: on Markovian–Poisson reversible substrates exhibiting heavy traffic, raw FDR slope $\approx 1$ across $\rho \to 1$.
 
-| Regime | $\gamma_{AB}$ | Phase relationship | v9 row |
-|---|---|---|---|
-| $c$–$c$ aligned | $\ll 0$ | in-phase locked | Hebbian / force chain |
-| $c$–$s$ mentor | $< 0$, asymmetric | driven entrainment, **non-reciprocal** in substrate, formally a priority queue | pilot-light / synaptic tagging |
-| $c$–$c$ orthogonal | $\approx 0$ | unlocked / phase drift | independent memory |
-| $c$–$c$ opposed (lock) | $> 0$, $K > \Delta\omega$ | anti-phase locked | competing hypotheses (sustained) |
-| $c$–$c$ opposed (split) | $> 0$, $K < \Delta\omega$ | competitive desynchronisation (pitchfork) | Lotka–Volterra dropout |
-| $k_{\text{frust}}$ | $N \ge 3$ obstructive | frustrated sync | gridlock / UNSAT |
+**Composite catalogue** (sweep $\gamma_{AB}$):
 
-Multi-mode pattern selection for $N \ge 3$ admits chimera states (§Phase-locking) and is fully closed via four channels (§Framework primitives consolidation).
+| Regime | $\gamma_{AB}$ | Phase relationship |
+|---|---|---|
+| $c$–$c$ aligned | $\ll 0$ | in-phase locked (Hebbian / force chain) |
+| $c$–$s$ mentor | $< 0$, asymmetric | driven entrainment, non-reciprocal, priority queue |
+| $c$–$c$ orthogonal | $\approx 0$ | unlocked / phase drift |
+| $c$–$c$ opposed (lock) | $> 0$, $K > \Delta\omega$ | anti-phase locked |
+| $c$–$c$ opposed (split) | $> 0$, $K < \Delta\omega$ | competitive desync (pitchfork) |
+| $k_{\text{frust}}$ | $N \ge 3$ obstructive | frustrated sync |
 
-## Topological drain $k_{\text{frust}}$
+## k_frust drain
 
-$N \ge 3$ closed chain with obstructive $\gamma$ topology admits no *equilibrium* (detailed-balance) steady state: its stationary state is irreducibly a NESS carrying a drive-independent, topologically-forced Schnakenberg cycle current. **This broken-detailed-balance circulation — not deterministic fixed-point non-existence — is the defining invariant** (§Framework-primitives §8 triality's underlying fact). The deterministic flow realises it in two sub-regimes by the sign of the relaxation eigenvalue's real part: a *stable circulating focus* (Re $<0$, complex spectrum — spirals into a NESS that still circulates) or a *repelling focus + attracting limit cycle* (Re $>0$; §Stability). Cross-saturation conflict is internal to the kernel mathematics; drive-independent. Recovers v9's "not resolvable by $D$" assertion as kernel consequence rather than separate axiom.
+**Definitional core (Receipts §846 PROMOTED, 2026-05-20).** The stationary state is irreducibly a NESS: a topologically-forced circulating current (broken detailed balance). The deterministic flow realises this in two sub-regimes by sign of the relaxation eigenvalue's real part — both are $k_{\text{frust}}$; **the complex spectrum (irreducible rotation), not fixed-point non-existence, is the invariant**:
 
-**Six-register reading of one phenomenon:**
+- *Stable circulating focus* (Re $<0$, complex spectrum): spirals into a NESS that still circulates ($J\ne 0$).
+- *Repelling focus + attracting limit cycle* (Re $>0$): cooperative fixed point repels onto attracting orbit.
 
-1. Cyclic pumping–fraying trajectory (this section): some mode's chit goes negative each cycle; time-averaged $G$ diverges.
-2. Hopf-unstable spiral with attracting limit cycle (§Stability): cooperative fixed point repels; system on attracting orbit.
-3. Frustrated sync (§Phase-locking): pairwise lock-attempts broken by topological obstruction, re-form around different weakest mode.
-4. Schnakenberg cycle current with divergent action (§Thermodynamic and informational accounting): $J_C\ln(\prod_+k/\prod_-k)$ forced regardless of $D$.
-5. Non-existence of a *gradient* Lyapunov $\mathcal{V}$ (§Active modulation): the flow has an irreducible circulating part — a stability-Lyapunov may exist (a stable focus has one), but no free-energy whose gradient *is* the dynamics (detailed balance is broken).
-6. Priority-queue inversion (§Load-handling): asymmetric load absorption with no symmetric back-flow.
+**Affinity vs magnitude** (Receipts §13/§16/§Topological-drain mpa-LEGAL audit, 2026-05-20). Drive-independence is a property of the cycle **affinity** $A_C = \oint v/D = \ln(\prod_+ k / \prod_- k)$ (intensive log-rate-ratio, the thermodynamic force), forced nonzero regardless of $D$. The current **magnitude** $J_{ss}$ scales with absolute kinetic rates and therefore flows with chit (R1 measured: $J$ grew $1.3\times 10^{-2} \to 2.5\times 10^{-1}$ as $G_0$ swept 0.9 → 2.0). Falsifier reads: "$J$ becomes $D$-(noise)-dependent OR resolves to detailed balance" — not "drive-dependent" (pump-dependence of magnitude is legal).
 
-These six register-readings collapse at the topology level to one fact (the stationary state is irreducibly a circulating NESS — broken detailed balance); see §Framework primitives consolidation §8 for the topological triality.
+**Survived falsification ladder** (Receipts §846 R1/R2/R3):
+- *R1 — operating-point sweep.* $J$ sign-definite + drive-independent across drive/headroom; scales only with wiring. At chit$=0.010$, $J$ reads 5.8σ above matched reciprocal control.
+- *R2 — Wall round-trip, dual lens.* Discrete (sign-class) representation: scanning Wall corruption to 8× the destruction anchor, frustration is never destroyed — strong chaos only flips chirality sign (a reversed loop is still frustrated).
+- *R3 — gradient/detailed-balance test.* Frustrated-loop Jacobian spectrum is complex at all coupling; matched cooperative control reads real-spectrum.
 
-gFDR signature: transient negative response $N_f$ in loop-level apparatus.
+**Predicted measurements on a new substrate** (the falsifier surface):
+1. Frustrated-loop coexistence-Jacobian has complex eigenvalues at every coupling in the surviving operating range.
+2. $J$ is sign-definite, $D$-noise-invariant, and scales (only) with absolute kinetic rates.
+3. After strong-chaos Wall round-trip, chirality may flip but $|J|$ recovers; detailed-balance recovery (real spectrum) is forbidden while wiring is intact.
+
+**gFDR signature.** Transient negative response $N_f$ in loop-level apparatus (noting that $N_f$ is a τ_obs-conditional observer-shadow, weaker than the intrinsic $J$ meter; do not run a kill-shot on $N_f$ alone).
 
 ## Stability and attractor structure
 
-The §Bridge eigenvalue's real part sets the regime; its full complex structure governs perturbation-recovery. Above threshold, single-mode coherences are 2D in local linearisation (field × population) — Jacobian has a complex-conjugate pair $(\gamma_{RO}, \omega_{RO})$, the relaxation-oscillation regime.
+The §Bridge eigenvalue's real part sets the regime; full complex structure governs perturbation-recovery. Above threshold, single-mode coherences are 2D in local linearisation (field × population) — Jacobian has a complex-conjugate pair, the relaxation-oscillation regime.
 
-**Per-regime damping signatures and attractor types.**
+**Exact characteristic polynomial** (field × slow-resource, Lamb stationary closure; Receipts §13, mpa-LEGAL LANDED 2026-05-20, validated to machine precision against class-B laser Jacobian):
+$$\lambda^2 + \gamma_s e^{\text{chit}}\lambda + 2L\gamma_s(e^{\text{chit}}-1) = 0$$
+
+**Exact closed forms.**
+$$\gamma_{RO}(\text{chit}) = \frac{\gamma_s}{2}e^{\text{chit}}, \qquad \omega_{RO}(\text{chit}) = \sqrt{2L\gamma_s(e^{\text{chit}}-1) - \frac{\gamma_s^2}{4}e^{2\text{chit}}}$$
+$$Q(\text{chit}) = \sqrt{\frac{2L(e^{\text{chit}}-1)}{\gamma_s} - \frac{e^{2\text{chit}}}{4}}\;e^{-\text{chit}}, \qquad \zeta(\text{chit}) = \sqrt{\frac{\gamma_s}{8L}}\;\frac{e^{\text{chit}}}{\sqrt{e^{\text{chit}}-1}}$$
+
+**Non-monotonic structure.** $Q \to 0$ at both ends (chit $\to 0^+$ and chit $\to \infty$), peaking at **chit $= \ln 2$**. Underdamped band bounded by two critical-damping points; overdamped at both ends. (This is the class-B picture, not the "many cycles deep in $c$" form the pre-mpa-legal-audit framework carried.)
+
+**Per-regime attractor structure.**
 
 | Regime | Damping | Recovery profile | Attractor |
 |---|---|---|---|
-| $c$ | $\zeta < 1$ underdamped | decaying oscillation at $\omega_{RO}$ | stable spiral / focus |
-| $s$ | $\zeta \to 1$ critical | algebraic settling (= CK aging diagonal long-time tail) | centre manifold at threshold |
-| $r$ | $\zeta > 1$ overdamped | bath relaxation; no oscillator | stable origin |
-| $k_{\text{frust}}$ | repelling cooperative focus | cyclic, no return | attracting limit cycle |
+| $c$ deep | $\zeta > 1$ overdamped | RO damps out | stable focus |
+| $c$ mid-band | $\zeta < 1$ underdamped | decaying oscillation at $\omega_{RO}$ | stable spiral |
+| $s$ | $\zeta \to \infty$ overdamped | algebraic settling (= CK aging) | centre manifold at threshold |
+| $r$ | $\zeta > 1$ overdamped | bath relaxation | stable origin |
+| $k_{\text{frust}}$ | complex spectrum, both Re signs | cyclic NESS | circulating focus / limit cycle |
 
-*$k_{\text{frust}}$ sub-regimes.* The repelling-focus + limit-cycle row is the Re$\,>0$ case; a frustrated loop whose amplitude is saturation-clamped is the Re$\,<0$ case — a *stable* focus with **complex** eigenvalues that still circulates (a NESS, $J\neq0$). Both are $k_{\text{frust}}$; the complex spectrum (irreducible rotation), not the sign of Re, is the signature (§Topological drain).
-
-$Q = \omega_{RO}/(2\gamma_{RO})$: cycles-of-headroom observable, conjugate to chit. Chit reads *whether* threshold is cleared; $Q$ reads *how many cycles* of natural oscillation that headroom buys.
-
-$$\omega_{RO} = \sqrt{2\gamma_s L\,(e^{\text{chit}}-1)},\qquad Q = \sqrt{2L(e^{\text{chit}}-1)/\gamma_s}$$
-
-$\gamma_s$ is the substrate's slow-resource turnover rate (population decay in lasers; syndrome decoding in QEC; plasticity in neural; carrying-capacity adjustment in ecological; reinforcement-extinction in behavioural). Both vanish at threshold (chit $\to 0^+$); $Q$ grows as $e^{\text{chit}/2}/\sqrt{\gamma_s}$ deep in $c$.
+**$Q = \omega_{RO}/(2\gamma_{RO})$ = cycles-of-headroom.** Conjugate to chit. Chit reads *whether* threshold is cleared; $Q$ reads *how many cycles* of natural oscillation that headroom buys.
 
 **Active/passive probe = on/off resonance.** Probes within $\gamma_{RO}$ of $\omega_{RO}$ are active (Q-amplified); off-resonance probes are passive baseline. Boundary linewidth = $\gamma_{RO}$.
 
-**Recovery profile is a third probe-class signature** alongside spontaneous FDR (steady-state stochastic) and load-driven fraying (sustained-load trajectory).
+**Slow-manifold reading of $s$-aging.** At threshold, leading eigenvalue's real part vanishes; dynamics collapse onto centre manifold. $P_s$ = slow-manifold fixed-point amplitude; $\alpha_s$ = slow eigenvalue's residual scaling against saturating gain. The same $\Pi_{\text{slow}}$ that isolates the $s$-regime centre manifold is the level-projection operator for the meta-ledger ascent — within-level dynamics and level-to-level transport are the same projection at two scales.
 
-**Slow-manifold reading of $s$-aging.** At threshold, leading eigenvalue's real part vanishes; dynamics collapse onto centre manifold. CK aging signature *is* the slow-manifold trace: $P_s$ = slow-manifold fixed-point amplitude; $\alpha_s$ = slow eigenvalue's residual scaling against saturating gain. The same projection $\Pi_{\text{slow}}$ that isolates the $s$-regime centre manifold is the level-projection operator for the meta-ledger ascent (§Heat-tax tower) — the slow-manifold reading of $s$-aging and the meta-ledger flow's compression operator are the same projection at two scales (within-level dynamics vs. level-to-level transport).
-
-**Bifurcation summary** (codimension-1 explicit in framework):
-
+**Bifurcation summary** (codimension-1):
 - Transcritical at chit $= 0$ (laser threshold; $c \leftrightarrow r$).
 - Pitchfork at $\gamma_{AB} = \gamma_c$ (cooperative–competitive boundary).
 - Hopf-unstable at obstructive $\gamma$-chain onset ($k_{\text{frust}}$).
 
-Codimension-2 closures via standard normal-form theory (Bogdanov–Takens, cusp, Bautin, fold-Hopf).
+Codimension-2 closures via standard normal-form theory.
 
-**Wall-forces-NRT chain.** As $u_n\to 1^-$ at the Complexity Wall (§Load-handling Cobham closure), each tower-level ascent $n\to n+1$ undergoes a delay-induced Hopf bifurcation via the DDE characteristic equation. With $N\ge 3$ ascents Hopf-bifurcating, the 3-torus required for Newhouse–Ruelle–Takens chaos populates automatically. **Meta-ledger chaos post-Wall is forced, not merely allowed**, contingent on (i) the substrate not collapsing into $r$-regime before the bifurcation sequence completes, and (ii) the three Cobham–Haken bridge conditions of §Load-handling holding approximately. Three-closure stack: Cobham wait formula → DDE Hopf per ascent → NRT chaos at $N\ge 3$.
+**Wall-forces-NRT chain.** As $u_n\to 1^-$ at the Complexity Wall (§Load-handling Cobham closure), each tower-level ascent $n\to n+1$ undergoes a delay-induced Hopf bifurcation via the DDE characteristic equation. With $N\ge 3$ ascents Hopf-bifurcating, the 3-torus required for Newhouse–Ruelle–Takens chaos populates automatically. Meta-ledger chaos post-Wall is forced (not merely allowed), conditional on (i) the substrate not collapsing into $r$ before the bifurcation sequence completes, and (ii) the three Cobham–Haken bridge conditions of §Load-handling holding approximately.
+
+**Open prediction** (from mpa-LEGAL fix, 2026-05-20): deep-$c$ phase-lock collapse. With non-monotonic $Q$, deep in $c$ gives $Q\to 0$, restoring direct lock ($K_{AB}\propto 1/\sqrt{1+4Q^2}\to 1$). Over-provisioned holdings may *collapse* multi-mode independent-memory capacity (locked modes cannot store orthogonal trails). Falsifier owed; named substrate owed.
 
 ## Phase-locking and collective coherence
 
-For two coherences with detuning $\Delta\omega$ and effective phase coupling
+Two coherences with detuning $\Delta\omega$ and effective phase coupling
 $$K_{AB} = -\gamma_{AB}\sqrt{\rho_A\rho_B}/[\rho_{\text{sat}}\sqrt{1+4Q^2}]$$
-(phase-reduction of the two-mode kernel; $Q\gg 1$ recovers standard $1/(2Q)$ Kuramoto suppression, $Q\lesssim 1$ deep-cooperative direct lock): lock if $K_{AB} \gtrsim \Delta\omega$. Arnold-tongue structure in $(\Delta\omega, K_{AB})$ follows.
+(phase reduction of the two-mode kernel). $Q\gg 1$ (mid-band) gives standard $1/(2Q)$ Kuramoto suppression; $Q\to 0$ at both ends (near threshold and deep in $c$) restores direct lock. Suppression strongest at chit$=\ln 2$ (the Q peak) — non-monotonic in chit. Lock if $K_{AB} \gtrsim \Delta\omega$. Arnold-tongue structure in $(\Delta\omega, K_{AB})$.
 
-**Order parameter.** Kuramoto $r = |(1/N)\sum_n e^{i\phi_n}|$: collective coherence amplitude, independent of per-mode chit.
+**Two independent transitions.** Order parameters at population level: per-mode chit (whether threshold is cleared) and collective $r = |(1/N)\sum_n e^{i\phi_n}|$ (phase coherence). Two second-order transitions: chit-zero amplitude onset and Kuramoto $K_c$ phase onset. Neither implies the other.
 
-**Two independent phase transitions and observables.** Two second-order transitions: chit-zero amplitude onset and Kuramoto $K_c$ phase onset. Two order parameters at population level: per-mode chit and collective $r$. Neither implies the other.
+**Sync feedback to heat-tax tower.** $L_{n+1}^{(0)}$ depends on level-$n$ sync: high $r_n$ reduces $L_{n+1}^{(0)}$ (cooperative gain-sharing); low $r_n$ raises it. Third channel of upward fraying propagation.
 
-**Sync feedback to heat-tax tower.** $L_{n+1}^{(0)}$ depends on level-$n$ sync: high $r_n$ reduces $L_{n+1}^{(0)}$ (cooperative gain-sharing); low $r_n$ raises it. Third channel of upward fraying propagation (§Heat-tax tower).
+**Chimera states.** Partially-synchronised regimes — coexisting $c$- and $r$-sub-populations at fixed substrate parameters — are generic in heterogeneous-coupling kernels. Closed via Sun–Bollt–Nishikawa generalised MSF: spectral splits of $\mathcal{L}_{ij} = -K_{ij}\cos(\phi_j^*-\phi_i^*)$ are the mathematical signature.
 
-**Chimera states.** Partially-synchronised regimes — coexisting synchronised $c$-regime and incoherent $r$-regime sub-populations at fixed substrate parameters — are generic in heterogeneous-coupling kernels. Closed via Sun–Bollt–Nishikawa generalised MSF for heterogeneous networks. Spectral splits of the generalised Laplacian $\mathcal{L}_{ij} = -K_{ij}\cos(\phi_j^*-\phi_i^*)$ are the mathematical signature of chimera-admitting kernels.
-
-*SBN mild-heterogeneity scope.* Sun–Bollt–Nishikawa is a perturbative extension of Pecora–Carroll for nearly-identical systems. Application to generic Character kernels with mild heterogeneity (per-mode chit and $\gamma_{s,i}$ spreads small compared to their means) is direct; application to strongly-heterogeneous substrate classes is a *posited extension* — the sign of the leading transversal eigenvalue (the spectral test's qualitative answer) is expected to be robust, but quantitative eigenvalue gaps require an independent strong-heterogeneity correction. Quantitative use in the strong-heterogeneity regime carries a substrate-class falsifier.
+**SBN substrate-class scope.** Direct on mild heterogeneity (per-mode chit and $\gamma_{s,i}$ spreads small vs means); leading transversal eigenvalue *sign* (qualitative answer) expected robust at strong heterogeneity, but quantitative eigenvalue gaps require independent correction. Falsifier (Receipts §15/§19): substrate classes where SBN spectral predictions and observed sync behaviour disagree quantitatively under strong heterogeneity; or heterogeneous-coupling Character substrates yielding only uniform sync ($r\to 1$) or uniform incoherence across the parameter range, with no partial-sync chimera regime accessible.
 
 ## Thermodynamic and informational accounting
 
 Stochastic thermodynamics + information theory consolidate into a single dual ledger.
 
-**Trajectory entropy production.** Detailed fluctuation theorem $P(\sigma)/P(-\sigma) = e^\sigma$ (Crooks). Anomalous fraying-resistance trajectories exponentially rare in $|\sigma|$.
+**Trajectory entropy production.** Detailed fluctuation theorem $P(\sigma)/P(-\sigma) = e^\sigma$ (Crooks).
 
 **TUR.** $\text{Var}(J)/\langle J\rangle^2 \ge 2k_B/\langle\sigma\rangle$ (Barato–Seifert). Maintenance current precision bounded by entropy production.
 
-**Schnakenberg cycle decomposition.** $\langle\sigma\rangle = \sum_C J_C\ln(\prod_+k/\prod_-k)$ on the master-equation embedding ($\gamma_{ij}$ are kernel parameters, not transition rates — affinity is the log-ratio of compound rates around the embedded cycle). For limit-cycle attractors the continuous-traversal form is $\sigma_{\text{frust}} = J_{ss}\oint v(\theta)/D(\theta)\,d\theta$ on the orbit ring. $k_{\text{frust}}$ drive-independence is the topologically-forced cycle current.
+**TUR-tightness as substrate-class fingerprint** (Receipts §16). $T = \langle\sigma\rangle\text{Var}(J)/(2k_B\langle J\rangle^2)$ varies by substrate class: biological active matter near saturation ($T\approx 1$); engineered macroscopic queues loose ($T\gg 1$). Falsifier: nominally same-class substrates exhibit arbitrary $T$ values.
+
+**Schnakenberg cycle decomposition.** $\langle\sigma\rangle = \sum_C J_C\ln(\prod_+k/\prod_-k)$ on the master-equation embedding. $\gamma_{ij}$ are kernel parameters, not transition rates — affinity is the log-ratio of compound rates around the embedded cycle. For limit-cycle attractors the continuous-traversal form is $\sigma_{\text{frust}} = J_{ss}\oint v(\theta)/D(\theta)\,d\theta$ on the orbit ring. $k_{\text{frust}}$'s drive-independence lives at the affinity factor $\oint v/D$; magnitude $J_{ss}$ flows with chit (§k_frust drain).
 
 **Predictive information.** $I_{\text{pred}} = I(\text{past};\text{future})$. Third independent coherence observable alongside chit and $Q$.
 
-**Active-probe channel capacity.** $C \sim B\log_2(1+S/N)$ with $B \sim \gamma_{RO}$, $S/N \sim Q$. Informational dual of TUR; together they are two faces of the observability bound.
+**Active-probe channel capacity.** $C \sim B\log_2(1+S/N)$ with $B \sim \gamma_{RO} = (\gamma_s/2)e^{\text{chit}}$ (broadens $\propto e^{\text{chit}}$) and $S/N \sim Q$ (non-monotonic, peaks at chit$=\ln 2$). Channel capacity peaks at intermediate headroom, not deep in $c$.
 
-**Information geometry.** Fisher metric on $(G_0, L, \gamma_{AB},\ldots)$ space. Geodesics = max-likelihood deformation paths; $C_{\text{Character}}$ adiabatic merge condition becomes "geodesic stays on above-threshold manifold." The drain $k_{\text{frust}}$ excises a region from the parameter manifold (no $P_{ss}$ exists), making it a homotopy obstruction — one face of the §Framework primitives consolidation §8 topological triality.
+**Information geometry.** Fisher metric on $(G_0, L, \gamma_{AB},\ldots)$ space. Geodesics = max-likelihood deformation paths; $C_{\text{Character}}$ adiabatic merge condition becomes "geodesic stays on above-threshold manifold." $k_{\text{frust}}$ excises a region from the parameter manifold (no $P_{ss}$ exists), making it a homotopy obstruction.
 
-**Rate-distortion / Compression Axiom.** $\mathcal{C}$ is lossy compression on trail-class space; $\epsilon$ is its compression rate. $\Phi_{total} = \Phi^{(0)}/(1-\epsilon)$ is the standard rate-distortion geometric series.
+**Rate-distortion / Compression Axiom.** $\mathcal{C}$ is lossy compression on trail-class space; $\epsilon$ its compression rate. $\Phi_{total} = \Phi^{(0)}/(1-\epsilon)$ is the rate-distortion geometric series.
 
-**Extended second law** (Sagawa–Ueda). $\langle\sigma\rangle \ge -\Delta I$. Bit-readout holdings sustain at lower chit by paying via mutual information.
+**Extended second law** (Sagawa–Ueda). $\langle\sigma\rangle \ge -\Delta I$.
 
-**Bit/Chit dual ledger.**
+**Bit/Chit dual ledger** (per-row measurements; the framework's natural information/thermo correspondence):
 
 | Axis | Thermodynamic | Informational |
 |---|---|---|
@@ -251,92 +262,78 @@ Stochastic thermodynamics + information theory consolidate into a single dual le
 | Compression | Heat-tax tower | Rate-distortion tower |
 | Coupling | $\langle\sigma\rangle \ge -\Delta I$ | (same bound, dual reading) |
 
-**Bijective duality closure (Still bound).** Under the Still thermodynamic prediction bound,
+**Still bound / optimal-encoding identity** (one of the five posits below).
 $$\langle\sigma\rangle - \langle\sigma\rangle_{\min} \ge \gamma_s\,\chi$$
-with $\chi = C_\mu - I_{\text{pred}}$ (cryptic order; $C_\mu$ structural complexity of the Crutchfield $\varepsilon$-machine), with equality at the rate-distortion-optimal limit. Sub-optimal substrates split the ledger by $\gamma_s\chi$ — the *same* gap parameter as §Active modulation cryptic order and §Load-handling encoding overhead $\Delta_n = u_n - \epsilon_n$. **Optimal-encoding triality**: $\chi = \Delta_n = \langle\sigma\rangle_{\text{excess}}/\gamma_s$ — one quantity, three measurement protocols.
+with $\chi = C_\mu - I_{\text{pred}}$ (cryptic order; $C_\mu$ = structural complexity of the Crutchfield $\varepsilon$-machine), equality at the rate-distortion-optimal limit. The *same* gap parameter as §Active modulation cryptic order and §Load-handling encoding overhead $\Delta_n = u_n - \epsilon_n$. **Optimal-encoding Rosetta**: $\chi = \Delta_n = \langle\sigma\rangle_{\text{excess}}/\gamma_s$ — one quantity, three measurement protocols (information / queueing / thermodynamic registers).
+
+**Falsifier for the dual ledger** (Receipts §17/§20). Substrate where $I_{\text{pred}}$ scaling with chit, $Q$, and internal-model richness deviates from its thermodynamic dual — a single functional form fits all substrate classes with no class-specific deviation. (This is *also* the falsifier for the per-substrate-class fingerprint claim; one falsifier, two readings.)
 
 ## Pattern formation and self-organisation
 
-**Holdings as dissipative structures.** The chit-zero crossing IS the dissipative-structure formation transition (Prigogine). Substrate examples (laser, glass, surface code, behavioural) are substrate-conditional instances of the same threshold mathematics.
+**Holdings as dissipative structures.** The chit-zero crossing IS the dissipative-structure formation transition (Prigogine). Substrate examples (laser, glass, surface code, behavioural) are conditional instances of the same threshold mathematics.
 
-**Chit as order parameter** (Haken's slaving). Above threshold, fast micro-modes adiabatically follow chit's evolution; the §Stability centre-manifold reduction is the slaving relation read backward.
+**Chit as order parameter** (Haken slaving). Above threshold, fast micro-modes adiabatically follow chit's evolution; the §Stability centre-manifold reduction is the slaving relation read backward.
 
 **SOC self-tuning.** Under feedback-coupled maintenance dynamics, chit-zero is an *attractor in parameter space*, not merely a regime boundary. Predicted $s$-regime signatures:
-
 1. Power-law avalanche statistics $P(s) \sim s^{-\tau}$, $\tau \approx 3/2$ (mean-field).
-2. 1/f spectral tail (consistent with the existing CK aging diagonal).
+2. 1/f spectral tail.
 3. Spatiotemporal scale invariance in multi-mode fraying clusters.
 
-**Galton–Watson at two registers.** Fraying propagation maps to a Galton–Watson branching process with branching ratio
-$$\mu = G_0/L = e^{\text{chit}}.$$
-At chit $\to 0^+$, $\mu \to 1^+$: critical branching, $P(s) \sim s^{-3/2}$ in mean field. One of the five leading-order posits. Two registers, both reaching criticality at framework-primitive boundaries:
+**Galton–Watson at two registers.** Fraying propagation maps to a Galton–Watson branching process with branching ratio $\mu = G_0/L = e^{\text{chit}}$ (posit P2 below). At chit $\to 0^+$, $\mu \to 1^+$: critical branching, $P(s) \sim s^{-3/2}$ in mean field.
+- *Horizontal/spatial:* $\mu = e^{\text{chit}} \to 1$ at chit $= 0$ (within-level; classical iid Galton–Watson).
+- *Vertical/meta-ledger:* tower branching ratio $\to 1$ at $\epsilon = 1$ (across-level; correlated-offspring multitype extension).
 
-- *Horizontal/spatial:* $\mu = e^{\text{chit}} \to 1$ at chit $= 0$ (within-level).
-- *Vertical/meta-ledger:* tower branching ratio $\to 1$ at $\epsilon = 1$ (across-level).
+Mean-field $\tau = 3/2$ at criticality on both registers; substrate-graph effective dimensionality fixes the empirical exponent. Vertical-register iid extension condition: weak cross-level correlation (a substrate-class falsifier).
 
-*Iid-assumption scope.* Horizontal register satisfies classical Galton–Watson iid in the mean-field reading. Vertical register has correlated offspring distributions across levels (shared $G_{\text{total}}$, three coupled §Heat-tax channels) — a correlated-offspring branching-process extension (multitype Galton–Watson with bounded cross-type covariance). Criticality-at-unity survives the multitype extension; the mean-field $\tau = 3/2$ at the vertical register is conditional on cross-level correlation remaining weak enough that single-type universality is retained. Substrate-specific cross-level coupling strength is a falsifier.
+**Falsifier for avalanche universality** (Receipts §18). Feedback-coupled NESS substrate with clearly separated timescales exhibiting a robust stable $\tau \ne 3/2$; or timescale-separated substrate showing no avalanche statistics. (Validated 2026-05-20: avalanche apparatus recovers $\tau = 3/2$ on exact critical Galton–Watson, log-bin slope 1.501; RFIM at-H_c → 3/2 as field window tightens.)
+
+**Falsifier for branching-ratio claim** (Receipts §18). Critical branching ratio $\ne 1$ at the $\epsilon \ge 1$ Complexity Wall transition in any observable hierarchical NESS substrate.
 
 **Four-aspect Complexity Wall.** At $\epsilon = 1$, four critical signatures coincide:
+- *Thermodynamic*: cumulative-mass geometric series fails to converge.
+- *Dynamical*: meta-ledger flow bifurcation in trail-class space (§Stability NRT).
+- *Informational*: lossy compression rate hits unity.
+- *SOC-critical*: fraying branching ratio reaches unity.
 
-- *Thermodynamic*: cumulative-mass geometric series fails to converge (§Heat-tax tower).
-- *Dynamical*: meta-ledger flow bifurcation in trail-class space (§Stability).
-- *Informational*: lossy compression rate hits unity (§Thermodynamic and informational accounting).
-- *SOC-critical*: fraying branching ratio reaches unity (this section).
+**Wall-coupling posit** (P1 below): $\beta_{\text{mem}} \approx 1 - \epsilon$. Simplest functional form satisfying both endpoints. Falsifier (Receipts §9): substrate exhibiting an empirical $\beta_{\text{mem}}(\epsilon)$ relation that violates the linear form by more than a substrate-conditional tolerance, with both endpoints respected.
 
-The four-aspects-as-register-faces-of-a-single-unifying-parameter $\beta_{\text{mem}}\to 0$ reading rests on the Wall-coupling posit below. Without that posit, the four aspects remain coincident at $\epsilon = 1$ but their *common scaling parameter* across registers is not guaranteed. The §Load-handling spatial expression (traffic-driven → frozen-topological transition; $\ell_c(\beta_{\text{mem}})$) is the spatial signature of the same posited parameter, not a fifth independent aspect.
+**Regime ontology recast.** The $s$-regime is the *generic* attractor of feedback-coupled NESS, not the unstable middle of a triplet:
+- $c$: over-provisioned holdings (chit pulled deep above threshold by external constraint).
+- $s$: self-organised natural operating point.
+- $r$: post-collapse.
 
-**Wall-coupling posit.** Leading-order linear coupling:
-$$\beta_{\text{mem}} \approx 1 - \epsilon.$$
-Simplest functional form satisfying both endpoints: $\epsilon\to 0 \Rightarrow \beta_{\text{mem}}\to 1$ (Markovian); $\epsilon\to 1 \Rightarrow \beta_{\text{mem}}\to 0$ (extreme aging). One of the five leading-order posits; substrate-thermodynamic derivation of the exact functional form is the residual open beneath the falsifier.
+This explains empirical over-representation of $s$-regime in observed substrates.
 
-**Regime ontology recast.** $s$-regime is the *generic* attractor of feedback-coupled NESS, not the unstable middle of a triplet:
-
-- $c$-regime: over-provisioned holdings (chit pulled deep above threshold by external constraint).
-- $s$-regime: self-organised natural operating point of feedback-coupled holdings.
-- $r$-regime: post-collapse holdings.
-
-This explains the empirical over-representation of $s$-regime in observed substrates: feedback-coupled NESS systems land there because the parameter-space attractor pulls them.
-
-**Hierarchy of dissipative structures.** §Heat-tax tower is hierarchical pattern formation: each ascent is a new dissipative-structure transition with its own chit-as-order-parameter and its own slaving relation. §Stability per-level attractor structure + SOC per-level self-tuning + heat-tax across-levels = three aspects of one nested formation.
-
-**Turing-class spatial pattern formation.** Extending §9 kernel with spatial diffusion gives reaction–diffusion system; Turing instability requires three substrate-conditional conditions: (i) non-reciprocity $\gamma_{AB}\gamma_{BA}<0$ (mentor row), (ii) substrate-native autocatalysis $\gamma_{ii}<0$ (the bare §9 kernel has $J_{AA}=0$ at coexistence), (iii) differential diffusion $D_B \gg D_A$. Multi-mode pattern selection ($N\ge 3$) is fully closed at framework level via four channels (§Framework primitives consolidation).
+**Turing-class spatial pattern formation.** Extending §Universal kernel with spatial diffusion: Turing instability requires (i) non-reciprocity $\gamma_{AB}\gamma_{BA}<0$, (ii) substrate-native autocatalysis $\gamma_{ii}<0$ (the bare kernel has $J_{AA}=0$ at coexistence), (iii) differential diffusion $D_B \gg D_A$. Falsifier (Receipts §19): spatially extended Character substrates with $c$-regime clusters and identifiable long-range inhibitory coupling that fail to yield characteristic Turing wavelengths; or such substrates yielding pattern wavelengths uncorrelated with the predicted activator-inhibitor length-scale ratio.
 
 ## Active modulation and internal models
 
-**Plant–controller decomposition.** A holding is a closed loop. *Plant*: substrate's natural dynamics (§Bridge open-loop eigenvalue). *Controller*: maintenance feedback adjusting $G_0$ based on observed plant state. Closed-loop eigenvalue is shifted by controller transfer function, generically toward stability.
+**Plant–controller decomposition.** A holding is a closed loop. *Plant*: substrate's natural dynamics (§Bridge open-loop eigenvalue). *Controller*: maintenance feedback adjusting $G_0$ based on observed plant state. Closed-loop eigenvalue shifted by controller transfer function, generically toward stability.
 
-The §Stability active probe, §Pattern-formation SOC feedback, and §Pattern-formation slaving relation are three aspects of one closed-loop structure (§Framework primitives consolidation §11): the holding is a controller actively shaping its plant.
+**Lyapunov stability.** Chit is a candidate single-mode Lyapunov function. Non-frustrated multi-mode topologies admit the relative-entropy Lyapunov $\mathcal{V} = \sum_i[x_i - x_i^* - x_i^*\ln(x_i/x_i^*)]$ on gauged amplitudes (Harary structural-balance gauge), with $d\mathcal{V}/dt \le 0$ when the gauged $\gamma$ is positive semi-definite. $k_{\text{frust}}$ admits no *gradient* Lyapunov (the discriminator is gradient/detailed-balance structure, i.e. real vs complex spectrum, not stability per se — Receipts §846 R3).
 
-**Lyapunov stability.** Chit is a candidate single-mode Lyapunov function. Non-frustrated multi-mode topologies admit the relative-entropy Lyapunov $\mathcal{V} = \sum_i[x_i - x_i^* - x_i^*\ln(x_i/x_i^*)]$ on gauged amplitudes (Harary structural-balance gauge), with $d\mathcal{V}/dt = -\delta x^T \gamma\,\delta x \le 0$ when the gauged $\gamma$ is positive semi-definite. (Calligraphic $\mathcal{V}$ distinguishes from Rescorla–Wagner associative-strength $V$ below.) $k_{\text{frust}}$ admits *no* Lyapunov — non-existence is the dynamical-systems content of "no stationary fixed point" (§Topological drain).
+**Weighted Lyapunov for frustration-free-but-not-PSD topologies.** For Volterra–Lyapunov stable matrices that are not PSD, a strictly positive diagonal weight $W = \text{diag}(w_i)$ exists such that $W\gamma + \gamma^T W$ is PSD. Weighted form: $\mathcal{V} = \sum_i w_i[x_i - x_i^* - x_i^*\ln(x_i/x_i^*)]$. $W = I$ recovers PSD.
 
-**Weighted Lyapunov for frustration-free-but-not-PSD topologies.** For Volterra–Lyapunov stable matrices that are not PSD, a strictly positive diagonal weight matrix $W = \text{diag}(w_i)$ exists such that $W\gamma + \gamma^T W$ is PSD. Weighted form: $\mathcal{V} = \sum_i w_i[x_i - x_i^* - x_i^*\ln(x_i/x_i^*)]$. $W = I$ recovers PSD.
+**Auto-tuning posit** (P3 below): substrates natively tune $\gamma_{s,i}$ to satisfy diagonal stability via inverse-form $W = \text{diag}(\gamma_{\text{ref}}/\gamma_{s,i})$. Falsifier (Receipts §20): substrate exhibiting empirical $W$ outside the inverse-form scaling under conditions where diagonal stability is required.
 
-**Substrate-class auto-tuning posit.** Substrates natively tune $\gamma_{s,i}$ to satisfy diagonal stability via inverse-form
-$$W = \text{diag}(\gamma_{\text{ref}}/\gamma_{s,i})$$
-— inverse-scaling, slow-mode-dominant weighting. One of the five leading-order posits.
+**Internal model principle** (Francis–Wonham). A controller robust to a class of substrate disturbances must internally encode the generating structure of those disturbances. Substrate instances: surface-code decoder = internal model of error process; glass cage = encoding of bath schedule slow modes; behavioural pattern = encoding of reinforcement schedule structure.
 
-**Internal model principle** (Francis–Wonham). A controller robust to a class of substrate disturbances must internally encode the generating structure of those disturbances. Substrate-conditional instances: surface-code decoder = internal model of substrate's error process; glass cage = encoding of bath schedule's slow modes; behavioural pattern = encoding of reinforcement schedule's structure. Coherence is a substrate's local accumulation of model.
-
-**Behavioural substrate via continuous-time Rescorla–Wagner.** With associative strength $V(t)$, maximum conditioning $\lambda$, and learning rate $\kappa_{RW}$:
-$$\dot V = \kappa_{RW}(\lambda - V).$$
-Mappings: $V\to\rho$; $\kappa_{RW}\to\gamma_s$; $\lambda$ conjugate to maintenance budget $G_0$; extinction ($\lambda\to 0$) $=$ $R_{\text{Character}}$ quench trajectory. Variable-ratio reinforcement schedules predicted to instance Caputo $\beta_{\text{mem}}<1$ in extinction tails — sixth cross-register connection in the Caputo chain.
+**Behavioural substrate via continuous-time Rescorla–Wagner.** With associative strength $V(t)$, maximum conditioning $\lambda$, and learning rate $\kappa_{RW}$: $\dot V = \kappa_{RW}(\lambda - V)$. Mappings: $V\to\rho$; $\kappa_{RW}\to\gamma_s$; $\lambda$ conjugate to $G_0$; extinction ($\lambda\to 0$) = $R_{\text{Character}}$ quench. Variable-ratio reinforcement schedules predicted to instance Caputo $\beta_{\text{mem}}<1$ in extinction tails. Falsifier (Receipts §20): habit-extinction tails fail to exhibit Caputo $\beta_{\text{mem}}<1$ on variable-ratio schedules; or behavioural substrate showing extinction inconsistent with the framework's Rescorla–Wagner mapping.
 
 **Four-axis coherence observable.**
 
-| Axis | Reading | Source |
-|---|---|---|
-| chit | whether threshold is cleared | §Chit unit |
-| $Q$ | cycles of headroom | §Stability |
-| $I_{\text{pred}}$ | predictability given history | §Thermodynamic and informational accounting |
-| Internal-model richness | how rich a model of disturbance is encoded | this section |
+| Axis | Reading |
+|---|---|
+| chit | whether threshold is cleared |
+| $Q$ | cycles of headroom |
+| $I_{\text{pred}}$ | predictability given history |
+| Internal-model richness | how rich a model of disturbance is encoded |
 
 Independent axes. Internal-model richness may explain substrate-class variance in $s$-regime clustering: rich-model substrates cluster tighter near critical, weak-model substrates drift further.
 
-**Structural complexity and cryptic order.** The structural-complexity reading $C_\mu = H(\mathcal{S})$ on Crutchfield $\varepsilon$-machine causal states is mathematically independent of $I_{\text{pred}}$ for hidden-state processes, with $C_\mu \ge I_{\text{pred}}$ and **cryptic order** $\chi = C_\mu - I_{\text{pred}} \ge 0$ as the gap. The cryptic order identifies with the §Load-handling encoding overhead $\Delta_n = u_n - \epsilon_n$ at the optimal-encoding limit:
-$$\chi = \Delta_n \qquad \text{(at the optimal-encoding limit)}.$$
-One of the five leading-order posits.
+**Cryptic order and the optimal-encoding identity.** Structural complexity $C_\mu = H(\mathcal{S})$ on Crutchfield $\varepsilon$-machine causal states; $C_\mu \ge I_{\text{pred}}$, cryptic order $\chi = C_\mu - I_{\text{pred}} \ge 0$. The cryptic order identifies with the §Load-handling encoding overhead $\Delta_n = u_n - \epsilon_n$ at the optimal-encoding limit (posit P5 below): $\chi = \Delta_n$.
 
-*Stationarity-gap reading.* $C_\mu$ is derived for stationary processes; the framework's load-bearing positive instance (surface-code $s\to r$ CK aging) is non-stationary. Two compatible reconciliations: (i) *trajectory-ensemble local stationarity* — at fixed waiting-time $t_w$, the time-translated ensemble is locally stationary, $C_\mu(t_w)$ and $I_{\text{pred}}(t_w)$ are well-defined, $\chi(t_w)$ is the slowly-varying gap parameter along the aging diagonal; (ii) *time-varying $\varepsilon$-machines* — non-stationary computational-mechanics extensions give the same $C_\mu \ge I_{\text{pred}}$ inequality at each instantaneous causal-state partition. Substrate classes whose aging is slow compared to the predictive-information integration timescale use (i) by default; substrates with rapid aging inherit (ii).
+*Stationarity-gap reading.* $C_\mu$ derived for stationary processes; the framework's load-bearing positive instance (surface-code $s\to r$ aging) is non-stationary. Two reconciliations: (i) trajectory-ensemble local stationarity (default, for aging slow vs predictive-information integration timescale); (ii) time-varying $\varepsilon$-machines (rapid-aging substrates). Substrate-thermodynamic derivation of the slow-variation criterion is residual.
 
 ## Collective hydrodynamics
 
@@ -344,23 +341,23 @@ One of the five leading-order posits.
 
 **Toner–Tu hydrodynamics.** For populations with continuum spatial extent, slow dynamics of density $n(x,t)$ and orientational order $\mathbf{p}(x,t)$ satisfy Toner–Tu equations. The flocking transition $|\mathbf{p}|=0\to|\mathbf{p}|>0$ is the population-level analog of the chit-zero threshold.
 
-*Toner–Tu substrate-class scope.* Direct application for active-matter substrates with intrinsic self-propulsion and aligning interaction (active colloids, motile cells, robotic swarms, flocking animals). Application as the "active-matter overlay" channel for substrate classes lacking intrinsic self-propulsion (surface codes, neural ensembles, glassy substrates, behavioural substrates) is a *posited extension*; the active-stress / swim-pressure formulae below should be read as the framework's leading-order proposal for an effective stress tensor, with substrate-thermodynamic derivation of effective $v_0$, $\tau_R$ a substrate-class residual.
+*Substrate-class scope.* Direct on active-matter substrates with intrinsic self-propulsion (active colloids, motile cells, robotic swarms, flocking animals). Application as the "active-matter overlay" for substrate classes lacking intrinsic self-propulsion (surface codes, neural ensembles, glassy, behavioural) is a posited extension; effective $v_0$, $\tau_R$ derivation is a substrate-class residual.
 
-**Active stress and §Heat-tax tower extension.** Holdings impose more than heat on coarse-grained manifolds: mechanical, informational, structural stress. Substrate-class fingerprint at hydrodynamic level: $\alpha_\Sigma/\alpha_\sigma \sim v_0^2\,\tau_R/D_{\text{trans}}$ (swim-pressure ratio; alignment-independent, MIPS-compatible, survives $r\to 0$).
+**Active stress / swim pressure.** Substrate-class fingerprint at hydrodynamic level: $\alpha_\Sigma/\alpha_\sigma \sim v_0^2\,\tau_R/D_{\text{trans}}$ (alignment-independent, MIPS-compatible, survives $r\to 0$).
 
-**Green–Kubo identification of $\tau_R$.** Substrate-neutral form: $\tau_R = \int_0^\infty \langle\mathbf{u}(t)\cdot\mathbf{u}(0)\rangle\,dt$, where $\mathbf{u}(t)$ is the unit-vector direction of the holding's active maintenance-work application in its state space. Same mathematical object across substrates. For non-Markovian substrates with Caputo $\beta_{\text{mem}}<1$, $\tau_R$ formally diverges (Green-Kubo integrand $\sim t^{-\beta_{\text{mem}}}$); finite-size cutoffs regularise.
+**Green–Kubo identification of $\tau_R$.** Substrate-neutral: $\tau_R = \int_0^\infty \langle\mathbf{u}(t)\cdot\mathbf{u}(0)\rangle\,dt$. For non-Markovian substrates with Caputo $\beta_{\text{mem}}<1$, $\tau_R$ formally diverges (integrand $\sim t^{-\beta_{\text{mem}}}$); finite-size cutoffs regularise.
 
-**$f(r)$ active-stress closure.** Toner–Tu active pressure: $P_{\text{active}} = (n\,v_0^2\,\tau_R/d)[1 + Cr^2]$ with active-coupling constant $C = \zeta_0 d/(v_0^2\tau_R)$. Sign of $C$: contractile $>0$, extensile $<0$, isotropic $\approx 0$. Drives the §Heat-tax tower r-coupling between channels 2 and 3.
+**$f(r)$ active-stress closure.** Toner–Tu active pressure $P_{\text{active}} = (n\,v_0^2\,\tau_R/d)[1 + Cr^2]$ with active-coupling $C = \zeta_0 d/(v_0^2\tau_R)$. Sign of $C$: contractile $>0$, extensile $<0$, isotropic $\approx 0$. Drives the §Heat-tax tower $r$-coupling between channels 2 and 3.
 
-**Giant number fluctuations.** Active populations exhibit $\delta N \sim N^a$ with $a > 1/2$ (canonical $a = 1$). TUR may saturate or loosen in this regime; substrate-class diagnostic.
+**Giant number fluctuations.** $\delta N \sim N^a$ with $a > 1/2$ (canonical $a = 1$). TUR may saturate or loosen; substrate-class diagnostic.
 
-**Non-reciprocal coupling.** v9 §Falloff already flags as extension axis. The §Universal kernel admits $\gamma_{AB}\ne\gamma_{BA}$; coexistence Jacobian has $\operatorname{Tr}=0$, $\det = -\gamma_{AB}\gamma_{BA}\rho_A^*\rho_B^*$, giving three regimes by sign of $\gamma_{AB}\gamma_{BA}$: positive ⇒ saddle (runaway / competitive exclusion); negative ⇒ centre promoted to stable limit cycle of frequency $\omega_{\text{pq}} \approx \sqrt{|\gamma_{AB}\gamma_{BA}|\rho_A^*\rho_B^*}$ under finite-$\mathcal{D}$ (mentor row priority-queue oscillation); zero ⇒ exceptional point. Spatially extended: traveling waves at velocity $v\sim\sqrt{D_{\text{diff}}|\gamma_{AB}\gamma_{BA}|}$. The §Universal kernel mentor row is *actually* non-reciprocal in substrate dynamics; the symmetric-kernel formal expression is a simplification.
+**Non-reciprocal coupling.** Universal-kernel coexistence Jacobian with $\gamma_{AB}\ne\gamma_{BA}$ has $\text{Tr}=0$, $\det = -\gamma_{AB}\gamma_{BA}\rho_A^*\rho_B^*$: three regimes by sign of $\gamma_{AB}\gamma_{BA}$. Negative ⇒ centre promoted to limit cycle, frequency $\omega_{\text{pq}} \approx \sqrt{|\gamma_{AB}\gamma_{BA}|\rho_A^*\rho_B^*}$ (mentor row priority-queue oscillation). Spatially extended: traveling waves at $v\sim\sqrt{D_{\text{diff}}|\gamma_{AB}\gamma_{BA}|}$.
 
-**MIPS** (motility-induced phase separation). Pure repulsive interactions with self-propulsion produce phase separation. New clustering mechanism not in §Universal kernel: clustering at $\gamma_{AB} \ge 0$ via self-propulsion-induced density fluctuations alone. Substrate instancing: open.
+**MIPS.** Pure repulsive interactions with self-propulsion produce phase separation. New clustering mechanism not in §Universal kernel: clustering at $\gamma_{AB} \ge 0$ via self-propulsion-induced density fluctuations alone. Falsifier (Receipts §21): high-Péclet ($\text{Pe} = v_0\tau_R/a \gg 1$) clustering at $\gamma_{AB}\ge 0$ without predicted swim-pressure / density-fluctuation signature; or substrates passing the high-Péclet criterion failing to cluster at $\gamma_{AB}\ge 0$.
 
 ## Load-handling and capacity dynamics
 
-**Holdings as queues.** Mapping: $\lambda$ arrival rate of perturbations, $\mu$ service rate ($\sim G_0$), utilisation $\rho = \lambda/\mu$. Chit dual to utilisation at simplest mapping: $\text{chit} = -\ln\rho$.
+**Holdings as queues.** $\lambda$ arrival rate, $\mu$ service rate ($\sim G_0$), utilisation $\rho = \lambda/\mu$. Simplest mapping: $\text{chit} = -\ln\rho$.
 
 | Regime | Chit | $\rho$ | Queueing state |
 |---|---|---|---|
@@ -368,179 +365,94 @@ One of the five leading-order posits.
 | $s$ | $\to 0^+$ | $\to 1^-$ | heavy traffic, critical fluctuations |
 | $r$ | $< 0$ | $> 1$ | unstable, queue blowup |
 
-**Heavy-traffic = $s$-aging.** Kingman's $\langle Q\rangle \sim 1/(1-\rho)$ heavy-traffic limit IS the §gFDR $s$-aging signature in queueing register; CK exponent $\alpha_s$ has a heavy-traffic queue-length analog. Coincides for Markovian substrates; diverges for non-Markovian — divergence pattern is a substrate-class diagnostic.
+**Heavy-traffic = $s$-aging.** Kingman's $\langle Q\rangle \sim 1/(1-\rho)$ heavy-traffic limit IS the §gFDR $s$-aging signature in queueing register. Coincides for Markovian substrates; diverges for non-Markovian — divergence pattern is the substrate-class diagnostic. **Note: this mapping is the subject of the reframed mm1 falsifier — see §Universal two-mode kernel.**
 
 **Little's law.** $\langle Q\rangle = \lambda\langle W\rangle$. Framework's first explicit ⟨amplitude⟩ × ⟨rate⟩ × ⟨timescale⟩ relation at fixed operating point.
 
-**Jackson-network special case.** For Markov–Poisson substrates: product-form steady state $P(\mathbf{Q}) = \prod_i P_i(Q_i)$ with Burke departure-process structure. Tractable explicit-solution regime.
+**Jackson-network special case.** For Markov–Poisson substrates: product-form steady state $P(\mathbf{Q}) = \prod_i P_i(Q_i)$ with Burke departure-process structure.
 
-**Multiclass priority and the mentor row.** §Universal mentor row is structurally a priority queue (Kelly). The §Universal mentor row + §Collective non-reciprocal coupling + §Load-handling priority queue are three readings of one substrate-deep asymmetry.
-
-**Cobham priority-queue mapping.** With shared maintenance budget pool $G_{\text{total}}$ as server, tower levels $n$ as priority classes ranked by Haken's slaving, arrival rates $\lambda_n$ as fraying-event frequencies, service times $\tau_n = 1/\gamma_{s,n}$, per-level utilisation $\rho_n = \lambda_n\tau_n$, cumulative utilisation $u_n = \sum_{i=0}^n \rho_i$. Cobham expected wait for class $n+1$:
+**Cobham priority-queue mapping.** With shared budget $G_{\text{total}}$ as server, tower levels $n$ as priority classes ranked by Haken slaving, arrival rates $\lambda_n$, service times $\tau_n = 1/\gamma_{s,n}$, per-level $\rho_n = \lambda_n\tau_n$, cumulative $u_n = \sum_{i=0}^n \rho_i$. Cobham expected wait:
 $$W_{n+1} = W_0/[(1-u_n)(1-u_{n+1})], \qquad W_0 = \tfrac{1}{2}\sum_i \lambda_i\langle\tau_i^2\rangle.$$
 Wait diverges at $u \to 1^-$, coincident with the §Heat-tax thermodynamic singularity at $\epsilon \to 1^-$.
 
-*The Cobham–Haken bridge.* The Theorem maps two distinct mathematical structures: Haken's slaving (centre-manifold reduction by natural-timescale separation) and Cobham's wait formula (non-preemptive priority-queue identity with Poisson arrivals at a single server pool). The composition is interpretive, requiring three substrate-side conditions:
+**Cobham–Haken bridge conditions** (Receipts §22). Three substrate-side conditions:
+1. **Poisson arrivals.** Memoryless inter-arrivals with rate $\lambda_n$. Heavy-tailed substrates (Caputo $\beta_{\text{mem}}<1$) carry fractional-Brownian corrections — leading-order critical structure preserved, divergence exponent changes from $-1$ to $-\beta_{\text{mem}}$.
+2. **Single-server-pool interpretation of $G_{\text{total}}$.** Strict per-level partitioning → Jackson reading instead.
+3. **Non-preemptive ranking by timescale.** Top-down preemption (cognitive substrates) → preemptive-priority corrections.
 
-1. **Poisson arrivals at the tower level.** Fraying events arrive as memoryless Poisson with rate $\lambda_n$. Substrates with heavy-tailed inter-arrival times (canonically Caputo $\beta_{\text{mem}}<1$) carry fractional-Brownian corrections — leading-order critical structure preserved, divergence exponent changes from $-1$ to $-\beta_{\text{mem}}$.
-2. **Single-server-pool interpretation of $G_{\text{total}}$.** Shared maintenance budget serves all priority classes through a single allocation mechanism. Substrates with strict per-level budget partitioning carry a Jackson-network reading instead.
-3. **Non-preemptive ranking by timescale.** Slowest macroscopic mode is highest-priority (centre-manifold's adiabatic-following structure). Substrates with internal preemption mechanisms (canonically: top-down attentional override in cognitive substrates) carry preemptive-priority corrections.
+Substrate-conditional falsifier per condition.
 
-Substrate classes satisfying all three inherit the full Cobham closure; those satisfying some inherit corresponding modifications.
+**ε↔u optimal-encoding identity** (posit P4 below): $u_n = \epsilon_n$ at the rate-distortion bound. Sub-optimal substrates have $u_n > \epsilon_n$, overhead $\Delta_n \ge 0$. The four-aspect Wall splits — thermodynamic and SOC aspects reach criticality first (via $u \to 1$); the informational aspect ($\epsilon \to 1$) is reached only by optimal-encoding substrates. **Sub-optimal substrates die thermodynamically before they die informationally.**
 
-**ε↔u optimal-encoding identity.** For a substrate at the rate-distortion bound:
-$$u_n = \epsilon_n \qquad (\text{rate-distortion-optimal encoding}).$$
-One of the five leading-order posits. Sub-optimal substrates have $u_n > \epsilon_n$ with overhead $\Delta_n \ge 0$; the four-aspect Wall splits — thermodynamic and SOC aspects reach criticality first (via $u \to 1$); the informational aspect ($\epsilon \to 1$) is reached only by optimal-encoding substrates.
-
-**Spatial Jackson-network generalisation.** Kelly's product-form theorem: $P(\mathbf{Q}) = \prod_k P_k(Q_k)$ across patches $k$, each patch independently undergoing Cobham priority dynamics. Non-Markovian Caputo memory violates Kelly's quasi-reversibility; critical interaction length $\ell_c(\beta_{\text{mem}})$ for product-form breakdown depends on Caputo exponent:
+**Spatial Jackson-network generalisation.** Kelly product-form $P(\mathbf{Q}) = \prod_k P_k(Q_k)$ across patches. Non-Markovian Caputo memory violates Kelly's quasi-reversibility; critical interaction length:
 $$\ell_c(\beta_{\text{mem}}) = \sqrt{(2D_{\beta_{\text{mem}}}/\Gamma(1+\beta_{\text{mem}}))(W_0/(1-u_n))^{\beta_{\text{mem}}}}.$$
 
-**Traffic-driven → frozen-topological transition.** As $u_n \to 1^-$ alone (Markovian heavy traffic), $\ell_c$ diverges via wait-time inflation. As $\beta_{\text{mem}} \to 0$ at the Wall, $W^{\beta_{\text{mem}}} \to 1$ and $\ell_c \to \sqrt{2D_0}$ with degenerate dimension. The spatial expression of the Complexity Wall is a regime transition from dynamic congestion domains to frozen topological domains. Substrate's intrinsic topology sets the freeze-length. This is the spatial reading of the same Wall-coupling posit governing the §Pattern formation four-aspect Wall, not an independent fifth aspect.
+**Traffic-driven → frozen-topological transition.** As $u_n \to 1^-$ alone (Markovian heavy traffic), $\ell_c$ diverges via wait-time inflation. As $\beta_{\text{mem}} \to 0$ at the Wall, $W^{\beta_{\text{mem}}} \to 1$ and $\ell_c \to \sqrt{2D_0}$ with degenerate dimension. The spatial expression of the Complexity Wall is a regime transition from dynamic congestion domains to frozen topological domains.
 
-## Framework primitives
+## Five leading-order posits
 
-The framework's API surface and eleven cross-register identities.
+Five framework primitives share an identical four-part shape: (1) simplest functional form placing a primitive at its critical / optimal limit; (2) substrate-conditional deviation from that form; (3) falsifier formalised in Receipts; (4) substrate-thermodynamic derivation as receipts-only residual.
 
-### Five leading-order posits (methodological)
+| # | Posit | Section | Receipts | Predicted measurement |
+|---|---|---|---|---|
+| P1 | $\beta_{\text{mem}} \approx 1-\epsilon$ | §Pattern formation | §9 | Substrate's $\beta_{\text{mem}}(\epsilon)$ relation linear to leading order with both endpoints respected |
+| P2 | $\mu = e^{\text{chit}}$ | §Pattern formation | §18 | Avalanche branching ratio tracks $e^{\text{chit}}$; $\tau\approx 3/2$ at chit $=0$ |
+| P3 | $w_i = \gamma_{\text{ref}}/\gamma_{s,i}$ | §Active modulation | §20 | Substrate-native weights inverse-scale with $\gamma_{s,i}$ |
+| P4 | $u_n = \epsilon_n$ | §Load-handling | §22 | At rate-distortion-optimal encoding, $u_n - \epsilon_n \to 0$ |
+| P5 | $\chi = \Delta_n$ | §Active modulation | §20 | $C_\mu - I_{\text{pred}} = u_n - \epsilon_n = \langle\sigma\rangle_{\text{excess}}/\gamma_s$ |
 
-Five framework primitives share an identical four-part shape:
-
-1. simplest functional form placing a framework primitive at its critical / optimal limit;
-2. substrate-conditional deviation from that form;
-3. falsifier formalised;
-4. substrate-thermodynamic derivation as receipts-only residual.
-
-| Posit | Section | Receipts |
-|---|---|---|
-| $\beta_{\text{mem}} \approx 1-\epsilon$ | §Pattern formation | §9 Wall-coupling |
-| $\mu = e^{\text{chit}}$ | §Pattern formation | §18 Galton–Watson |
-| $w_i = \gamma_{\text{ref}}/\gamma_{s,i}$ | §Active modulation | §20 auto-tuning |
-| $u_n = \epsilon_n$ | §Load-handling | §22 ε↔u |
-| $\chi = \Delta_n$ | §Active modulation | §20 cryptic order |
-
-The pattern is the framework's **API surface**: universality fixes exponents (the simple form at the limit); substrates fix amplitudes (deviations from the form). RG language. Each posit is testable; none is derived from substrate thermodynamics.
-
-### Eleven cross-register identities
-
-**1. Caputo memory exponent $\beta_{\text{mem}}$ — seven-register chain of one parameter.**
-
-- Memory-tail $t^{-\beta_{\text{mem}}}$
-- $\tau_R$ Green–Kubo divergence
-- Swim-pressure fingerprint $\alpha_\Sigma/\alpha_\sigma$ divergence via $\tau_R$
-- Spatial Kelly-network product-form breakdown
-- Wall-coupling $\beta_{\text{mem}}\approx 1-\epsilon$ posit
-- Variable-ratio behavioural-extinction tail
-- Spatial traffic-driven → frozen-topological transition via $\ell_c(\beta_{\text{mem}})$
-
-The unifying $s$-regime / Wall-approach control parameter under the Wall-coupling posit. The four-aspect Wall (thermodynamic / dynamical / informational / SOC) is its multiple-register expression — four core register-faces of one parameter under the posit; the spatial expression ($\ell_c$) reads the same parameter spatially, not a fifth independent aspect.
-
-**2. Optimal-encoding triality.** $\chi = \Delta_n = \langle\sigma\rangle_{\text{excess}}/\gamma_s$ — one quantity, three measurement protocols:
-
-- Cryptic order $\chi = C_\mu - I_{\text{pred}}$
-- Encoding overhead $\Delta_n = u_n - \epsilon_n$
-- Dissipation excess $\langle\sigma\rangle - \langle\sigma\rangle_{\min} = \gamma_s\chi$
-
-Sub-optimal substrates die thermodynamically before they die informationally. The four-aspect Wall is a single parameter only at the optimal limit; sub-optimal substrates split it.
-
-**3. Wall-forces-NRT chain.** Three closures stacking to make meta-ledger chaos *forced* past the Wall:
-
-- Cobham wait $W_{n+1} \to \infty$ at $u_n \to 1^-$, under the Cobham–Haken bridge conditions.
-- Generic Hopf per tower-ascent via DDE characteristic equation.
-- $N\ge 3$ ascents complete the 3-torus required for NRT chaos.
-
-Substrate-conditional on whether $r$-regime collapse precedes the bifurcation sequence and on the Cobham–Haken bridge conditions holding.
-
-**4. Galton–Watson branching at two registers.** One mean-field universality class instantiated at two framework-primitive boundaries:
-
-- Horizontal/spatial: $\mu = e^{\text{chit}} \to 1$ at chit $= 0$ (within-level; classical iid Galton–Watson).
-- Vertical/meta-ledger: tower branching ratio $\to 1$ at $\epsilon = 1$ (across-level; correlated-offspring multitype extension).
-
-Mean-field $\tau = 3/2$ at criticality on both registers; substrate-graph effective dimensionality fixes the empirical exponent. Vertical-register iid extension condition: weak cross-level correlation.
-
-**5. Mentor row's dual face.** One non-reciprocal coupling structure, two morphological manifestations:
-
-- Temporal limit cycle, frequency $\omega_{\text{pq}} \approx \sqrt{|\gamma_{AB}\gamma_{BA}|\rho_A^*\rho_B^*}$.
-- Spatial Turing pattern, wavenumber $k_c$ — when also equipped with substrate autocatalysis and differential diffusion.
-
-Substrate spatial structure selects between the two faces.
-
-**6. Three distinct spatial-structure mechanisms.** Distinguishable prerequisites and dynamics:
-
-- Turing reaction–diffusion: requires non-reciprocity + substrate autocatalysis + differential diffusion.
-- Kelly queueing-congestion product-form breakdown: requires bandwidth contention; no autocatalysis or differential diffusion needed.
-- Frozen-topological at $\beta_{\text{mem}} \to 0$: memory-driven; substrate intrinsic topology sets freeze-length.
-
-Not reducible to each other; substrate may carry one, two, or all three at different scales.
-
-**7. $r$-coupling between heat-tax channels 2 and 3.** Channels 2 ($\alpha_\Sigma\langle\Sigma_n\rangle$, scales as $1+Cr^2$) and 3 ($r$-drop sync degradation) share $r$ as driver in *opposing* directions. Substrate active-coupling $C$ (sign: contractile $>0$ / extensile $<0$ / isotropic $\approx 0$) determines balance.
-
-**8. $k_{\text{frust}}$ topological triality.** Three co-implied measurement protocols, one underlying fact — **the stationary state is irreducibly a NESS: a topologically-forced, drive-independent circulating current (broken detailed balance)**:
-
-- Dynamical: no *equilibrium* (detailed-balance) steady state; the stationary state circulates (the relaxation spectrum is complex). [The earlier "no stationary fixed point" was too strong — a stable circulating focus *is* a fixed point and is genuine $k_{\text{frust}}$; see §Topological drain sub-regimes.]
-- Informational-geometric: no Fisher geodesic / scalar potential generates the circulating flux — homotopy obstruction.
-- Thermodynamic: drive-independent Schnakenberg cycle current forced by orbit topology.
-
-Identity at the underlying-topology level; substrate-specific measurement signatures differ across registers.
-
-**9. $s$-regime exponent triality** (under common-exponent substrate-class condition). One parameter, three mathematical-discipline measurements:
-
-$$\alpha_s = \beta_{\text{mem}} = \text{anomalous heavy-traffic exponent}$$
-
-- CK aging-diagonal slope $\alpha_s$ (physics; gFDR signature).
-- Caputo fractional memory exponent $\beta_{\text{mem}}$ (fractional calculus).
-- Heavy-traffic queue-tail anomalous exponent (operations research).
-
-Substrate-class condition: substrate's slow-resource memory kernel and load-arrival process share a single anomalous-diffusion exponent. Distinct from item 1 (chain of *consequences*); this is identity *across measurement protocols*. Both belong.
-
-**10. Four-channel pattern selection architecture.** Multi-mode ($N\ge 3$) pattern selection decomposes into exactly four independent tests, all closed:
-
-- Frustration test (signed-graph sign-product).
-- Spectral sync test (Sun–Bollt–Nishikawa generalised MSF; mild-heterogeneity scope, posited extension to strong heterogeneity).
-- Non-reciprocity test (Jacobian sign analysis).
-- Active-matter overlay (Toner–Tu / MIPS; direct for active-matter substrates, posited extension elsewhere).
-
-The complete operating system for multi-mode emergence; any $N\ge 3$ Character kernel routes through these four tests, with channels 2 and 4 carrying explicit substrate-class scope.
-
-**11. Closed-loop plant-controller unifier.** Three aspects of one closed-loop control structure:
-
-- Active probe (§Stability): on-resonance feedback through relaxation-oscillation loop.
-- SOC self-tuning (§Pattern formation): feedback-coupled chit-zero attractor.
-- Haken slaving (§Pattern formation): centre-manifold reduction read backward.
-
-The plant–controller decomposition (§Active modulation) is the unifying register; the three are different reading-protocols of the same closed-loop.
+Universality fixes that *there is* a critical-limit form (the exponents); substrates fix the amplitudes (deviations from the form). RG language. Each posit is testable; none is derived from substrate thermodynamics.
 
 ## Methodological imperatives
 
-- **Trajectory primacy.** Bounded time-series data of sustained holding, not static point measurements.
+- **Trajectory primacy.** Bounded time-series of sustained holding, not static point measurements.
 - **NESS-by-default.** Detailed-balance breaking is foundational baseline; equilibrium is the degenerate (zero-drive) special case.
-- **Reading rules inherit from v9.** Substrate-conditional sign caveats and detection-event preprocessing apply identically.
-- **Falsifier discipline.** Each character-specific claim wants its own falsifier statement. Surface-code $s$-aging identification is the load-bearing positive instance; per-claim falsifiers for the rest are owed.
-- **API surface, not closed theory.** Five leading-order posits encode the framework's API: each posit places a primitive at its critical limit via the simplest natural form; substrate-thermodynamic derivation of exact functional shapes is the canonical extension mode, not a defect of the present state.
+- **mpa-legal.** Every dynamical quantity (rate, coupling, response, current) must *flow with the operating point* unless the physics explicitly says otherwise. An inert constant frozen where physics requires flow is illegal; the audit method has caught two such cases (Receipts §13 / §Topological-drain mpa-LEGAL audit, 2026-05-20).
+- **Falsifier discipline.** Each claim states a predicted measurement on a named substrate (or substrate class), with a sharp falsifier formalised in Receipts. Surface-code $s$-aging is the load-bearing positive cross-substrate instance; the rest are predictions awaiting empirical contact.
+- **Goalpost-optic.** Refinements during a falsification campaign must shrink the falsifiable surface, not enlarge it. Survival is the operative verdict.
+- **Reading rules inherit from v9.** Substrate-conditional sign caveats (Markovian γ-sign inversion; detection-event preprocessing) apply identically.
+- **API surface, not closed theory.** Five posits encode the framework's API: each posit places a primitive at its critical limit via the simplest natural form; substrate-thermodynamic derivation of exact functional shapes is the canonical extension mode, not a defect.
 
 ## Open items
 
-Closed-form residuals and structural conjectures both stand at zero — the architectural take lives in §Framework primitives consolidation. The remaining items are **empirical coupling parameters**: framework predictions awaiting substrate contact, with sharp falsifiers and posited functional forms (the five leading-order posits) already established. These are the framework's API where universal theory meets empirical reality, not theoretical gaps.
+These are predictions awaiting empirical contact (live falsifiers) and pieces of pipeline owed before some verdicts can be adjudicated (owed work). Architectural conjectures and meta-organisational claims that are not yet framework content are listed at the bottom.
 
-**Empirical coupling parameters** (predictions awaiting empirical contact; falsifiers formalised in Receipts):
+### Live falsifiers (named falsifier substrate + predicted measurement)
 
-- Surface-code $s \to r$ migration as the gFDR cross-substrate test (§gFDR signatures; primary instance) — falsifier formalised in Receipts §4.
-- Habit-extinction as Rescorla–Wagner reference driver — falsifier formalised in Receipts §20 (habit-extinction); variable-ratio schedules predicted to extend the Caputo $\beta_{\text{mem}}$ chain to behavioural substrates.
-- Power-law avalanche exponent $\tau \approx 3/2$ on any substrate (§Pattern formation) — Galton–Watson critical-branching mechanism closed via posit $\mu = e^{\text{chit}}$; falsifier in Receipts §18 (avalanche).
-- Meta-ledger branching ratio in observed substrates (§Pattern formation) — falsifier in Receipts §18 (branching ratio).
-- Strange-attractor / chaotic Character dynamics on any substrate (§Stability) — falsifier in Receipts §14 (strange-attractor instancing).
-- MIPS clustering at $\gamma_{AB} \ge 0$ on any substrate (§Collective hydrodynamics) — falsifier in Receipts §21 (MIPS).
-- Chimera-state substrate instancing (§Phase-locking) — falsifier in Receipts §15 (chimera).
-- TUR-tightness as substrate-class universality observable (§Thermo-info accounting) — falsifier in Receipts §16 (TUR-tightness).
-- $I_{\text{pred}}$ scaling with chit, $Q$, internal-model richness across substrate classes (§Thermo-info + §Active modulation) — falsifier in Receipts §17/§20 ($I_{\text{pred}}$ scaling).
-- Heavy-traffic exponent vs $\alpha_s$ on Markovian and non-Markovian substrates (§Load-handling) — falsifier in Receipts §22 (heavy-traffic).
-- Substrate-class hard-vs-soft capacity walls (§Capacity dynamics) — falsifier in Receipts §5/§22 (hard-vs-soft walls).
-- Turing-class spatial pattern formation: three-condition substrate-instance refinement (non-reciprocal mentor row + substrate-native autocatalysis + differential diffusion); falsifier in Receipts §19 (Turing).
-- Memory-exponent collapse near Complexity Wall: leading-order coupling $\beta_{\text{mem}}\approx 1-\epsilon$; falsifier in Receipts §9 (memory-exponent coupling).
-- Substrate-class auto-tuning to diagonally-stable $W$: inverse-form $W = \text{diag}(\gamma_{\text{ref}}/\gamma_{s,i})$; falsifier in Receipts §20 (auto-tuning).
-- Common-exponent substrate-class condition for the $s$-regime exponent triality (§Universal two-mode kernel): substrate slow-resource memory kernel and load-arrival process share a single anomalous-diffusion exponent. Falsifier: substrate classes where the FDR exponent and the queueing-tail exponent are measured to differ.
-- Cobham–Haken bridge conditions (§Load-handling): three substrate-side conditions (Poisson tower arrivals, single-server-pool $G_{\text{total}}$, non-preemptive timescale ranking) must hold approximately. Substrate-conditional falsifier per condition.
-- Sun–Bollt–Nishikawa strong-heterogeneity extension (§Phase-locking): SBN spectral test sign-robust at mild heterogeneity; quantitative accuracy at strong heterogeneity is a posited extension. Falsifier: substrate classes where SBN spectral predictions and observed sync behaviour disagree quantitatively under strong-heterogeneity conditions.
-- Toner–Tu active-matter overlay extension (§Collective hydrodynamics): direct for active-matter substrates; effective $v_0, \tau_R$ derivation a substrate-class residual for substrates lacking intrinsic self-propulsion.
-- $\varepsilon$-machine stationarity-gap reading (§Active modulation): trajectory-ensemble local stationarity (default) vs time-varying $\varepsilon$-machines (rapid-aging substrates). Substrate-thermodynamic derivation of the slow-variation criterion is residual.
+- Surface-code $s \to r$ migration as gFDR cross-substrate test (Receipts §4; primary instance).
+- Habit-extinction Caputo $\beta_{\text{mem}}<1$ on variable-ratio schedules (Receipts §20).
+- Avalanche $\tau \approx 3/2$ on feedback-coupled NESS with separable timescales (Receipts §18). Apparatus validated 2026-05-20 on critical Galton–Watson + RFIM.
+- Meta-ledger branching ratio = 1 at $\epsilon = 1$ in any observable hierarchical NESS substrate (Receipts §18).
+- Strange-attractor / chaotic Character dynamics on any substrate crossing $\epsilon \ge 1$ (Receipts §14).
+- MIPS clustering at $\gamma_{AB} \ge 0$ in high-Péclet substrates (Receipts §21).
+- Chimera-state substrate instancing under SBN spectral test (Receipts §15).
+- TUR-tightness as substrate-class universality (Receipts §16).
+- $I_{\text{pred}}$ scaling with chit, $Q$, internal-model richness across substrate classes — *also the falsifier for the bit/chit dual ledger if a substrate breaks the per-row correspondence* (Receipts §17/§20).
+- Heavy-traffic exponent vs $\alpha_s$ on Markovian and non-Markovian substrates — the reframed mm1 falsifier per FALSIFICATION.md Finding 3 (Receipts §22).
+- Substrate-class hard-vs-soft capacity walls (Receipts §5/§22).
+- Turing-class three-condition refinement (non-reciprocity + autocatalysis + differential diffusion) (Receipts §19).
+- Memory-exponent collapse near the Wall ($\beta_{\text{mem}} \approx 1-\epsilon$) (Receipts §9).
+- Auto-tuning inverse-form $w_i = \gamma_{\text{ref}}/\gamma_{s,i}$ on substrates requiring diagonal stability (Receipts §20).
+- Common-exponent condition for the $s$-regime exponent identity. Falsifier: substrate classes where FDR exponent and queueing-tail exponent are measured to differ.
+- Cobham–Haken bridge conditions: three substrate-side conditions, each with own falsifier.
+- SBN strong-heterogeneity extension: falsifier on substrate classes where SBN spectral predictions and observed sync behaviour disagree quantitatively under strong heterogeneity.
+- Toner–Tu active-matter overlay: direct for active-matter substrates; effective $v_0, \tau_R$ derivation a substrate-class residual for substrates lacking intrinsic self-propulsion.
+- Deep-$c$ phase-lock collapse / multi-mode memory capacity loss (raised by the mpa-LEGAL fix to non-monotonic $Q$, 2026-05-20). Falsifier owed; named substrate owed.
+- $k_{\text{frust}}$ cross-substrate instance (see "Open conjectures" below).
 
-Two classes of residual live beneath each posit-based item: (i) the *empirical coupling parameter* itself — substrate-specific number or curve to be measured; and (ii) *substrate-thermodynamic derivation of the exact functional form* of the corresponding leading-order posit. Closing (ii) for a substrate class promotes the posit from leading-order universal-form to derived substrate-specific form — the canonical extension mode of the framework's API.
+### Owed work (pipeline)
+
+- **5-vector inversion** (`conformer/compute/five_vector.py::fit_kww5` first-cut exists; recovers X on two_temp_ou to ~1–2%). Until landed + integrated, X-bearing verdicts read at the raw FDR-locus-slope layer per FALSIFICATION.md adjudication policy.
+- **Domain-of-validity gate** on the conform pipeline (FALSIFICATION.md Finding 2: pure oscillation reads as `s_critical` with locus_residual ~0.8; no gating). Awaits 5-vector fitter absorbing valid-aging residuals before a residual threshold can isolate out-of-domain cases.
+- **Underdamped/oscillatory inversion** (FALSIFICATION.md Finding B): conform clamps to deep-r on class-B laser ringing C(τ), χ(τ). Adjudicate alongside Finding 2 when the domain gate / 5-vector work is taken up.
+- **Auditor layer never exercised on controls.** Once inversion carries X, push a control cell through the auditor and check the regime story.
+- **$\varepsilon$-machine stationarity-gap criterion.** Substrate-thermodynamic derivation of the slow-variation criterion separating the trajectory-ensemble-local-stationarity reading from the time-varying-$\varepsilon$-machine reading.
+
+### Open conjectures (research notes, not framework content)
+
+- **$k_{\text{frust}}$ as second primitive axis.** The R1/R2/R3 ladder survived on a synthetic 3-cycle; Receipts §846 explicitly flagged the elevation to numbered primitive as "still steeping" and earned only by a real cross-substrate instance. Operational content (NESS circulation, complex spectrum, affinity ≠ magnitude) sits at the level of v9 §Three typed objects + §gFDR signatures + §k_frust drain here. Promotion remains available when a real substrate exercises (a) drive-independent NESS circulation, (b) chirality conservation under a chirality-preserving substrate transformation, (c) the three triality registers measuring the same thing — *on a non-synthetic system*.
+- **$k_{\text{frust}}$ topology-floor posit.** Functional form not yet committed. Promote when a committed functional form ties the smallest-cycle-affinity floor to graph topology and a measurement names a falsifier substrate.
+- **$k_{\text{frust}}$ information-native characterisation.** $k_{\text{frust}}$ currently lives natively in dynamical-systems / differential-geometric registers; its information-face is a derived consequence-set (forced past-future mutual information; non-zero KS entropy). Owed: a substrate-independent information-native characterisation (candidate direction: topological mutual information that survives detailed-balance restoration).
+- **Bilingual register as a structural-universality claim.** The bit/chit dual ledger (now in §Thermo-info accounting) is per-row content with a stated falsifier ($I_{\text{pred}}$ scaling deviation). The further claim that "the dual mapping itself is substrate-independent" needs a substrate test independent of the per-row falsifier; until then, it lives as expository organisation, not framework content.
+- **Substrate-transformation classification (chirality-preserving / chirality-flipping / axis-mixing).** Two known entries already live in their original homes: Markovian γ-sign inversion (§gFDR substrate-conditional reading rules) and strong-chaos Wall round-trip (§k_frust drain R2). Three candidate residuals (time-reversal on non-conservative substrates; parity on active-matter substrates with definite $C$ sign; mirror operations on intrinsically chiral substrates) are future work. Promote when a substrate test names a chirality-preserving transformation and demonstrates identity-class non-interconversion.
+- **Chirality-typed identity catalogue.** The predictive content — "chiral identities have sharper substrate-class scope than achiral ones" — needs a substrate where the prediction has been (or will be) tested. Promote when that substrate is named.

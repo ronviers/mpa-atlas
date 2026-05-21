@@ -114,3 +114,44 @@ If unsure whether something is a protocol or a meta-document: protocols specify 
 The discipline was named explicitly in a session on 2026-05-08, after the user observed that workstations heat-mapped during a day of production traverse a narrow path despite their nominal feature space — and that mature standards (color management's ICC v4, ~120 pages) carry decades of constituency baggage MPA does not have. The framing the user introduced: ***peel*, not scrape.** Peel away the legacy paths down to the singular working path actually used.
 
 The justification phrasing — *it was never brittle if it never broke* — is the user's. It is not a hedge or a slogan; it is the discipline's load-bearing claim about what brittleness means and when underspecification is correct.
+
+
+## Character test suite — spec-stability contract
+
+mpa-atlas is the upstream of the character test framework owned by
+mpa-conform. Canonical doc:
+[`H:/mpa-conform/conformer/tests/character/README.md`](../mpa-conform/conformer/tests/character/README.md).
+
+cdv1 (universal two-mode kernel, gFDR signatures, five-bucket regime
+classifier, heat-tax tower, chit unit, Compression Axiom) and RFC-S
+(scale-management semantics) are the **structures character tests verify
+substrates render *as*.** Real measurements are projected through these
+structures to land in the framework's canonical space; the shots in
+`H:/mpa-conform/output/tests/character/<timestamp>/` are the visible
+record of whether that projection holds.
+
+**Spec changes here must round-trip through a character test run before
+landing.** This is not a CI gate; it is a discipline. Open a fresh
+character-test dailies (`python -m conformer.cli test-character` from
+`H:/mpa-conform`), watch the shots in DJV, then ship the spec change.
+If a substrate's character changes shape under the new spec, the
+shot reveals it before users do.
+
+This pairs with thin-RFC discipline: we do not thicken specs
+speculatively, but we also do not change them without watching the
+character round-trip.
+
+
+## Rendering discipline — the water MPA swims in
+
+Canonical doc:
+[`H:/mpa-conform/conformer/shot/RENDERING_DISCIPLINE.md`](../mpa-conform/conformer/shot/RENDERING_DISCIPLINE.md).
+Established 2026-05-17. Every visual property in every shot maps to
+framework data; differentiation, not decoration. The discipline is not
+a feature -- it is the medium every visualization in the MPA suite
+operates in, and it does not get re-litigated per session.
+
+This repo's contribution to shot rendering is whatever its
+character-test contract above already names. Any addition that would
+violate the two rules (every property maps to data; differentiation
+not decoration) does not land; the discipline does not bend.
