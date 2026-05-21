@@ -141,15 +141,20 @@ already names most of these — keep it in sync.
   hardest trim; see decision (1) below.
 - **Load-handling** → done above (template).
 
-## Optional structural improvement (evaluate, don't assume)
+## Adoption catalogue (the v9-style form — resolved per decision 1/3)
 
 Mirror v9's **Composite catalogue** with a single **Adoption catalogue** table:
 one row per adopted register — `register | MPA mapping (one phrase) | load-bearing
-observable | falsifier | receipts §`. That collapses six prose sections into a
-table plus the few genuinely load-bearing claims promoted to their own lines
-(heavy-traffic=s-aging, the five posits, the MIPS/active-stress fingerprints).
-Strongly recommended *if* the per-section peel still reads as six thin-but-
-separate sections; skip it if the peel alone already lands cdv1 near v9 density.
+observable | falsifier | receipts §`. This collapses the six prose sections into
+a table, with the few genuinely load-bearing claims promoted to their own lines
+above/below it: **heavy-traffic = s-aging**, the **five posits (P1–P5)**, the
+**MIPS / active-stress fingerprints**. Borrowed apparatus → receipts as always.
+
+Naming (decision 2): give each catalogue row's MPA-side instance a coined name
+where one fits — a named handle in the `register` / `mapping` cell beats a
+generic descriptor (banach-substrate precedent). The Load-handling template
+below shows the prose-section residue; in the catalogue, that residue becomes
+one row plus the promoted heavy-traffic=s-aging line.
 
 ## Where things go — no new external document
 
@@ -166,23 +171,32 @@ is already met by `mpa-auditor/corpus/api-manifest.json` (curated from cdv1
 §Open items + receipts). If that file needs rows, update it; don't make a new
 markdown doc.
 
-## What you (Ron) need to decide / provide before or during the session
+## Decisions (resolved 2026-05-21)
 
-1. **How hard to trim the speculative adoptions.** Collective hydrodynamics
-   (and the active-matter overlay generally) is a *posited extension* with no
-   load-bearing positive instance — unlike surface-code/glass which carry the
-   primary cross-substrate test. Decide per adoption: stays as a live falsifier,
-   or demotes to §Open conjectures (research notes). This is a judgment about
-   what has earned framework status; the session should not guess it.
-2. **External citations / prior-art to point at.** If your outbound research
-   channel has returned a report bearing on any adoption's prior-art mapping,
-   hand it to the session so receipts entries cite it rather than re-deriving.
-3. **Confirm "no new document."** Above I recommend relocating into receipts.
-   If you'd rather the adoptions live as a standalone catalogue doc, say so —
-   it changes the target.
-4. **One PR or staged.** Recommend one branch, one PR: all six sections peeled
-   + matching receipts appends in the same commit, so no half-relocated state
-   is ever pushed.
+1. **Trim to v9-style.** No "posited extension / substrate-class residual"
+   hedging prose in the body. An adoption either carries a claim with a named
+   falsifier (it stays, terse) or it does not (demote to §Open conjectures).
+   Speculative adoptions with no positive instance — Collective hydrodynamics /
+   the active-matter overlay especially — trim hardest: a falsifier line or a
+   demotion, never a section of hedged prose. v9 is the density target, and v9
+   gets its density partly from a *catalogue table* (see Adoption catalogue
+   below) — so "v9-style" selects that form.
+2. **Prior-art → receipts, and name things.** Borrowed apparatus and its
+   citations live in receipts (composition entries). When relocating, prefer a
+   **coined name** for the MPA-side object/instance over a generic descriptor —
+   precedent: the conform substrate was named **banach-substrate** even though
+   more literally-accurate names existed, because a proper-name handle is worth
+   more than descriptive accuracy. Use a name where one fits; don't force one
+   where none does.
+3. **No new document.** Roles are all housed already: claims+falsifiers →
+   `cdv1_compressed`; derivations / borrowed apparatus → `cdv1_receipts`;
+   narrative / prior-art → `cdv1_unabridged`; live attack status →
+   `FALSIFICATION.md`; machine-readable registry →
+   `mpa-auditor/corpus/api-manifest.json`. The only open choice was the *form*
+   the adoption claims take in the SoT — resolved as the Adoption catalogue
+   (below), per (1).
+4. **One PR.** One branch, one PR: all six sections peeled + matching receipts
+   appends in the same commit. No half-relocated state is ever pushed.
 
 ## Hard guardrails (atlas discipline)
 
