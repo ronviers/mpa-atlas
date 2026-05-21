@@ -49,6 +49,8 @@ The log form is required by stochastic thermodynamics: $\ln(k_+/k_-)$ is the Cro
 
 **Limit-point status.** chit $= 0$ is a critical limit, not an attainable operating state. Substrates approach it asymptotically; the $s$-regime is a finite window around the limit. Width: drive-axis substrates carry irreducible thermodynamic floor ($kT/q$); damping-axis vanishes in deterministic limit (F-003-rlc $Q=0.5$ zero).
 
+**Domain (open interval, not endpoints).** Observables are continuous on an open interval; Boolean/discrete logic is the degenerate limit at the endpoints ($0, 1, \infty$). chit is the per-event instance — continuous $\ln(G_0/L)$ whose Boolean endpoint is the bit ($\ln 2$; §Thermo-info accounting). An *attained* endpoint has left the domain, so it surfaces as a NaN falsification tripwire, not a fillable value. (Scope statement; not the demoted claim that the bit↔chit *mapping* is substrate-independent — §Open conjectures.)
+
 ## Fraying sequence
 
 Load monotonically reduces the chit:
