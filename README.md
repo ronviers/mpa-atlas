@@ -1,5 +1,7 @@
 # mpa-atlas
 
+📄 **Published paper:** *Metastable Propositional Algebra: The finite-drive deformation of Boolean structure* — the unified source of truth, [`framework/mpa_unabridged.md`](framework/mpa_unabridged.md). Open access (CC-BY-4.0): **DOI [10.5281/zenodo.20357550](https://doi.org/10.5281/zenodo.20357550)**. (The `v9_*` / `cdv1_*` files below are its source layers.)
+
 > ⚠ **Read [`CLAUDE.md`](CLAUDE.md) before touching any RFC.** This repo operates under thin-RFC discipline — exchange surfaces are written at gross-underengineering resolution by design. Half a page per object is the target. *It was never brittle if it never broke.* Default standards-body instincts (defensive enumeration, MUST/SHOULD/MAY granularity, edge-case prose) are explicitly resisted. The framework underneath ([v9 compressed](framework/v9_compressed.md)) is dense; the protocols on top are thin; total weight is correctly distributed.
 
 Protocols and framework documents for MPA (Metastable Propositional Algebra). The canonical theory, the RFC sequence that turns it into a checkable contract, and the architectural commitments that govern how those documents fit together.
