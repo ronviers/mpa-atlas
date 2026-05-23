@@ -246,67 +246,85 @@ the claim-conservation + character-test gates before touching prose (steps 4-5).
   entries (Bennett'82, Kadanoff'66, Volterra'26, Wilson'75, Wolynes'95) give journal/vol/page but no article
   title in source — transferred as-is; canonical-title completion is a Phase-5-only-if-verified item.
   Nothing stripped. *Delete this bullet next session.*
-- **Phase 5 — Rebuild unified unabridged.** One prose paper from unified compressed + receipts
-  + transferred prior-art (**now in hand: [`mpa_prior_art.md`](mpa_prior_art.md)** — fold its 121-ref list
-  in as the paper's reference list, thread its concept-anchored framing + cdv1's inline naming into prose;
-  supply the 5 missing physics-entry titles only if verified). Transfer-and-reframe (prose re-threaded around spine+wings), not
-  regenerate-from-scratch. **Write to §Voice anchor above** (paper not log; interest shown not
-  announced; cut anything that neither advances the argument nor names a falsifier). **Re-thread cdv1_unabridged §18's eleven-identities reading-guide per
-  [`identities_restructure_spec.md`](identities_restructure_spec.md)** (claim-typed: 6 identities +
-  2 relations + 2 decompositions, posits threaded in). The A/B/C typing also resolves the spine/wing
-  split the shape left open (see §Shape note): cross-register *bridge* identities (k_frust topological
-  triality, optimal-encoding triality, β_mem cross-protocol identity) re-thread toward the **spine**;
-  the C-decompositions (#6, #10) stay in the **Character wing**. Spec is union-preserving (no claim
-  dropped; only meta-labels re-typed) — compatible with claim-conservation, but its re-typing is a
-  framing change, so apply it as a labelled Phase-5 move, not silently. Delete the spec file once §18
-  is rebuilt.
+- **Phase 5 — Rebuild unified unabridged.** ✅ DONE (draft) 2026-05-23. [`mpa_unabridged.md`](mpa_unabridged.md)
+  authored end-to-end (~1280 lines): Abstract → SPINE (12 sections, deformation core leading) → STRUCTURAL
+  WING → CHARACTER WING → Open items → Appendices → References (all 121 refs folded in). Transfer-and-reframe
+  from the v9/cdv1 unabridged prose + `mpa_compressed`, in the v9 register; written to §Voice anchor.
+  **Voice calibrated + validated by Ron on the opening movement** (front matter + deformation core), then
+  carried straight through. **Two Ron fixes applied:** (1) "Principles & method" relocated from the front to
+  an **appendix** — leading with method reads as self-regard / a distraction from grasping MPA; (2) inline
+  `[FALSIFIER:…]` tags removed (they "bring drama," read as asking benefit-of-the-doubt) → claims stated
+  plainly, kill-conditions kept as plain prose where load-bearing (homochirality drive-sweep), formal
+  falsifiers pointed to receipts/§Open items. Saved [[feedback_authored_document_discipline]] (also: keep
+  Ron's own voice out of the doc). **§18 restructure landed** as the Character wing's **Cross-register
+  structure** section (6 identities / 2 relations / 2 decompositions; posits threaded inline; A3
+  universality-coincidence kept as its own one-member subtype). **Structural call — deviates from the
+  §Shape-note plan, flag for Ron:** the §18 reading-guide was kept as ONE coherent section in the Character
+  wing rather than splitting the bridge-identities onto the spine — a reading guide stays coherent in one
+  place, its underlying content is already distributed across spine+wings, and the spine's through-line is
+  not interrupted by catalogue material (spec §6 delegated this structural call to the rewrite session).
+  **No-post-conform held:** surface-code + two-frame credited as pre-conform direct sims; five-vector
+  inversion flagged owed. **Scope decision:** derivation appendices NOT reproduced — pointed to
+  `mpa_receipts.md` (keeps the paper from doubling; receipts are the derivation home). **Residuals (→ review
+  / Phase 6):** Ron's full-draft read; 5 untitled physics refs (Bennett'82, Kadanoff'66, Volterra'26,
+  Wilson'75, Wolynes'95) preserved as-is per the no-fabricate gate (canonical titles available on request);
+  `identities_restructure_spec.md` deletion deferred to the Phase-6 retirement batch (not bundled, not
+  premature).
 - **Phase 6 — Cross-refs + forward-only retirement.** Update every pointer: atlas CLAUDE.md
   doc lists, sibling-repo CLAUDE.mds, RFC "Pointer" fields (RFCs cite v9/cdv1 sections — names
   change), DEFERRED.md, memory (`project_two_frame_gfdr_and_kfrust_refactor`,
   `feedback_thin_rfc_discipline_mpa`). Retire split docs forward-only — git holds the past
   (`feedback_forward_only_no_lineage`).
 
-**Weight (revised 2026-05-23, post-sizing).** Phases 1–4 done. Remaining is dominated by **Phase 5**
-(≈ 4–5 units: reauthor ~1530 lines of source prose into one paper + fold in `mpa_prior_art.md` + carry
-the §18 restructure + conform-vigilance) and the small **Phase 6** bookend (≈ 1: pointer sweep across
-repos, low-judgment). Phase 5 is now the bulk of all remaining effort. Sequence: 5 then 6 (6 strictly last).
+**Weight (revised 2026-05-23, post-Phase-5-draft).** Phases 1–5 done (Phase 5 draft landed 2026-05-23,
+~1280 lines). Remaining: Ron's full-draft review, then the small **Phase 6** bookend (≈ 1: pointer sweep
+across repos + forward-only retirement of the split docs / `mpa_prior_art.md` / `identities_restructure_spec.md`,
+low-judgment). Phase 6 strictly last.
 
 ---
 
 ## Current state (refine every exit)
 
-**Phases 1–4 complete (2026-05-22 → 2026-05-23).** [`mpa_compressed.md`](mpa_compressed.md) and
-[`mpa_receipts.md`](mpa_receipts.md) exist and are mutually resolved (receipts audit passed), and
-[`mpa_prior_art.md`](mpa_prior_art.md) holds the merged 121-reference prior-art (Phase 4). The
-**Phase-3 interface semantic-identity check PASSED** — all five operational surfaces (regime classifier,
-gFDR signatures, canonical observables, five-vector inversion, RO exact forms) are union-preserving
-against `v9_compressed ∪ cdv1_compressed`; verified surface-by-surface (see the Phase-3 bullet above).
-The conform-traversing character-test half is **not credited** (plumbing-only; [[no-post-conform-evidence]]);
-merge-safety stands on the sound leg (no compute code changed + render path doesn't read the unified docs).
-The split sources (`v9_compressed`, `cdv1_compressed`, `v9_receipts`, `cdv1_receipts`) remain **live** —
-the unified pair does not replace them until Phase 6 retires them forward-only.
+**SoT promotion + adversarial-review precision pass (2026-05-23, per Ron — "fix everything, avoid being an
+embarrassment").** [`mpa_unabridged.md`](mpa_unabridged.md) is now the **source of truth for MPA** (Status
+note flipped; `mpa_compressed` + the split docs are downstream, retiring in Phase 6 — and the **Phase-6
+pointer-target is now the unabridged, not the compressed**). A hostile mid-tier-model review (12 points)
+was triaged and the landing items fixed across the SoT, the two factual bugs propagated to
+`mpa_compressed`: #3 chit dimensions ($G_0, L$ both rates → ratio dimensionless), #6 triad ("minimal
+carrier of gauge-irremovable circulation," dropping the false "every longer cycle contains a triad"), #5
+cross-register epistemic relabel (identities → coincidences/correspondences; equality-at-limit /
+under-condition flagged throughout), #8 surface-code scoped to locus-shape (+ $X$ owed), #1 deformation →
+controlled-family + series-unrecovered honesty, #2 algebra-interior framing, #10
+falsifiable-content-is-the-transfer, #12 cosmic-flourish trimmed, #4 two-bits operational falsifier.
+**Receipts needed no change** — already more careful than the prose (no dimensional gloss; deformation
+derivation chain already marked unrecovered). Recurring failure mode the review exposed: *a word claiming
+more than the math delivers* ([[feedback_authored_document_discipline]]).
 
-**The next session starts Phase 5 — Rebuild unified unabridged** (re-read §North star §Gate check +
-§Voice anchor + the Rewrite constraint below first — this is the prose phase, where voice and the
-no-post-conform-evidence constraint bite hardest). Inputs are all in hand: `mpa_compressed.md` +
-`mpa_receipts.md` + `mpa_prior_art.md`. It is the big phase (≈ half the remaining effort): one prose
-paper, transfer-and-reframe around spine+wings, carrying the §18 identities restructure. Phase 6
-(cross-ref sweep + forward-only retirement) is the small bookend after. Main line (mpa-conform /
-mpa-auditor) is where work resumes if the fork stays parked.
+**Phases 1–5 complete (2026-05-22 → 2026-05-23).** The unified pair [`mpa_compressed.md`](mpa_compressed.md)
++ [`mpa_receipts.md`](mpa_receipts.md) exist and are mutually resolved; [`mpa_prior_art.md`](mpa_prior_art.md)
+holds the merged 121-reference prior-art; and **[`mpa_unabridged.md`](mpa_unabridged.md) is now drafted
+end-to-end** (Phase 5) — one prose paper, spine + two wings, the §18 identities restructure landed as its
+Cross-register structure, all 121 refs folded into the reference list. The **Phase-3 interface
+semantic-identity check PASSED** (five operational surfaces union-preserving). The conform-traversing
+character-test half is **not credited** (plumbing-only; [[no-post-conform-evidence]]). The split sources
+(`v9_compressed`, `cdv1_compressed`, `v9_receipts`, `cdv1_receipts`) plus `mpa_prior_art.md` and
+`identities_restructure_spec.md` remain **live** until Phase 6 retires them forward-only.
 
-**Rewrite constraint (Phases 4–5), per Ron:** do not let the broken pipeline derail the rewrite, but
-**do not carry any conform/inversion-traversing result into the unabridged as valid.** The trustworthy
-evidence is the pre-conform layer (direct library-cell / synthetic-testbed sims validated against exact
-analytical forms — e.g. the two-frame gFDR bricks, rotational-OU, class-B-laser Jacobian). Honestly-
-flagged un-instanced predictions stay flagged; nothing post-conform gets promoted to "shown."
+**The next session does Phase 6 — cross-refs + forward-only retirement** (the small bookend), gated on
+Ron's full-draft read of `mpa_unabridged.md`. Phase 6: update every pointer (atlas CLAUDE.md doc lists,
+sibling-repo CLAUDE.mds, RFC "Pointer" fields, DEFERRED.md, memory), retire the split docs +
+`mpa_prior_art.md` + `identities_restructure_spec.md` forward-only (git holds the past), and optionally
+complete the 5 untitled physics refs if verified.
 
-Then Phases 4–5 (prior-art transfer + unabridged rebuild, the latter carrying the identities-restructure
-spec) and Phase 6 (cross-refs + forward-only retirement). **Phase-6 note discovered this session:**
-mpa-conform/CLAUDE.md lists `cdv1_compressed.md` / `v9_compressed.md` / `cdv1_receipts.md` as files it
-reads — these are *human/curator reference*, not parsed at render time (confirmed: the render needed none
-of them), so repointing them to `mpa_compressed.md` + `mpa_receipts.md` at the swap is a safe doc-pointer
-update, not a behaviour risk. Main line (mpa-conform / mpa-auditor) is where work resumes if the fork
-stays parked.
+**Rewrite constraint (held in Phase 5, keep holding), per Ron:** no conform/inversion-traversing result is
+carried as valid; the trustworthy layer is the pre-conform direct sims against exact analytical forms (the
+two-frame gFDR bricks, rotational-OU, class-B-laser Jacobian). Honestly-flagged un-instanced predictions
+stay flagged; nothing post-conform is promoted to "shown."
+
+**Phase-6 note (standing):** mpa-conform/CLAUDE.md lists `cdv1_compressed.md` / `v9_compressed.md` /
+`cdv1_receipts.md` as files it reads — *human/curator reference*, not parsed at render time, so repointing
+them to `mpa_compressed.md` + `mpa_receipts.md` at the swap is a safe doc-pointer update, not a behaviour
+risk. Main line (mpa-conform / mpa-auditor) is where work resumes if the fork stays parked.
 
 ---
 
@@ -373,3 +391,35 @@ stays parked.
   concept-anchored (v9 §-pointers dropped per the Phase-2 stable-anchor finding; cdv1's inline framing
   threads in at Phase 5). 5 v9 physics entries lack article titles in source → transferred as-is, flagged
   (no fabrication). Next session: Phase 5 (rebuild unabridged — the big one; inputs all in hand).
+- **2026-05-23 (Phase 5 drafted — the unabridged landed)** — `mpa_unabridged.md` authored end-to-end
+  (~1280 lines) by transfer-and-reframe from the v9/cdv1 unabridged prose + `mpa_compressed`, in the v9
+  register. Shipped the opening movement (front matter + deformation core) first for voice calibration;
+  Ron validated voice + import-naming (May–Leonard / Reed–Muller named even when textbook) + the
+  deformation through-line as "exactly right," then I carried it straight through spine → both wings →
+  open items → references without re-gating. **Two Ron fixes:** Principles & method → appendix (leading
+  with method = self-regard, a distraction); falsifiers de-inlined (the `[FALSIFIER:]` tag "brings drama" /
+  reads as asking benefit-of-the-doubt) → claims plain, kill-conditions plain where load-bearing, formal
+  falsifiers in receipts. Saved [[feedback_authored_document_discipline]] (incl. "keep Ron's voice out of
+  the doc"). §18 restructure landed as the Character wing's Cross-register structure (6/2/2, posits
+  threaded) — **kept as one coherent section in the wing rather than splitting bridge-identities to the
+  spine (deviates from §Shape-note plan; flagged for review)**. Derivation appendices pointed to receipts,
+  not reproduced (shorter wins). 5 untitled physics refs preserved (no fabricate). Next: Ron's full-draft
+  read, then Phase 6 (cross-ref sweep + forward-only retirement).
+- **2026-05-23 (SoT promotion + adversarial-review precision pass)** — Ron promoted `mpa_unabridged.md` to
+  the **source of truth for MPA** ("fix everything... avoid being an embarrassment") against a hostile
+  mid-tier-model review (12 points). The landing critiques all shared one failure mode — a word claiming
+  more than the math (deformation / algebra / identity / load-bearing). Fixed across the SoT: #3 chit
+  dimensions ($G_0,L$ rates), #6 triad (minimal carrier of gauge-irremovable circulation, dropping the
+  false "every longer cycle contains a triad"), #5 cross-register relabel (→ coincidences/correspondences,
+  equality-at-limit/under-condition flagged), #8 surface-code → locus-shape (+$X$ owed), #1 deformation →
+  controlled-family + series-unrecovered, #2 algebra-interior, #10 falsifiable-content=transfer, #12
+  cosmic-flourish trim, #4 two-bits operational falsifier. Propagated #3/#6 to `mpa_compressed`; receipts
+  unchanged (already careful — they'd marked the deformation derivation unrecovered). Defended (don't-land):
+  two-faces independence (operationalized as its own falsifier), posits-as-API (disclosed RG stance),
+  bridge=table (honestly labeled), Wall (derived geometric divergence). Status flipped → Phase-6
+  pointer-target is the unabridged. Saved the lesson to [[feedback_authored_document_discipline]]. Then a
+  final forward-facing tone pass (per Ron): stripped all backward-facing/changelog language (status-note
+  lineage, dates, "promoted"/"to date") and apologetic/defensive prose (the "not X" constructions,
+  "operational not asserted", the cosmic-heat-death flourish, the deformation-cochain defense) — the SoT
+  now states rather than defends; defense lives in receipts; *MPA adds no object* kept as a confident
+  claim, not an apology.
