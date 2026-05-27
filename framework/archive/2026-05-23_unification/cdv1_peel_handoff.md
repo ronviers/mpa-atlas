@@ -215,7 +215,7 @@ markdown doc.
 - **Character round-trip before landing** (atlas CLAUDE.md, non-negotiable). A
   spec change to cdv1 must round-trip through a character-test run: from
   `H:/mpa-conform`, `python -m conformer.cli test-character`, watch the dailies
-  in DJV (`H:\tools\djv\djv-3.4.2-windows-amd64\bin\djv.exe`). If a substrate's
+  in DJV (`C:\Program Files\DJV 3.4.2\bin\djv.exe`). If a substrate's
   character changes shape under the peeled spec, the shot reveals it before the
   commit. **Ron watches this** — it is human-in-the-loop, not a CI gate.
 

@@ -1,0 +1,178 @@
+# v9 (operational source of truth)
+
+**Status:** Live. Every protocol revision and dev workflow reads from this file.
+**Companions:**
+- [`v9_receipts.md`](v9_receipts.md) — line-keyed justifications for the compressed claims. Append-only during prove-as-you-go work; the file that makes unabridged reconstruction tractable.
+- [`v9_unabridged.md`](v9_unabridged.md) — public-facing prose-and-prior-art version. Refreshed from this file (+ receipts) periodically; allowed to lag. Do not lean on it for operational lookups.
+
+If this file disagrees with the unabridged, this file wins. If this file disagrees with receipts, treat as bug.
+
+---
+
+## Setting
+Boolean = $D \to \infty$ limit, where $D = \Phi^*/\kappa$ (work supplied / dissipation scale). MPA is the finite-$D$ generalization. Maintaining a proposition costs work; cut the work, structure dissolves. Substrate classes are characterised by the $(\Phi^*, \kappa)$ envelopes their realizers can produce, intersected with the $D$ values the spec asks for.
+**Primitives**: trail vector (kernel-weighted history while proposition active), drive $D$, observer kernel $\tau_{obs}$.
+
+## Foundational principles
+Five architectural commitments govern the framework. Long-form treatment: [Architectural Block-In](../architecture/MPA_Architectural_Block-In.md) §"Foundational principles (consolidated)". Declared here so v9 carries them rather than only being the rigor source the RFCs declare *about*.
+
+1. **Color-management discipline.** Three layers — substrate-native, canonical representation, realizer-output — with declared, named, versioned, swappable transforms between them. The canonical representation is substrate-neutral by construction.
+2. **Observer-driven scale management.** $\tau_{obs}$ is the camera. The canonical representation is observer-relative; cross-scale composition is camera motion, not transform invocation. No scale-class taxonomy baked into the framework. §Scale-relativity is the operational consequence.
+3. **Demand-bounded sufficiency.** The framework commits to *enough* representation for the demand placed on it, not maximal faithfulness to substrate. Drivers declare a demand envelope; canonical representation is sized to it; past the envelope the framework is silent. MPA is not the bottleneck on substrate fidelity.
+4. **Singular working-space path.** Within a version, exactly one canonical-representation shape. Plurality lives in drivers (substrate-conditional), realizer-interface intent flags (user-intent-conditional), and version succession (time-conditional) — never at the working-space layer. *Peel*, not scrape.
+5. **Thin-RFC discipline.** Exchange surfaces written at gross-underengineering resolution by design; v9 carries the rigor underneath, the RFCs carry the contract. *It was never brittle if it never broke.* Does not govern v9 itself.
+
+The five are coupled (Block-In §"Coupling between principles"). They constrain the RFC sequence and the driver/realizer architecture; they do not constrain the operator algebra or capacity claims that follow, which are upstream of the protocol layer.
+
+## Three typed objects
+**Vertex regime** (single trail, stability axis $\lambda_A$):
+- $c$ committed: $\lambda_A \ll -D$ — self-sustaining, ≈ 1
+- $s$ suspended: $|\lambda_A| \lesssim D$ — true-while-pumped
+- $r$ reset: $\lambda_A \gg D$ — decayed, ≈ 0
+
+Three-regime threshold structure = cooperativity pattern of driven open quantum systems (Sieberer–Buchhold–Diehl) and laser threshold (Haken).
+
+**Edge** (signed shear $\gamma_{AB}$):
+- $\gamma<0$ cooperative · $\gamma\approx 0$ orthogonal · $\gamma>0$ conflicting (per-edge cost $\gamma_{AB}$ in $D$-units)
+
+**Subgraph** ($k_{\text{frust}}$): cycle of $c$-edges with obstructive shear product. Topological invariant of the coupling graph (Mézard–Parisi–Virasoro). Not resolvable by $D$. Vertex-level substrate-neutrality and subgraph-level substrate-specificity are the same fact stated at two layers.
+
+A thermodynamic distinction survives scale-relativity: self-sustaining structure (closed coupling) is energetically distinct from drive-pumped structure regardless of $\tau_{obs}$. The mentor pairing (§Composite catalogue) turns on this distinction.
+
+## Scale-relativity
+Vertex label depends on $\tau_{obs}$ (same trail reads $c$/$s$/$r$ at narrow/mid/wide window). Hierarchy itself is substrate-fixed. $\gamma$ scales with $\tau_{obs}$. $k_{\text{frust}}$ is invariant.
+
+## Operators
+$\mathcal{M}=\{c,s,r\}$, $\mathcal{M}_2=\{c,r\}$.
+
+| Op | Signature | Action | $D \to \infty$ limit |
+|---|---|---|---|
+| $C$ | $\mathcal{M}^2 \to \mathcal{M}$ | try to merge: $d_{A\oplus B}=w_A d_A + w_B d_B$, evaluate $\lambda_{A\oplus B}$ | $\land$ |
+| $S$ | $\mathcal{M}^2 \to \mathcal{M}$ | hold both: $|\lambda_A|+|\lambda_B|+\max(0,\gamma_{AB})\le D$ | $\lor$ |
+| $K$ | $\mathcal{M}^2 \to \mathcal{M}_2$ | $\delta(A,B)=\hat d_A - \hat d_B$, $\lambda_{A\ominus B}=|\gamma_{AB}|-D/2$; $c$ if $\delta\ne 0$ ∧ $D>2|\gamma_{AB}|$, else $r$ | $\oplus$ |
+| $R$ | $\mathcal{M} \to \mathcal{M}$ | sever to bath: $W_R/\kappa \ge \ln 2 \cdot H(A\mid\text{rest})$; recovers Landauer when $\kappa = k_BT \cdot \xi_{sub}$ | $\neg$ |
+
+Notation. $C \in \Sigma$ is the try-merge operator. It is a distinct object from the compression operator $\mathcal{C}$ introduced in §Compression Axiom — different category (operator on trails vs. operator on the ledger tower), different role. Typographical distinction ($C$ vs $\mathcal{C}$) is preserved throughout this document.
+
+$K$ is unique: codomain restricted to $\mathcal{M}_2$; quotient acts on its inputs. $C, S, R$ quotient acts on output. Asymmetric typing = coordinate-free expression of where the metastable $s$ sits in each signature. $K$ over $\mathbb{F}_2$ is the parity-check object that distinguishes XOR-SAT from $k$-SAT (Mézard–Ricci-Tersenghi–Zecchina).
+
+## Boolean section ($\mathcal{M}_2$)
+Three identifications of the same set:
+1. Codomain of $K$
+2. Fixed-point set of coarse-graining flow ($s$ metastable)
+3. Section on which limit-equivalence quotient $q: \mathcal{M}(\infty) \to \mathbb{B}$ is bijective
+
+Restriction of $\Sigma=\{C,S,K,R,\top,\bot\}$ to $\mathcal{M}_2 \cong (\mathbb{B},\land,\lor,\oplus,\neg)$. Closure at $\sigma$-shadow level (regime can stray to $s$ but shadow holds).
+
+Reed-Muller / ANF presentation: $\mathcal{M}_2$ is the $\{\oplus,\land,1\}$ ring ($\oplus = K$, $\land = C$, $1 = \top$; $\neg = \oplus\,1$ via $K(\cdot,\top)$). MPA is its finite-$D$ deformation (the $D\to\infty$ Boolean limit above): $R$'s irreversibility ($c\to r$, non-involutive) is the deformed involution. The drive $G_0$ is the deformation coordinate (chit register $\ln(G_0/L)$), not the ring's $1$.
+
+**Two deformation faces.** The deformation off Boolean carries two coordinates: an **amplitude** coordinate (chit/$D$, continuous — drives the $c\to s\to r$ migration) and a **sign-topological** coordinate (Harary balance of the signed coupling graph). Boolean is the **balanced/gaugeable** ring (every signed cycle of even negative parity, so gauge-equivalent to unsigned — real spectrum, no protected current). The deformation's sign-face is **Harary-imbalance**: the chimeric sign of a Harary triad $\triangle_H$ (cdv1 §Central commitment) *is* the deformation coordinate away from Harary-balance — the ANF-ring deformation made dynamical — with order parameter the affinity $\mathcal{A}=\oint v/D$. This face is topological, not amplitude: hence $k_{\text{frust}}$ does not migrate under the $\tau_{obs}$ sweep while $c/s/r$ does (§Scale-relativity). MPA adds no object here — it imports the ring (Reed-Muller/ANF), the balance (Harary), the cycle (May–Leonard), and the affinity (Schnakenberg), and reads them under sustained dissipation.
+
+**Boundary rules** at $\mathcal{M}_2 \times \{s\}$: $\bot$ not global annihilator, $\top$ not global identity — shear and drive remain active. $C(\top,s)$ tracks edge/budget; $C(\bot,s), S(\bot,s)$ pass-through; $S(\top,s)$ → $s$ or competitive dropout; $K(\top,s)$ uses residual non-parallelism. Operator-level shadow of the mentor pairing (§Composite catalogue).
+
+**Terminal attractor.** Repeated compression contracts toward $\mathcal{M}_2$ geometrically; $\epsilon$ measures residual information mass outside $\mathcal{M}_2$ after each step.
+
+## Composite catalogue (molecular layer)
+| Pair | Edge | Composite | Field-name |
+|---|---|---|---|
+| $c$–$c$ aligned | $\gamma<0$ | $c$ deepened | Hebbian; force chains |
+| $c$–$c$ orthogonal | $\gamma\approx 0$ | $s$ | independent memory |
+| $c$–$c$ opposed | $\gamma>0$ | $s$ if $D$ covers, else one→$r$ | competing hypotheses |
+| $c$–$s$ | $\gamma<0$ | $s$ (mentor) | synaptic tagging; pilot-light |
+| $s$–$s$ | $\gamma>0$ | $s$ or competitive dropout | Lotka–Volterra |
+| $c$–$c$–$c$ cycle | obstructive product | $k_{\text{frust}}$ | gridlock; UNSAT |
+| oscillatory–$c$ | limit cycle, $\lambda_B \ll 0$ | entrainment / quench | Kuramoto; circadian |
+
+Per row: MPA's contribution is modest — the field already has the phenomenon, the framework supplies unifying vocabulary. Per table: the contribution is sharper — the same vertex+edge rule set generates phenomena with no shared microphysics across neuroscience, ecology, statistical mechanics, combustion, organisational dynamics. Cycle row sits at a different type (subgraph, not pair) — molecular layer's natural carrier of $k_{\text{frust}}$.
+
+## Capacity
+On classically consistent (frustration-free) graph, sustainable subgraph $\Gamma^*$:
+$$|\Gamma^*| \le \sqrt{\frac{2D}{\alpha\,\gamma_{min}\,d_{avg}}}$$
+Sparse: $\sim D$. Dense: $\sim\sqrt{D}$ — the Hopfield ceiling (Amit–Gutfreund–Sompolinsky); sharp threshold at the wall (random $k$-SAT, Mézard–Parisi–Zecchina). Predicts modular sparsification of densely-coupled substrates. $k_{\text{frust}}$ marks where structure is unsustainable at any $D$. **Complexity Wall** = spectral analogue at the meta-ledger layer (§Compression Axiom).
+
+## Fluctuation-dissipation signatures
+Parametric plot $\chi(\tau)$ vs $C(0)-C(\tau)$:
+- $r$ (vertex): unit slope (FDR)
+- $c$ (vertex): $X \ll 1$, suppressed response, narrow horizontal locus
+- $s$ (vertex): aging diagonal, plateaus at long times — Cugliandolo–Kurchan
+- $k_{\text{frust}}$ (subgraph): transient **negative** response (loop-level, spin-glass response theory)
+
+Signatures attach to objects of distinct type. $X \gg 1$ excluded by dissipative dynamics (unstable amplifier, not a sustained representation).
+
+**Per-regime universality invariants.**
+
+| Regime | Invariant | Reading |
+|---|---|---|
+| $c$ | $X_c = \lim_\tau \chi(\tau)/(C(0)-C(\tau)) = 0$ | suppression / narrow horizontal locus |
+| $s$ | $\alpha_s = $ slope of aging segment in $\chi$ vs $(C(0)-C)$ | CK ratio |
+| $s$ | $P_s = \lim_\tau C(\tau)/C(0)$ | plateau height |
+| $r$ | $X_r = \lim_\tau \chi(\tau)/(C(0)-C(\tau)) = 1$ | unit-slope FDR |
+| $k_{\text{frust}}$ | $N_f = \int_T \min(0,\chi)\,d\tau \big/ \int_T \lvert\chi\rvert\,d\tau$ | transient-negative fraction |
+
+Universal within universality class; substrate-dependent corrections fall off with system size, temperature, and finite-time effects. $\alpha_s$ and $P_s$ are the load-bearing cross-substrate observables; the rest are within-class structural identifiers.
+
+**Surface-code identification.** Distance-3 rotated memory-Z syndrome streams trace a clean $s$-aging diagonal at sub-threshold operation — places the QEC substrate in the Cugliandolo–Kurchan universality class. Locus deforms toward threshold. The framework's most direct cross-substrate empirical content. Frustration negative-FDR not present in this measurement: uncorrelated depolarising drives $s \to r$ (vertex migration), not toward closed frustrated loops on the syndrome graph; test condition tightens to a noise model that closes such a loop.
+
+**Scale-sweep prediction.** $\tau_{obs}$ sweep at fixed substrate walks the locus through $c \to s \to r$. $k_{\text{frust}}$ does not migrate (topological).
+
+## Substrate-conditional reading rules
+- **Markovian sign caveat (F.1):** stiff/Markovian substrates (overdamped Langevin, syndrome streams) invert $\gamma$ signs (kernel-width artefact); use $|\gamma|$ + FDR shape jointly, not signs.
+- **Detection events (F.2):** when readout violates the locality requirement of $\dot x$ (raw stabiliser flip propagates), use canonical local preprocessing — for surface codes, $e_i(t) = s_i(t) \oplus s_i(t-1)$ (bounded-local: an error at $t$ triggers exactly two events). Trail by EMA against detection events.
+
+## Compression Axiom / meta-ledger flow
+Ledger tracks substrate. Who tracks ledger? Tower converges iff each ascent contracts under the compression operator $\mathcal{C}$ (distinct from $C \in \Sigma$, §Operators): $\epsilon = \|\mathcal{C}\|_{op} < 1$.
+
+Flow is RG-like (Wilson–Kadanoff + Banach):
+- $c$, $r$ fixed points; $s$ metastable (→$c$ if reinforced, →$r$ if not)
+- $\mathcal{M}_2$ = terminal attractor
+- $k_{\text{frust}}$ invariant on substrates carrying it
+- edges follow endpoints; shear-positive edges with both endpoints→$r$ vanish
+- Boolean = degenerate limit (every level collapses to identity)
+
+Trail vectors = equivalence classes under this flow. Substrate-neutrality at vertex = same flow class. Substrate-specificity at subgraph = topology of interaction graph. Quotient $q: \mathcal{M}(\infty) \to \mathbb{B}$ at the limit; $\mathcal{M}_2$ is the cavity-method *frozen core*, $s$ is the *free* region (Krzakala et al. 2007).
+
+**Construction.** $\mathcal{C}$ is not primitive at v9; it is the abstract re-presentation of cdv1's heat-tax tower flow on the space of slow-manifold generators (cdv1 §Heat-tax tower → Meta-ledger flow in continuous register; cdv1 receipts §6.5). The level-to-level map $\mathcal{A}_n \mapsto \mathcal{A}_{n+1}$ is induced by Mori–Zwanzig projection of the universal two-mode kernel onto the slow manifold, with heat-tax substitution carrying level-$n$ entropy production into level-$(n+1)$ dissipation. $\epsilon$ is the leading IR linear-stability eigenvalue of this map at $\mathcal{M}_2$, Landauer-pinned to the substrate's thermal-conductivity coefficient $\alpha_{\sigma,0}$. Banach contraction $\epsilon < 1$ is therefore a *derived* property (IR fixed-point linear stability), not an axiom on an abstract operator. The continuous flow $T_\nu$ between integer levels exists by integration of the running-coupling β-functions; no $\ln\mathcal{C}$ construction is required.
+
+**Tower of dimensionless drives.** Each meta-ledger level carries its own $D_n = \Phi^*_n/\kappa_n$. The Compression Axiom acquires a dimensional statement: the contraction $\epsilon < 1$ on each ascent bounds $D_{n+1}$ relative to $D_n$. A compressed ledger that tracks a richer substrate must do so with proportionally less informational mass. Substrate classes at level $n$ characterised by $(\Phi^*_n, \kappa_n)$ envelopes intersected with the $D_n$ the architecture asks for. Spec-layer dimensional structure extends to the whole tower.
+
+**Convergent Tower / Complexity Wall.** $\Phi_{total} = \Phi^{(0)}/(1-\epsilon)$ when $\epsilon<1$. When $\epsilon \ge 1$ (insufficient spectral gap or modularity), tower diverges: thermodynamic impossibility theorem on resource-bounded inference for maximally-entangled substrates. The flow has a downward extension too — within a level, constituent regimes can migrate while the cluster reads as committed at the level above; nested convergence at every level.
+
+**Trail-class metric.** Under the spectral-gap condition (isolated leading eigenvalue $\epsilon$ of $\mathcal{C}$), trail equivalence is $d_A \sim d_B \iff \lim_n \epsilon^{-n}\|\mathcal{C}^n(d_A-d_B)\| = 0$ — agreement at leading rate; difference decays strictly faster than $\epsilon^n$. Metric on $\mathcal{T}/\!\sim$:
+$$\rho\bigl([A],[B]\bigr) = \lim_{n\to\infty} \epsilon^{-n}\,\bigl\|\mathcal{C}^n(d_A-d_B)\bigr\|.$$
+Amplitude of the leading-eigenmode component of $d_A - d_B$. Well-defined because faster-decaying modes vanish under $\epsilon^{-n}$ rescaling. Spectral gap closes at the Complexity Wall; $\rho$ undefined there by construction. Distinct from $\varepsilon_n = \|\mathcal{C}_n\|_{op}$ (operator-norm contraction rate at level $n$) — $\rho$ measures distance between trail classes; $\varepsilon_n$ measures rate of compression.
+
+**RG closure.** Operationally: $\|\mathcal{C}\|_{op} = \epsilon < 1$ is sufficient for all theorems above (Banach fixed-point, geometric convergence on $\{\mathcal{C}^n\}$, Convergent Tower, capacity bound, FDR signatures). Structurally: $\mathcal{C}$'s identification with Wilson–Kadanoff block-averaging is type-identity, established by cdv1's construction (cdv1 receipts §6.5). Both the v9 meta-ledger flow and Wilson–Polchinski functional RG are running-coupling flows on a space of generators with an IR-attracting fixed point. The three-step proof strategy — (i) locality factorization, (ii) block-variable capacity preservation, (iii) conjugating isometry $\phi$ — maps directly onto the cdv1 construction (spectral gap; heat-tax substitution preserving kernel form at the next level; $\phi = \Pi_{\text{slow}}$). Markovian / spectral-gap regime is proven scope; non-Markovian Caputo $\beta_{\text{mem}} < 1$ uses fractional-RG generalization with the same construction. Substrate-conditional functional form of the β-functions is the remaining classification residual; per-substrate-class fingerprints read off from heat-tax coefficients.
+
+(The $s$-aging cross-substrate transfer instances $\alpha_s$ and $P_s$ universality — §Fluctuation-dissipation signatures — the strongest cross-substrate evidence to date that this programme is well-posed.)
+
+## Asymptotic closure
+Every framework-prediction observable in MPA takes values in an open interval whose boundaries are 0, 1, or $\infty$. No prediction attains 0, 1, or $\infty$ exactly at any non-asymptotic operating point. Boundary values exist only as limits: $\mathcal{M}_2$ at $D \to \infty$; $\varepsilon \to 1$ at the Complexity Wall; $\text{chit} = 0$ as critical limit; $X_c \to 0$ in deep $c$; $X_r \to 1$ in deep $r$ (and at thermodynamic equilibrium); $u_n \to 1$ at Cobham blocking; $\eta \to 0$ at the Hopfield ceiling; $\beta_{\text{mem}} \to 1$ at the Markovian limit. Categorical labels ($\top$, $\bot$, $k_{\text{frust}}$) exist only at the $\mathcal{M}_2$ boundary or as discrete derivatives of continuous parameters with the boundary itself ill-defined ($k_{\text{frust}}$ singular at $\gamma_{AB} \to 0$).
+
+**Falsifier.** A framework-prediction observable shown to attain exactly 0 or 1 at a finite, non-degenerate operating point. The only conceivable instance is the exact equilibrium of cosmic heat death — where equilibrium FDR predicts $X_r = 1$ exactly. Standard cosmology places heat death at $t \to \infty$, never exactly reached, so the falsifier is itself asymptotic. MPA is therefore falsifiable in principle and unfalsifiable in practice within cosmic time: the framework's continuous-physics identity is preserved by the universe's own continuous-time structure.
+
+**Reading.** MPA is a continuous-physics framework. The structural commitment that boundary values are asymptotic-only is what makes the framework continuous *across* observables, not just within any one. Falsification routes through any observable whose predicted value can be shown to attain 0 or 1 (or $\infty$) at a finite, non-degenerate operating point.
+
+## Falloff profile (three faces)
+- **Longitudinal** (along $D$, fixed everything else): polynomial-in-$1/D$ / critical-scaling / exponential-with-power-law-correction
+- **Lateral** (other commitments — scalar trail, single kernel, reciprocal coupling, continuous time): smooth or cusps?
+- **Scale** ($\tau_{obs}$): kernel sweep walks $c\to s\to r$ on vertex; $k_{\text{frust}}$ doesn't migrate
+
+Conjecture: Boolean is codimension-$N$ singular point in the parameter landscape, $N$ = relaxable commitments producing non-perturbative structure. Mathematics on hand: bifurcation/catastrophe (Thom–Arnold), spin-glass landscape theory (Mézard–Parisi–Virasoro, Cugliandolo–Kurchan, Wolynes–Onuchic), non-reciprocal active matter (Fruchart–Vitelli) — most directly aligned existing formalism for operators with no Boolean shadow.
+
+## Extension axes (exist only at $D < \infty$ + at least one commitment relaxed)
+- **Limit-cycle trail** → rhythm primitive, oscillator-$c$ composites, closed-loop FDR
+- **Hierarchical kernel** → multi-timescale, fragile-here-stable-there, multi-scale aging FDR (parametrises kernel-width axis; carries the coarse-graining flow itself)
+- **Non-reciprocal coupling** → dominance/inhibition, no symmetric truth-table shadow, turbulent FDR (Fruchart–Vitelli formalism)
+- **Higher-order frustration** (hypergraph) → multi-plateau aging, full glassy taxonomy (graph-dimension extension parallel to multi-timescale extension on kernel-width)
+- **Finite-population discreteness** → flickering $c\leftrightarrow r$, native probabilistic logic
+
+Each = candidate operator with no Boolean limit. Two further deferred: **transfer operator** $T(A \to A')$ with $W_T/\kappa \ge \ln 2 \cdot [H(A\mid A',\text{rest}) - \mathcal{I}(A;A')]$ (irreducible cost minus salvage credit); **latent ledgers** (encoded structure at near-zero ongoing cost, decompression-on-demand).
+
+## Deformation calculus (finite-$D$ interior)
+| Theorem | Bound | Limit |
+|---|---|---|
+| 6 (associator) | $\|\alpha_C\| \lesssim (1/D)\sum\|\gamma\|$ | $\to 0$ |
+| 7 (distributivity defect) | $\|\delta_{dist}\| \lesssim (1/D)[\max(0,\gamma_{YZ})-\max(0,\gamma_{XY},\gamma_{XZ})]^+$ | $\to 0$ |
+| 9 (Boolean deviation) | $\Delta_C(A,B)=1$ iff $\gamma_{AB}>0$ ∧ $D < \gamma_{AB}$ | sharp threshold |
+
+Theorem 9 is the resource-induced instability: a substrate's $\gamma$ profile measured at operating $D$ determines exactly which propositional pairs admit joint commitment. Same cooperativity threshold structure as cavity QED / laser threshold. Interior is quantified; the boundary-rules treatment in §Boolean section is exact.

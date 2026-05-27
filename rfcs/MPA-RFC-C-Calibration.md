@@ -3,7 +3,7 @@ this is ron. this document had been deprecated and should be moved to a location
 # MPA-RFC-C: Calibration
 
 **Status:** Draft v0.2 — first thin-RFC pass. (v0.1 standards-body draft superseded; preserved in commit history.)
-**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md), [character (compressed, operational)](../framework/cdv1_compressed.md). The chit unit `ln(G₀/L)` and the fraying sequence `c → s → k → r` are the load-bearing imports.
+**Targets:** [mpav1 (compressed, operational)](../framework/mpav1_compressed.md) — its STRUCTURAL and CHARACTER readings (joined at the shared spine). The chit unit `ln(G₀/L)` and the fraying sequence `c → s → k → r` are the load-bearing imports.
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md).
 
 ---
@@ -76,15 +76,15 @@ A calibration record is **invalid** if any of:
 
 ## 6. Pointer
 
-[v9 (compressed)](../framework/v9_compressed.md) and [character (compressed)](../framework/cdv1_compressed.md) carry the formal derivation:
+[mpav1 (compressed)](../framework/mpav1_compressed.md) carries the formal derivation (STRUCTURAL and CHARACTER readings):
 
 | What | Where |
 |---|---|
-| Chit unit `ln(G₀/L)`; threshold semantics | character §"Chit unit"; v9 §Boolean section |
-| Fraying sequence `c → s → k → r` under threshold descent | character §"Fraying sequence" |
-| FDR signatures per regime; gFDR plot conventions | v9 §Fluctuation-dissipation signatures |
-| Substrate-conditional reading rules (Markovian sign, EMA preprocessing) | v9 Appendix F |
-| Heat-tax tower; vertical re-calibration cost | character §"Heat-tax tower" |
+| Chit unit `ln(G₀/L)`; threshold semantics | mpav1 §"Chit unit"; §Boolean section |
+| Fraying sequence `c → s → k → r` under threshold descent | mpav1 §"Fraying sequence" |
+| FDR signatures per regime; gFDR plot conventions | mpav1 §FDR signatures |
+| Substrate-conditional reading rules (Markovian sign, EMA preprocessing) | mpav1 Appendix F |
+| Heat-tax tower; vertical re-calibration cost | mpav1 §"Heat-tax tower" |
 | RFC-S §4 driver profile (the artifact this record calibrates against) | [RFC-S v0.2 §4](MPA-RFC-S_Scale-Management.md#4-driver-profile) |
 | RFC-S §5 round-trip validation (the protocol this record supplies evidence for) | [RFC-S v0.2 §5](MPA-RFC-S_Scale-Management.md#5-round-trip-validation) |
 

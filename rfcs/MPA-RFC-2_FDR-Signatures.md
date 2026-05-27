@@ -1,7 +1,7 @@
 # MPA-RFC-2: FDR-Signature Contract
 
 **Status:** Draft v0.1 — first thin-RFC pass (no block-in stage, per Block-In §Next-session priorities).
-**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). Per-regime parametric shapes + universality-invariant table are the load-bearing imports.
+**Targets:** [mpav1 (compressed, operational)](../framework/mpav1_compressed.md). Per-regime parametric shapes + universality-invariant table are the load-bearing imports.
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md), [`reference-drivers/surface-code-qec.md`](../reference-drivers/surface-code-qec.md), [RFC-3 v0.1](MPA-RFC-3_Consistency-Completeness.md), [RFC-V v0.1](MPA-RFC-V_Reference-Vocabulary.md), [RFC-RI v0.1](MPA-RFC-RI_Realizer-Interface.md)
 
 ---
@@ -33,7 +33,7 @@ S_FDR = (object_ref, regime_class, parametric_plot, universality_tuple, observer
 | `object_ref` | Vertex / edge / subgraph ID in the spec object (RFC-1) |
 | `regime_class` | One of $\{c, s, r, k_{\text{frust}}\}$ |
 | `parametric_plot` | Sampled curve $(\chi(\tau), C(0)-C(\tau))$ at declared resolution |
-| `universality_tuple` | Per-regime invariants from v9 §Fluctuation-dissipation signatures (regime-conditional set; see Invariant 2) |
+| `universality_tuple` | Per-regime invariants from mpav1 §FDR signatures (regime-conditional set; see Invariant 2) |
 | `observer_kernel` | $\tau_{obs}$ at which the signature was measured |
 | `measurement_envelope` | Subset of the driver's `operating_envelope` (RFC-S §4) covering this measurement |
 
@@ -44,7 +44,7 @@ Schema in [Appendix A](#appendix-a-schema).
 A signature is **valid** iff:
 
 1. **Object-typed.** `object_ref` resolves to a typed object in a valid spec; `regime_class` matches the object's type (vertex regimes use $\{c, s, r\}$; subgraphs use $\{k_{\text{frust}}\}$).
-2. **Universality-tuple completeness.** Tuple carries the regime-conditional invariants per [RFC-V §2](MPA-RFC-V_Reference-Vocabulary.md) (which inherits from v9 §Fluctuation-dissipation signatures).
+2. **Universality-tuple completeness.** Tuple carries the regime-conditional invariants per [RFC-V §2](MPA-RFC-V_Reference-Vocabulary.md) (which inherits from mpav1 §FDR signatures).
 3. **Within-class.** Measured invariants fall within the substrate-specific tolerance the driver profile declares.
 4. **Observer-relativity.** Measured at the spec-declared $\tau_{obs}$; cross-band declarations are separate signatures.
 5. **Envelope-respect.** `measurement_envelope` ⊆ driver's `operating_envelope`.
@@ -77,10 +77,10 @@ A signature is **invalid** if any of:
 
 | What | Where |
 |---|---|
-| Per-regime parametric shapes + universality-invariant table $\{X_c, \alpha_s, P_s, X_r, N_f\}$ | [v9 §Fluctuation-dissipation signatures](../framework/v9_compressed.md) |
-| Substrate-conditional reading rules (Markovian sign, detection-event preprocessing) | v9 §Substrate-conditional reading rules |
-| Surface-code load-bearing reference (Cugliandolo–Kurchan $s$-aging) | v9 §FDR (surface-code paragraph) + [`reference-drivers/surface-code-qec.md`](../reference-drivers/surface-code-qec.md) |
-| Trail-class metric $\rho$ (used in I5 intra-class distance) | v9 §Compression Axiom |
+| Per-regime parametric shapes + universality-invariant table $\{X_c, \alpha_s, P_s, X_r, N_f\}$ | [mpav1 §FDR signatures](../framework/mpav1_compressed.md) |
+| Substrate-conditional reading rules (Markovian sign, detection-event preprocessing) | mpav1 §Substrate-conditional reading rules |
+| Surface-code load-bearing reference (Cugliandolo–Kurchan $s$-aging) | mpav1 §FDR (surface-code paragraph) + [`reference-drivers/surface-code-qec.md`](../reference-drivers/surface-code-qec.md) |
+| Trail-class metric $\rho$ (used in I5 intra-class distance) | mpav1 §Compression Axiom |
 | Per-intent comparison semantics | [RFC-S §3](MPA-RFC-S_Scale-Management.md) (intents) + §5 (round-trip metrics) |
 
 ---
@@ -110,12 +110,12 @@ fdr_signature = {
 - **Per-substrate measurement protocols** → driver profile (RFC-S §4) `operating_envelope` and `reference_outputs`.
 - **Acceptance thresholds per intent** → driver profile, validated via RFC-S §5 round-trip.
 - **Cross-substrate signature comparison at a meta level** → RFC-3 (consistency & completeness).
-- **Multi-loop $k_{\text{frust}}$ signatures.** v9 carries the single-loop transient-negative shape ($N_f$); multi-loop / hyperedge frustration may have richer signatures. Open until a substrate instances them.
+- **Multi-loop $k_{\text{frust}}$ signatures.** mpav1 carries the single-loop transient-negative shape ($N_f$); multi-loop / hyperedge frustration may have richer signatures. Open until a substrate instances them.
 
 ## Appendix C: Open
 
 1. **Universality-class boundary.** Categorical agreement is the load-bearing test (RFC-S §5 I5); intra-class numerical bounds are substrate-specific. Cross-substrate boundary characterization is open — currently relies on driver-declared tolerance.
-2. **$\alpha_s$ measurement form.** v9 §FDR specifies "slope of aging segment" without committing to log-log vs. linear (CK ratio reading). RFC-2 inherits the agnostic form; v0.2 may canonicalize once a second reference substrate (habit-extinction) provides comparison data.
+2. **$\alpha_s$ measurement form.** mpav1 §FDR specifies "slope of aging segment" without committing to log-log vs. linear (CK ratio reading). RFC-2 inherits the agnostic form; v0.2 may canonicalize once a second reference substrate (habit-extinction) provides comparison data.
 
 ---
 
@@ -123,7 +123,7 @@ fdr_signature = {
 
 | Version | Status | Change |
 |---|---|---|
-| **v0.1** | **current** | First thin-RFC pass. Universality tuple anchored on v9 §FDR per-regime invariants. |
+| **v0.1** | **current** | First thin-RFC pass. Universality tuple anchored on mpav1 §FDR per-regime invariants. |
 
 **Compatibility.** Within v0.x: schema additions only. Removal of universality-tuple fields requires v1.0+ revision.
 

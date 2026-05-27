@@ -1,7 +1,7 @@
 # MPA-RFC-S: Scale Management
 
 **Status:** Draft v0.2 — first thin-RFC pass. (v0.1 preserved at [`MPA-RFC-S_Scale-Management_Block-In.md`](MPA-RFC-S_Scale-Management_Block-In.md) as honest-scope reference; not authoritative.)
-**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). Compression Axiom + operator algebra are the load-bearing imports.
+**Targets:** [mpav1 (compressed, operational)](../framework/mpav1_compressed.md). Compression Axiom + operator algebra are the load-bearing imports.
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md), [RFC-RI v0.1](MPA-RFC-RI_Realizer-Interface.md)
 
 ---
@@ -18,7 +18,7 @@ This RFC inherits five principles from the [Architectural Block-In](../architect
 
 RFC-S adds one principle, internal to scale management:
 
-6. **RG flow as foundational structure.** Scale-management semantics derive from the renormalization-group flow defined by v9's Compression Axiom (Wilson–Kadanoff + Banach contraction at $\epsilon < 1$). The canonical representation, substrate gamut, intent operations, and behavior at boundary points are *positions in or trajectories under this flow*, not finite-engineering analogs reconstructed from color management. Color management is a finite discipline; MPA scale management is infinite. Infinity-machinery is imported directly, not patched on case-by-case.
+6. **RG flow as foundational structure.** Scale-management semantics derive from the renormalization-group flow defined by mpav1's Compression Axiom (Wilson–Kadanoff + Banach contraction at $\epsilon < 1$). The canonical representation, substrate gamut, intent operations, and behavior at boundary points are *positions in or trajectories under this flow*, not finite-engineering analogs reconstructed from color management. Color management is a finite discipline; MPA scale management is infinite. Infinity-machinery is imported directly, not patched on case-by-case.
 
 ---
 
@@ -35,7 +35,7 @@ The canonical representation at $p = \tau_{obs}$ is **the fixed-point set of the
 
 Cross-position structure (auto-remap as $\tau_{obs}$ moves) **is the flow trajectory itself**; the driver supplies the rule that realizes it (form open — see Appendix B). Specifying the canonical representation at one $p$ plus the contraction $\mathcal{C}_n$ specifies it everywhere along the trajectory.
 
-**Pointer:** v9 §Compression Axiom; §Three typed objects; §Boolean section.
+**Pointer:** mpav1 §Compression Axiom; §Three typed objects; §Boolean section.
 
 ---
 
@@ -52,7 +52,7 @@ A substrate's gamut is **the image of its RG trajectory** in canonical-represent
 
 A spec is **in-gamut** at operating $(\tau_{obs}, D)$ iff its $(V, E, \Gamma, D, \tau_{obs}, P)$ corresponds to points along the substrate's trajectory. Out-of-gamut handling is intent-determined (§3).
 
-**Pointer:** v9 §Setting; §Capacity; §Falloff profile; Appendix G (Convergent Tower).
+**Pointer:** mpav1 §Setting; §Capacity; §Falloff profile; Appendix G (Convergent Tower).
 
 ---
 
@@ -72,7 +72,7 @@ Five intents enumerate which canonical-representation invariants are preserved w
 
 **Composition.** Two adjacent intents compose iff their preserved-invariant sets union without conflict. I2 (drive-faithful) does not compose with adjusting intents. Composition algebra beyond this rule is deferred (Appendix B).
 
-**Pointer:** v9 §Operators; §Fluctuation-dissipation signatures (I5 universality classes); Appendix F (substrate-conditional reading).
+**Pointer:** mpav1 §Operators; §FDR signatures (I5 universality classes); Appendix F (substrate-conditional reading).
 
 ---
 
@@ -92,7 +92,7 @@ The artifact a driver produces. Field enumeration here; machine-readable schema 
 
 **Characterization vs. calibration.** Characterization produces the driver profile (one-time per substrate class). Calibration verifies the substrate is in the declared `operating_envelope` (per-experiment). A characterized-but-uncalibrated substrate has a profile that cannot be trusted on the current measurement; a calibrated-but-uncharacterized substrate has no profile at all.
 
-**Pointer:** v9 §Substrate-conditional reading rules; Architectural Block-In §"What this means for drivers."
+**Pointer:** mpav1 §Substrate-conditional reading rules; Architectural Block-In §"What this means for drivers."
 
 ---
 
@@ -119,9 +119,9 @@ A driver is accepted iff forward and round-trip errors fall below intent-specifi
 | I4 persistence-preserving | Sequence distance on $\{\varepsilon_n\}$; survival-declaration agreement |
 | I5 signature-preserving | Universality-class agreement; intra-class parameter distance |
 
-**Reference-substrate bootstrap.** First reference per substrate domain is hand-built from v9 by-hand reading (v9 §5 + Appendix F for surface-code QEC). Subsequent drivers are validated against it. Multi-driver agreement supersedes single-reference validation once multiple drivers exist.
+**Reference-substrate bootstrap.** First reference per substrate domain is hand-built from mpav1 by-hand reading (mpav1 §5 + Appendix F for surface-code QEC). Subsequent drivers are validated against it. Multi-driver agreement supersedes single-reference validation once multiple drivers exist.
 
-**Pointer:** v9 §5 (surface-code identification); Appendix F (substrate-conditional reading); [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md) canonicalizes I5 metrics.
+**Pointer:** mpav1 §5 (surface-code identification); Appendix F (substrate-conditional reading); [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md) canonicalizes I5 metrics.
 
 ---
 
@@ -131,7 +131,7 @@ Boundary parameter values are *points in the compactified parameter space*, not 
 
 | Point | Physical reading | Default policy |
 |---|---|---|
-| $\epsilon \to 1$ | Complexity Wall (v9 Appendix G). Tower fails to converge; further ascent thermodynamically forbidden. | Spec must declare wall-acceptance (terminal level) or fail. I4 extrapolates with growing $\sigma_n$; others reject. |
+| $\epsilon \to 1$ | Complexity Wall (mpav1 Appendix G). Tower fails to converge; further ascent thermodynamically forbidden. | Spec must declare wall-acceptance (terminal level) or fail. I4 extrapolates with growing $\sigma_n$; others reject. |
 | $D \to \infty$ | Boolean limit. Canonical representation collapses to $\mathcal{M}_2 \cong \mathbb{B}$. | Specs reduce to classical propositional logic; full operator algebra unnecessary. Recommend Boolean export. |
 | $D = 0$ | No drive. Only $\mathcal{M}_2$ subset admissible (no $s$-regime). | Reject specs with $s$-regime vertices at $D = 0$. |
 | $\tau_{obs} \to 0$ | Microscopic limit. Substrate-native granularity dominates; $\Pi(S)$ floor governs. | Below the driver's stated floor, the driver is invalid. |
@@ -139,7 +139,7 @@ Boundary parameter values are *points in the compactified parameter space*, not 
 | $\lambda = \pm D$ | Regime-transition boundary. Reading ambiguous within transition zone of substrate-characterized width $\delta$. | Zone reading undefined. I1 widens to next category; I2 reports ambiguous; substrate declares $\delta$ in its driver profile. |
 | $\gamma_{AB} > 0 \wedge D < \gamma_{AB}$ | Theorem-9 boundary. Joint commitment infeasible. | RFC-1 mechanical check flags. Intent-determined: I2 hard-flags, I1 scales, I3 redistributes $\gamma$. |
 
-**Pointer:** v9 Theorem 9 (joint-commitment threshold); Appendix G (Convergent Tower / Complexity Wall); §Boolean section.
+**Pointer:** mpav1 Theorem 9 (joint-commitment threshold); Appendix G (Convergent Tower / Complexity Wall); §Boolean section.
 
 ---
 
@@ -156,13 +156,13 @@ Items the next revision absorbs as needed:
 3. **Lower-bound $\varepsilon_n$.** $\varepsilon = 0$ is non-physical (information must be lost across real-scale coarse-graining). Substrate-specific $\varepsilon_n^{\min}$ declared in driver profile; form of declaration open.
 4. **Observable sufficiency in round-trip validation.** §5 assumes the backward map is invertible enough to validate; §4's `reference_outputs` are the inputs that drive it. Neither states *which observables jointly constrain which canonical-representation axes*. Concrete force: an inversion against a single-mode gFDR locus constrains the vertex regime but is rank-deficient on the edge $\gamma$ — the round-trip would pass while leaving an axis untouched. v0.3 should add an observable-coverage obligation: a driver's `reference_outputs` must jointly constrain every canonical axis it claims to support. (Surfaced by the mpa-auditor mock-dataset slice; see that repo's `docs/rfc-s-integration-notes.md`.)
 
-(Trail-class metric and per-regime universality invariants closed in v9 between v0.2 and the next RFC-S revision: $\rho$ in §Compression Axiom, $\{X_c, \alpha_s, P_s, X_r, N_f\}$ in §Fluctuation-dissipation signatures. RFC-S §3 I5's intra-class metric and §5 round-trip per-intent metrics now reference these directly; v0.3 will tighten the §3 / §5 wording to point at the v9 invariants by name.)
+(Trail-class metric and per-regime universality invariants closed in mpav1 between v0.2 and the next RFC-S revision: $\rho$ in §Compression Axiom, $\{X_c, \alpha_s, P_s, X_r, N_f\}$ in §FDR signatures. RFC-S §3 I5's intra-class metric and §5 round-trip per-intent metrics now reference these directly; v0.3 will tighten the §3 / §5 wording to point at the mpav1 invariants by name.)
 
 ## Appendix C: What this RFC does not specify (deferred)
 
 - **Behavioral / evolving substrates.** Substrates whose operating envelope evolves during measurement (training neural networks, evolving biological systems) do not admit a static driver profile. Out of scope. Future RFC-Beh or extension axis.
 - **Sheaf-theoretic pipeline composition.** Tier-3 import (handoff §"Infinity-machinery available, ranked by fit"). Not earning weight at v0.2; reserve for v0.3 if §3's union rule proves insufficient.
-- **Coalgebraic trail-class equivalence.** Reserve for when v9's open trail-class metric question becomes blocking.
+- **Coalgebraic trail-class equivalence.** Reserve for when mpav1's open trail-class metric question becomes blocking.
 - **Reference-target standardization governance.** Who declares which substrates are reference targets, on what criteria — operational, not protocol-layer.
 
 ---

@@ -1,7 +1,7 @@
 # MPA-RFC-V: Reference Vocabulary
 
 **Status:** Draft v0.1 — first thin-RFC pass.
-**Targets:** [v9 (compressed)](../framework/v9_compressed.md) for operational meanings.
+**Targets:** [mpav1 (compressed)](../framework/mpav1_compressed.md) for operational meanings.
 **Companion:** All other RFCs, drivers, realizers read this for canonical labels.
 
 ---
@@ -16,11 +16,11 @@ The **reference vocabulary**: canonical-label registry for cross-cutting concept
 
 ## 2. Cross-cutting labels
 
-**Operators (v9 §Operators).** $C$ try-merge / $S$ hold-both / $K$ parity-XOR / $R$ reset-sever; $\Sigma = \{C, S, K, R\}$ (extended to $\{C, S, K, R, \top, \bot\}$ in the Boolean section); $\mathcal{C}$ compression operator (distinct from $C$); $\mathcal{C}_n$ level-$n$ compression operator.
+**Operators (mpav1 §Operators).** $C$ try-merge / $S$ hold-both / $K$ parity-XOR / $R$ reset-sever; $\Sigma = \{C, S, K, R\}$ (extended to $\{C, S, K, R, \top, \bot\}$ in the Boolean section); $\mathcal{C}$ compression operator (distinct from $C$); $\mathcal{C}_n$ level-$n$ compression operator.
 
-**Regimes (v9 §Three typed objects).** $c$ committed ($\lambda_A \ll -D$); $s$ suspended ($|\lambda_A| \lesssim D$); $r$ reset ($\lambda_A \gg D$); $k_{\text{frust}}$ subgraph frustration (topological).
+**Regimes (mpav1 §Three typed objects).** $c$ committed ($\lambda_A \ll -D$); $s$ suspended ($|\lambda_A| \lesssim D$); $r$ reset ($\lambda_A \gg D$); $k_{\text{frust}}$ subgraph frustration (topological).
 
-**Per-regime universality invariants (v9 §Fluctuation-dissipation signatures).**
+**Per-regime universality invariants (mpav1 §FDR signatures).**
 
 | Symbol | Name | Regime |
 |---|---|---|
@@ -32,7 +32,7 @@ The **reference vocabulary**: canonical-label registry for cross-cutting concept
 
 **Intents (RFC-S §3).** I1 regime-preserving; I2 drive-faithful; I3 capacity-preserving; I4 persistence-preserving; I5 signature-preserving.
 
-**Compression-axiom symbols (v9 §Compression Axiom).** $\epsilon = \|\mathcal{C}\|_{op}$ (single-level contraction rate); $\varepsilon_n = \|\mathcal{C}_n\|_{op}$ (level-$n$); $\rho$ trail-class metric (leading-eigenmode amplitude); $\mathcal{T}$ trail-vector Banach space; $\mathcal{T}/\!\sim$ trail-class space; $\mathcal{M} = \{c, s, r\}$; $\mathcal{M}_2 = \{c, r\}$ (Boolean section).
+**Compression-axiom symbols (mpav1 §Compression Axiom).** $\epsilon = \|\mathcal{C}\|_{op}$ (single-level contraction rate); $\varepsilon_n = \|\mathcal{C}_n\|_{op}$ (level-$n$); $\rho$ trail-class metric (leading-eigenmode amplitude); $\mathcal{T}$ trail-vector Banach space; $\mathcal{T}/\!\sim$ trail-class space; $\mathcal{M} = \{c, s, r\}$; $\mathcal{M}_2 = \{c, r\}$ (Boolean section).
 
 ## 3. Per-RFC labels (authority pointers)
 
@@ -45,7 +45,7 @@ The **reference vocabulary**: canonical-label registry for cross-cutting concept
 
 ## 4. Disambiguation rules
 
-- **$C$ vs. $\mathcal{C}$.** $C \in \Sigma$ (try-merge operator; v9 §Operators); $\mathcal{C}$ compression operator (v9 §Compression Axiom). Distinct objects, distinct categories. Typographical distinction preserved everywhere; no document may use the same glyph for both.
+- **$C$ vs. $\mathcal{C}$.** $C \in \Sigma$ (try-merge operator; mpav1 §Operators); $\mathcal{C}$ compression operator (mpav1 §Compression Axiom). Distinct objects, distinct categories. Typographical distinction preserved everywhere; no document may use the same glyph for both.
 - **$\epsilon$ vs. $\varepsilon_n$.** $\epsilon$ — single-level (default; level 0). $\varepsilon_n$ — explicitly level-$n$. Subscript required when the level is non-zero.
 
 ## 5. Invariants

@@ -2,7 +2,7 @@
 
 **Status:** v0.2 — block-in level (broad strokes, not detailed specification). v0.2 promotes three additional principles to foundational status: demand-bounded sufficiency, singular working-space path, thin-RFC discipline.
 **Purpose:** Capture the architectural commitments made this session at a resolution sufficient for the next session to work from
-**Companion artifacts:** [RFC-1 (Spec Object)](../rfcs/MPA-RFC-1_Spec-Object.md); [RFC-S Block-In (Scale Management)](../rfcs/MPA-RFC-S_Scale-Management_Block-In.md); [v9 framework](../framework/v9_unabridged.md)
+**Companion artifacts:** [RFC-1 (Spec Object)](../rfcs/MPA-RFC-1_Spec-Object.md); [RFC-S Block-In (Scale Management)](../rfcs/MPA-RFC-S_Scale-Management_Block-In.md); [mpav1 framework](../framework/mpav1_unabridged.md)
 
 ---
 
@@ -48,7 +48,7 @@ The framework commits to *enough* representation for the demand placed on it, no
 
 Consequence: MPA is not the bottleneck on substrate fidelity. Substrates carry whatever fidelity they carry; the framework reads only what the demand needs. Drivers don't claim unbounded fidelity; they declare an envelope they're calibrated for.
 
-**Bidirectionality.** DBS operates in both directions. *Forward:* declared demand → framework sizes the canonical representation (specs and drivers do this; RFC-1 §3 invariant 7 enforces non-empty demand envelopes). *Backward:* a tool pointed at an unknown dataset → framework declares what it can't characterize and what would be needed, rather than failing silently or pretending coverage. The forward direction is the protocol surface. The backward direction is operational discipline for tools, composed from the same mechanical ingredients — driver-profile gamut declarations (RFC-S §4), RFC-3 cross-artifact predicates surfacing gaps, v9 §Substrate-conditional reading rules + reference-drivers/ as characterization templates. *Informed silence, not dumb silence.* When future protocol tools point the framework at substrates outside any driver's envelope, they should articulate the gap (which class, which fields, what calibration would be needed), not produce a generic failure.
+**Bidirectionality.** DBS operates in both directions. *Forward:* declared demand → framework sizes the canonical representation (specs and drivers do this; RFC-1 §3 invariant 7 enforces non-empty demand envelopes). *Backward:* a tool pointed at an unknown dataset → framework declares what it can't characterize and what would be needed, rather than failing silently or pretending coverage. The forward direction is the protocol surface. The backward direction is operational discipline for tools, composed from the same mechanical ingredients — driver-profile gamut declarations (RFC-S §4), RFC-3 cross-artifact predicates surfacing gaps, mpav1 §Substrate-conditional reading rules + reference-drivers/ as characterization templates. *Informed silence, not dumb silence.* When future protocol tools point the framework at substrates outside any driver's envelope, they should articulate the gap (which class, which fields, what calibration would be needed), not produce a generic failure.
 
 Lands in: RFC-1's foundational principles section (as a principle); RFC-1 §3 invariant 7 (every spec object declares a demand envelope); RFC-S §2 with a parallel subsection on the demand side; the driver profile schema (drivers declare a demand envelope they cover); planned protocol tooling (which carries the backward direction operationally — no new RFC needed).
 
@@ -71,7 +71,7 @@ Exchange surfaces are written at gross-underengineering resolution by design. No
 - No legacy interop. There is no v8.5 we owe compatibility to.
 - No multi-stakeholder negotiation. Single program, single author per artifact.
 - No defensive MUST/SHOULD/MAY granularity needed at N=1 implementer.
-- No edge-case enumeration upfront. The algebra is in v9; the protocol declares invariants and lets v9 carry the cases.
+- No edge-case enumeration upfront. The algebra is in mpav1; the protocol declares invariants and lets mpav1 carry the cases.
 
 What the protocols *do* contain:
 1. **Object** — what artifact this governs (1 sentence)
@@ -79,13 +79,13 @@ What the protocols *do* contain:
 3. **Invariants** — numbered list, ≤7 where possible
 4. **Operations** — what you can do with it, what they preserve
 5. **Falsifiers** — what makes a candidate invalid
-6. **Pointer** — which v9 sections carry the formal derivation
+6. **Pointer** — which mpav1 sections carry the formal derivation
 
 Half a page per object is the target; growth past it is debt that requires explicit justification (a comment naming what force pushed past brevity, with a revert-when-force-passes commitment).
 
 Justification: brittleness is a measurement against actual stress. A thin protocol that holds under the stress it actually encounters is correctly underspecified, not negligently so. *It was never brittle if it never broke.* When something breaks, we thicken the relevant spot — that spot only, that break only, with a debt-marker. The defensive instincts that grew ICC v4 to ~120 pages are real; we don't import them prophylactically.
 
-Failure modes acknowledged: Markdown / HTTP/1.0 / CSV are warnings — short spec + thin substrate = ambiguity everywhere. We avoid this trap because **v9 is rigorous**: the protocols can be thin because the framework underneath is dense. v9 (~80 pages) carries the rigor; the RFCs carry the contract. Together they're the right total weight, distributed correctly.
+Failure modes acknowledged: Markdown / HTTP/1.0 / CSV are warnings — short spec + thin substrate = ambiguity everywhere. We avoid this trap because **mpav1 is rigorous**: the protocols can be thin because the framework underneath is dense. mpav1 (~80 pages) carries the rigor; the RFCs carry the contract. Together they're the right total weight, distributed correctly.
 
 Lands in: every RFC structure (six-field template); explicit page-budget targets per RFC; the RFC review discipline (reject growth past budget without debt-marker).
 
@@ -119,7 +119,7 @@ The framework makes no commitments at this layer; substrates do what substrates 
 
 ### Canonical representation (working space)
 
-MPA-native. The typed objects v9 already specifies — trail vectors, vertex regimes, edges with shear, subgraphs with $k_{\text{frust}}$, drive $D$, observer kernel $\tau_{obs}$, persistence profile $P$. Tightened by RFC-1 and successors.
+MPA-native. The typed objects mpav1 already specifies — trail vectors, vertex regimes, edges with shear, subgraphs with $k_{\text{frust}}$, drive $D$, observer kernel $\tau_{obs}$, persistence profile $P$. Tightened by RFC-1 and successors.
 
 Properties (declared, load-bearing):
 - Substrate-neutral by construction
@@ -173,7 +173,7 @@ This is fine. The interface commitment is what matters for substrate neutrality;
 
 The $(V, E, \Gamma, D, \tau_{obs}, P)$ structure is preserved. What changes is how to read it.
 
-- All elements are *implicitly observer-relative*. Already true in v9 (scale-relativity); now load-bearing.
+- All elements are *implicitly observer-relative*. Already true in mpav1 (scale-relativity); now load-bearing.
 - $\tau_{obs}$ becomes more central than RFC-1 draft 0.1 treated it. It's not just one of six fields; it's the *framing field* that defines the observer's position and the canonical representation's calibration. Other fields are read relative to it.
 - $P$ becomes the camera trajectory. Already true in spirit; now explicit.
 - The spec author writes in observer-relative terms throughout. The framework provides discipline to ensure observer-relativity is consistent across the spec.
@@ -201,7 +201,7 @@ This is more structured than the previous framing, but the structure is what mak
 
 Color management uses reference targets (Macbeth charts, calibration suites) that any new pipeline component is validated against. MPA needs analogs.
 
-**Surface-code QEC** is the first reference substrate, because v9 §5 already gives the empirical validation (Cugliandolo–Kurchan aging diagonal at sub-threshold) and Appendix F gives the by-hand reading rules. Any new driver should be checkable against the surface-code reference: produce its driver, run it on the canonical surface-code data, confirm the same FDR signatures emerge.
+**Surface-code QEC** is the first reference substrate, because mpav1 §5 already gives the empirical validation (Cugliandolo–Kurchan aging diagonal at sub-threshold) and Appendix F gives the by-hand reading rules. Any new driver should be checkable against the surface-code reference: produce its driver, run it on the canonical surface-code data, confirm the same FDR signatures emerge.
 
 **Habit extinction** is the candidate second reference substrate, for the behavioral domain. Decades of clean acquisition / extinction / spontaneous-recovery / reinstatement data; structure maps cleanly onto trail-vector decay and mentor pumping; field has been receptive to formal models. The previous session identified this as the right first behavioral driver target; the block-in promotes it to *reference target* status — used to validate every subsequent behavioral-domain driver.
 
@@ -209,11 +209,11 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 
 ---
 
-## v9 corrections needed
+## mpav1 corrections needed
 
 **Closed:**
-1. **Notation disambiguation** ($C$ vs $\mathcal{C}$) — closed in v9 §Operators (notation paragraph) + §Compression Axiom (paragraph corrected; previously-corrupted LaTeX rendering fixed). Cross-RFC closure: [RFC-V v0.1 §4](../rfcs/MPA-RFC-V_Reference-Vocabulary.md) makes the disambiguation rule official.
-2. **Architectural framing layer-in** — closed in v9 §"Foundational principles" (frame section after §Setting; ½-page declaration, points back here for long-form). v9 now declares all five principles rather than only being the rigor source the RFCs declare *about*. Closed 2026-05-10.
+1. **Notation disambiguation** ($C$ vs $\mathcal{C}$) — closed in mpav1 §Operators (notation paragraph) + §Compression Axiom (paragraph corrected; previously-corrupted LaTeX rendering fixed). Cross-RFC closure: [RFC-V v0.1 §4](../rfcs/MPA-RFC-V_Reference-Vocabulary.md) makes the disambiguation rule official.
+2. **Architectural framing layer-in** — closed in mpav1 §"Foundational principles" (frame section after §Setting; ½-page declaration, points back here for long-form). mpav1 now declares all five principles rather than only being the rigor source the RFCs declare *about*. Closed 2026-05-10.
 
 **Pending:** (none)
 
@@ -221,10 +221,10 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 
 ## Open questions (carried forward)
 
-**From v9 (closed):**
-- Metric on trail-class space — closed in v9 §Compression Axiom (spectral-gap form: $\rho$ = leading-eigenmode amplitude). $\rho$ is distinct from $\varepsilon_n$: $\rho$ is the trail-class metric, $\varepsilon_n$ the contraction rate.
-- Per-regime universality invariants — closed in v9 §Fluctuation-dissipation signatures ($\{X_c, \alpha_s, P_s, X_r, N_f\}$). $\alpha_s$ and $P_s$ are the load-bearing cross-substrate observables instanced by surface-code Cugliandolo–Kurchan.
-- Formal coarse-graining map at RG-literature rigor — two-tier closure in v9 §Compression Axiom. Operationally closed (Banach contraction sufficient for all theorems above); Wilson–Kadanoff structural equivalence is a classification conjecture with explicit proof strategy (locality / blocking / conjugacy). Open only at the structural-proof level.
+**From mpav1 (closed):**
+- Metric on trail-class space — closed in mpav1 §Compression Axiom (spectral-gap form: $\rho$ = leading-eigenmode amplitude). $\rho$ is distinct from $\varepsilon_n$: $\rho$ is the trail-class metric, $\varepsilon_n$ the contraction rate.
+- Per-regime universality invariants — closed in mpav1 §FDR signatures ($\{X_c, \alpha_s, P_s, X_r, N_f\}$). $\alpha_s$ and $P_s$ are the load-bearing cross-substrate observables instanced by surface-code Cugliandolo–Kurchan.
+- Formal coarse-graining map at RG-literature rigor — two-tier closure in mpav1 §Compression Axiom. Operationally closed (Banach contraction sufficient for all theorems above); Wilson–Kadanoff structural equivalence is a classification conjecture with explicit proof strategy (locality / blocking / conjugacy). Open only at the structural-proof level.
 
 **From this session and follow-ons (newly opened or sharpened, now promoted to foundational principles — see "Foundational principles (consolidated)" above):**
 - *Demand-bounded sufficiency.* Now principle #3.
@@ -246,7 +246,7 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 
 | Artifact | Status | Location |
 |---|---|---|
-| v9 compressed | Stable; self-contained (free-standing); trail-class metric + per-regime universality invariants integrated; RG-closure two-tier framing | [`framework/v9_compressed.md`](../framework/v9_compressed.md) |
+| mpav1 compressed | Stable; self-contained (free-standing); trail-class metric + per-regime universality invariants integrated; RG-closure two-tier framing | [`framework/mpav1_compressed.md`](../framework/mpav1_compressed.md) |
 | Architectural block-in (this document) | Stable; updated through v0.2 closures | [`architecture/MPA_Architectural_Block-In.md`](MPA_Architectural_Block-In.md) |
 | RFC-1 (Spec Object) | v0.2 thin-pass stable | [`rfcs/MPA-RFC-1_Spec-Object.md`](../rfcs/MPA-RFC-1_Spec-Object.md) |
 | RFC-2 (FDR signatures) | v0.1 thin-pass stable | [`rfcs/MPA-RFC-2_FDR-Signatures.md`](../rfcs/MPA-RFC-2_FDR-Signatures.md) |
@@ -264,7 +264,7 @@ Color management uses reference targets (Macbeth charts, calibration suites) tha
 
 ## Next session priorities
 
-The original priority list (items 1–6) is fully landed: v9 notation correction ✓; RFC-1 v0.2 ✓; RFC-S thin pass ✓; surface-code reference driver ✓; RFC-2 ✓. RFC-V, RFC-RI, RFC-3 also produced at thin-pass weight. The constellation now has full protocol coverage; remaining work is substrate-research, hygiene, and tooling rather than protocol design.
+The original priority list (items 1–6) is fully landed: mpav1 notation correction ✓; RFC-1 v0.2 ✓; RFC-S thin pass ✓; surface-code reference driver ✓; RFC-2 ✓. RFC-V, RFC-RI, RFC-3 also produced at thin-pass weight. The constellation now has full protocol coverage; remaining work is substrate-research, hygiene, and tooling rather than protocol design.
 
 In recommended order:
 
@@ -274,14 +274,14 @@ In recommended order:
 
 Items 1 and 3 advance through reality contact (more substrates measured, more drivers written). Item 2 advances through pure work and can be done at any time.
 
-(v9 architectural-framing back-port closed 2026-05-10 — see "v9 corrections needed" item 2.)
+(mpav1 architectural-framing back-port closed 2026-05-10 — see "mpav1 corrections needed" item 2.)
 
 ---
 
 ## Closing note
 
-The session moved from "build the translator" to "specify the input contract first" to "specify the input contract with color-management and scale-management discipline." A follow-on session sharpened it further with three more principles — demand-bounded sufficiency, the singular working-space path, and thin-RFC discipline — none of which redirects the program; each is a tightening that closes off a way the framework could grow weight it doesn't need. The architecture as it now stands is the same shape v9 had been pointing at, with the implicit principles made explicit and load-bearing. RFC-1 v0.2 ties the five commitments together at the spec-object level and tests whether the thin-RFC discipline holds for the foundational object. Subsequent RFCs build outward from that foundation.
+The session moved from "build the translator" to "specify the input contract first" to "specify the input contract with color-management and scale-management discipline." A follow-on session sharpened it further with three more principles — demand-bounded sufficiency, the singular working-space path, and thin-RFC discipline — none of which redirects the program; each is a tightening that closes off a way the framework could grow weight it doesn't need. The architecture as it now stands is the same shape mpav1 had been pointing at, with the implicit principles made explicit and load-bearing. RFC-1 v0.2 ties the five commitments together at the spec-object level and tests whether the thin-RFC discipline holds for the foundational object. Subsequent RFCs build outward from that foundation.
 
 The framework has firmed up substantially this session. The next session inherits a coherent architecture rather than a collection of tightening proposals.
 
-The Maya analogy is doing more work than first appearance suggests: it's not just an aesthetic for how artists want to work, it's a structural recognition that scale-relativity in v9 was always pointing at observer-driven scale management without the language to name it. Naming it is the move that converts an implicit principle into an architectural commitment — and the commitments made early are the ones that don't get baked in wrong.
+The Maya analogy is doing more work than first appearance suggests: it's not just an aesthetic for how artists want to work, it's a structural recognition that scale-relativity in mpav1 was always pointing at observer-driven scale management without the language to name it. Naming it is the move that converts an implicit principle into an architectural commitment — and the commitments made early are the ones that don't get baked in wrong.

@@ -1,7 +1,7 @@
 # MPA-RFC-RI: Realizer Interface
 
 **Status:** Draft v0.1 — first thin-RFC pass.
-**Targets:** [v9 (compressed)](../framework/v9_compressed.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md) (spec-object input), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md) (intents at realizer junction), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md) (signature targets), [RFC-V v0.1](MPA-RFC-V_Reference-Vocabulary.md) (canonical labels).
+**Targets:** [mpav1 (compressed)](../framework/mpav1_compressed.md), [RFC-1 v0.2](MPA-RFC-1_Spec-Object.md) (spec-object input), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md) (intents at realizer junction), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md) (signature targets), [RFC-V v0.1](MPA-RFC-V_Reference-Vocabulary.md) (canonical labels).
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [`reference-drivers/surface-code-qec.md`](../reference-drivers/surface-code-qec.md), [RFC-3 v0.1](MPA-RFC-3_Consistency-Completeness.md).
 
 ---

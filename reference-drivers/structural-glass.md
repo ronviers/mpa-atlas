@@ -1,6 +1,6 @@
 # Structural-Glass Reference Driver
 
-**Status:** v0.1 — first reference driver for the structural-glass substrate class. Hand-built from [v9 §Fluctuation-dissipation signatures](../framework/v9_compressed.md) (aging-class identification) and [character §gFDR signatures](../framework/cdv1_compressed.md) (Cugliandolo–Kurchan diagonal as the $s$-regime signature).
+**Status:** v0.1 — first reference driver for the structural-glass substrate class. Hand-built from [mpav1 §FDR signatures](../framework/mpav1_compressed.md) — the STRUCTURAL reading's aging-class identification and the CHARACTER reading's Cugliandolo–Kurchan diagonal as the $s$-regime signature.
 **Targets:** [RFC-1 v0.2](../rfcs/MPA-RFC-1_Spec-Object.md), [RFC-S v0.2](../rfcs/MPA-RFC-S_Scale-Management.md), [RFC-C v0.2](../rfcs/MPA-RFC-C-Calibration.md).
 **Schema:** [`schema/driver-profile.v0.2.json`](../schema/driver-profile.v0.2.json) for the profile; [`schema/calibration-record.v0.1.json`](../schema/calibration-record.v0.1.json) for per-experiment calibration. This is the markdown companion; field structure mirrors RFC-S §4.
 
@@ -16,7 +16,7 @@ The bootstrap reference for the rheology / amorphous-solid domain. Independent d
 | `target_rfc_versions` | RFC-1 v0.2 + RFC-S v0.2 + RFC-C v0.2 |
 | `substrate_class` | `structural-glass` |
 | `characterization_date` | 2026-05-10 |
-| `authority` | reference (hand-built from v9 + character) |
+| `authority` | reference (hand-built from mpav1) |
 | `validation_history` | empty — first reference |
 
 ## Operating envelope
@@ -85,7 +85,7 @@ Per-primitive measurement protocol the [RFC-C v0.2](../rfcs/MPA-RFC-C-Calibratio
 | **`L`** (structural relaxation rate) | Stress relaxation $\sigma(t) = \sigma_0 \exp[-(t/\tau_\alpha)^\beta]$ on cessation; or simulation analog: spin-overlap autocorrelation after MC quench. | $L = \tau_\alpha^{-1}$ evaluated at the relevant aging time $t_w$. For multi-mode relaxation, take the slowest $\tau_\alpha$ as structural $L$; faster modes are local $\beta$-relaxation. | Cessation complete: no residual drive torque (lab) / no remnant field (simulation). Match to independent creep-compliance viscosity $\eta_0 = 1/(J_e^0 \cdot L)$. |
 | **`G₀`** (unsaturated budget) | Steady-state shear stress $\sigma_{\text{ss}}$ at strain rate $\dot\gamma$; or simulation: steady-state energy injection rate per CRR. | $G_0 = \sigma_{\text{ss}} \cdot \dot\gamma / E_{\text{CRR}}$ where $E_{\text{CRR}}$ is the substrate-declared CRR energy scale (or inferred from $G'(\omega)$ plateau). | Extrapolate $\sigma_{\text{ss}} \cdot \dot\gamma$ to zero strain to isolate the unsaturated cost. $G_0 / L > 1$ at max drive. |
 | **`τ_obs`** (canonical observer kernel) | Two-time correlation $C(t_w, t_w + \tau)$; or frequency sweep $G'(\omega), G''(\omega)$. | Canonical $\tau_{\text{obs}}$ is the waiting time $t_w$ that maximises gFDR violation in $\chi$ vs $C(0) - C(\tau)$. Alternative: $\omega^*$ where $G' = G''$ (loss-tangent peak), mapped to $\tau_{\text{obs}} = 1/\omega^*$. | gFDR must show the Cugliandolo–Kurchan aging diagonal below $T_c$; if absent, kernel misaligned. |
-| **`γ_AB`** (cross-saturation) | Localized shear burst on region $A$; stress response in region $B$. | $\gamma_{AB} = -\partial \sigma_B / \partial \gamma_A$, normalised by local modulus $G'_A$. Sign per v9 Appendix F: negative cooperative (stress shielding), positive conflicting (stress concentration). | Linear-response regime verified by Boltzmann-superposition check. |
+| **`γ_AB`** (cross-saturation) | Localized shear burst on region $A$; stress response in region $B$. | $\gamma_{AB} = -\partial \sigma_B / \partial \gamma_A$, normalised by local modulus $G'_A$. Sign per mpav1 Appendix F: negative cooperative (stress shielding), positive conflicting (stress concentration). | Linear-response regime verified by Boltzmann-superposition check. |
 | **Threshold (chit) verification** | Strain-rate sweep toward yield; or simulation: drive-rate sweep toward critical $\dot\gamma_c$. | Verify stress-fluctuation linewidth broadens as $\dot\gamma \to \dot\gamma_c$ where $G_0 \to L$. | Threshold crossing coincides with onset of non-Newtonian behaviour and shear banding. |
 | **Drift clock** (retirement trigger) | Thermal history drift; physical aging (enthalpy relaxation). | Retire when $\tau_\alpha$ shifts > 20% from baseline, or when sample undergoes thermal excursion outside the calibrated $T$-range. | Structural relaxation time $\tau_\alpha$ is the drift clock; aging changes $L$, which changes the chit. |
 

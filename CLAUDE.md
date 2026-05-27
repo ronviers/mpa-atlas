@@ -8,7 +8,7 @@ Working in this repo means working under **thin-RFC discipline.** This document 
 
 ## Principle
 
-Exchange surfaces are written at gross-underengineering resolution by design. Half a page per object is the target. **Not less rigorous, not phoned-in** — deliberately thin *where standards bodies are thick*. The framework underneath ([v9 compressed](framework/v9_compressed.md)) is dense (~12KB, derivation-heavy); the protocols on top are thin; the total weight is correctly distributed.
+Exchange surfaces are written at gross-underengineering resolution by design. Half a page per object is the target. **Not less rigorous, not phoned-in** — deliberately thin *where standards bodies are thick*. The framework underneath ([mpav1 compressed](framework/mpav1_compressed.md)) is dense (derivation-heavy); the protocols on top are thin; the total weight is correctly distributed.
 
 ## Justification
 
@@ -51,26 +51,27 @@ See [RFC-1 v0.2](rfcs/MPA-RFC-1_Spec-Object.md) for the canonical instance.
 
 The thin protocols work because the rigor is elsewhere:
 
-- **v9 compressed** → operator algebra, theorems, capacity bounds, FDR signatures, Compression Axiom — the *claims*, densely stated
-- **v9 receipts** → line-keyed justifications behind the compressed claims (citation, composition, bespoke proof shard, or `unrecovered` marker). The file that makes unabridged reconstruction tractable.
-- **cdv1 compressed / cdv1 receipts** → same pattern for the Character projection (continuous physical economics of sustained NESS traversal). The structural projection (v9) and Character projection are complementary readings of the same NESS-substrate phenomenology — both apply to any substrate (glass, QEC, brain, behavioral, future).
+- **mpav1 compressed** → operator algebra, theorems, capacity bounds, FDR signatures, Compression Axiom, chit unit, two-mode kernel, heat-tax tower, five posits — the *claims*, densely stated. One phenomenology, two readings (STRUCTURAL + CHARACTER) joined at a shared spine; both apply to any substrate (glass, QEC, brain, behavioral, future).
+- **mpav1 receipts** → line-keyed justifications behind the compressed claims (citation, composition, bespoke proof shard, or `unrecovered` marker). The file that makes unabridged reconstruction tractable.
 - **Architectural block-in** → cross-cutting decisions, the five foundational principles, multi-RFC framing
 - **Mechanical validation** (FDR round-trip checks, Theorem-9 checks, capacity envelope checks) → enforcement
 - **The RFC itself** → exchange contract, nothing else
 
-If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in v9 (claims) / receipts (derivations) / block-in (decisions), not here.
+If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in mpav1 compressed (claims) / receipts (derivations) / block-in (decisions), not here.
 
-**Receipts discipline.** When a session proves, derives, or composes a result that becomes a line in `v9_compressed.md` or `cdv1_compressed.md`, append a justification entry to the matching receipts file *in the same session*. Discipline rules (workflow, type tags, keying) live in [`framework/v9_receipts.md`](framework/v9_receipts.md). Lines whose proof tree is genuinely lost get an honest `unrecovered` marker — no fabricated reconstructions.
+**Receipts discipline.** When a session proves, derives, or composes a result that becomes a line in `mpav1_compressed.md`, append a justification entry to [`framework/mpav1_receipts.md`](framework/mpav1_receipts.md) *in the same session*. Discipline rules (workflow, type tags, keying) live there. Lines whose proof tree is genuinely lost get an honest `unrecovered` marker — no fabricated reconstructions.
+
+**`framework/` is canonical-only — not a scratchpad.** The `framework/` folder holds the canonical framework artifacts and nothing else: `mpav1_compressed.md` (the operational source of truth), `mpav1_receipts.md`, `mpav1_unabridged.md`, and the methodology reference `translating FDR.md`. Working material — handoffs, planning/blocking docs, drafts, session notes, scratch, pasted exchanges — goes in `docs/`, never `framework/`. Superseded canonical docs go to `framework/archive/`. Do not stage scratch in `framework/`.
 
 ## Forces pushing toward heavyweight (resist)
 
 These are the rationalizations that grow protocols from half a page to dozens:
 
 - *"What if a future implementer..."* — there is no future implementer. Single author per artifact. We version when one arrives.
-- *"For completeness we should enumerate..."* — completeness lives in v9. Pointers, not duplication.
+- *"For completeness we should enumerate..."* — completeness lives in mpav1 compressed. Pointers, not duplication.
 - *"It would be safer to spec the edge case..."* — edge cases live as compactification points, named once. Defense lives in mechanical validation, not in prose.
 - *"MUST / SHOULD / MAY granularity..."* — language of multi-stakeholder negotiation. We have one author. Declarative writing suffices.
-- *"This [Provisional] tag will help future maintainers..."* — it's a note-to-self disguised as a spec annotation. Move to an "Open" appendix or to v9's open-questions list.
+- *"This [Provisional] tag will help future maintainers..."* — it's a note-to-self disguised as a spec annotation. Move to an "Open" appendix or to mpav1 compressed's open-questions list.
 
 When you notice yourself reaching for one of these, that's a signal: stop, name the force, check whether it's actual stress (something broke) or anticipated stress (something might).
 
@@ -90,10 +91,9 @@ When you notice yourself reaching for one of these, that's a signal: stop, name 
 - Protocol-adjacent operational documents
 
 **Does not govern:**
-- **v9 compressed** — the source of structural-domain claims. Allowed to be dense. Maintained dense, not thin.
-- **v9 receipts** — line-keyed justifications behind the compressed claims. Append-only; grows with proof activity.
-- **v9 unabridged** — public-facing prose-and-prior-art document. Lives in `framework/`. Allowed to lag and to be long. Reconstructible from compressed + receipts.
-- **cdv1 compressed / cdv1 receipts / cdv1 unabridged** — same three-suffix pattern for the Character projection (compressed claim-only, receipts line-keyed justifications, unabridged paper).
+- **mpav1 compressed** — the operational source of truth; the full claim set (STRUCTURAL + CHARACTER readings on one spine). Allowed to be dense. Maintained dense, not thin.
+- **mpav1 receipts** — line-keyed justifications behind the compressed claims. Append-only; grows with proof activity.
+- **mpav1 unabridged** — public-facing prose-and-prior-art document. Lives in `framework/`. Allowed to lag and to be long. Reconstructible from compressed + receipts.
 - **Architectural block-in** — meta-document, allowed to grow as principles consolidate. (But each principle inside should be tight.)
 - **READMEs, handoffs** — operational meta, written for clarity over brevity. (Still: short is better.)
 
@@ -103,11 +103,9 @@ If unsure whether something is a protocol or a meta-document: protocols specify 
 
 - [Architectural Block-In v0.2](architecture/MPA_Architectural_Block-In.md) — foundational principles section (five principles, including thin-RFC discipline as #5).
 - [RFC-S v0.2](rfcs/MPA-RFC-S_Scale-Management.md) — worked example of the discipline applied to a section that resisted thinning. RG flow as foundational structure (§0.6); compactification absorbs edge cases (§6); sheaves and coalgebras flagged as Tier-3 reserve (Appendix C). The v0.1 block-in is preserved at `MPA-RFC-S_Scale-Management_Block-In.md` as honest-scope reference.
-- [v9 compressed](framework/v9_compressed.md) — structural-domain operational source of truth. RFCs point here for rigor.
-- [v9 receipts](framework/v9_receipts.md) — line-keyed justifications for v9 compressed claims.
-- [cdv1 compressed](framework/cdv1_compressed.md) — Character-projection operational source of truth. Continuous physical economics of sustained NESS traversal: chit unit, universal two-mode kernel, heat-tax tower, gFDR signatures, five leading-order posits, eleven cross-register identities. Claim-only; substrate-neutral.
-- [cdv1 receipts](framework/cdv1_receipts.md) — line-keyed justifications for cdv1 compressed claims.
-- [cdv1 unabridged](framework/cdv1_unabridged.md) — public-facing prose-and-prior-art version of the Character projection. Rebuilt from compressed + receipts; allowed to lag between rebuilds.
+- [mpav1 compressed](framework/mpav1_compressed.md) — the operational source of truth. RFCs point here for rigor. One phenomenology, two readings — STRUCTURAL (discrete operator algebra, finite-$D$ interior) and CHARACTER (continuous driven-dissipative dynamics: chit unit, two-mode kernel, heat-tax tower, gFDR signatures, five posits) — joined at the Boolean→MPA deformation spine. Claim-only; substrate-neutral.
+- [mpav1 receipts](framework/mpav1_receipts.md) — line-keyed justifications for the compressed claims.
+- [mpav1 unabridged](framework/mpav1_unabridged.md) — public-facing prose-and-prior-art version. Rebuilt from compressed + receipts periodically; allowed to lag between rebuilds.
 
 ## Origin
 
@@ -122,10 +120,10 @@ mpa-atlas is the upstream of the character test framework owned by
 mpa-conform. Canonical doc:
 [`H:/mpa-conform/conformer/tests/character/README.md`](../mpa-conform/conformer/tests/character/README.md).
 
-cdv1 (universal two-mode kernel, gFDR signatures, five-bucket regime
-classifier, heat-tax tower, chit unit, Compression Axiom) and RFC-S
-(scale-management semantics) are the **structures character tests verify
-substrates render *as*.** Real measurements are projected through these
+mpav1's Character projection (universal two-mode kernel, gFDR signatures,
+five-bucket regime classifier, heat-tax tower, chit unit, Compression Axiom)
+and RFC-S (scale-management semantics) are the **structures character tests
+verify substrates render *as*.** Real measurements are projected through these
 structures to land in the framework's canonical space; the shots in
 `H:/mpa-conform/output/tests/character/<timestamp>/` are the visible
 record of whether that projection holds.

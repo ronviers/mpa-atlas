@@ -1,7 +1,7 @@
 # MPA-RFC-1: Spec Object
 
 **Status:** Draft v0.2 — first thin-RFC pass
-**Targets:** [v9 (compressed, operational)](../framework/v9_compressed.md). The unabridged prose-and-prior-art version is at [`v9_unabridged.md`](../framework/v9_unabridged.md); refresh-from-compressed cadence; allowed to lag; not authoritative for operational lookups.
+**Targets:** [mpav1 (compressed, operational)](../framework/mpav1_compressed.md). The unabridged prose-and-prior-art version is at [`mpav1_unabridged.md`](../framework/mpav1_unabridged.md); refresh-from-compressed cadence; allowed to lag; not authoritative for operational lookups.
 **Companion:** [Architectural Block-In v0.2](../architecture/MPA_Architectural_Block-In.md), [RFC-S v0.2](MPA-RFC-S_Scale-Management.md), [RFC-2 v0.1](MPA-RFC-2_FDR-Signatures.md), [RFC-3 v0.1](MPA-RFC-3_Consistency-Completeness.md), [RFC-V v0.1](MPA-RFC-V_Reference-Vocabulary.md), [RFC-RI v0.1](MPA-RFC-RI_Realizer-Interface.md)
 
 ---
@@ -14,7 +14,7 @@ This RFC inherits five principles from the [Architectural Block-In](../architect
 2. **Observer-driven scale management.** $\tau_{obs}$ is the camera; canonical representation is observer-relative.
 3. **Demand-bounded sufficiency.** Canonical representation is sized to the demand placed on it. **The MPA is not the bottleneck.**
 4. **Singular working-space path.** Within an RFC version, exactly one shape. Plurality lives in drivers, intent flags, and version succession — not at the working-space layer.
-5. **Thin-RFC discipline.** Exchange surfaces are written at gross-underengineering resolution. *It was never brittle if it never broke.* Edge cases live in v9; cross-cutting decisions live in the architectural block-in; defensive enumeration lives in mechanical validation.
+5. **Thin-RFC discipline.** Exchange surfaces are written at gross-underengineering resolution. *It was never brittle if it never broke.* Edge cases live in mpav1; cross-cutting decisions live in the architectural block-in; defensive enumeration lives in mechanical validation.
 
 ---
 
@@ -44,12 +44,12 @@ The schema is canonical: a payload conforming to the schema is a valid spec obje
 
 A spec object is **valid** iff all of:
 
-1. **Type-closure.** Every vertex / edge / subgraph references types defined in v9 §Operators and §Composite catalogue.
-2. **Sign-canonicity.** All $\gamma$ values use canonical spec-layer sign ($\gamma<0$ cooperative, $\gamma\approx 0$ orthogonal, $\gamma>0$ conflicting). Substrate-native sign inversions happen at the driver layer, never inside the spec object. (See v9 Appendix F.1 for the Markovian-substrate convention.)
+1. **Type-closure.** Every vertex / edge / subgraph references types defined in mpav1 §Operators and §Composite catalogue.
+2. **Sign-canonicity.** All $\gamma$ values use canonical spec-layer sign ($\gamma<0$ cooperative, $\gamma\approx 0$ orthogonal, $\gamma>0$ conflicting). Substrate-native sign inversions happen at the driver layer, never inside the spec object. (See mpav1 Appendix F.1 for the Markovian-substrate convention.)
 3. **Observer-relativity.** All quantities read at the declared $\tau_{obs}$. Multi-band declarations name each band explicitly.
 4. **Scale-monotonicity.** Vertex regimes follow $c \to s \to r$ as $\tau_{obs}$ widens (no inverse transitions). $\gamma$ does not strengthen at wider $\tau_{obs}$.
-5. **Capacity-respect.** $|\Gamma^*| \le \sqrt{2D / \alpha\,\gamma_{\min}\,d_{\text{avg}}}$ at the operating point (v9 §Capacity).
-6. **Tower-convergence.** When $P$ declares $N \ge 1$ ascents, $\varepsilon_n < 1$ at each ascent — *or* the spec explicitly declares a Complexity Wall at ascent $n$ (v9 Appendix G).
+5. **Capacity-respect.** $|\Gamma^*| \le \sqrt{2D / \alpha\,\gamma_{\min}\,d_{\text{avg}}}$ at the operating point (mpav1 §Capacity).
+6. **Tower-convergence.** When $P$ declares $N \ge 1$ ascents, $\varepsilon_n < 1$ at each ascent — *or* the spec explicitly declares a Complexity Wall at ascent $n$ (mpav1 Appendix G).
 7. **Demand-envelope-declaration.** Every spec object carries a non-empty demand envelope. The framework promises no resolution beyond what the envelope demands.
 
 ## 4. Operations
@@ -57,11 +57,11 @@ A spec object is **valid** iff all of:
 | Operation | Signature | Preserves |
 |---|---|---|
 | Validate | $S \to \{\text{valid}, \text{diagnostics}[]\}$ | Invariants 1–7 |
-| Theorem-9 mechanical check | $S \to \text{diagnostics}[]$ | Joint-commitment feasibility per edge ($\gamma_{AB}>0 \wedge D < \gamma_{AB}$ flagged; v9 Theorem 9) |
+| Theorem-9 mechanical check | $S \to \text{diagnostics}[]$ | Joint-commitment feasibility per edge ($\gamma_{AB}>0 \wedge D < \gamma_{AB}$ flagged; mpav1 Theorem 9) |
 | Capacity check | $S \to \text{diagnostics}[]$ | Invariant 5 at operating point |
 | Compile to realizer targets | $S \times \text{intent-flag} \to \text{realizer-interface-document}$ | Per [RFC-RI](MPA-RFC-RI_Realizer-Interface.md) |
 
-Operations are intent-neutral except compilation, which carries an intent declared at the realizer-interface boundary (RFC-RI). Operator actions on the canonical representation ($C, S, K, R$ from v9 §Operators) are intent-neutral by construction — they preserve canonical-representation invariants because the algebra is closed.
+Operations are intent-neutral except compilation, which carries an intent declared at the realizer-interface boundary (RFC-RI). Operator actions on the canonical representation ($C, S, K, R$ from mpav1 §Operators) are intent-neutral by construction — they preserve canonical-representation invariants because the algebra is closed.
 
 ## 5. Falsifiers
 
@@ -78,7 +78,7 @@ Diagnostics from operations §4 surface other conditions (Theorem-9 joint-commit
 
 ## 6. Pointer
 
-[v9 (compressed)](../framework/v9_compressed.md) carries the formal derivation. Sections in the compressed file:
+[mpav1 (compressed)](../framework/mpav1_compressed.md) carries the formal derivation. Sections in the compressed file:
 
 | What | Where |
 |---|---|
@@ -86,7 +86,7 @@ Diagnostics from operations §4 surface other conditions (Theorem-9 joint-commit
 | Operator algebra $\Sigma = \{C, S, K, R\}$ | §Operators |
 | Composite catalogue | §Composite catalogue |
 | Capacity bound | §Capacity |
-| FDR signatures per regime / subgraph | §Fluctuation-dissipation signatures |
+| FDR signatures per regime / subgraph | §FDR signatures |
 | Substrate-conditional reading rules | §Substrate-conditional reading rules |
 | Compression Axiom / meta-ledger flow | §Compression Axiom / meta-ledger flow |
 | Tower convergence / Complexity Wall | §Compression Axiom (Convergent Tower paragraph) |
@@ -121,8 +121,8 @@ The envelope's internal structure is left thin pending RFC-2 (signatures contrac
 - FDR-signature measurement protocols → RFC-2
 - Cross-field consistency invariants beyond §3 → RFC-3
 - Realizer-interface document format and intent-flag enumeration → RFC-RI
-- Substrate-conditional reading rules → drivers (v9 Appendix F is the canonical surface-code reference)
-- Trail-class metric → open in v9; deferred until RFC-3 needs it concretely
+- Substrate-conditional reading rules → drivers (mpav1 Appendix F is the canonical surface-code reference)
+- Trail-class metric → open in mpav1; deferred until RFC-3 needs it concretely
 
 ## Appendix D: Open
 
@@ -132,7 +132,7 @@ Items the next revision absorbs as needed:
 2. Trail-vector cross-vertex compatibility under operator $C$ — explicit declaration required on type mismatch; default-merge on type match. More permissive defaults, if any, deferred.
 3. Local-drive combinator in overlapping mentor-pump regions. Pointwise max is the working assumption; substrate evidence may revise.
 
-(Closures: trail-class metric in v9 §Compression Axiom — $\rho([A],[B]) = \lim_n \epsilon^{-n}\|\mathcal{C}^n(d_A-d_B)\|$, distinct from $\varepsilon_n = \|\mathcal{C}_n\|_{op}$. $C$ vs. $\mathcal{C}$ notation collision in [RFC-V v0.1 §4](MPA-RFC-V_Reference-Vocabulary.md).)
+(Closures: trail-class metric in mpav1 §Compression Axiom — $\rho([A],[B]) = \lim_n \epsilon^{-n}\|\mathcal{C}^n(d_A-d_B)\|$, distinct from $\varepsilon_n = \|\mathcal{C}_n\|_{op}$. $C$ vs. $\mathcal{C}$ notation collision in [RFC-V v0.1 §4](MPA-RFC-V_Reference-Vocabulary.md).)
 
 ---
 
@@ -149,6 +149,6 @@ Items the next revision absorbs as needed:
 
 Target: ≤3 pages for the spec object (the foundational, fully-fielded object — the heaviest RFC in the sequence). Body §0–§6 runs ~95 lines (≈2 pages); appendices A–D add ~50 lines (≈1 page). **Pass.**
 
-For comparison: v0.1 ran ~400 lines and was still incomplete in the foundational-principles dimension. v0.2 carries strictly more architectural content in 38% of the prose, by removing re-derivation, [Provisional] tags, and defensive enumeration that v9 (rigor) and the architectural block-in (cross-cutting decisions) carry instead.
+For comparison: v0.1 ran ~400 lines and was still incomplete in the foundational-principles dimension. v0.2 carries strictly more architectural content in 38% of the prose, by removing re-derivation, [Provisional] tags, and defensive enumeration that mpav1 (rigor) and the architectural block-in (cross-cutting decisions) carry instead.
 
 The remaining RFCs (RFC-2 / RFC-3 / RFC-V / RFC-RI) target ≤1 page each — half a page where the object admits it. The spec object is the only RFC where ≤3 is the right target, because it is the foundational object. Growth past these targets in any RFC carries a debt-marker naming the force that pushed past brevity, with a revert-when-force-passes commitment.
