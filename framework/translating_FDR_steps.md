@@ -2,6 +2,8 @@
 
 FDR worked example. Each step guards against one failure mode. Provenance tags: **[est.]** = established literature, **[MPA]** = bespoke to this framework.
 
+> **Inbound twin:** `transport_law_steps.md`. This recipe brings an import *into* the framework (translation); that one gets predictions *out* of imports already adopted (transport laws).
+
 **Step 1 — deep commonality.** Two observables of a stochastic process and the relation between them: **[est.]**
 $$C(t,t')=\langle x(t)\,x(t')\rangle,\qquad \chi(t,t')=\frac{\delta\langle x(t)\rangle}{\delta h(t')}$$
 Equilibrium ties them through one constant $1/T$; the NESS-general (Cugliandolo–Kurchan) form inserts a violation factor $X$ (response $R=\partial_t\chi$; sign convention on the derivative varies by author):

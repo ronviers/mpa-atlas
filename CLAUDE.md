@@ -51,17 +51,19 @@ See [RFC-1 v0.2](rfcs/MPA-RFC-1_Spec-Object.md) for the canonical instance.
 
 The thin protocols work because the rigor is elsewhere:
 
-- **mpav1 compressed** → operator algebra, theorems, capacity bounds, FDR signatures, Compression Axiom, chit unit, two-mode kernel, heat-tax tower, five posits — the *claims*, densely stated. One phenomenology, two readings (STRUCTURAL + CHARACTER) joined at a shared spine; both apply to any substrate (glass, QEC, brain, behavioral, future).
-- **mpav1 receipts** → line-keyed justifications behind the compressed claims (citation, composition, bespoke proof shard, or `unrecovered` marker). The file that makes unabridged reconstruction tractable.
+- **mpa_engine** → the *claims* axis: operator algebra, capacity bounds, FDR signatures, Compression Axiom, chit unit, two-mode kernel, heat-tax tower, five posits, adoption catalogue, consolidated falsifiers, regime ontology — densely stated. One phenomenology, two readings (STRUCTURAL + CHARACTER) joined at a shared spine; both apply to any substrate (glass, QEC, brain, behavioral, future).
+- **mpa_receipts_engine** → line-keyed justifications behind the engine claims (citation, composition, bespoke proof shard, or `unrecovered` marker), plus the CORRECTIONS & PROMOTED REFINEMENTS log and the prior-art map.
+- **mpa_frontier** → the maturity ledger / GATES state machine (steeping → sharpening → battery → staked → promoted) that quarantines provisional work.
+- **mpa_prior_art** → the borrowed-results axis: `pa:` keys, what each import borrows and what reading MPA adds.
 - **Architectural block-in** → cross-cutting decisions, the five foundational principles, multi-RFC framing
 - **Mechanical validation** (FDR round-trip checks, Theorem-9 checks, capacity envelope checks) → enforcement
 - **The RFC itself** → exchange contract, nothing else
 
-If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in mpav1 compressed (claims) / receipts (derivations) / block-in (decisions), not here.
+If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in mpa_engine (claims) / mpa_receipts_engine (derivations) / block-in (decisions), not here.
 
-**Receipts discipline.** When a session proves, derives, or composes a result that becomes a line in `mpav1_compressed.md`, append a justification entry to [`framework/mpav1_receipts.md`](framework/mpav1_receipts.md) *in the same session*. Discipline rules (workflow, type tags, keying) live there. Lines whose proof tree is genuinely lost get an honest `unrecovered` marker — no fabricated reconstructions.
+**Receipts discipline.** When a session proves, derives, or composes a result that becomes a line in `mpa_engine.md`, append a justification entry to [`framework/mpa_receipts_engine.md`](framework/mpa_receipts_engine.md) *in the same session*. Discipline rules (workflow, type tags, keying) live there. Lines whose proof tree is genuinely lost get an honest `unrecovered` marker — no fabricated reconstructions.
 
-**`framework/` is canonical-only — not a scratchpad.** The `framework/` folder holds the canonical framework artifacts and nothing else: `mpav1_compressed.md` (the operational source of truth), `mpav1_receipts.md`, `mpav1_unabridged.md`, and the methodology reference `translating FDR.md`. Working material — handoffs, planning/blocking docs, drafts, session notes, scratch, pasted exchanges — goes in `docs/`, never `framework/`. Superseded canonical docs go to `framework/archive/`. Do not stage scratch in `framework/`.
+**`framework/` is canonical-only — not a scratchpad.** Everything in `framework/` (excluding `archive/`) is active/live canonical: the four-axis set `mpa_engine.md` (claims, the operational source of truth), `mpa_receipts_engine.md` (derivations), `mpa_frontier.md` (maturity ledger), `mpa_prior_art.md` (borrowed results), plus `mpa_applications.md`, `mpa_fdr_treatment.md`, `mpa_units.md`, and the methodology reference `translating_FDR_steps.md`. Working material — handoffs, planning/blocking docs, drafts, session notes, scratch, pasted exchanges — goes in `docs/`, never `framework/`. Superseded canonical docs go to `framework/archive/`. Do not stage scratch in `framework/`.
 
 ## Forces pushing toward heavyweight (resist)
 
@@ -91,9 +93,9 @@ When you notice yourself reaching for one of these, that's a signal: stop, name 
 - Protocol-adjacent operational documents
 
 **Does not govern:**
-- **mpav1 compressed** — the operational source of truth; the full claim set (STRUCTURAL + CHARACTER readings on one spine). Allowed to be dense. Maintained dense, not thin.
-- **mpav1 receipts** — line-keyed justifications behind the compressed claims. Append-only; grows with proof activity.
-- **mpav1 unabridged** — public-facing prose-and-prior-art document. Lives in `framework/`. Allowed to lag and to be long. Reconstructible from compressed + receipts.
+- **mpa_engine** — the operational source of truth; the full claim set (STRUCTURAL + CHARACTER readings on one spine). Allowed to be dense. Maintained dense, not thin.
+- **mpa_receipts_engine** — line-keyed justifications behind the engine claims, plus the corrections log and prior-art map. Append-only; grows with proof activity.
+- **mpa_frontier / mpa_prior_art / mpa_applications / mpa_fdr_treatment / mpa_units** — the rest of the four-axis canonical set + applications/treatment/units. Allowed to be dense.
 - **Architectural block-in** — meta-document, allowed to grow as principles consolidate. (But each principle inside should be tight.)
 - **READMEs, handoffs** — operational meta, written for clarity over brevity. (Still: short is better.)
 
@@ -103,9 +105,9 @@ If unsure whether something is a protocol or a meta-document: protocols specify 
 
 - [Architectural Block-In v0.2](architecture/MPA_Architectural_Block-In.md) — foundational principles section (five principles, including thin-RFC discipline as #5).
 - [RFC-S v0.2](rfcs/MPA-RFC-S_Scale-Management.md) — worked example of the discipline applied to a section that resisted thinning. RG flow as foundational structure (§0.6); compactification absorbs edge cases (§6); sheaves and coalgebras flagged as Tier-3 reserve (Appendix C). The v0.1 block-in is preserved at `MPA-RFC-S_Scale-Management_Block-In.md` as honest-scope reference.
-- [mpav1 compressed](framework/mpav1_compressed.md) — the operational source of truth. RFCs point here for rigor. One phenomenology, two readings — STRUCTURAL (discrete operator algebra, finite-$D$ interior) and CHARACTER (continuous driven-dissipative dynamics: chit unit, two-mode kernel, heat-tax tower, gFDR signatures, five posits) — joined at the Boolean→MPA deformation spine. Claim-only; substrate-neutral.
-- [mpav1 receipts](framework/mpav1_receipts.md) — line-keyed justifications for the compressed claims.
-- [mpav1 unabridged](framework/mpav1_unabridged.md) — public-facing prose-and-prior-art version. Rebuilt from compressed + receipts periodically; allowed to lag between rebuilds.
+- [mpa_engine](framework/mpa_engine.md) — the operational source of truth (claims axis). RFCs point here for rigor. One phenomenology, two readings — STRUCTURAL (discrete operator algebra, finite-$D$ interior) and CHARACTER (continuous driven-dissipative dynamics: chit unit, two-mode kernel, heat-tax tower, gFDR signatures, five posits) — joined at the Boolean→MPA deformation spine. Claim-only; substrate-neutral.
+- [mpa_receipts_engine](framework/mpa_receipts_engine.md) — line-keyed justifications for the engine claims, the corrections log, and the prior-art map.
+- [mpa_frontier](framework/mpa_frontier.md) — maturity ledger / GATES state machine. [mpa_prior_art](framework/mpa_prior_art.md) — borrowed-results axis. Plus `mpa_applications.md`, `mpa_fdr_treatment.md`, `mpa_units.md`.
 
 ## Origin
 

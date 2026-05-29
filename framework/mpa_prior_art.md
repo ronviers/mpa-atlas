@@ -83,8 +83,8 @@ Each row: `key` — **imported result** · *imports* (what is borrowed) · *MPA 
 * `still-bound` — **thermodynamics of prediction (Still–Sivak–Bell–Crooks)** · imports: $\langle\sigma\rangle-\langle\sigma\rangle_{\min}\ge\gamma_s\chi$, equality at optimal encoding · handle: optimal-encoding coincidence · adds: $\chi=\Delta_n=\langle\sigma\rangle_{\text{excess}}/\gamma_s$ (one quantity, three registers).
 
 ## Queueing
-* `kingman` — **heavy-traffic limit (Kingman; Iglehart–Whitt)** · imports: $\langle Q\rangle\sim1/(1-\rho)$ · handle: heavy-traffic = $s$-aging · adds: queue-tail exponent ↔ FDR aging exponent (coincident Markovian, divergent non-Markovian).
-* `fbm-queueing` — **fractional-Brownian / LRD queueing (Norros; Leland et al.)** · imports: $1/(1-\rho)^{\beta}$ generalisation · handle: anomalous heavy-traffic exponent · adds: $\alpha_s=\beta=$ heavy-traffic exponent under the common-exponent condition.
+* `kingman` — **heavy-traffic limit (Kingman; Iglehart–Whitt)** · imports: $\langle Q\rangle\sim1/(1-\rho)$ · handle: heavy-traffic = $s$-aging · adds: queue-tail exponent ↔ FDR aging exponent, two readings of one $\beta$ (coincident at $\beta=1$, distinct off-Markovian — the $\beta=1$ anchor of the §9 transport law).
+* `fbm-queueing` — **fractional-Brownian / LRD queueing (Norros; Leland et al.)** · imports: $1/(1-\rho)^{\beta}$ generalisation · handle: anomalous heavy-traffic exponent · adds: heavy-traffic exponent $=g(\beta)=\beta/(2-\beta)$, one register of the §9 transport law — collapses with $\alpha_s=\beta_{\text{mem}}$ onto a single $\beta$, numerically coincident only at $\beta=1$.
 * `cobham-priority` — **priority-queue wait (Cobham; Kleinrock conservation)** · imports: $W=W_0/[(1-\sigma_n)(1-\sigma_{n+1})]$ · handle: tower fraying-propagation wait · adds: the three §6 channels are three faces of one queueing mechanism.
 * `littles-law` — **Little's law** · imports: $\langle Q\rangle=\lambda\langle W\rangle$ · handle: amplitude × rate × timescale relation · adds: holds per priority class at a fixed operating point.
 * `erlang-b` — **Erlang loss formula** · imports: $B(c,\rho)$ blocking, M/M/c/c · handle: $\eta(\Gamma^*)=1-B(c,\rho)$ · adds: soft (Erlang) vs hard ($\mathbb{1}[|\Gamma^*|\ge c]$) split as a substrate-class fingerprint.
@@ -112,7 +112,7 @@ Each row: `key` — **imported result** · *imports* (what is borrowed) · *MPA 
 ## Fractional / memory
 * `caputo-fractional` — **Caputo fractional calculus / Mittag-Leffler (Podlubny; Mainardi)** · imports: $\Gamma(\tau)=\Gamma_0 E_\beta(-(\tau/\tau_c)^\beta)$, power-law tail · handle: fractional-memory kernel closure · adds: $\beta_{\text{mem}}=1$ exponential, $<1$ glassy; the deformation's memory axis.
 * `ctrw` — **anomalous diffusion / CTRW (Metzler–Klafter)** · imports: $\langle x^2\rangle\sim t^\beta$, fractional Fokker–Planck · handle: critical length $\ell_c(\beta_{\text{mem}})$ · adds: spatial Wall transition from congestion to frozen-topological domains.
-* `pottier-fdr` — **non-Markovian FDR (Pottier)** · imports: Caputo $\beta$ = aging slope in non-Markovian FDR · handle: $\alpha_s=\beta_{\text{mem}}$ leg · adds: half of the three-register $s$-exponent coincidence.
+* `pottier-fdr` — **non-Markovian FDR (Pottier)** · imports: Caputo $\beta$ = aging slope in non-Markovian FDR · handle: $\alpha_s=\beta_{\text{mem}}$ leg · adds: the $\alpha_s=\beta_{\text{mem}}=\beta$ (FDR/memory) register of the §9 transport law.
 
 ## Topological memory
 * `topological-memory` — **topological / fault-tolerant quantum memory; surface code (Kitaev; Fowler et al.)** · imports: a protected logical DoF, free to store and costly to address; threshold behaviour · handle: topological-bit reference class; surface-code substrate · adds: surface-code $s\to r$ migration as the load-bearing positive instance; topological bit cost-in-modification.

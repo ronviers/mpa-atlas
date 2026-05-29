@@ -234,7 +234,7 @@ Every observable $\in$ open interval; boundary $\in\{0,1,\infty\}$ attained only
 * dissipative structures : Turing wavelength : three-condition failure
 * control : four-axis observable, $k_{\text{frust}}$ admits no gradient Lyapunov : habit-extinction $\beta_{\text{mem}}<1$, or $W$ off the P3 form
 * active matter : active-stress fingerprint $\alpha_\Sigma/\alpha_\sigma\sim v_0^2\tau_R/D_{\text{trans}}$, MIPS : high-Pe clustering at $\gamma_{AB}\ge0$ without swim-pressure
-* queueing : heavy-traffic $=s$-aging, chit$\,=-\ln\rho$, $\varepsilon\leftrightarrow u$ : Markovian-reversible substrate showing aging $X<1$
+* queueing : heavy-traffic exponent $=g(\beta)$ and $s$-aging $\alpha_s=\beta$ are one $\beta$ (coincident @$\beta{=}1$), chit$\,=-\ln\rho$, $\varepsilon\leftrightarrow u$ : queue and aging exponents not collapsing onto a common $\beta$
 * **surface-code** (primary positive instance): distance-3 syndrome traces $s$-aging locus shape sub-threshold, migrates to unit slope across threshold. **FALSIFY**: unit slope sub-threshold, or shape persists across threshold.
 * regime ontology: $s$ = generic attractor of feedback-coupled NESS ($c$ over-provisioned, $r$ post-collapse), not the unstable middle of a triplet.
 
@@ -266,7 +266,7 @@ Canonical checklist; each = a predicted measurement on a named substrate/class. 
 * **SOC**: stable $\tau\ne3/2$, OR meta-ledger branching $\ne1$ at $\varepsilon=1$.
 * **Forced chaos**: a substrate crossing $\varepsilon\ge1$ that fails to produce strange-attractor / chaotic Character dynamics; or the bridge conditions forcing meta-ledger chaos fail.
 * **Memory exponent**: $\beta_{\text{mem}}$ near the Wall departs from $\approx1-\varepsilon$ (P1).
-* **Heavy-traffic / common-exponent**: a Markovian-reversible substrate showing aging $X<1$, OR a non-Markovian one showing Markovian $1/(1-\rho)$ scaling; the $s$-exponent coincidence ($\alpha_s=\beta_{\text{mem}}=$ heavy-traffic exponent) fails where FDR and queue-tail exponents are measured to differ.
+* **Heavy-traffic transport law**: $\alpha_s=\beta_{\text{mem}}=\beta$ and the heavy-traffic exponent $=g(\beta)$ are one underlying $\beta$ read in three registers — numerically coincident **only at $\beta=1$** (Markovian), distinct known functions off it. FALSIFY: a substrate's FDR-aging and queue-tail exponents fail to collapse onto a common $\beta$ through the maps ($g=\beta/(2-\beta)$ Norros, or $1/\beta$ M/G/1).
 * **Synchronization**: anything beyond uniform sync/incoherence proves inaccessible; chimera fails the spectral test.
 * **Dissipative structures**: Turing three-condition failure (non-reciprocity + autocatalysis + differential diffusion).
 * **Control**: habit-extinction not Caputo $\beta_{\text{mem}}<1$ on variable-ratio schedules; OR auto-tuning $W$ off the $w_i=\gamma_{\text{ref}}/\gamma_{s,i}$ form.
