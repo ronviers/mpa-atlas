@@ -4,6 +4,16 @@ One phenomenology, two readings on one finite-$D$ deformation of the Boolean rin
 
 ---
 
+## WHAT MPA IS — forced consistency across dissipative registers
+
+MPA is a **measurement discipline**, not a model. It forces independently-derived imports to read **one** substrate parameter $\theta$ through fixed known maps, and tests the forcing by a **collapse falsifier** (`transport_law_steps.md`). It is **subtractive** — it imports and metabolizes, asserts no new machinery; the content is in the *bindings* and their over-determination, never in invented apparatus. The finite-$D$ Boolean deformation below is **the first register where closure was found, not the definition**: one degenerate point ($\text{Boolean}=\text{Markov}=\text{equilibrium}=\text{detailed balance}=X\!\equiv\!1=\mathcal{A}{=}0=\beta{=}1$) read from many sides.
+
+**Membership / self-test** (scale-invariant — binds MPA's own claims; I5 in `mpa_frontier.md`): a candidate is MPA iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds** rather than invents. Fail any ⇒ systems thinking, not MPA.
+
+**"Forced" cashes out as:** iff-chain as architecture · explicit falsifier checklist · every dynamical quantity flows with the operating point (nothing hand-frozen).
+
+---
+
 ## PARAMETERS
 
 * **D** $:= \Phi^*/\kappa$ — drive coordinate (supplied work / dissipation scale). Boolean $:= \lim_{D\to\infty}$ of operator action; predictive content = shape of deviation from that limit.
