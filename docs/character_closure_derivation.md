@@ -135,7 +135,7 @@ coarse-graining**, which is why the cascade re-renders the same character object
 
 ---
 
-## Gate check (against `battery_character_primitives.md`)
+## Gate check (against the character-primitives battery spec — falsifier now in [`../framework/mpa_receipts_engine.md`](../framework/mpa_receipts_engine.md) §deformation-generators)
 
 - **(C) closure — DERIVED.** gl(3,ℝ) Cartan decomposition: exhaustive (dim 9 = 1+3+5) and closed
   (residual 3·10⁻¹⁶). Extensions close on named structures. A closure, not a catalogue. ✓

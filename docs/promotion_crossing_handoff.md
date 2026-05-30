@@ -83,8 +83,7 @@ are staged (exact edits noted). Permanent home once they cross = frontier (stake
 landed** (staked→core; `central-commitment`+`two-frame` crossed earlier). **`two-bits` CORRECTED** (atlas
 `2c24f86`) — the §Two bits "$\ge1$ ch to modify" fired (boundary fake-NaN), `staked:two-bits` removed,
 topological bit free both ways. Remaining staked: `gfdr-two-step`, `auto-tuning`, `memory-collapse` (3).
-Naming for the deformation chart settled (`docs/candidate_engine_primitives.md`, now superseded by the
-landed engine).
+Naming for the deformation chart settled and landed in the engine (§DEFORMATION GENERATORS).
 
 ---
 
@@ -248,8 +247,8 @@ then #4 (wall-ladder) once the cascade substrate is chosen — but Ron's steer i
 
 ## RELATED HANDOFFS / RECORD
 
-- `character_engine_promotion_handoff.md` — the character-deformation-algebra baton; its goal
-  (`character-primitives` to `staked`) is **done**; the next step is #1 above (cross it on RPS).
+- The character-deformation-algebra baton (retired 2026-05-30, fully consumed) — its goal
+  (`character-primitives` to `staked`) landed and then crossed staked→core; see receipts `§commit-line crossing`.
 - Crossing logged in `mpa_receipts_engine.md` `§commit-line crossing`; frontier reflects the new
   ledger. Memory: `project_frustration_ascent_recursion.md`.
 

@@ -1,7 +1,7 @@
 # Syn3 Alive-Loop — Project-Direction Handoff (2026-05-29)
 
 **Read cold.** This is the baton that pivots the MPA program from synthetic apparatus to its real
-target. The previous arc (`recursion_cascade_handoff.md` → the chiral-bonding / character-primitive
+target. The previous arc (the recursion-cascade → chiral-bonding / character-primitive
 work, recorded in memory `project_frustration_ascent_recursion.md`) built and validated the
 apparatus on synthetic substrates. This handoff names what the apparatus was always *for* and
 begins moving the work onto the one substrate Ron cares about.
