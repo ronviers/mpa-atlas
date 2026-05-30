@@ -668,3 +668,43 @@ EP). Frontier `frustration-ascent` substrate-target sharpened: requirement (d) �
 are internal-cycle, not physical-rotation. **Flagged for engine review:** the chiral-mode-as-near-Goldstone /
 gapped-far-from-EP reading sharpens the `nonhermitian-ep` ↔ TWO-FACES picture (the Wall/EP is where the
 internal chiral phase mode goes marginal). No substrate committed — the screen is now sharp; the hunt continues.
+
+**Library screened + RULED OUT (`mpa-conform/scripts/library_chiral_screen.py`, fig `library_chiral_screen.png`):**
+no mpa-central library substrate even self-lights into an internal cycle. The two internal-cycle primitives
+are the failure archetypes: **lotka_volterra** is a *conservative center* (chiral eigenvalues exactly
+Re = 0 at every operating point) — the maximally-soft / near-Goldstone case, and its loop direction is
+structural not spontaneous; **driven_ring** is a 1D running current with explicit (sign-F) direction, no
+chiral plane. Clean spectral ordering confirming criterion (d): **LV (Re = 0, fragile) → homochiral
+(Re = −0.1, brittle) → Banach (Re = −1, gapped/robust)**. So the external hunt is the only path.
+
+---
+
+## REFINED PROMPT — round 2 (surgical, given the synthesis + the library screen)
+
+> **REFINED (round 2). I'm hunting for a real, physically-grounded system with a specific spectral signature, and round 1 + my own screening taught me to be surgical. I need a system that spontaneously breaks chiral/parity symmetry into a nonequilibrium steady state carrying a cyclic current *in an internal / order-parameter space* (NOT physical real-space rotation), AND whose chiral (rotational) relaxation mode is GAPPED — its damping rate comparable to the longitudinal/amplitude mode, i.e. sitting *far from any critical exceptional point* — rather than a soft, near-marginal (Goldstone-like) mode. Named systems + citations; flag where I'm wrong.**
+>
+> **WHY SO SPECIFIC (what round 1 + screening established).** I model this as coupled units, each carrying an internal cyclic current; coupling them with a discrete symmetry should grow a slower collective chiral mode, whose robustness to disorder in the local chiral axis is governed *entirely* by how far each unit's chiral relaxation mode sits from marginal (from the exceptional point). I screened the obvious candidates; they fail instructively:
+> - **Conservative cycles (Lotka–Volterra-type centers):** chiral eigenvalues *exactly* marginal (Re λ = 0) — maximally soft, fatally fragile.
+> - **Explicitly-driven running states (tilted washboard / driven rings):** current direction set by the *drive sign* — not spontaneous.
+> - **Physical-rotation active matter (spinner lattices, bacterial vortices):** real-space angular momentum, not an internal cycle; chirality usually built-in (explicit torque).
+> - **Continuous-symmetry-breaking flocks/nematics:** orientation is a soft Goldstone mode — fragile.
+> I need the *combination none of these has*: **spontaneous** chirality + **internal**-space cycle + **gapped** (non-Goldstone, far-from-EP) chiral mode.
+>
+> **QUESTIONS** (named systems/results + citations; flag wrong framing):
+>
+> **1. The decisive signature first.** Which real systems have a chiral/rotational relaxation mode that is **gapped by design** (damping comparable to the amplitude mode, far from a critical exceptional point), *not* a soft near-Goldstone mode? Candidate gapping mechanisms to confirm/correct: (i) **non-reciprocal** couplings in the ordered phase *away from* the critical exceptional point (finite damping gap δ); (ii) **discrete** (Z₂ / C_n) chirality with no continuous rotational symmetry; (iii) **overdamped** odd-viscoelastic regimes (not the underdamped propagating-wave regime). Name a concrete realized/realizable system for each.
+>
+> **2. Spontaneity.** Of those, which break chirality **spontaneously** (handedness self-selected from a parity-symmetric start), not via built-in microscopic chirality (DMI, chiral molecules, pre-set torques)? (This was the binding constraint in round 1.)
+>
+> **3. Internal vs physical rotation.** Of those, which carry the cyclic current in an **internal / order-parameter space** (an order-parameter phase rotation, a concentration/population cycle, a coupled-mode rotation) rather than physical real-space angular momentum? I want the internal kind.
+>
+> **4. Hierarchy + disorder.** Of those, which have a discrete rotational symmetry + a multi-scale (coarse-grainable) structure, and a **finite locking range** (Kuramoto-like K_c) so the collective chiral mode survives a finite spread of local-axis disorder?
+>
+> **5. Single best target + data.** Given all four filters, what is the single strongest real (or minimally-engineerable) system; what observable shows (i) the internal chiral current and (ii) the gapped (Re λ_chiral ≪ 0, far-from-EP) relaxation mode; and is there open/published data? **If no *natural* system passes all four, what is the minimal *engineered* system** (e.g. a non-reciprocal oscillator/condensate array on a discrete lattice, tuned away from its critical exceptional point) that would?
+>
+> **Please give named systems/results + citations, and correct any place the framing is non-standard or loose.**
+
+---
+
+## returned research — round 2 (paste model responses below)
+
