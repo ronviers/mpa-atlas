@@ -61,12 +61,13 @@ are staged (exact edits noted). Permanent home once they cross = frontier (stake
    **What survives (cleaner):** the two bits are NOT "two costs, one per face." AMPLITUDE bit =
    *dissipative* (a real interior cost: maintenance $\langle\sigma\rangle{=}0.6$, leaks without drive);
    SIGN bit = *topological* (no interior cost; any flip cost is substrate-specific rewiring work, e.g.
-   the homochirality racemic-saddle height, never a universal $\ge1$ ch). **PROPOSED ENGINE CORRECTION
-   (held):** §Two bits / engine BITS — drop "$\ge1$ ch per protected sign to modify" + the $b_1$-ch
-   forced-erasure floor *as a cost*; keep free-to-hold, gauge-irremovable, flips-only-by-rewiring (now a
-   free reversible braid). Same error family as wall-forces-chaos: a quantity formulated at the degenerate
-   boundary instead of entailed from the interior. (`staked:homochirality` + `central-commitment` are
-   unaffected — none asserts the $\ge1$ ch.)
+   the homochirality racemic-saddle height, never a universal $\ge1$ ch). **ENGINE CORRECTION LANDED +
+   PUSHED 2026-05-30 (atlas `2c24f86`):** engine §TWO BITS corrected (free both ways, forward-only);
+   receipts §Two bits `staked`→`corrected` (full lineage); frontier `staked:two-bits` removed +
+   `flip-cost-across-zero` tombstone / `battery:sign-interior` / `wall-as-type-boundary` (ii) patched;
+   `mpa_units.md` + prior-art (`landauer`, `bennett-reversible`) stale pointers fixed. Same error family
+   as wall-forces-chaos: a quantity formulated at the degenerate boundary instead of entailed from the
+   interior. (`staked:homochirality` + `central-commitment` unaffected — none asserts the $\ge1$ ch.)
 
 4. **`wall-ladder` — DEFERRED** (not built). CLV $\theta_{\min}$ diagnostic is built+validated; the
    vindicate needs a "real emergent cascade" driven to closure-loss ($\theta_{\min}\to0$), and *which*
@@ -74,9 +75,9 @@ are staged (exact edits noted). Permanent home once they cross = frontier (stake
    expensive FDR gates (`gfdr-two-step`, `memory-collapse`) left alone per the cheap-observables discipline.
 
 **Ledger if the staged crossings land: staked 6 → 4** (`character-primitives`, `homochirality` cross;
-`central-commitment`+`two-frame` already crossed). **`two-bits` is now a CORRECTION, not a crossing** —
-the engine §Two bits "$\ge1$ ch to modify" fires (boundary fake-NaN); its exact ledger disposition
-(revise `staked:two-bits` to "free both ways" vs a §Two bits correction entry) is Ron's call.
+`central-commitment`+`two-frame` already crossed). **`two-bits` was a CORRECTION (landed 2026-05-30,
+atlas `2c24f86`)** — the engine §Two bits "$\ge1$ ch to modify" fired (boundary fake-NaN); `staked:two-bits`
+removed, §Two bits `corrected`, the topological bit is free both ways.
 
 ---
 
