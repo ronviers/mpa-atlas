@@ -1,6 +1,6 @@
 # MPA — RECEIPTS (engine)
 
-De-scaffolded derivation/falsifier layer for the engine. Each entry = result + mechanism + kill condition + epistemic tag. Tags: `proven` (standard/composition), `bespoke` (novel shard), `open`, `empirical`, `staked` (planted, un-instanced), `corrected` (superseded an earlier illegal form). All formulas use the mpa-legal (operating-point-flowing) forms; where the source froze a quantity illegally, the corrected form is given and marked. Citations, dates, repo paths, session/figure IDs, and campaign narrative are stripped.
+De-scaffolded derivation/falsifier layer for the engine. Each entry = result + mechanism + kill condition + epistemic tag. Tags: `proven` (standard/composition), `bespoke` (novel shard), `open`, `empirical`, `staked` (planted, un-instanced), `corrected` (superseded an earlier illegal form). All formulas use the mpa-legal (operating-point-flowing) forms; where the source froze a quantity illegally, the corrected form is given and marked. Citations, dates, repo paths, session/figure IDs, and campaign narrative are stripped — **except in the `CORRECTIONS & PROMOTED REFINEMENTS` log below, which by design retains each correction's date, superseded form, and evidence-script pointer: that provenance _is_ the supersession record.**
 
 Every borrowed result resolves to `mpa_prior_art.md` by the bare `pa:` keys collected in the PRIOR-ART MAP at the foot of this file. Entries carry no eponyms; the names live only in the ledger. An entry absent from the map imports nothing — it is owned reading.
 

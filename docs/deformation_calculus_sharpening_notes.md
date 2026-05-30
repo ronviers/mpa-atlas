@@ -11,10 +11,10 @@ here is to over-capture; trim as pieces stabilize into compressed content or get
 discarded as honest false starts.
 
 Companion canonical files (do **not** lean on this note for operational lookups):
-[`../framework/mpav1_compressed.md`](../framework/mpav1_compressed.md) §Deformation
-calculus / §Owed work / §Asymptotic closure; [`../framework/mpav1_receipts.md`](../framework/mpav1_receipts.md)
+[`../framework/mpa_engine.md`](../framework/mpa_engine.md) §Deformation
+calculus / §Owed work / §Asymptotic closure; [`../framework/mpa_receipts_engine.md`](../framework/mpa_receipts_engine.md)
 §Deformation calculus; [`../framework/mpa_fdr_treatment.md`](../framework/mpa_fdr_treatment.md);
-the falsification battery [`../framework/boolean_deformation_falsification_battery.md`](../framework/boolean_deformation_falsification_battery.md).
+the falsification battery [`../framework/archive/boolean_deformation_falsification_battery.md`](../framework/archive/boolean_deformation_falsification_battery.md).
 
 ---
 

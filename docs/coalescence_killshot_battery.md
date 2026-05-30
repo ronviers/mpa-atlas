@@ -6,7 +6,7 @@ a real frustrated substrate. Not a boundary test.** Counterpart to
 scaling-collapse). (Filename retains "coalescence": the exceptional point /
 eigenvalue coalescence at 𝒜=0 is the boundary this battery deliberately **does not
 visit** — the test is interior.) Canonical claims under test:
-[`../framework/mpav1_compressed.md`](../framework/mpav1_compressed.md) §Central
+[`../framework/mpa_engine.md`](../framework/mpa_engine.md) §Central
 commitment, §k_frust drain, §Two bits, §Asymptotic closure; receipts §Central
 commitment, §846 (R1/R2/R3), §Homochirality. Trajectory and the three corrections
 that shaped this scope: notes §12.

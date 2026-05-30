@@ -8,7 +8,7 @@ Working in this repo means working under **thin-RFC discipline.** This document 
 
 ## Principle
 
-Exchange surfaces are written at gross-underengineering resolution by design. Half a page per object is the target. **Not less rigorous, not phoned-in** — deliberately thin *where standards bodies are thick*. The framework underneath ([mpav1 compressed](framework/mpav1_compressed.md)) is dense (derivation-heavy); the protocols on top are thin; the total weight is correctly distributed.
+Exchange surfaces are written at gross-underengineering resolution by design. Half a page per object is the target. **Not less rigorous, not phoned-in** — deliberately thin *where standards bodies are thick*. The framework underneath (the [mpa_engine](framework/mpa_engine.md) + [mpa_receipts_engine](framework/mpa_receipts_engine.md) set) is dense (derivation-heavy); the protocols on top are thin; the total weight is correctly distributed.
 
 ## Justification
 
@@ -70,10 +70,10 @@ If you find yourself writing derivation, motivation, or alternative-considered p
 These are the rationalizations that grow protocols from half a page to dozens:
 
 - *"What if a future implementer..."* — there is no future implementer. Single author per artifact. We version when one arrives.
-- *"For completeness we should enumerate..."* — completeness lives in mpav1 compressed. Pointers, not duplication.
+- *"For completeness we should enumerate..."* — completeness lives in mpa_engine / mpa_receipts_engine. Pointers, not duplication.
 - *"It would be safer to spec the edge case..."* — edge cases live as compactification points, named once. Defense lives in mechanical validation, not in prose.
 - *"MUST / SHOULD / MAY granularity..."* — language of multi-stakeholder negotiation. We have one author. Declarative writing suffices.
-- *"This [Provisional] tag will help future maintainers..."* — it's a note-to-self disguised as a spec annotation. Move to an "Open" appendix or to mpav1 compressed's open-questions list.
+- *"This [Provisional] tag will help future maintainers..."* — it's a note-to-self disguised as a spec annotation. Move to the mpa_frontier ledger or mpa_receipts_engine's open-questions.
 
 When you notice yourself reaching for one of these, that's a signal: stop, name the force, check whether it's actual stress (something broke) or anticipated stress (something might).
 
@@ -122,7 +122,7 @@ mpa-atlas is the upstream of the character test framework owned by
 mpa-conform. Canonical doc:
 [`H:/mpa-conform/conformer/tests/character/README.md`](../mpa-conform/conformer/tests/character/README.md).
 
-mpav1's Character projection (universal two-mode kernel, gFDR signatures,
+The engine's (`mpa_engine.md`) Character projection (universal two-mode kernel, gFDR signatures,
 five-bucket regime classifier, heat-tax tower, chit unit, Compression Axiom)
 and RFC-S (scale-management semantics) are the **structures character tests
 verify substrates render *as*.** Real measurements are projected through these
