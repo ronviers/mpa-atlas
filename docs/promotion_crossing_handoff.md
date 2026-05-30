@@ -12,12 +12,12 @@ The **circulation / topological-bit cluster is cleared** via the RPS emergent-su
 
 ---
 
-## BATCH STATUS — 2026-05-30 (three more crossings tested; HELD for review, nothing landed)
+## BATCH STATUS — 2026-05-30 (three more crossings — ALL LANDED + PUSHED: 2 promoted, 1 corrected)
 
-Three queue items run as falsification-grade experiments (strict pre-registered bars). Scripts +
-figures on disk; **no canonical ledger edits, no commits** — all awaiting review. The ledger crossings
-are staged (exact edits noted). Permanent home once they cross = frontier (staked-removal) + receipts
-(staked→proven + §commit-line crossing); this section is the durable record until then.
+Three queue items run as falsification-grade experiments (strict pre-registered bars), then **all
+landed + pushed** — atlas `efcc396` (character-primitives + homochirality), `2c24f86` (two-bits
+correction); apparatus conform `8a88c22`. Permanent home = frontier (staked-removal) + receipts
+(staked→`proven` + §commit-line crossing). This section is the durable per-crossing record.
 
 1. **`character-primitives` → CROSSED + LANDED 2026-05-30 (5/5)** · `mpa-conform/scripts/rps_character.py` · fig
    `output/calibration/rps_character.png`. The gl(3) deformation apparatus on RPS's **emergent**
