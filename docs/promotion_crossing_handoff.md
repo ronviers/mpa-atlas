@@ -5,8 +5,10 @@ it revealed a **repeatable strategy** for crossing the rest of the queue. Contin
 
 ## STATUS (one line)
 
-`central-commitment` + `two-frame-construction` **promoted staked→core** via a real emergent substrate
-(rock-paper-scissors); the queue is no longer dammed — the path to feed it is now known and cheap.
+The **circulation / topological-bit cluster is cleared** via the RPS emergent-substrate strategy:
+`central-commitment`, `two-frame`, `character-primitives`, `homochirality` **crossed** staked→core;
+`two-bits` **corrected** (the ≥1 ch flip-floor was a boundary fake-NaN). **Ledger: staked 6 → 3.**
+**Next session: four reachable moves queued below (Ron 2026-05-30: "do them all") — see §THE QUEUE.**
 
 ---
 
@@ -169,36 +171,65 @@ entailed) crossed staked→core. The exact edit pattern for any future crossing:
 
 ---
 
-## THE QUEUE + PRIORITIZED NEXT MOVES
+## THE QUEUE + NEXT MOVES (2026-05-30 — four reachable; Ron: "do them all")
 
-Ledger now: **staked 6** (was 8), **battery 3** (sign-interior fired). Prioritized by
-leverage-per-cost — the cheap emergent/circulation crossings first:
+**The circulation / topological-bit cluster is CLEARED.** `central-commitment` + `two-frame` (RPS),
+`character-primitives` (RPS, the character deformation chart), `homochirality` (the homochiral triad)
+all **crossed**; `two-bits` **corrected** (the ≥1 ch flip-floor was a boundary fake-NaN; the
+topological bit is free both ways). Ledger: **staked 6 → 3** (`gfdr-two-step`, `auto-tuning`,
+`memory-collapse` remain). All four moves below are cheap, direct-observable, emergent-substrate tests
+(the winning strategy); apparatus mostly exists. Honor the **fake-NaN rule** + **tests-under-1hr**.
+**Ron's steer (window closing): pick these up next session, do all four — order flexible.**
 
-1. **`character-primitives` via RPS (HIGH leverage, cheap).** RPS *is* the C3-symmetric protected
-   arena the deformation-algebra was waiting on. Run the deformation apparatus
-   (`character_closure.py` generators / the gl(3) Cartan picture) **on RPS**: does RPS's character
-   compose from the generators, and does the protected meta-cycle survive RPS's native deformations
-   within its C3 symmetry? If yes → `staked:character-primitives` crosses (the structural-law
-   promotion lands on a real arena). This is the natural next crossing.
-2. **`two-bits` via RPS floor-isolation (cheap).** RPS already shows the topological bit is *free to
-   hold* and *flips only by rewiring*. Owed: the **floor-isolation protocol** — a quasistatic
-   handedness flip *through the balanced (achiral) state* measuring the **≥1 ch** cost, split from the
-   rewiring work. Extend RPS with that protocol → crosses `two-bits`.
-3. **`homochirality` via a chiral-autocatalysis sim (cheap, named stake).** RPS is *adjacent*
-   (ecological, not biochemical). Build a Frank / Kondepudi chiral-autocatalysis network (another
-   emergent substrate), drive-sweep: magnitude→racemic while sign invariant; the three nulls.
-   Crosses the named real-substrate stake.
-4. **`wall-as-type-boundary` via `battery:wall-ladder` on a real cascade (medium).** Run
-   `clv_diagnostic.py` (θ_min, already validated) on a real *emergent multi-scale* substrate's RG
-   levels — read them as NHIM plateaus, drive one to ε→1, watch θ_min→0. A coupled-oscillator or
-   reaction-diffusion cascade could serve.
-5. **(Lower — the expensive FDR/response gates.)** `gfdr-two-step` (SK is compute-marginal; if pursued,
-   use the **no-field Chatelain/Ricci-Tersenghi estimator** to avoid the two-branch decorrelation,
-   not the step-field method), `memory-collapse` (fbm/east, β_mem(ε)), `seam-collapse`/`thm9-crossover`,
-   `auto-tuning`. Deprioritize vs the circulation crossings unless specifically wanted.
+1. **`frustration-ascent` — the JOINT instance (highest leverage; medium; outcome uncertain).** Both
+   legs are instanced *separately* now (structural $=$ character-primitives on RPS; self-lighting $=$
+   the homochiral triad's SSB). The bet needs **ONE** real symmetric chiral substrate that self-lights
+   **and** sustains a cascade whose meta-cycle survives its native deformations. **Build:** couple the
+   homochiral-triad SSB into a meta-arena (3 self-lit homochiral triads, C3-covariant), or give the
+   homochiral triad an internal cascade. **Read:** does the *self-lit* homochiral state close a
+   protected meta-cycle (b1 up, drift eigenpair) that survives tilt within its symmetry? **Honest:**
+   the self-lit state may be too rigid to cascade — *a clean miss is real evidence*. If it closes →
+   `frustration-ascent` crosses sharpening→battery/staked (the layer-2 generative bet's coverage).
+   Apparatus: extend `homochiral_triad.py` + `chiral_bonding.py` / `character_closure.py` meta-arena.
 
-Recommended single next move: **#1 (character-primitives on RPS)** — highest leverage, cheap, and it
-completes the deformation-algebra arc this session staked.
+2. **`dimensionless-substrate` — the self-probe T on RPS (CHEAPEST; likely clean).** We already have
+   $\langle\sigma\rangle{=}0.6$ and $J$ on RPS (`rps_two_bits.py` computes $\langle\sigma\rangle$ via
+   Lyapunov; `rps_triad.py` the circulation). Compute the dimensionless self-probe
+   $\mathcal{T}=\langle\sigma\rangle\,\mathrm{Var}(J)/(2\langle J\rangle^2)$ (TUR-tightness, $\ge1$) at
+   the standard operating points — the real-substrate version of what `banach_frustrated.py` does
+   synthetically. ↑ moves `dimensionless-substrate` sharpening→battery. One short run; `banach_frustrated.py`
+   already computes $\mathcal{T}$ — port the operating point to RPS / the homochiral triad.
+
+3. **`scale-covariant-circulation` — k_frust RG-invariance on RPS (CHEAP; extends the topological bit
+   to the scale axis).** Read RPS's circulation at **two scales** via a legitimate coarse-graining
+   (adiabatic Mori–Zwanzig $\Pi_{\text{slow}}$ under local-detailed-balance $\wedge$ $b_1$-preservation):
+   predict **sign($\mathcal{A}$) scale-INVARIANT** (the topological bit; $k_{\text{frust}}$ does not
+   migrate) while **$|J|$ renormalizes** by the eliminated-mode timescale ratio. Pre-exclude the two
+   illegitimate violations (A-fail $=$ hidden-EP loss; B-fail $=$ loop contraction $=$ rewiring).
+   Substrate: `banach_frustrated`/RPS embedded with fast bystanders (spatial $\Pi_{\text{slow}}$), or its
+   $\tau_{\text{obs}}$-window axis. ↑ walks steeping→sharpening→battery. Direct circulation test, cheap.
+
+4. **`wall-ladder` — CLV θ_min on a real emergent cascade (medium; PICK THE SUBSTRATE FIRST).** The
+   `clv_diagnostic.py` $\theta_{\min}$ discriminator is built + validated (Rössler chaos $\to0$;
+   coupled-SL torus + limit cycle bounded; the dynamical_tower torus certified NHIM). The **plateau
+   side** (a real emergent cascade's levels read as NHIM plateaus, $\theta_{\min}$ bounded) is reachable
+   now; the **closure-loss side** ($\varepsilon\to1$, $\theta_{\min}\to0$) is the **deferred delay-driven
+   regime** (§14 delayed-negative-self-feedback, $K>\gamma_s$ — likely chaoses at $N{=}1$, which would
+   refute the $N\ge3$ framing). **Open judgment call (Ron's): which substrate counts as
+   real-emergent-multi-scale** (coupled-oscillator or reaction-diffusion cascade). Decide that first,
+   then run the plateau side; closure-loss can follow.
+
+**Deprioritized — the expensive FDR/response gates** (compute-heavy ensemble responses, hours; the
+opposite of the cheap-circulation strategy): `gfdr-two-step` (needs a *second* instance; if pursued,
+the no-field Chatelain/Ricci-Tersenghi estimator, not the step-field method), `memory-collapse`
+(fbm/east, $\beta_{\text{mem}}(\varepsilon)$ aging), `consolidation-ascent` (needs a real
+$\beta_{\text{mem}}<1$ substrate + the $\langle\sigma\rangle$ apparatus), `seam-collapse`/`thm9-crossover`
+(real-FDR scaling collapse), `auto-tuning` (uncertain — needs a real adaptive substrate). **Parked:**
+the syn3 alive-loop north star.
+
+**Suggested order:** the two cheap quick-wins first (#2 dimensionless-substrate, #3
+scale-covariant-circulation) to bank momentum, then the high-leverage #1 (frustration-ascent joint),
+then #4 (wall-ladder) once the cascade substrate is chosen — but Ron's steer is "do them all," so order is open.
 
 ---
 
