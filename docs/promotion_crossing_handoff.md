@@ -8,7 +8,11 @@ it revealed a **repeatable strategy** for crossing the rest of the queue. Contin
 The **circulation / topological-bit cluster is cleared** via the RPS emergent-substrate strategy:
 `central-commitment`, `two-frame`, `character-primitives`, `homochirality` **crossed** staked→core;
 `two-bits` **corrected** (the ≥1 ch flip-floor was a boundary fake-NaN). **Ledger: staked 6 → 3.**
-**Next session: four reachable moves queued below (Ron 2026-05-30: "do them all") — see §THE QUEUE.**
+**The four queued moves are DONE (2026-05-30, "do them all") — see §THE FOUR MOVES (2026-05-30) below:**
+two cheap wins **instanced to battery** (`battery:dimensionless-self-probe`, `battery:scale-covariant-circulation`),
+`frustration-ascent` joint a **clean informative miss** (stays sharpening, gap sharpened), `wall-ladder`
+**plateau side instanced** on the coupled-SL cascade (closure-loss still deferred). **No commit-line crossings;
+all four are frontier-ledger moves — no engine edits.** Next steps in §THE QUEUE (now the leftover / forward gates).
 
 ---
 
@@ -84,6 +88,63 @@ landed** (staked→core; `central-commitment`+`two-frame` crossed earlier). **`t
 `2c24f86`) — the §Two bits "$\ge1$ ch to modify" fired (boundary fake-NaN), `staked:two-bits` removed,
 topological bit free both ways. Remaining staked: `gfdr-two-step`, `auto-tuning`, `memory-collapse` (3).
 Naming for the deformation chart settled and landed in the engine (§DEFORMATION GENERATORS).
+
+---
+
+## THE FOUR MOVES — 2026-05-30 (the queue, run; "do them all". 2 instanced, 1 clean miss, 1 plateau-side)
+
+All four ran as falsification-grade experiments (strict pre-registered bars), cheap & emergent-substrate,
+honoring the fake-NaN rule + tests-under-1hr. **None crossed the commit line** — all are frontier-ledger
+moves (no engine edits, no receipts retag; battery entries don't mirror to receipts). Apparatus in
+`mpa-conform/scripts/`, figures in `mpa-conform/output/calibration/`.
+
+1. **#2 `dimensionless-substrate` → INSTANCED (sharpening→battery).** `rps_dimensionless.py` /
+   `rps_dimensionless.png`. The real-emergent version of `banach_frustrated`: on RPS's **emergent** chiral
+   Jacobian (antisym $=x^*(\alpha-\beta)/2\,A_{\text{CYC}}$, not drawn in) the TUR self-probe + canonical
+   affinity close — $A_{\text{emp}}{=}A_{\text{closed}}{=}2\pi\langle\sigma\rangle/\omega$ (1.7% err), $A$ &
+   $\omega/\gamma_{\text{eff}}{=}\sqrt3$ **noise-independent** (1.3% / 0.0% spread), $A$ tracks the ecology
+   $\delta$ ($8.7\to34.8$ nats), empirical $\mathcal{T}\ge1$ everywhere. **LANDED:** frontier
+   `battery:dimensionless-self-probe` planted; `dimensionless-substrate` residual closed. Next ↑: a *second*
+   real substrate → promotes the engine `FRAMES` self-probe ruler.
+
+2. **#3 `scale-covariant-circulation` → INSTANCED (steeping→sharpening→battery).**
+   `scale_covariant_circulation.py` / `.png`. Discrete driven Markov 3-cycle + fast detailed-balance bystander
+   traps; the legitimate adiabatic $\Pi_{\text{slow}}$ (Schur) leaves the affinity $\mathcal{A}=\sum\ln(k_+/k_-)$
+   **scale-invariant in sign AND value** (fine≡coarse to 0) while $J$ renormalizes **exactly** by the
+   eliminated-mode timescale ($J_{\text{fine}}/J_{\text{coarse}}=1/(1{+}d)$, machine-precision, $9\times$) — the
+   $\prod k$-cancellation mechanism realized exactly. A-fail (driven non-DB fast subspace, affinity-leak) and
+   B-fail (loop contraction = rewiring) are the pre-excluded illegitimate maps. **LANDED:** frontier
+   `battery:scale-covariant-circulation` planted; the old steeping parent collapsed into it (forward-only). Next
+   ↑: the split on an OU/continuous substrate → promotes engine `SCALE-RELATIVITY`.
+
+3. **#1 `frustration-ascent` JOINT → CLEAN MISS (stays sharpening; gap sharpened).** `homochiral_cascade.py` /
+   `.png`. A meta-arena of THREE self-lit homochiral triads, C3-covariantly even-parity bonded. **Self-lighting
+   AND cascade-closure DO co-occur in the same system** — the full 18-dim coupled cascade self-lights
+   *coherently* (12/12 ICs, shared hand, both basins) and carries an emergent meta-cycle ($\omega_{\text{meta}}{\approx}0.082$);
+   the emergent self-lit Jacobian (chiral axis exactly on $(1,1,1)$) lifts (C3-covariant closes, generic kills).
+   **But ROBUSTNESS fails:** the meta-cycle survives only a $\sim3°$ tilt cone (vs $\sim6{-}10°$ wired), no clean
+   $\theta_c\propto\kappa$ — the self-lit attractor is **stiff** (collective $-1$, plane $-0.1$), the $O(\kappa^2)$
+   meta-cycle fragile to native tilt = the "too rigid to *robustly* cascade" outcome the bet flagged.
+   **Methodological catch (fake-NaN):** the seed exponent $\kappa^{1.27}$ is grid-sensitive (a hand-drawn
+   *isotropic* sub gives the same), so the qualitative closes/kills is the robust readout, not the exponent.
+   **Does NOT cross.** Crossing needs a *less-stiff* self-lit substrate OR the `tilt_rescue.py` pull on a self-lit
+   stream.
+
+4. **#4 `wall-ladder` PLATEAU SIDE → INSTANCED on the chosen substrate (battery:wall-ladder plateau face).**
+   `clv_tower.py` / `.png`. **Substrate chosen (Ron's "pick the substrate first" call): the coupled Stuart-Landau
+   cascade** (`dynamical_tower` substrate) — apparatus exists, CLV already validated on it, frontier frames
+   coupled-SL as the cascade's own dynamics; reaction-diffusion would be a from-scratch detour risking under-1hr.
+   Ran the Ginelli CLV $\theta_{\min}$ on the tower's ascent levels: $N{=}1$ limit cycle ($90°$), $N{=}2$ 2-torus
+   ($87°$), $N{=}3$ 3-torus ($83.6°$) — **all NHIM plateaus** ($\theta_{\min}$ bounded, no chaos at weak coupling =
+   the honest-negative), the $N{=}3$ torus FTLE false-positive (95th-pct $+0.054{>}0$) correctly ignored by
+   $\theta_{\min}$; inter-level transitions are ignition, not closure-loss. **Closure-loss side ($\theta_{\min}\to0$)
+   stays DEFERRED** (delay-driven regime, `delay_tower.py` / §14, $K>\gamma_s$); SL = Hopf normal form of the
+   emergent triads, so full real-emergent vindication (both sides) is open. `wall-as-type-boundary` stays sharpening.
+
+**Net ledger:** staked still **3** (`gfdr-two-step`, `auto-tuning`, `memory-collapse` — untouched). Two new
+battery falsifiers of record. `frustration-ascent` + `wall-as-type-boundary` stay sharpening (gaps sharpened, not
+crossed). The emergent=real + cheap-circulation strategy held for the two wins; the two harder moves returned
+honest, informative partials.
 
 ---
 
@@ -171,6 +232,14 @@ entailed) crossed staked→core. The exact edit pattern for any future crossing:
 ---
 
 ## THE QUEUE + NEXT MOVES (2026-05-30 — four reachable; Ron: "do them all")
+
+> **DONE 2026-05-30 — see §THE FOUR MOVES above for outcomes.** #2 + #3 instanced to battery; #1 clean
+> miss (stays sharpening, gap sharpened); #4 plateau side instanced (closure-loss deferred). The detail
+> below is kept as the original spec/context. **Forward gates now:** (a) #2 → a *second* real substrate
+> for the `FRAMES` standard; (b) #3 → the split on an OU/continuous substrate for `SCALE-RELATIVITY`;
+> (c) #1 → a *less-stiff* self-lit substrate or the `tilt_rescue` pull on a self-lit stream; (d) #4 → the
+> closure-loss side (the deferred delay-driven regime), and both sides on a fully-emergent cascade. The
+> deprioritized expensive FDR/response gates (`gfdr-two-step`, `memory-collapse`, …) are unchanged below.
 
 **The circulation / topological-bit cluster is CLEARED.** `central-commitment` + `two-frame` (RPS),
 `character-primitives` (RPS, the character deformation chart), `homochirality` (the homochiral triad)
