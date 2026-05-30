@@ -17,19 +17,21 @@ figures on disk; **no canonical ledger edits, no commits** — all awaiting revi
 are staged (exact edits noted). Permanent home once they cross = frontier (staked-removal) + receipts
 (staked→proven + §commit-line crossing); this section is the durable record until then.
 
-1. **`character-primitives` → CROSSES (5/5)** · `mpa-conform/scripts/rps_character.py` · fig
+1. **`character-primitives` → CROSSED + LANDED 2026-05-30 (5/5)** · `mpa-conform/scripts/rps_character.py` · fig
    `output/calibration/rps_character.png`. The gl(3) deformation apparatus on RPS's **emergent**
    Jacobian: M_RPS *produces* $A_{\text{CYC}}$ (Antisym $=x^*(\alpha-\beta)/2\,A_{\text{CYC}}$, residual
    **0** — chirality generator emergent, not hand-drawn, forced onto the $(1,1,1)$ $\mathfrak{so}(3)$
    axis); forced EP normal form $R^2{=}1.0000$; C3-meta-arena lift closes (b1 3→4, **0%** generic
    closure, $\omega_{\text{meta}}\propto\kappa^{1.93}$ vs split $\propto\kappa^{1.01}$). One FAKE-NaN
    trap caught+fixed mid-run ($\kappa{=}0.3$ over-drove RPS's weakly-damped (0.1) chiral modes into
-   instability; the global spectrum revealed it; scaled $\kappa{=}0.4\,\gamma_{\text{rot}}$). **Staged
-   crossing:** engine line 67 ("staked, un-instanced" → "instanced on RPS"); receipts
-   §deformation-generators staked→`proven` + RPS evidence; new §commit-line crossing(2); frontier
-   remove `staked:character-primitives`, update the `frustration-ascent` structural-side note.
+   instability; the global spectrum revealed it; scaled $\kappa{=}0.4\,\gamma_{\text{rot}}$). **LANDED:**
+   engine §DEFORMATION GENERATORS rewritten as the named **character deformation chart** (Damping /
+   Chirality / Splitting + Noise / Nonlinearity / Drive-periodicity / Composition; the $\sim39°$ node +
+   squeeze tongues = **tools/landmarks**, not primitives; falsifiability/"gross map rules out
+   configurations" note per Ron) + RPS-instanced + promoted; receipts §deformation-generators
+   staked→`proven`; new §commit-line crossing (2); frontier `staked:character-primitives` removed.
 
-2. **`homochirality` → CROSSES (4/4)** · `mpa-conform/scripts/homochiral_triad.py` · fig
+2. **`homochirality` → CROSSED + LANDED 2026-05-30 (4/4)** · `mpa-conform/scripts/homochiral_triad.py` · fig
    `output/calibration/homochiral_triad.png`. **Built a genuine emergent substrate:** two MIRROR chiral
    3-cycles + Frank cross-inhibition. Spontaneously breaks parity (|ee|→1); the winning hand carries a
    **protected 3-cycle NESS circulation** (complex pair $-0.1\pm0.173i$, $\mathcal{A}\ne0$); drive-sweep
@@ -41,10 +43,11 @@ are staged (exact edits noted). Permanent home once they cross = frontier (stake
    ICs → **exactly 500/500**). The early 37/63 over 100 ICs was finite-sample — the *fix* was to
    demonstrate the symmetry (equivariance + paired ICs), not chase Monte-Carlo convergence. Physically:
    zero built-in chiral bias = a clean frozen-accident SSB (explicit-bias mechanisms, e.g. weak-force
-   parity violation, are a separate add-on, out of scope). **Staged crossing:** receipts §Homochirality
-   staked→`proven` + homochiral-triad evidence; frontier remove `staked:homochirality`; record in
-   §commit-line crossing(2). (Scope: a model Frank/Kondepudi-class network — models biological
-   homochirality, is not the literal ancient biochemical substrate.)
+   parity violation, are a separate add-on, out of scope). **LANDED:** receipts §Homochirality
+   staked→`proven` + homochiral-triad evidence; engine (substrate-neutral — no edit; the topological-bit
+   claim was already stated); frontier `staked:homochirality` removed; `frustration-ascent` self-lighting
+   leg marked instanced; recorded in §commit-line crossing (2). (Scope: a model Frank/Kondepudi-class
+   network — models biological homochirality, not the literal ancient biochemical substrate.)
 
 3. **`two-bits` → a CORRECTION to engine §Two bits (NOT a crossing); held for review** ·
    `mpa-conform/scripts/rps_two_bits.py` · fig `output/calibration/rps_two_bits.png`. **Ron's catch (the
@@ -74,10 +77,12 @@ are staged (exact edits noted). Permanent home once they cross = frontier (stake
    substrate counts as real-emergent-multi-scale is the substrate-judgment call flagged as Ron's. The
    expensive FDR gates (`gfdr-two-step`, `memory-collapse`) left alone per the cheap-observables discipline.
 
-**Ledger if the staged crossings land: staked 6 → 4** (`character-primitives`, `homochirality` cross;
-`central-commitment`+`two-frame` already crossed). **`two-bits` was a CORRECTION (landed 2026-05-30,
-atlas `2c24f86`)** — the engine §Two bits "$\ge1$ ch to modify" fired (boundary fake-NaN); `staked:two-bits`
-removed, §Two bits `corrected`, the topological bit is free both ways.
+**Ledger: staked 6 → 3 (all resolved 2026-05-30).** `character-primitives` + `homochirality` **crossed +
+landed** (staked→core; `central-commitment`+`two-frame` crossed earlier). **`two-bits` CORRECTED** (atlas
+`2c24f86`) — the §Two bits "$\ge1$ ch to modify" fired (boundary fake-NaN), `staked:two-bits` removed,
+topological bit free both ways. Remaining staked: `gfdr-two-step`, `auto-tuning`, `memory-collapse` (3).
+Naming for the deformation chart settled (`docs/candidate_engine_primitives.md`, now superseded by the
+landed engine).
 
 ---
 
