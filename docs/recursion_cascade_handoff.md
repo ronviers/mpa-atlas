@@ -85,27 +85,37 @@ its next structural hole, and (b) *because* a self-generated meta-triad is **for
 cross `frustration-ascent`'s promote line by derivation **and** hand us the first *non-authored*
 substrate recursion has had. The no-creation theorem certifies (a)⇒(b).
 
-**Build outline:**
-1. **Generic micro-rules + a drive — nothing hand-frustrated.** Three *balanced* blocks (real
-   internal spectrum, 𝒜=0 internally), a NESS drive, generic coupling. Do NOT draw in `A_CYC` at
-   the meta-level (that's the fitted version already done).
-2. **Bond the sub-triads through their ROTATING (chiral, current-carrying) modes**, not their
-   collective (real) modes. (Collective-mode reciprocal bonding already gives +0 — confirmed in
-   `frustration_ascent.py`. The rotating modes carry sign(𝒜); the hypothesis is the lower
-   chirality *seeds* the upper frustration.)
-3. **Measure forced-not-fitted:** does an emergent meta-triad appear (complex pair, 𝒜_meta≠0,
-   b₁: +1) with **no hand-supplied odd-parity bond**? Compare against the closed-form prediction so
-   the emergence is forced, not tuned.
-4. **Invoke the no-creation theorem as the proof-of-no-smuggling:** show the blocks are balanced
-   (so frustration cannot have been hidden), so an emergent triad is provably forced by the drive.
-5. **Keep micro-rules GENERIC, not reverse-engineered** — the forced-not-fitted honesty bar.
+**Build outline (CORRECTED 2026-05-29 per Ron — the frustration is in the SUBS; the provably-generic
+part is the META-COUPLING. The earlier "balanced blocks + bond their chiral modes" was
+self-contradictory — a balanced block has no chiral mode — and the balanced-blocks reading is the
+dead test, "drive-from-balance," already answered NO by no-creation):**
+1. **Internally-frustrated (chiral) sub-triads.** Each sub carries sign(𝒜)≠0 — a complex pair /
+   rotating mode. THAT chirality is the seed. (NOT 𝒜=0 blocks.)
+2. **Couple the subs with a PROVABLY GENERIC, symmetric / even-parity (gauge-balanced)
+   meta-coupling** — draw NO odd-parity `A_CYC` at the meta level. Minimal generic topology: 3 subs
+   in a symmetric ring. The frustration must NOT be in the coupling I draw.
+3. **Condense each chiral sub (Schur complement) and measure** whether the effective meta-coupling
+   acquires an antisymmetric part → an emergent meta-cycle (complex pair, b₁: 3→4). Why it's
+   non-trivial and forced: `M_eff = M_ss − M_sf M_ff⁻¹ M_sfᵀ`; with symmetric `M_sf`, the product is
+   symmetric *iff* `M_ff` is symmetric — but the chiral block's `M_ff` carries antisymmetric `A_CYC`,
+   so the emergent antisymmetric meta-coupling ∝ `M_sf·(antisym M_ff⁻¹)·M_sfᵀ` ∝ the sub-chirality.
+   Dodges the rank-1 scalar-server trap (chiral block is rank-3) and signed-balance (the imbalance is
+   in the emergent EFFECTIVE meta-graph, never drawn).
+4. **Certifier (corrected): the meta-coupling is provably symmetric (even-parity, gauge-balanced)** —
+   so any emergent meta-odd-parity is FORCED by the sub-chiralities threading through the
+   condensation, not by a bond I drew. (NOT "the blocks are balanced" — that was the dead test.)
+5. **Protection + honesty checks:** the emergent meta-cycle must be PROTECTED — gauge-irremovable,
+   sign survives drive-titration (not a drive-set / gauge-removable rotation, which the
+   frustration-ascent qualification excludes). Watch for a **homochirality condition** (do the subs
+   need shared handedness for the meta-cycle to close?) — a finding either way; touches
+   `staked:homochirality`. All structural choices generic, not reverse-engineered.
 
-- **VINDICATE:** emergent meta-triad from chiral-mode bonding, forced, blocks provably balanced →
-  layer-2 generative bet *partly earned* (generative given a drive); `frustration-ascent`
-  crosses toward promote by forced-not-fitted derivation.
-- **KILL:** generic micro-rules + drive never platform an emergent triad through chiral coupling →
-  the cascade is structurally parasitic at every scale (needs every hole supplied) → layer-2
-  generative bet is **bootstrap-blocked** (clean result for the frontier).
+- **VINDICATE:** emergent PROTECTED meta-cycle (b₁:3→4) from symmetric meta-coupling + chiral subs →
+  chirality propagates upward → the cascade self-generates its next hole → layer-2 generative bet
+  *partly earned* (generative given a drive), forced-not-fitted.
+- **KILL:** symmetric meta-coupling + chiral subs yield no meta-cycle, OR only a drive-set /
+  gauge-removable one → chirality does not propagate; the cascade needs the odd-parity meta-bond
+  supplied at every scale → layer-2 generative bet **bootstrap-blocked** (clean result for the frontier).
 
 **Discipline reminders for the build:** pre-conform / direct-sim (Lyapunov + spectrum, like
 `banach_frustrated`); strict thresholds, low commitment; NaN is a tripwire (read global winding /

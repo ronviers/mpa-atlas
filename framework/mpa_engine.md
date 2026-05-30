@@ -56,6 +56,18 @@ Boundary at $\mathcal{M}_2\times\{s\}$: operators do **not** reduce to Boolean i
 
 ---
 
+## DEFORMATION GENERATORS — the character-bearing operator's deformation space (conditional)
+
+* **Linear drift** $M\in\mathfrak{gl}(3,\mathbb{R})$, **Cartan-decomposed**: $\mathfrak{gl}(3)=\mathbb{R}I\oplus\mathfrak{so}(3)\oplus\mathrm{Sym}_0$ — **damping** (trace, central) $\oplus$ **chirality** mag+sign+orientation (axial $\mathfrak{so}(3)$; $A_{\text{CYC}}=L_x{+}L_y{+}L_z$, axis $(1,1,1)$) $\oplus$ **splitting/detuning** (sym-traceless $\mathrm{Sym}_0$). $\dim=1{+}3{+}5=9$ — **exhaustive**. Brackets $[\mathfrak{k},\mathfrak{k}]\subseteq\mathfrak{k}$, $[\mathfrak{k},\mathfrak{p}]\subseteq\mathfrak{p}$, $[\mathfrak{p},\mathfrak{p}]\subseteq\mathfrak{k}$ ($\mathfrak{k}{=}\mathfrak{so}(3)$, $\mathfrak{p}{=}\mathrm{Sym}_0$) — **closed**. A closure (a law), not a catalogue.
+* **Extensions** (each closes on a named structure beyond $\mathfrak{gl}(3)$): noise $=$ diffusion tensor $Q\in\mathrm{Sym}^+$ via continuous Lyapunov; nonlinearity $=$ gain/saturation normal forms (pitchfork/Hopf); time-periodic $=$ Floquet/monodromy (parametric squeeze $\to$ Adler circle map); **composition** $=$ Schur on coupled triads $\to$ again $(\mathfrak{gl}(3)$ drift, $\mathrm{Sym}^+$ noise$)$ — the two-mode-kernel RG type-identity (closed under coarse-graining; ties `COMPRESSION`).
+* **Autonomy**: closure needs **no** symmetry ($\mathfrak{gl}(3)$ closes unconditionally). The meta-scale protecting symmetry is a **substrate boundary condition** (parameterized in, *not* a structural output): it suppresses the $O(\kappa)$ $\mathrm{Sym}_0$ doublet-splitting channel so the $O(\kappa^2)$ $\mathfrak{so}(3)$ chiral seed leads.
+* **LIFT (conditional law)**: *given* a substrate symmetry protecting the collective doublet against $O(\kappa)$ $\mathrm{Sym}_0$ splitting, the residual deformation is $M_2=-\gamma' I_2+(\delta/2)Z+\omega J$ ($Z$ Sym$_0$-split, $J$ so(2)-rotation), $\lambda=-\gamma'\pm\sqrt{(\delta/2)^2-\omega^2}$. Protected ($\delta{=}0$) $\Rightarrow$ complex pair $\Rightarrow$ **counter-rotating meta-cycle, forced**; $\delta{=}2\omega$ $\Rightarrow$ exceptional point — one normal form, the protected lift and the EP its two branches (the `TWO FACES` sign-face boundary). Generic even-parity coupling splits at $O(\kappa)$ $\Rightarrow$ cycle killed.
+* **FALSIFY**: a triad deformation that is not a composition of the generators (basis not closed); a non-model-specific response that misses its canonical closed form; the protecting symmetry only hand-suppliable (neither derived nor honestly conditioned $=$ fitted). **Frontier, not promoted (model-specific):** the $\sim39°$ symmetric-cone chirality-reversal node; the non-uniform-squeeze secondary tongues.
+
+*Staked (bridge rung, un-instanced on real substrates): frontier `staked:character-primitives`, receipts §deformation-generators. The structural law promotes synthetically; the coverage claim (real character composes from these) stays the parked instance frontier.*
+
+---
+
 ## DEFORMATION CALCULUS — finite-$D$ interior (matched, not one $1/D$ series)
 
 * **Thm 6** associator (regular bulk): $\lVert\alpha_C\rVert\lesssim(1/D)\sum\lvert\gamma\rvert\to0$.
