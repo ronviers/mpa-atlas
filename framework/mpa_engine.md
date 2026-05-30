@@ -8,7 +8,7 @@ One phenomenology, two readings on one finite-$D$ deformation of the Boolean rin
 
 MPA is a **measurement discipline**, not a model. It forces independently-derived imports to read **one** substrate parameter $\theta$ through fixed known maps, and tests the forcing by a **collapse falsifier** (`transport_law_steps.md`). It is **subtractive** — it imports and metabolizes, asserts no new machinery; the content is in the *bindings* and their over-determination, never in invented apparatus. The finite-$D$ Boolean deformation below is **the first register where closure was found, not the definition**: one degenerate point ($\text{Boolean}=\text{Markov}=\text{equilibrium}=\text{detailed balance}=X\!\equiv\!1=\mathcal{A}{=}0=\beta{=}1$) read from many sides.
 
-**Membership / self-test** (scale-invariant — binds MPA's own claims; I5 in `mpa_frontier.md`): a candidate is MPA iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds** rather than invents. Fail any ⇒ systems thinking, not MPA.
+**Membership / self-test** (scale-invariant — binds MPA's own claims; I5 in `mpa_frontier.md`): a candidate is MPA iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds faithfully** — the binding preserves the import's logical type (a generic/∃ result is not bound as forced/∀, a necessary condition not as sufficient, topological genericity not as measure-typicality), and behavior at a degenerate point or boundary is **entailed from the interior structure**, never asserted at the limit. Fail any ⇒ systems thinking, not MPA.
 
 **"Forced" cashes out as:** iff-chain as architecture · explicit falsifier checklist · every dynamical quantity flows with the operating point (nothing hand-frozen).
 
@@ -165,7 +165,7 @@ Soft/hard split = substrate-class fingerprint: soft = smooth crossover; hard-wal
 * $\mathcal{C}$ derived (not primitive): heat-tax flow on slow-manifold generators; $\varepsilon$ = leading IR linear-stability eigenvalue; $\varepsilon<1$ derived from IR fixed-point stability; per level $D_n=\Phi^*_n/\kappa_n$.
 * **WALL** ($\varepsilon\ge1$): tower diverges. Sustained level-$(n{+}1)$ coherence needs $\ln(G_{0,n+1}/L_{n+1})>0$; fraying at level $n$ inflates $L_{n+1}$ via 3 channels (heat-tax spike · active-stress spike · $r_n$ sync drop) = faces of $W_{n+1}=W_0/[(1-u_n)(1-u_{n+1})]$, singularity $u\to1$ coincident with $\varepsilon\to1$, with $u_n=\varepsilon_n$ at rate-distortion-optimal encoding; channels 2,3 share $r$ in opposing directions via $f(r)=Cr^2$.
 * **Four-aspect coincidence at $\varepsilon=1$**: thermodynamic (mass divergence) · dynamical (meta-ledger bifurcation) · informational (compression rate $\to1$) · critical (branching $\to1$); $\beta_{\text{mem}}\approx1-\varepsilon$ unifies. Sub-optimal encoding **splits** them: thermo+critical hit first via $u\to1$; informational ($\varepsilon\to1$) only at optimal encoding $\Rightarrow$ sub-optimal substrates die thermodynamically before informationally.
-* **Wall-forces-chaos**: wait diverges $u\to1^-\Rightarrow$ generic Hopf each ascent; $N\ge3$ ascents complete a 3-torus $\Rightarrow$ forced chaos past the Wall.
+* **Wall = loss of normal hyperbolicity**: $\varepsilon\to1^-\Rightarrow$ the transverse spectral gap closes and the reduced (plateau) description ceases to persist. Post-Wall the dynamics leave the plateau — torus bifurcation, intermittency, crisis, or chaos, none forced. Chaos is **delay-driven**: the diverging wait $u\to1^-$ ($W_{n+1}\to\infty$) makes each ascent a Mackey–Glass DDE, chaotic already at $N{=}1$; the route is set by delay and gain, not by ascent count.
 
 ---
 
@@ -286,7 +286,7 @@ Canonical checklist; each = a predicted measurement on a named substrate/class. 
 * **Precision tightness**: nominally same-class substrates exhibiting arbitrary $T$.
 * **Dual ledger**: $I_{\text{pred}}$ scaling deviates from its thermodynamic dual (also the per-row bit/chit falsifier).
 * **SOC**: stable $\tau\ne3/2$, OR meta-ledger branching $\ne1$ at $\varepsilon=1$.
-* **Forced chaos**: a substrate crossing $\varepsilon\ge1$ that fails to produce strange-attractor / chaotic Character dynamics; or the bridge conditions forcing meta-ledger chaos fail.
+* **Wall closure-loss**: a substrate at $\varepsilon\to1$ whose reduced description persists — transverse spectral gap / CLV minimum angle bounded from $0$ (normal hyperbolicity intact at the Wall). **Delay-chaos gating**: post-Wall chaos that requires $N\ge3$ ascents and is absent at $N{=}1$ with the delay mechanism present.
 * **Memory exponent**: $\beta_{\text{mem}}$ near the Wall departs from $\approx1-\varepsilon$ (P1).
 * **Heavy-traffic transport law**: $\alpha_s=\beta_{\text{mem}}=\beta$ and the heavy-traffic exponent $=g(\beta)$ are one underlying $\beta$ read in three registers — numerically coincident **only at $\beta=1$** (Markovian), distinct known functions off it. FALSIFY: a substrate's FDR-aging and queue-tail exponents fail to collapse onto a common $\beta$ through the maps ($g=\beta/(2-\beta)$ Norros, or $1/\beta$ M/G/1).
 * **Synchronization**: anything beyond uniform sync/incoherence proves inaccessible; chimera fails the spectral test.
