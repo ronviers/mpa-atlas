@@ -87,10 +87,10 @@ Independence is load-bearing: the sign-face is the source of $k_{\text{frust}}$'
 
 ## TWO BITS — one per face, non-interconvertible
 
-* **Amplitude bit**: $D\to\infty$ endpoint of chit; occupancy (which-state); emergently discrete; erased by $R$ at floor $1\,\text{ch}$; held vs thermal leak; reversibly flippable at no fundamental cost.
-* **Topological bit**: chimeric sign of a frustrated triad; wiring (which-handedness); intrinsically discrete $\forall$ finite $D$; gauge-irremovable; $\tau_{obs}$- and amplitude-invariant; **free to hold** (no barrier leak) but **not reversibly flippable** — chirality change is forced through the balanced (sign-erased) state, $\ge 1\,\text{ch}$ per protected sign. $\Rightarrow$ **cost moves from maintenance to modification.**
-* Forced-erasure floor = cycle-space dimension of the frustrated subgraph.
-* **FALSIFY**: protected sign requires a per-time maintenance cost scaling with held duration (amplitude bit in disguise); OR chirality flips along a continuous path below $1\,\text{ch}$.
+* **Amplitude bit** (the *dissipative* bit): $D\to\infty$ endpoint of chit; occupancy (which-state); emergently discrete; erased by $R$ at floor $1\,\text{ch}$ (a real interior, many-to-one operation); held vs thermal leak; reversibly flippable at no fundamental cost. **Real cost — in maintenance (holding) and erasure.**
+* **Topological bit** (the *topological* bit): chimeric sign of a frustrated triad; wiring (which-handedness); intrinsically discrete $\forall$ finite $D$; gauge-irremovable; $\tau_{obs}$- and amplitude-invariant; **free to hold** (no barrier leak) **and free to flip** — a sign flip $+1\!\leftrightarrow\!-1$ is a reversible bijection (a topological *braid*: reverse the directed cycle by rewiring), at no fundamental cost (Bennett); it does **not** change under any continuous interior deformation — only by discrete rewiring, which never instantiates the balanced ($\mathcal{A}=0$) state. **Free both ways; any flip cost is substrate-specific rewiring work, not universal.** *(Corrected from "$\ge 1\,\text{ch}$ per protected sign to modify / cost moves from maintenance to modification": that is a Landauer **erasure** floor wrongly placed on a reversible flip, definable only at the never-attained $\mathcal{A}=0$ boundary — a fake-NaN; receipts §Two bits.)*
+* Cycle-space dimension $b_1$ of the frustrated subgraph = the **count of independent gauge-irremovable signs** (topological capacity), not a per-flip cost.
+* **FALSIFY**: protected sign requires a per-time maintenance cost scaling with held duration (amplitude bit in disguise); OR the sign changes under a continuous interior deformation without rewiring (not topological).
 
 ---
 

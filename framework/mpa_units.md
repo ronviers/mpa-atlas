@@ -23,9 +23,9 @@ This is a third forced appearance of the bit↔chit correspondence the engine al
 
 ## 2. The anchor set (MPA-natural units)
 
-* **Cost & information — the ch $\equiv\ln2$ nats.** **[FORCED unit]**, erasure-anchored. Report $\langle\sigma\rangle$-excess, the flip-floor, channel capacity, $I_{\text{pred}}$, cryptic order $\chi$, and all erasure costs **in ch**.
+* **Cost & information — the ch $\equiv\ln2$ nats.** **[FORCED unit]**, erasure-anchored. Report $\langle\sigma\rangle$-excess, the amplitude-bit erasure floor, channel capacity, $I_{\text{pred}}$, cryptic order $\chi$, and all erasure costs **in ch** (the topological sign flip is reversible — no flip-floor; §Two bits).
 * **Headroom (amplitude) — chit in ch**, $\text{chit}_{\text{ch}}=\text{chit}/\ln2$. Origin $\text{chit}=0$ **[FORCED]** (threshold, never attained); unit tick $\text{chit}=\ln2$ **[FORCED]** (Q-peak). So $\text{chit}_{\text{ch}}=1$ is *always* the peak-ringing point on every substrate.
-* **Structure — counts, no length.** Minimal frustrated cycle $N=3$ **[FORCED]**; the unit of protected structure is the cycle-space dimension $b_1=E-V+c$ (the forced-erasure floor) **[FORCED]**. Smallest protected object: $N=3$, $b_1=1$.
+* **Structure — counts, no length.** Minimal frustrated cycle $N=3$ **[FORCED]**; the unit of protected structure is the cycle-space dimension $b_1=E-V+c$ (the topological **capacity**: count of independent gauge-irremovable signs — *not* a per-flip cost) **[FORCED]**. Smallest protected object: $N=3$, $b_1=1$.
 * **Time — $1/\gamma_s$** (slow-resource turnover) or **$\tau_c$** (memory time). **[CONVENTION]** — substrate-set; there is no forced universal time. All rates reported in these. $\beta_{\text{mem}}$ already dimensionless.
 * **Coupling — $\gamma$ in $D$-units** ($\gamma/D$, or $\gamma/L$ near threshold). **[CONVENTION]**.
 * **Drive / level — $D=\Phi^*/\kappa$**, per level $D_n=\Phi^*_n/\kappa_n$. Heat-tax coefficient $\alpha_{\sigma,0}=$ the framework conductivity unit **[CONVENTION, fixed here]**. Primary memory class $\beta_{\text{mem}}=1$; fractional family $\beta_{\text{mem}}<1$ as reference **[CONVENTION, fixed here]**.

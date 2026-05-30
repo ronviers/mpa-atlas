@@ -10,6 +10,76 @@ it revealed a **repeatable strategy** for crossing the rest of the queue. Contin
 
 ---
 
+## BATCH STATUS — 2026-05-30 (three more crossings tested; HELD for review, nothing landed)
+
+Three queue items run as falsification-grade experiments (strict pre-registered bars). Scripts +
+figures on disk; **no canonical ledger edits, no commits** — all awaiting review. The ledger crossings
+are staged (exact edits noted). Permanent home once they cross = frontier (staked-removal) + receipts
+(staked→proven + §commit-line crossing); this section is the durable record until then.
+
+1. **`character-primitives` → CROSSES (5/5)** · `mpa-conform/scripts/rps_character.py` · fig
+   `output/calibration/rps_character.png`. The gl(3) deformation apparatus on RPS's **emergent**
+   Jacobian: M_RPS *produces* $A_{\text{CYC}}$ (Antisym $=x^*(\alpha-\beta)/2\,A_{\text{CYC}}$, residual
+   **0** — chirality generator emergent, not hand-drawn, forced onto the $(1,1,1)$ $\mathfrak{so}(3)$
+   axis); forced EP normal form $R^2{=}1.0000$; C3-meta-arena lift closes (b1 3→4, **0%** generic
+   closure, $\omega_{\text{meta}}\propto\kappa^{1.93}$ vs split $\propto\kappa^{1.01}$). One FAKE-NaN
+   trap caught+fixed mid-run ($\kappa{=}0.3$ over-drove RPS's weakly-damped (0.1) chiral modes into
+   instability; the global spectrum revealed it; scaled $\kappa{=}0.4\,\gamma_{\text{rot}}$). **Staged
+   crossing:** engine line 67 ("staked, un-instanced" → "instanced on RPS"); receipts
+   §deformation-generators staked→`proven` + RPS evidence; new §commit-line crossing(2); frontier
+   remove `staked:character-primitives`, update the `frustration-ascent` structural-side note.
+
+2. **`homochirality` → CROSSES (4/4)** · `mpa-conform/scripts/homochiral_triad.py` · fig
+   `output/calibration/homochiral_triad.png`. **Built a genuine emergent substrate:** two MIRROR chiral
+   3-cycles + Frank cross-inhibition. Spontaneously breaks parity (|ee|→1); the winning hand carries a
+   **protected 3-cycle NESS circulation** (complex pair $-0.1\pm0.173i$, $\mathcal{A}\ne0$); drive-sweep
+   $|J|\propto\sigma^2\to0$, sign held; **beats all three nulls** — incl. the trap, the 2-component
+   Frank bistable (homochiral but $\mathcal{A}{=}0$ ⇒ the frustrated triad is necessary). Also instances
+   `frustration-ascent`'s **self-lighting leg** (the spontaneous SSB RPS lacked). **Parity finding
+   (Ron's catch — methodological):** the SSB split is **exactly 50/50 by an exact mirror symmetry**
+   (equivariance residual $7\!\cdot\!10^{-15}$; aggregate 2000 ICs → $0.492\pm0.011$, 0.7σ; parity-paired
+   ICs → **exactly 500/500**). The early 37/63 over 100 ICs was finite-sample — the *fix* was to
+   demonstrate the symmetry (equivariance + paired ICs), not chase Monte-Carlo convergence. Physically:
+   zero built-in chiral bias = a clean frozen-accident SSB (explicit-bias mechanisms, e.g. weak-force
+   parity violation, are a separate add-on, out of scope). **Staged crossing:** receipts §Homochirality
+   staked→`proven` + homochiral-triad evidence; frontier remove `staked:homochirality`; record in
+   §commit-line crossing(2). (Scope: a model Frank/Kondepudi-class network — models biological
+   homochirality, is not the literal ancient biochemical substrate.)
+
+3. **`two-bits` → a CORRECTION to engine §Two bits (NOT a crossing); held for review** ·
+   `mpa-conform/scripts/rps_two_bits.py` · fig `output/calibration/rps_two_bits.png`. **Ron's catch (the
+   fake-NaN-at-zero rule, to its conclusion): "it cannot cost anything to flip the sign."** A flip
+   $+1\!\leftrightarrow\!-1$ is a bijection (NOT gate) ⇒ logically REVERSIBLE ⇒ by Bennett NO Landauer
+   floor; the $\ge1$ ch is the ERASURE cost (many-to-one), wrongly imported onto a flip. It only appears
+   if you route the flip *through* the balanced state $\mathcal{A}{=}0$ — but that is the NEVER-ATTAINED
+   boundary, and the per-flip cost there is an indeterminate fake-NaN ($0/0$). Verified: rewiring is a
+   reversible **involution** ($-1\!\to\!+1\!\to\!-1$, the topological-qubit *braid*, never instantiates
+   $\mathcal{A}{=}0$); and the would-be per-flip cost $\langle\sigma\rangle/\omega$ VARIES continuously
+   ($4.16\!\to\!2.08\!\to\!0.42$, crosses ln2, dips below it) $\to0/0$ at balance — **no fixed floor.**
+   So the topological SIGN bit is **free BOTH ways** (hold + flip). My earlier "entailed $b_1$ floor"
+   reading was a half-measure — it still imported a cost living only at the never-attained zero.
+   **What survives (cleaner):** the two bits are NOT "two costs, one per face." AMPLITUDE bit =
+   *dissipative* (a real interior cost: maintenance $\langle\sigma\rangle{=}0.6$, leaks without drive);
+   SIGN bit = *topological* (no interior cost; any flip cost is substrate-specific rewiring work, e.g.
+   the homochirality racemic-saddle height, never a universal $\ge1$ ch). **PROPOSED ENGINE CORRECTION
+   (held):** §Two bits / engine BITS — drop "$\ge1$ ch per protected sign to modify" + the $b_1$-ch
+   forced-erasure floor *as a cost*; keep free-to-hold, gauge-irremovable, flips-only-by-rewiring (now a
+   free reversible braid). Same error family as wall-forces-chaos: a quantity formulated at the degenerate
+   boundary instead of entailed from the interior. (`staked:homochirality` + `central-commitment` are
+   unaffected — none asserts the $\ge1$ ch.)
+
+4. **`wall-ladder` — DEFERRED** (not built). CLV $\theta_{\min}$ diagnostic is built+validated; the
+   vindicate needs a "real emergent cascade" driven to closure-loss ($\theta_{\min}\to0$), and *which*
+   substrate counts as real-emergent-multi-scale is the substrate-judgment call flagged as Ron's. The
+   expensive FDR gates (`gfdr-two-step`, `memory-collapse`) left alone per the cheap-observables discipline.
+
+**Ledger if the staged crossings land: staked 6 → 4** (`character-primitives`, `homochirality` cross;
+`central-commitment`+`two-frame` already crossed). **`two-bits` is now a CORRECTION, not a crossing** —
+the engine §Two bits "$\ge1$ ch to modify" fires (boundary fake-NaN); its exact ledger disposition
+(revise `staked:two-bits` to "free both ways" vs a §Two bits correction entry) is Ron's call.
+
+---
+
 ## THE BREAKTHROUGH (the strategy — use it)
 
 For the whole campaign every staked claim was stuck behind one gate: *needs a real substrate, not
