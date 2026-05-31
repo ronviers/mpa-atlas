@@ -22,7 +22,7 @@ MPA is a **measurement discipline**, not a model. It forces independently-derive
 * **λ_A** $\approx L - G_0$ — stability axis (bridge identity, zero-amplitude). This is why the two state-registers below are one condition, not two.
 * **γ_AB** — signed shear: $\gamma<0$ cooperative · $\gamma\approx0$ orthogonal · $\gamma>0$ conflicting (per-edge cost $\gamma_{AB}$ in $D$-units).
 * **τ_obs** — observer/integration window: moves continuous scalars (vertex label, $\gamma$); leaves topological invariants fixed.
-* **ε** $:= \lVert\mathcal{C}\rVert_{op}$ — per-ascent compression contraction (full definition in COMPRESSION). Tower converges iff $\varepsilon<1$; $\varepsilon\ge1$ = Wall.
+* **ε** $:= \lVert\mathcal{C}\rVert_{op}$ — per-ascent compression contraction (full definition in COMPRESSION). Tower converges iff $\varepsilon<1$; $\varepsilon\ge1$ = the marginal point.
 * **β_mem** — memory exponent (set by kernel closure below): $=1$ Markovian/exponential, $<1$ glassy/power-law.
 * **ρ_A** — mode occupation/amplitude (state variable of the kernel).
 
@@ -116,11 +116,11 @@ Independence is load-bearing: the sign-face is the source of $k_{\text{frust}}$'
 
 ## TWO-FRAME CONSTRUCTION — the FDR architectural twin of $k_{\text{frust}}$ + Central Commitment
 
-* **External frame** — amplitude $\times$ probe field $\to$ violation factor $X$. **Substrate-conditional**: requires a probe matched to the substrate; defined wherever a probe couples.
+* **External frame** — amplitude $\times$ probe field $\to$ FD ratio $X$. **Substrate-conditional**: requires a probe matched to the substrate; defined wherever a probe couples.
 * **Self-probe frame** — current $J\times$ intrinsic affinity $\mathcal{A}$ (nats) $\to$ tightness $\mathcal{T}=\langle\sigma\rangle\mathrm{Var}(J)/(2\langle J\rangle^2)\ge1$; core $\mathrm{SNR}_J=\langle J\rangle^2/\mathrm{Var}(J)\le\langle\sigma\rangle/2$. **Intrinsic**: no probe; affinity in nats by construction.
 * **Definedness asymmetry** (load-bearing): external is defined wherever a probe couples; self-probe is defined **iff a current exists** ($k_{\text{frust}}$-bearing). The frame's existence is itself a topological diagnostic — this is what makes the self-probe substrate-neutral, not merely an alternative reading.
 * **Mintability corollary** (what a cascade can *generate*; receipts §amplitude-autonomy): the external/amplitude frame's reference is always external, so a *self-sourced amplitude gain* (continuous-amplitude autonomy, $\mathrm{Re}\,a_{\text{eff}}>0$) has no intrinsic referent — it can only be an external constant (pump/coupling; e.g. $\mathrm{Re}\,a_{\text{eff}}=\mu+2\kappa$, $\delta$-flat), the FDR analogue of fixed bath $T$. The dissipation identity $\langle\sigma\rangle=J\cdot\mathcal{A}$ carries **no** amplitude-gain term and the chit runs through it, so **held character lives on $\mathcal{A}$ (the self-probe/sign-topological face), and only there.** ⇒ a cascade can **mint chirality/topology** (flows with the NESS — legal) but **not continuous-amplitude autonomy** (external-frame — supplied, not minted: inserting $\mu>0$ is illegal-as-character, an inert constant). **Test-validity guard:** an "autonomous-register-generated" claim resting on an inserted amplitude gain is a non-result (circular); a genuine layer-2 mint must show the generated quantity *flows with $\mathcal{A}$/a NESS quantity*, not with a pump/coupling constant. (The mpa-legal "no inert constant" rule recovered as a theorem of the definedness asymmetry, not assumed.)
-* **Bridge**: $\int$FDR-violation $=\langle\sigma\rangle=J\!\cdot\!\mathcal{A}$ — **exact magnitude identity CLOSED** (no longer verdict-only): on the rotational-OU testbed all three frames coincide to machine precision, $V_{\text{ext}}=\langle\sigma\rangle=J\mathcal{A}=2\omega_0^2/\kappa$ (the full velocity-form integral, both coordinates, all $\omega$, by residue calculus). $\mathcal{T}$ is $\tau$-independent (the $\tau$'s cancel) so the $\tau$-absorbed and $\tau$-explicit forms reconcile to one quantity. Receipts §gFDR-magnitude.
+* **Bridge**: $\int$FDR-departure $=\langle\sigma\rangle=J\!\cdot\!\mathcal{A}$ — **exact magnitude identity CLOSED** (no longer verdict-only): on the rotational-OU testbed all three frames coincide to machine precision, $V_{\text{ext}}=\langle\sigma\rangle=J\mathcal{A}=2\omega_0^2/\kappa$ (the full velocity-form integral, both coordinates, all $\omega$, by residue calculus). $\mathcal{T}$ is $\tau$-independent (the $\tau$'s cancel) so the $\tau$-absorbed and $\tau$-explicit forms reconcile to one quantity. Receipts §gFDR-magnitude.
 * **CONSTRUCTION** (architectural commitment, sibling of the Central Commitment): the two frames are **one dissipation, two readings** — not two independent observables. The two-frame iff-chain
 $$\text{self-probe defined}\ \Longleftrightarrow\ J\ne0\ \Longleftrightarrow\ \mathcal{A}\ne0\ \Longleftrightarrow\ \triangle\ \text{in coupling graph}$$
 binds the FDR architecture to the topological commitment in both directions:
@@ -158,25 +158,25 @@ Frustration-free graph (avg degree $d_{avg}$, min cost $\gamma_{min}$):
 $$|\Gamma^*|\le\sqrt{\frac{2D}{\alpha\,\gamma_{min}\,d_{avg}}}\qquad\text{(sparse }\sim D\text{, dense }\sim\sqrt D\text{)}$$
 $k_{\text{frust}}$ marks structure unsustainable at **any** $D$.
 
-Dynamic conjugate (same wall): $\sum_{i\in\Gamma^*}L_i\le G_{total}\,\eta(\Gamma^*)$, $\eta\in(0,1]$, $\eta\to0$ at the $\sqrt D$ ceiling.
+Dynamic conjugate (same ceiling): $\sum_{i\in\Gamma^*}L_i\le G_{total}\,\eta(\Gamma^*)$, $\eta\in(0,1]$, $\eta\to0$ at the $\sqrt D$ ceiling.
 $$\eta(\Gamma^*)=1-B(c,\rho),\qquad B(c,\rho)=\frac{\rho^c/c!}{\sum_{k=0}^c\rho^k/k!},\quad c=\lfloor|\Gamma^*|_{\text{crit}}\rfloor,\ \rho=\text{offered load}$$
 
-Soft/hard split = substrate-class fingerprint: soft = smooth crossover; hard-wall = replace $B$ by $\mathbb{1}[|\Gamma^*|\ge c]$. **FALSIFY**: soft substrate showing sharp snapping; OR hard-wall substrate showing soft tails.
+Soft/hard split = substrate-class fingerprint: soft = smooth crossover; hard-cutoff = replace $B$ by $\mathbb{1}[|\Gamma^*|\ge c]$. **FALSIFY**: soft substrate showing sharp snapping; OR hard-cutoff substrate showing soft tails.
 
 ---
 
-## COMPRESSION / WALL — one RG flow, two ledgers; converges iff $\varepsilon<1$
+## COMPRESSION / THE MARGINAL POINT — one RG flow, two ledgers; converges iff $\varepsilon<1$
 
 * **Info ledger**: RG flow, Banach contraction; $c,r$ fixed points; $s$ metastable ($\to c$ if reinforced, $\to r$ if not); $\mathcal{M}_2$ terminal attractor; $k_{\text{frust}}$ invariant; shear-positive edges with both endpoints $\to r$ vanish; Boolean = degenerate limit.
 * **Thermo ledger**: $L_{n+1}=L_{n+1}^{(0)}+\alpha_\sigma\langle\sigma_n\rangle+\alpha_\Sigma\langle\Sigma_n\rangle$; $\alpha_\sigma(\varepsilon)=\alpha_{\sigma,0}(1-\varepsilon)$; per-level erase-heat $\to0$ as $\varepsilon\to1$ while cumulative $\Phi_{total}=\Phi^{(0)}/(1-\varepsilon)$ **diverges**.
 * $\mathcal{C}$ derived (not primitive): heat-tax flow on slow-manifold generators; $\varepsilon$ = leading IR linear-stability eigenvalue; $\varepsilon<1$ derived from IR fixed-point stability; per level $D_n=\Phi^*_n/\kappa_n$.
-* **WALL** ($\varepsilon\ge1$): tower diverges. Sustained level-$(n{+}1)$ coherence needs $\ln(G_{0,n+1}/L_{n+1})>0$; fraying at level $n$ inflates $L_{n+1}$ via 3 channels (heat-tax spike · active-stress spike · $r_n$ sync drop) = faces of $W_{n+1}=W_0/[(1-u_n)(1-u_{n+1})]$, singularity $u\to1$ coincident with $\varepsilon\to1$, with $u_n=\varepsilon_n$ at rate-distortion-optimal encoding; channels 2,3 share $r$ in opposing directions via $f(r)=Cr^2$.
+* **MARGINAL POINT** ($\varepsilon\ge1$): tower diverges. Sustained level-$(n{+}1)$ coherence needs $\ln(G_{0,n+1}/L_{n+1})>0$; fraying at level $n$ inflates $L_{n+1}$ via 3 channels (heat-tax spike · active-stress spike · $r_n$ sync drop) = faces of $W_{n+1}=W_0/[(1-u_n)(1-u_{n+1})]$, singularity $u\to1$ coincident with $\varepsilon\to1$, with $u_n=\varepsilon_n$ at rate-distortion-optimal encoding; channels 2,3 share $r$ in opposing directions via $f(r)=Cr^2$.
 * **Four-aspect coincidence at $\varepsilon=1$**: thermodynamic (mass divergence) · dynamical (meta-ledger bifurcation) · informational (compression rate $\to1$) · critical (branching $\to1$); $\beta_{\text{mem}}\approx1-\varepsilon$ unifies. Sub-optimal encoding **splits** them: thermo+critical hit first via $u\to1$; informational ($\varepsilon\to1$) only at optimal encoding $\Rightarrow$ sub-optimal substrates die thermodynamically before informationally.
-* **Wall = loss of normal hyperbolicity**: $\varepsilon\to1^-\Rightarrow$ the transverse spectral gap closes and the reduced (plateau) description ceases to persist. Post-Wall the dynamics leave the plateau — torus bifurcation, intermittency, crisis, or chaos, none forced. Chaos is **delay-driven**: the diverging wait $u\to1^-$ ($W_{n+1}\to\infty$) makes each ascent a Mackey–Glass DDE, chaotic already at $N{=}1$; the route is set by delay and gain, not by ascent count.
+* **The marginal point = loss of normal hyperbolicity**: $\varepsilon\to1^-\Rightarrow$ the transverse spectral gap closes and the reduced (plateau) description ceases to persist. Past marginal the dynamics leave the plateau — torus bifurcation, intermittency, crisis, or chaos, none forced. Chaos is **delay-driven**: the diverging wait $u\to1^-$ ($W_{n+1}\to\infty$) makes each ascent a Mackey–Glass DDE, chaotic already at $N{=}1$; the route is set by delay and gain, not by ascent count.
 
 ---
 
-## OBSERVABLE SIGNATURES — FDR: parametric $\chi(\tau)$ vs $C(0)-C(\tau)$; $\int$FDR-violation $=\langle\sigma\rangle$
+## OBSERVABLE SIGNATURES — FDR: parametric $\chi(\tau)$ vs $C(0)-C(\tau)$; $\int$FDR-departure $=\langle\sigma\rangle$
 
 * **c**: chit$\,\gg0$ — $X_c=\lim_\tau\chi/(C(0)-C)=0$ (suppression, horizontal locus).
 * **s**: chit$\,\to0^+$ — $\alpha_s=$ slope of aging segment; $P_s=\lim_\tau C(\tau)/C(0)$ (plateau). **$\alpha_s,P_s$ = load-bearing cross-substrate observables.**
@@ -185,7 +185,7 @@ Soft/hard split = substrate-class fingerprint: soft = smooth crossover; hard-wal
 
 $s$ is two-step: quasi-equilibrium $X=1$ on short lags, aging $X<1$ on long lags (the long-lag segment is the $c/s/r$ discriminator). $X\gg1$ excluded. **CAUTION**: single-slope $X$ biases up — use segmented / five-vector inversion $(q_{EA},\tau_\alpha,\beta_{KWW},\tau_\beta,X)$.
 
-**Two-frame readings** (structural claim and falsifiers in `TWO-FRAME CONSTRUCTION`; this section carries the measurement signatures only): the external-probe frame yields $X$ (the violation factor running through the $c/s/r/k_{\text{frust}}$ rows above); the self-probe frame yields tightness $\mathcal{T}=\langle\sigma\rangle\mathrm{Var}(J)/(2\langle J\rangle^2)$, defined iff a current exists ($k_{\text{frust}}$-bearing). Both are readings of one dissipation: $\int$FDR-violation $=\langle\sigma\rangle=J\!\cdot\!\mathcal{A}$.
+**Two-frame readings** (structural claim and falsifiers in `TWO-FRAME CONSTRUCTION`; this section carries the measurement signatures only): the external-probe frame yields $X$ (the FD ratio running through the $c/s/r/k_{\text{frust}}$ rows above); the self-probe frame yields tightness $\mathcal{T}=\langle\sigma\rangle\mathrm{Var}(J)/(2\langle J\rangle^2)$, defined iff a current exists ($k_{\text{frust}}$-bearing). Both are readings of one dissipation: $\int$FDR-departure $=\langle\sigma\rangle=J\!\cdot\!\mathcal{A}$.
 
 ---
 
@@ -199,7 +199,7 @@ $s$ is two-step: quasi-equilibrium $X=1$ on short lags, aging $X<1$ on long lags
 | compression | heat-tax tower | rate-distortion tower |
 | coupling | $\langle\sigma\rangle\ge-\Delta I$ | (same bound, dual reading) |
 
-* Entropy production: $P(\sigma)/P(-\sigma)=e^\sigma$; $\int$FDR-violation $=\langle\sigma\rangle$.
+* Entropy production: $P(\sigma)/P(-\sigma)=e^\sigma$; $\int$FDR-departure $=\langle\sigma\rangle$.
 * Precision tightness $T$ varies by class (active matter $T\approx1$; engineered queues $T\gg1$). **FALSIFY**: same-class substrates with arbitrary $T$.
 * Affinity sum: $\langle\sigma\rangle=\sum_C J_C\ln(\prod_+k/\prod_-k)$; limit cycles $\sigma_{\text{frust}}=J_{ss}\oint v/D\,d\theta$.
 * $I_{\text{pred}}=I(\text{past};\text{future})$ (3rd coherence observable with chit, $Q$); active-probe capacity $\sim\gamma_{RO}\log_2(1+Q)$; $\langle\sigma\rangle\ge-\Delta I\Rightarrow$ readout holdings sustain at lower chit by paying in mutual information.
@@ -225,7 +225,7 @@ Vertex label depends on $\tau_{obs}$ (same trail reads $c/s/r$ at narrow/mid/wid
 
 ## ASYMPTOTIC CLOSURE
 
-Every observable $\in$ open interval; boundary $\in\{0,1,\infty\}$ attained only as a limit ($\mathcal{M}_2$@$D\to\infty$; $\varepsilon\to1$@Wall; chit$\,=0$ critical; $X_c\to0$ deep-$c$; $X_r\to1$ deep-$r$/eq; $u\to1$@blocking; $\eta\to0$@$\sqrt D$; $\beta_{\text{mem}}\to1$@Markovian). Categorical labels ($\top,\bot,k_{\text{frust}}$) exist only at the $\mathcal{M}_2$ boundary or as discrete derivatives. An attained endpoint = **NaN falsification tripwire** (never clip a state variable at 0). **FALSIFY**: any observable attaining exactly 0 or 1 at a finite, non-degenerate operating point.
+Every observable $\in$ open interval; boundary $\in\{0,1,\infty\}$ attained only as a limit ($\mathcal{M}_2$@$D\to\infty$; $\varepsilon\to1$@marginal; chit$\,=0$ critical; $X_c\to0$ deep-$c$; $X_r\to1$ deep-$r$/eq; $u\to1$@blocking; $\eta\to0$@$\sqrt D$; $\beta_{\text{mem}}\to1$@Markovian). Categorical labels ($\top,\bot,k_{\text{frust}}$) exist only at the $\mathcal{M}_2$ boundary or as discrete derivatives. An attained endpoint = **NaN falsification tripwire** (never clip a state variable at 0). **FALSIFY**: any observable attaining exactly 0 or 1 at a finite, non-degenerate operating point.
 
 ---
 
@@ -288,13 +288,13 @@ Canonical checklist; each = a predicted measurement on a named substrate/class. 
 * **Surface-code** (primary positive instance): syndrome FDR shows unit slope sub-threshold (no aging signature), OR locus shape persists across threshold (no $s\to r$ migration).
 * **Topological bit**: protected sign requires a per-time maintenance cost scaling with held duration (amplitude bit in disguise), OR chirality flips along a continuous path below $1\,\text{ch}$.
 * **Central commitment**: a real substrate sustaining protected circulation ($\mathcal{A}\ne0$, removable only by rewiring) with **no** triad; OR $J$ drive-noise-dependent / resolving to detailed balance; OR drive-sweep produces a sign flip (sign was drive-set, not protected).
-* **Capacity wall**: soft substrate showing sharp Hopfield-snapping, OR hard-wall substrate showing soft tails.
+* **Capacity ceiling**: soft substrate showing sharp Hopfield-snapping, OR hard-cutoff substrate showing soft tails.
 * **Asymptotic closure**: any observable attaining exactly $0$ or $1$ at a finite, non-degenerate operating point (NaN tripwire).
 * **Precision tightness**: nominally same-class substrates exhibiting arbitrary $T$.
 * **Dual ledger**: $I_{\text{pred}}$ scaling deviates from its thermodynamic dual (also the per-row bit/chit falsifier).
 * **SOC**: stable $\tau\ne3/2$, OR meta-ledger branching $\ne1$ at $\varepsilon=1$.
-* **Wall closure-loss**: a substrate at $\varepsilon\to1$ whose reduced description persists — transverse spectral gap / CLV minimum angle bounded from $0$ (normal hyperbolicity intact at the Wall). **Delay-chaos gating**: post-Wall chaos that requires $N\ge3$ ascents and is absent at $N{=}1$ with the delay mechanism present.
-* **Memory exponent**: $\beta_{\text{mem}}$ near the Wall departs from $\approx1-\varepsilon$ (P1).
+* **Marginal closure-loss**: a substrate at $\varepsilon\to1$ whose reduced description persists — transverse spectral gap / CLV minimum angle bounded from $0$ (normal hyperbolicity intact at the marginal point). **Delay-chaos gating**: past-marginal chaos that requires $N\ge3$ ascents and is absent at $N{=}1$ with the delay mechanism present.
+* **Memory exponent**: $\beta_{\text{mem}}$ near the marginal point departs from $\approx1-\varepsilon$ (P1).
 * **Heavy-traffic transport law**: $\alpha_s=\beta_{\text{mem}}=\beta$ and the heavy-traffic exponent $=g(\beta)$ are one underlying $\beta$ read in three registers — numerically coincident **only at $\beta=1$** (Markovian), distinct known functions off it. FALSIFY: a substrate's FDR-aging and queue-tail exponents fail to collapse onto a common $\beta$ through the maps ($g=\beta/(2-\beta)$ Norros, or $1/\beta$ M/G/1).
 * **Synchronization**: anything beyond uniform sync/incoherence proves inaccessible; chimera fails the spectral test.
 * **Dissipative structures**: Turing three-condition failure (non-reciprocity + autocatalysis + differential diffusion).

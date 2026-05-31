@@ -9,16 +9,16 @@
 | $C(t,t')$ | correlation $\langle x(t)x(t')\rangle$ |
 | $R(t,t')$ | response $\delta\langle x(t)\rangle/\delta h(t')$ |
 | $\chi$ | integrated susceptibility $\int R\,dt'$ |
-| $X$ | external-frame violation factor (amplitude face) |
+| $X$ | external-frame fluctuation–dissipation ratio (amplitude face) |
 | $T,\ T_{\text{sub}}$ | bath temperature; substrate-equivalent decay-driving parameter |
 | $T_{\text{eff}}=T/X$ | effective temperature (FD-plot slope) |
 | $\alpha_s,\ P_s$ | aging slope, plateau (amplitude-face observables) |
 | $\mathcal{A}$ | cycle affinity $\oint v/D_0=\ln(\prod_+k/\prod_-k)$ in nats (sign-topological face) |
 | $J\ (J_{ss})$ | circulating current (steady-state magnitude) |
 | $\langle\sigma\rangle$ | entropy-production rate |
-| $\mathcal{T}$ | tightness — self-frame violation factor (engine `FRAMES` calls this $T$; we write $\mathcal{T}$ here to disambiguate from bath temperature) |
+| $\mathcal{T}$ | tightness — self-frame FD ratio (engine `FRAMES` calls this $T$; we write $\mathcal{T}$ here to disambiguate from bath temperature) |
 | $\mathrm{SNR}_J$ | $\langle J\rangle^2/\mathrm{Var}(J)$ |
-| $V_{\text{ext}}$ | integrated external FDR-violation |
+| $V_{\text{ext}}$ | integrated external FDR-departure |
 | $\triangle$ | frustrated triad (gauge-imbalanced 3-cycle; `pa:signed-balance`); $k_{\text{frust}}$ its dynamical consequence |
 | chit | $\ln(G_0/L)$, measured in **ch** ($1\,\text{ch}\equiv\ln 2$ nats) |
 | $D$ vs $D_0$ | drive $\Phi^*/\kappa$ vs diffusion constant; the affinity integral uses $D_0$ |
@@ -38,13 +38,13 @@ FDR enters by the structural→character translation; each step guards one failu
 5. **Import established machinery** for the replacements; resist local invention (guards reinvention; every import resolves to a `pa:` key).
 6. **Verify integration** under the filter; concept-by-concept transfer ≠ a coherent whole (guards false closure).
 
-The two-frame structure below is itself a product of this discipline: it appeared when Step 5's velocity-form FDR-violation identity (`pa:harada-sasa`) was pressed against the force–flux / precision machinery (`pa:tur`) and checked for integration. *Working the translation updated the framework.*
+The two-frame structure below is itself a product of this discipline: it appeared when Step 5's velocity-form FDR-departure identity (`pa:harada-sasa`) was pressed against the force–flux / precision machinery (`pa:tur`) and checked for integration. *Working the translation updated the framework.*
 
 ## 2. The structural object and its NESS generalization
 
 FDR ties two observables of a stochastic process:
 $$C(t,t')=\langle x(t)x(t')\rangle,\qquad R(t,t')=\frac{\delta\langle x(t)\rangle}{\delta h(t')}.$$
-Equilibrium ties them by $1/T$; the NESS-general form (`pa:ck-aging`) inserts a violation factor $X$:
+Equilibrium ties them by $1/T$; the NESS-general form (`pa:ck-aging`) inserts a fluctuation–dissipation ratio $X$:
 $$R(t,t')=\frac{X(t,t')}{T}\,\frac{\partial C(t,t')}{\partial t'}\,\theta(t-t'),\qquad X\equiv1\ \text{at equilibrium}.$$
 On the FD plot ($\chi$ vs $1-C/C(0)$) the local slope sets the effective temperature: $T_{\text{eff}}=T/X$.
 
@@ -59,13 +59,13 @@ No-transfer items (Step 4) and their imports (Step 5):
 - passive → active probe — response feeds back through the maintenance dynamics; active band $|\omega-\omega_{RO}|\lesssim\gamma_{RO}$. (MPA)
 - equilibrium → degenerate $X\equiv1$ case.
 
-The decisive import is the velocity-form FDR-violation identity (`pa:harada-sasa`):
+The decisive import is the velocity-form FDR-departure identity (`pa:harada-sasa`):
 $$J_{\text{diss}}=\gamma\left[\langle v\rangle^2+\int_{-\infty}^{\infty}\frac{d\omega}{2\pi}\Big(\tilde C(\omega)-2T\tilde R'(\omega)\Big)\right],$$
-where the integrand vanishes at equilibrium. **The integrated FDR-violation is the dissipation rate** — no absolute $T$ needed. This is the hinge that unlocks §4.
+where the integrand vanishes at equilibrium. **The integrated FDR-departure is the dissipation rate** — no absolute $T$ needed. This is the hinge that unlocks §4.
 
 ## 4. The two conjugate frames
 
-Step 6 surfaces that the fluctuation–response relation has two conjugate frames — *one dissipation, two readings* (the recognition that FDR-violation and precision-cost are connected readings of one dissipation is a concurrent move in the field; `pa:fdr-tur-unification`):
+Step 6 surfaces that the fluctuation–response relation has two conjugate frames — *one dissipation, two readings* (the recognition that the FDR-departure and precision-cost are connected readings of one dissipation is a concurrent move in the field; `pa:fdr-tur-unification`):
 
 $$\underbrace{(\text{amplitude}\times h)\to X}_{\textbf{external frame}}\qquad\qquad\underbrace{(J\times\mathcal{A})\to\mathcal{T}}_{\textbf{self-probe frame}}$$
 
