@@ -130,6 +130,23 @@ across repos. Bring options, let Ron choose. (Note Ron's standing preference for
 descriptive accuracy — `feedback_prefer_coined_names` — which may favor a coined display name over a literal
 acronym expansion.)
 
+**DECIDED 2026-05-31 (Ron delegated; see `docs/naming_decision.md` — read it):** the name question was worked
+through with the lineage in hand. The framework **deflated** from *Metastable Propositional Calculus* (MPC — a
+full four-valued logic + separation theorem + quantum conjecture) to today's engine — *scaled down by its
+authors*, which is the **credential**, not an embarrassment. Locked recommendations:
+- **Identity (the §0 opening line):** *"MPA — a phenomenology of character in driven-dissipative systems. A
+  measurement discipline: one coordinate system forcing established results to read together; an effective
+  description — a better metaphor than most, but a metaphor until real substrates give it footing — not
+  claimed fundamental."* ("phenomenology" = the engine's own line-1 word, the precise effective-not-fundamental
+  term, matches the synthetic ceiling; anti-pretentious by construction.)
+- **Letters:** keep "MPA" as citation handle; state etymology (MPC Calculus → MPA Algebra, the Calculus→Algebra
+  shift = the first deflation) + the deflation **once, as credential**. Do NOT lead with the acronym expansion
+  ("Propositional Algebra" names only the structural half; the live soul is the character projection).
+- **"Propositional" is vestigial** (live work is dynamics, not logic) — FLAGGED for a deliberate future rename
+  decision WITH Ron, explicitly OUT of scope for §0.
+- **Confirm the MPC→MPA etymology with Ron** before stating it as fact — it is inferred (the lineage doc Ron
+  pasted + repo names `mpc-*`/`mpa-*`), not verified in canon ("MPA" is undefined in every live doc).
+
 ---
 
 ## DISCIPLINE GUARDRAIL (so the layer doesn't get second-guessed)
