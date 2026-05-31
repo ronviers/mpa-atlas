@@ -110,10 +110,12 @@ Dynamical consequence: $k_{\text{frust}}$ — stationary state irreducibly NESS,
 
 **Verdict** (receipts §gFDR two-frame `proven`): *same regime verdict wherever both frames are computable.* Numerical corroboration: one real substrate (class-B laser — both flag NESS) and one synthetic positive control (`driven_ring`, closing $\langle\sigma\rangle=J\cdot\mathcal{A}$ to verification precision); $\mathcal{T}\ge1$ wherever a current exists, near-saturated on limit cycles, loose on foci.
 
+**Closed (2026-05-31, Tier-B):**
+- *Exact magnitude identity* — **CLOSED.** $V_{\text{ext}}=\langle\sigma\rangle=J\cdot\mathcal{A}=2\omega_0^2/\kappa$ to machine precision across all three frames on the rotational-OU testbed (full velocity-form Harada–Sasa integral, residue-calculus closed form; numeric residual $=$ the analytic $1/\omega^2$ tail). Receipts §gFDR-magnitude.
+- *τ-window reconciliation* — **CLOSED.** $\mathcal{T}$ is $\tau$-independent past the small-$\tau$ transient (the $\tau$'s cancel; 1.2% spread) — the τ-absorbed (canonical) and τ-explicit forms are one quantity, the choice conventional ($\tau=$ NESS natural averaging window). `mpa-conform/scripts/two_frame_magnitude.py`.
+
 **Open**:
-- *τ-window reconciliation* — `mpa_frontier.md` `τ-window-reconciliation` `[sharpening]`. Two formulations of $\mathcal{T}$ in working notes (τ-absorbed canonical vs τ-explicit handoff) must agree on one form.
-- *Exact magnitude identity* — the velocity-form Harada–Sasa integral closing $V_{\text{ext}}=\langle\sigma\rangle=J\cdot\mathcal{A}$ numerically. (Refinement, not a gate; the verdict-level claim is already promoted.)
-- *Self-probe payoff instance* — a real substrate where $\mathcal{T}$ recovers a verdict the external frame cannot, demonstrating the intrinsic-reference advantage.
+- *Self-probe payoff instance* — a real substrate where $\mathcal{T}$ recovers a verdict the external frame cannot, demonstrating the intrinsic-reference advantage. (Substrate-gated — see `engine_readiness_assessment.md`.)
 
 **Falsifier**: a substrate where, both probes feasible at the same operating point, $\mathcal{T}$ and $X$ give *contradictory* regime verdicts (engine `TWO-FRAME CONSTRUCTION`; receipts §gFDR verdict-agreement). The architectural commitment carries a sharper, dual falsifier — the *iff-chain break*: frame machinery works and verdict-agreement holds, yet no frustrated triad in the coupling graph (engine `TWO-FRAME CONSTRUCTION` § FALSIFY; receipts §Two-Frame Construction; promoted to the core 2026-05-30 via `battery:sign-interior` RV1 on RPS — receipts §commit-line crossing).
 
