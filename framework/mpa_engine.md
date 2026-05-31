@@ -34,8 +34,6 @@ First-contact dictionary: the load-bearing nouns, named before the formalism use
 * **gauge** — a node-sign relabeling that leaves the physics unchanged; *gauge-invariant* = survives all relabelings (real structure); *gauge-irremovable* = a sign no relabeling can erase (the protected bit). (→ TWO FACES.)
 * **metabolize / subtractive** — MPA adds no mathematics; it *imports* established results and re-reads them in one coordinate system. All content is in the bindings and their over-determination, never in invented apparatus. (→ WHAT MPA IS.)
 
-*Lineage.* MPA is the deliberately scaled-down descendant of *Metastable Propositional Calculus* — a far larger earlier framework, cut back by its authors to this disciplined core. Most frameworks inflate; this one was peeled. The deflation is the credential, not an embarrassment.
-
 ---
 
 ## PARAMETERS
@@ -130,15 +128,13 @@ Independence is load-bearing: the sign-face is the source of $k_{\text{frust}}$'
 * **Affinity** $\mathcal{A}:=\oint_C v/D=\ln(\prod_+k/\prod_-k)$ (nats), gauge-invariant. $\mathrm{spec}(M)$ complex-conjugate pair $\Leftrightarrow\mathcal{A}\ne0$.
 * Stationary state irreducibly NESS = topologically-forced circulating current, broken detailed balance. **Invariant = complex spectrum (irreducible rotation), not fixed-point non-existence.** Sub-regimes: $\mathrm{Re}<0$ stable circulating focus ($J\ne0$); $\mathrm{Re}>0$ repelling focus + attracting limit cycle.
 * **Affinity vs magnitude**: drive-independence lives in $\mathcal{A}$ (forced $\ne0\ \forall D$); magnitude $J_{ss}$ flows with chit.
-* **COMMITMENT** (onset-necessity; *not* generativity, *not* determinism): protected circulation ($\mathcal{A}\ne0$, removable only by edge deletion) $\Rightarrow$ a triad in the coupling graph. This is the **topology $\to$ frame** direction of the two-frame iff-chain (self-probe defined $\Leftrightarrow J\ne0 \Leftrightarrow \mathcal{A}\ne0 \Leftrightarrow$ triad); the **frame $\to$ topology** direction is `TWO-FRAME CONSTRUCTION`. Mutually entailed — killing either direction kills both, but each direction is independently falsifiable.
-* **FALSIFY**:
-  * one real substrate sustaining protected circulation ($\mathcal{A}\ne0$, removable only by rewiring) with **no** triad;
-  * $J$ becomes drive-noise-dependent OR resolves to detailed balance (note: drive-dependent *magnitude* is legal);
-  * drive-sweep — titrate drive $\to0$, $\lvert$current$\rvert\to0$ while **sign stays invariant**; a sign flip $\Rightarrow$ sign was drive-set, not protected $\Rightarrow$ invalid. Three fatal nulls: balanced network / 2-component bistable / detailed balance.
+* **CENTRAL COMMITMENT** (a claim MPA holds as likely true; onset-necessity, *not* generativity, *not* determinism): protected circulation ($\mathcal{A}\ne0$, removable only by edge deletion) $\Rightarrow$ a triad in the coupling graph. The **topology $\to$ frame** direction of the two-frame iff-chain (self-probe defined $\Leftrightarrow J\ne0 \Leftrightarrow \mathcal{A}\ne0 \Leftrightarrow$ triad); the **frame $\to$ topology** direction is `TWO-FRAME CONSTRUCTION`. The iff-chain ties the two directions; each is independently testable. *(Refutation conditions: see FALSIFIERS.)*
 
 ---
 
-## TWO-FRAME CONSTRUCTION — the FDR architectural twin of $k_{\text{frust}}$ + Central Commitment
+## TWO-FRAME CONSTRUCTION — the FDR reading
+
+*A claim MPA holds as likely true. Refutation conditions consolidated in FALSIFIERS.*
 
 * **External frame** — amplitude $\times$ probe field $\to$ FD ratio $X$. **Substrate-conditional**: requires a probe matched to the substrate; defined wherever a probe couples.
 * **Self-probe frame** — current $J\times$ intrinsic affinity $\mathcal{A}$ (nats) $\to$ tightness $\mathcal{T}=\langle\sigma\rangle\mathrm{Var}(J)/(2\langle J\rangle^2)\ge1$; core $\mathrm{SNR}_J=\langle J\rangle^2/\mathrm{Var}(J)\le\langle\sigma\rangle/2$. **Intrinsic**: no probe; affinity in nats by construction.
@@ -305,13 +301,13 @@ Limit-cycle trail $\to$ rhythm primitive (closed-loop FDR). Hierarchical kernel 
 
 ---
 
-## FALSIFIERS — consolidated kill conditions
+## FALSIFIERS — consolidated refutation conditions
 
 Canonical checklist; each = a predicted measurement on a named substrate/class. (Inline `FALSIFY:` tags above are the same conditions in context; this is the single roll-up.)
 
 * **Surface-code** (primary positive instance): syndrome FDR shows unit slope sub-threshold (no aging signature), OR locus shape persists across threshold (no $s\to r$ migration).
 * **Topological bit**: protected sign requires a per-time maintenance cost scaling with held duration (amplitude bit in disguise), OR chirality flips along a continuous path below $1\,\text{ch}$.
-* **Central commitment**: a real substrate sustaining protected circulation ($\mathcal{A}\ne0$, removable only by rewiring) with **no** triad; OR $J$ drive-noise-dependent / resolving to detailed balance; OR drive-sweep produces a sign flip (sign was drive-set, not protected).
+* **Central commitment**: a real substrate sustaining protected circulation ($\mathcal{A}\ne0$, removable only by rewiring) with **no** triad; OR $J$ drive-noise-dependent / resolving to detailed balance (drive-dependent *magnitude* is legal); OR drive-sweep produces a sign flip (sign was drive-set, not protected). Three fatal nulls: balanced network / 2-component bistable / detailed balance.
 * **Capacity ceiling**: soft substrate showing sharp Hopfield-snapping, OR hard-cutoff substrate showing soft tails.
 * **Asymptotic closure**: any observable attaining exactly $0$ or $1$ at a finite, non-degenerate operating point (NaN tripwire).
 * **Precision tightness**: nominally same-class substrates exhibiting arbitrary $T$.
@@ -324,9 +320,9 @@ Canonical checklist; each = a predicted measurement on a named substrate/class. 
 * **Dissipative structures**: Turing three-condition failure (non-reciprocity + autocatalysis + differential diffusion).
 * **Control**: habit-extinction not Caputo $\beta_{\text{mem}}<1$ on variable-ratio schedules; OR auto-tuning $W$ off the $w_i=\gamma_{\text{ref}}/\gamma_{s,i}$ form.
 * **Active matter**: high-Péclet clustering at $\gamma_{AB}\ge0$ without swim-pressure (MIPS).
-* **Two-Frame Construction** (three independent kill conditions; mutually entailed with the Central Commitment via the iff-chain — killing any kills both claims):
+* **Two-Frame Construction** (three independent refutation conditions; tied to the Central Commitment via the iff-chain — refuting any refutes both):
   * *verdict-disagreement* — $\mathcal{T}$ and $X$ contradict at the same operating point where both are computable;
-  * *iff-chain break* (sharpest, architectural) — both frames defined and verdict-agreeing on a real substrate, yet no frustrated triad in the coupling graph;
+  * *iff-chain break* (sharpest) — both frames defined and verdict-agreeing on a real substrate, yet no frustrated triad in the coupling graph (minimal protected cycle $N\ne3$, or imbalance gauge-removable);
   * *definedness-asymmetry collapse* — self-probe and external definedness coincide across operating points (no topological signal in frame existence).
 * **Deep-$c$ phase-lock collapse**: over-provisioned holdings ($Q\to0$, $K_{AB}\to1$) lose multi-mode independent-memory capacity (named substrate owed).
 
