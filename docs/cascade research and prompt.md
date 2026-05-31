@@ -708,3 +708,479 @@ chiral plane. Clean spectral ordering confirming criterion (d): **LV (Re = 0, fr
 
 ## returned research — round 2 (paste model responses below)
 
+
+
+model a:
+Your screening has already eliminated most of the standard examples. After applying your four filters simultaneously, the candidate set becomes surprisingly small.
+
+The key point is that **three properties that are often conflated are actually independent**:
+
+1. **Spontaneous chirality** (± handedness selected from a parity-symmetric model).
+2. **Existence of an internal cyclic current** (a limit cycle in order-parameter space).
+3. **Gap of the phase/chiral mode** (finite decay rate, not Goldstone-soft).
+
+Most famous systems give you only two of the three.
+
+---
+
+# First: a correction to the framing
+
+You are treating the "chiral mode" as if it were generically analogous to a Goldstone mode.
+
+That is true only when the cycle comes from a continuous symmetry.
+
+For a stable limit cycle, the phase mode is neutrally stable because time-translation symmetry along the cycle produces a Floquet multiplier exactly equal to 1.
+
+In other words:
+
+* continuous phase symmetry → soft phase mode,
+* limit cycle → neutral Floquet phase mode,
+* discrete chirality (CW vs CCW) → no Goldstone theorem.
+
+The relevant object is therefore not
+
+[
+\lambda_{\rm chiral}
+]
+
+of a Goldstone sector, but rather the eigenvalue controlling transitions between the two handed attractors.
+
+If parity is only (Z_2),
+
+[
+\mathrm{CW} \leftrightarrow \mathrm{CCW},
+]
+
+that mode can indeed be strongly damped.
+
+This is the first place where your framing is slightly loose.
+
+---
+
+# The strongest known family
+
+## Nonlinear optical microresonators with spontaneous CW/CCW selection
+
+The cleanest experimentally demonstrated example I know is the Kerr microresonator work of Xiao, Ge, Gong and collaborators. A parity-symmetric whispering-gallery resonator develops spontaneous preference for clockwise or counterclockwise circulation even though the cavity itself is mirror symmetric. ([arXiv][1])
+
+The order parameter is
+
+[
+\psi = (a_{\rm CW},a_{\rm CCW}),
+]
+
+so the circulation occurs in mode space, not physical-space rotation.
+
+The broken symmetry is
+
+[
+a_{\rm CW}\leftrightarrow a_{\rm CCW}.
+]
+
+The attractors are:
+
+* CW-dominated state,
+* CCW-dominated state.
+
+Neither is imposed by microscopic chirality. ([arXiv][1])
+
+### Why it matches your filters
+
+**Spontaneous?**
+
+Yes. Handedness emerges through nonlinear symmetry breaking. ([arXiv][1])
+
+**Internal cycle?**
+
+Mostly yes.
+
+The relevant circulation is among optical mode amplitudes rather than a mechanical rotation.
+
+**Gapped chiral mode?**
+
+Potentially yes, and this is the important part.
+
+The symmetry-breaking bifurcation is associated with a non-Hermitian mode structure.
+
+Near the bifurcation/EP the restoring eigenvalue becomes small.
+
+Away from it, the parity-restoring eigenvalue is finite and can be comparable to amplitude relaxation.
+
+That is exactly the regime you are asking for.
+
+---
+
+# Even closer to your desired picture
+
+## Nonreciprocal oscillator pairs and networks
+
+The modern non-Hermitian/nonreciprocal literature essentially contains your mechanism already.
+
+The generic picture is:
+
+[
+\dot x = Mx + N(x)
+]
+
+with a non-normal, nonreciprocal Jacobian.
+
+Near the exceptional point:
+
+* chiral mode softens,
+* eigenvectors coalesce.
+
+Far from the EP:
+
+* finite damping gap,
+* finite relaxation rate,
+* strong robustness to disorder.
+
+This is precisely why the distance from the EP becomes the natural control parameter. ([PMC][2])
+
+What you are calling
+
+> robustness governed entirely by how far each unit sits from marginal
+
+is actually very close to standard non-Hermitian intuition.
+
+The spectral gap
+
+[
+\delta = -\Re(\lambda_{\rm chiral})
+]
+
+acts as the restoring scale.
+
+The larger (\delta), the more local axis disorder is tolerated before collective locking is lost.
+
+That part of your framework looks physically reasonable.
+
+---
+
+# Odd-elastic / odd-viscous active materials
+
+Here I think your screening is mostly correct.
+
+The odd-elasticity literature contains many examples of gapped oscillatory modes.
+
+For example, chiral active columnar phases support oscillations whose frequencies remain finite at zero wavenumber. ([PMC][3])
+
+Likewise nonreciprocal active fluids exhibit EP-separated stable regions with finite damping away from the exceptional lines. ([PMC][2])
+
+However:
+
+### Problem
+
+These systems almost always possess microscopic chirality.
+
+They are generally built from:
+
+* spinning particles,
+* imposed torques,
+* chiral constituents.
+
+Thus they fail your spontaneity requirement.
+
+---
+
+# Chemical-reaction candidates
+
+The most intriguing natural candidate is actually not active matter but driven reaction networks.
+
+Piñeros & Tlusty showed spontaneous chiral symmetry breaking in a parity-symmetric driven chemical network. ([PMC][4])
+
+The chirality is not imposed.
+
+The attractors are selected dynamically.
+
+The current lives in concentration space rather than real space.
+
+This is conceptually much closer to your desired object. ([PMC][4])
+
+However:
+
+### Missing evidence
+
+I do not know of a published spectral analysis showing that the chirality-restoring mode is demonstrably far from marginal and comparable to amplitude relaxation.
+
+The symmetry breaking is there.
+
+The internal current is there.
+
+The "far-from-EP gapped chiral mode" criterion remains unverified.
+
+---
+
+# Your hierarchy/disorder question
+
+This part maps almost directly onto synchronization theory.
+
+Suppose each unit has:
+
+[
+\lambda_{\rm chiral}=-\delta
+]
+
+for chirality restoration.
+
+Then introduce disorder in preferred local chiral axes with width (\sigma).
+
+A coupled network generally exhibits:
+
+[
+K > K_c(\sigma,\delta)
+]
+
+for collective locking.
+
+The qualitative prediction
+
+[
+K_c \downarrow
+\quad\text{as}\quad
+\delta \uparrow
+]
+
+is exactly what one would expect.
+
+A strongly damped local chiral sector behaves like a rigid rotor.
+
+A nearly marginal one behaves like a floppy rotor.
+
+Your proposed dependence on distance from EP is therefore plausible.
+
+What I do **not** know is a theorem saying robustness is governed *entirely* by (\delta).
+
+Typically non-normality, network topology, and noise strength also enter.
+
+---
+
+# My assessment after applying all four filters
+
+If I score the candidates against your requirements:
+
+| System                          | Spontaneous | Internal cycle           | Gapped chiral mode             | Realized   |
+| ------------------------------- | ----------- | ------------------------ | ------------------------------ | ---------- |
+| Flocks/nematics                 | ✓           | partly                   | ✗ Goldstone                    | ✓          |
+| Spinner/odd-viscous matter      | ✗           | mostly physical rotation | ✓                              | ✓          |
+| Chemical chiral networks        | ✓           | ✓                        | ?                              | ✓          |
+| Kerr microresonator chirality   | ✓           | ✓                        | likely ✓ away from bifurcation | ✓          |
+| Nonreciprocal oscillator arrays | can be ✓    | ✓                        | ✓                              | engineered |
+
+The strongest match to your specification is not a natural material.
+
+It is:
+
+> **A parity-symmetric nonreciprocal oscillator network (or photonic mode network) exhibiting spontaneous CW/CCW attractor selection, operated well away from the exceptional point.**
+
+That gives:
+
+* spontaneous handedness,
+* internal order-parameter circulation,
+* discrete (Z_2) chirality,
+* finite damping gap,
+* tunable distance from EP,
+* straightforward coarse-graining.
+
+In other words, the object you are looking for seems to sit much closer to the modern non-Hermitian/nonreciprocal oscillator literature than to traditional active-matter chirality.
+
+The most important conclusion from your screening may be that **"spontaneous internal chirality with a strongly gapped chiral mode" is not a generic active-matter phenomenon at all; it is closer to a bistable non-Hermitian oscillator phase operating away from criticality.** ([PMC][2])
+
+[1]: https://arxiv.org/abs/1607.01459?utm_source=chatgpt.com "Experimental demonstration of spontaneous chirality in a nonlinear microresonator"
+[2]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11087745/?utm_source=chatgpt.com "Nonreciprocity and odd viscosity in chiral active fluids - PMC"
+[3]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11497608/?utm_source=chatgpt.com "Chirality and odd mechanics in active columnar phases - PMC"
+[4]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9042824/?utm_source=chatgpt.com "Spontaneous chiral symmetry breaking in a random driven chemical system - PMC"
+
+model b:
+Your screening is surgically precise, and your diagnosis of the standard literature is spot on. You’ve correctly identified the fatal flaws in the usual "go-to" systems: Lotka-Volterra models are structurally marginal (structurally unstable), explicitly driven rings are trivially non-spontaneous, and standard active matter swarms rely on physical real-space rotation.
+
+You are hunting for a spontaneous, discrete symmetry-breaking into an internal phase-space limit cycle, creating a fully gapped chiral mode far from any critical exceptional point (EP). This is a beautiful and stringent constraint.
+
+Here is the breakdown of the physical mechanisms and the concrete systems that survive your gauntlet.
+
+---
+
+### 1. The Decisive Signature: Gapping Mechanisms
+
+Your framing of the gapping mechanisms is highly accurate, but requires one critical correction regarding continuous symmetries.
+
+* **(i) Non-reciprocal couplings far from the EP:** *Valid, but with a caveat.* As mapped out by Fruchart et al. (*Nature* 592, 2021), spontaneous parity-time ($\mathcal{PT}$) symmetry breaking into a chiral state happens at an exceptional point. To get a heavily *gapped* chiral relaxation mode ($\text{Re}(\lambda) \ll 0$), you must tune the non-reciprocal system deep into the broken phase. However, if the internal space has a continuous $U(1)$ symmetry, you will still suffer from a soft Goldstone phase mode. You need a discrete internal lattice to gap the phase entirely.
+* **(ii) Discrete ($Z_N$ / $C_N$) internal chirality:** **This is your winning mechanism.** If you couple $N$ units symmetrically, the macroscopic steady state can break into a "splay state" (a discrete vortex in the network's phase space). Because the symmetry breaking is $Z_2$ (a choice between a clockwise or counterclockwise phase-firing sequence), the chiral choice has *no continuous rotational symmetry to slide along*. The chiral relaxation mode is strictly gapped, proportional to the coupling strength.
+* **(iii) Overdamped odd-viscoelastic regimes:** *Flagged as a mismatch.* Odd elasticity almost exclusively manifests in physical, real-space deformations (e.g., active metamaterials, robotic swarms, dense crowds). It does not fit your internal-space requirement.
+
+### 2. Spontaneity
+
+To achieve true spontaneity without built-in torques or DMI, the system must rely on the **discrete splay state** mechanism. The physical couplings between the units must be purely bidirectional, reciprocal, and symmetric (e.g., $K_{AB} = K_{BA}$). Starting from a parity-symmetric initial state, the system undergoes a spontaneous pitchfork/Hopf bifurcation in the rotating frame of the oscillators, selecting one of the degenerate phase-sequencing routes. The handedness is strictly self-selected.
+
+### 3. Internal vs. Physical Rotation
+
+In these systems, the physical units are completely stationary in real space. The cyclic "current" is the sequential advancement of their internal order parameters (e.g., a chemical concentration peak, a localized optical phase, or a magnetic spin angle). The cycle lives entirely in the state space of the network graph.
+
+### 4. Hierarchy + Disorder (The Locking Range)
+
+This requirement is perfectly captured by the physics of **frustrated Kuramoto networks**. When your local units have a disorder in their natural frequencies ($\Delta \omega$), the macroscopic chiral state (the splay sequence) survives as long as the symmetric coupling $K$ exceeds a critical threshold $K_c$. This finite locking range guarantees the system is coarse-grainable; the macroscopic energy gap shields the collective chiral order parameter from local axis disorder and noise.
+
+---
+
+### 5. Single Best Target System & Data
+
+Given your four filters, the absolute strongest realizations exist in the domain of symmetrically coupled nonlinear limit-cycle oscillators.
+
+#### The Natural / Experimental Target: Coupled Belousov-Zhabotinsky (BZ) Micro-Droplets
+
+Seth Fraden’s group (Brandeis University) has extensively realized your exact requirements by trapping Belousov-Zhabotinsky chemical droplets in discrete, symmetric geometries (e.g., rings of $N=3$ or $N=4$).
+
+* **The Setup:** The stationary droplets are coupled via the symmetric diffusion of inhibitory molecules.
+* **The Internal Current:** Fluorescence imaging reveals the internal chemical concentrations peaking in a spontaneous $1 \rightarrow 2 \rightarrow 3$ or $1 \rightarrow 3 \rightarrow 2$ firing sequence.
+* **The Gapped Mode:** Because the coupling is inhibitory, the synchronized state is highly unstable, violently pushing the system into the discrete $Z_2$ splay state. The relaxation back to the firing sequence after a transient optical perturbation is rapid and exponential, proving the chiral mode is massively gapped and heavily damped.
+* **Citations:** * Tompkins et al., "Testing Turing's theory of morphogenesis in chemical cells," *PNAS* 111 (12) 4397-4402 (2014).
+* Nkomo et al., "Phase locking of highly nonlinear integrate-and-fire oscillators," *Phys. Rev. Lett.* 110, 244102 (2013).
+
+
+
+#### The Minimal Engineered Target: Frustrated Spin-Torque or Nanolaser Arrays
+
+If you want a purely analytical, mathematically crisp engineered system, your target is a $C_3$ symmetric ring of **Spin-Torque Nano-Oscillators (STNOs)** or **semiconductor nanolasers** tuned to purely repulsive (anti-phase) coupling.
+
+The governing dynamics are a frustrated Kuramoto network:
+
+
+$$\frac{d\theta_i}{dt} = \omega_i + \frac{K}{N} \sum_{j=1}^{N} \sin(\theta_j - \theta_i + \alpha)$$
+
+* **How it works:** By tuning the phase frustration $\alpha$ near $\pi$ (repulsive coupling) with a completely symmetric $K$, the system perfectly rejects the in-phase state and falls into a gapped $Z_2$ chiral splay state where $\Delta \theta = \pm 120^\circ$.
+* **The Gap:** The Lyapunov exponents for this system are analytically calculable. Because the chiral choice is a discrete transition between the $+120^\circ$ and $-120^\circ$ basins, the gap for the chiral relaxation mode scales as $\text{Re}(\lambda_{\text{chiral}}) \sim -K$. It is entirely divorced from any critical exceptional point, sitting at the bottom of a deep, gapped potential well in the rotating frame.
+model c:
+
+I'll search for the specific literature on non-reciprocal and non-Hermitian systems with gapped chiral modes, spontaneous parity breaking, and internal-space cyclic currents.
+
+
+Below is a surgical walk through the literature, answering your five questions in order and flagging where your framing needs tightening.
+
+---
+
+### 1. The decisive signature: gapped chiral/rotational relaxation far from an exceptional point
+
+Your requirement is actually **two independent constraints** that are easy to conflate: (a) the mode must be far from an exceptional point (finite damping gap, not square-root soft), **and** (b) it must not be protected by a continuous symmetry (otherwise it is Goldstone-like regardless of distance from the EP). A non-reciprocal system deep in its ordered phase can satisfy (a), but if the ordered phase breaks a continuous O(2) symmetry, the phase fluctuation along the limit cycle remains marginal. To get a gapped "chiral" relaxation mode you need the discrete-symmetry route.
+
+**Confirmed mechanisms and concrete systems:**
+
+| Mechanism | Realized / realizable system | Spectral signature |
+|---|---|---|
+| **(i) Non-reciprocal couplings deep in the ordered phase** | Non-reciprocal phase transitions in multi-population flows (e.g. two-component active matter, neural Wilson–Cowan models, or the predator-prey cycles studied by Weis *et al.*) | In the chiral phase the order parameter executes a limit cycle. Deep in the phase (far from the EP bifurcation), the radial/amplitude mode is gapped, but the **phase mode along the cycle is marginal if the symmetry is continuous**. |
+| **(ii) Discrete (Z₂ / Cₙ / Zₙ) chirality with no continuous rotational symmetry** | **Non-reciprocal clock model** (minimally engineered: a lattice of Zₙ phases with antisymmetric inter-site coupling). Because the symmetry is discrete, the "phason" is gapped by design. The gap is set by the discrete-symmetry-breaking scale, comparable to the amplitude gap. | Gapped phason (Re λ_chiral ≈ Re λ_amplitude ≪ 0). No Goldstone mode. |
+| **(iii) Overdamped odd-viscoelastic bulk waves** | Odd elastic solids immersed in odd solvents (Lee *et al.*, 2025; Fruchart, Scheibner & Vitelli, 2023). | In the overdamped limit, odd elasticity allows propagating displacement waves with gapped dispersion, but the chirality is **built-in** by active torques, not spontaneous. |
+
+**Framing correction:** In the Fruchart–Hanai–Littlewood–Vitelli theory of non-reciprocal phase transitions, the chiral phase is born at an exceptional point (EP). The eigenvalue gap vanishes as |δ|^{1/2} at the transition. Deep in the ordered phase the linearized eigenvalues have finite negative real parts, but if the symmetry is O(2) the phase coordinate along the limit cycle is a zero mode. To obtain a gapped chiral relaxation mode you must break the continuous symmetry down to discrete; distance from the EP alone is insufficient.
+
+---
+
+### 2. Spontaneity (handedness self-selected from a parity-symmetric start)
+
+Of the candidates above, only the **non-reciprocal phase-transition frameworks** and certain **reaction networks** give true spontaneous parity breaking.
+
+- **Fruchart *et al.*, Nature 2021:** In the chiral phase, parity is spontaneously broken: the two order-parameter components rotate at constant speed Ω_ss with a fixed relative angle, either clockwise or anticlockwise, selected by the initial condition. The microscopic dynamics are parity-symmetric; the handedness is emergent.
+- **Weis *et al.*, 2025 (generalized multi-population):** For N=3 populations, a Z₂ conjugation symmetry is spontaneously broken in the 2-chiral phase. The system chooses one of two chiral cycles.
+- **Random driven chemical system (Nature Communications 2022):** A fully symmetric chemical reaction network under strong random driving spontaneously bifurcates into a chiral steady state (R or S channel with equal probability). This is spontaneous, but note it is a **static chiral fixed point**, not a persistent limit cycle.
+
+The odd-viscoelastic systems (iii) fail this filter: they require microscopic active torques (built-in chirality) to generate odd elasticity.
+
+---
+
+### 3. Internal vs. physical rotation
+
+You want the cycle to live in **order-parameter space**, not in real-space angular momentum.
+
+- **Fruchart / Weis class:** The cycle is in the space of complex order parameters (e.g., ⟨ψ_A⟩, ⟨ψ_B⟩) or population fractions. The rotation is a phase rotation of the order parameter, not a physical rotation of the constituents. This satisfies your criterion.
+- **Driven-dissipative condensate lattice (Belyansky *et al.*, 2025):** The traveling wave is a phase pattern of the complex bosonic field; again internal order-parameter space.
+- **Random driven chemical system:** The chiral state is a concentration imbalance in internal chemical space.
+- **Odd elasticity / spinner lattices:** These involve real-space physical rotation or torque. They fail this filter.
+
+---
+
+### 4. Hierarchy + disorder: discrete symmetry, multi-scale structure, finite locking range
+
+This is where the literature is thinnest. The existing non-reciprocal phase-transition work (Fruchart, Avni *et al.*) is mostly mean-field or focuses on continuous O(2) swap phases in 3D. For a **finite locking range** against disorder in the local chiral axis, you need a discrete-synchronization (Kuramoto-like) mechanism on a lattice.
+
+**The closest published structures:**
+- **Nonreciprocal Ising model (Avni *et al.*, 2023/2024):** In d=3, the swap phase is O(2)-symmetric and coarse-grainable, but it is destroyed in d=2 by defect proliferation. The discrete Ising symmetry gives a finite correlation length, but the swap phase itself is a continuous rotation.
+- **Discrete-symmetry active matter (Chatterjee & Karmakar, 2025):** Four-state active matter with non-reciprocal inter-species couplings shows discrete internal states and droplet nucleation, but the "chirality" here is physical real-space motion, not internal.
+
+**What you need:** A lattice of units each carrying a discrete internal phase (Zₙ clock variables) with non-reciprocal coupling that favors a directed cycle. Disorder in the local chiral axis appears as random bond twists. A finite K_c (Kuramoto-like threshold) exists because the discrete symmetry allows pinning. This has **not** been fully worked out in the literature as a single unified model.
+
+---
+
+### 5. Single best target + data
+
+**Verdict: No natural system passes all four filters simultaneously.** The combination of spontaneous internal chiral cycling + discrete symmetry + gapped relaxation far from EP + disorder robustness is not yet realized in a single experiment.
+
+**Single strongest natural-ish candidate:**
+- **Random driven chemical reaction networks** (Nature Comm 2022) give spontaneous internal chiral symmetry breaking, but they settle to a **static chiral fixed point**, not a cyclic current. The relaxation to the chiral state is gapped, but there is no persistent limit cycle.
+
+**Minimal engineered system that would satisfy all four:**
+
+> **A non-reciprocal discrete oscillator array on a lattice (e.g., Zₙ clock model or Stuart-Landau oscillators with quantized phases), tuned deep into its ordered chiral phase, far from the critical exceptional point.**
+
+**Design recipe:**
+1. **Unit:** Each site carries a discrete phase θ_i ∈ {0, 2π/n, ..., 2π(n-1)/n} (Zₙ clock) or a complex amplitude z_i.
+2. **Non-reciprocal coupling:** Antisymmetric nearest-neighbor coupling J_{ij} ≠ J_{ji} (e.g., directional phase lag). This breaks detailed balance and can stabilize a chiral limit cycle.
+3. **Tuning:** Operate at coupling strength well above the EP bifurcation (J ≫ J_c), so all linearized eigenvalues have Re λ ≈ -γ comparable to the amplitude relaxation rate.
+4. **Discrete symmetry:** Zₙ ensures the phason is gapped. The gap Δ_phason ~ J/n² (set by the discrete symmetry breaking scale).
+5. **Disorder:** Introduce random local phase twists δ_i in the non-reciprocal bonds. Because the symmetry is discrete, there is a finite pinning/locking range before the collective chiral mode is destroyed.
+
+**Observable signatures:**
+- **(i) Internal chiral current:** Time-resolved measurement of the phase rotation at each site (e.g., in topolectrical circuits, the voltage phase; in photonic lattices, the optical phase). The phase winds unidirectionally around the order-parameter cycle.
+- **(ii) Gapped relaxation mode:** Impulse-response spectroscopy. Perturb the phase of the order parameter and measure the relaxation. You should see a single exponential decay with rate |Re λ| comparable to the amplitude relaxation, and no slow (near-marginal) branch.
+
+**Platforms:** Topolectrical circuits, photonic lattices with gain/loss engineering, or synthetic cold-atom lattices with reservoir-engineered non-reciprocal hopping are the most mature platforms for this kind of discrete non-Hermitian lattice.
+
+---
+
+### Summary of where your framing is non-standard or loose
+
+| Your phrasing | Correction |
+|---|---|
+| "Gapped chiral mode far from EP" | Distance from the EP controls the damping of the *radial* mode, but if the ordered phase has a continuous symmetry, the *phase* mode along the limit cycle is Goldstone-like regardless of distance from the EP. You need **discrete symmetry** to gap it. |
+| "Internal cyclic current" | Be precise whether you mean a limit cycle (persistent rotation) or a static chiral fixed point. The chemical system (Nature Comm 2022) achieves the latter, not the former. |
+| "Kuramoto-like K_c for disorder in the local chiral axis" | This is well-defined only for discrete phase variables. In continuous O(2) systems, disorder in the chiral axis is a random rotation symmetry; the locking problem is ill-posed without a discrete anchor. |
+| "Comparable damping to the longitudinal/amplitude mode" | In a discrete-symmetry limit cycle, the gapped phason and the amplitudeon are indeed expected to have comparable damping deep in the ordered phase. This is a sharp prediction. |
+
+If you want, I can write down the explicit lattice equations for the minimal engineered Zₙ non-reciprocal oscillator array and compute the linearized spectrum to confirm the gapped phason.
+
+---
+
+## SYNTHESIS — round 2 + the splay-cascade test (a TRIPLE OBSTRUCTION; 2026-05-30)
+
+**Round-2 correction (all 3, important):** "far from the EP" is only half — distance-from-EP gaps the
+*amplitude* mode, but a *continuous*-symmetry cycle keeps a soft *phase* (Goldstone/Floquet-neutral) mode
+regardless. To gap the *chiral* mode you need **discrete chirality (Z₂/Z_n)**. **Convergent candidate:** a
+**Z₂ splay state** in a repulsively-coupled C₃ oscillator ring — spontaneous CW/CCW firing-order, internal
+phase-space cycle, chiral mode gapped at Re ~ −K/2; **realized** in coupled BZ micro-droplets (Fraden;
+Tompkins PNAS 2014), engineerable as frustrated-Kuramoto / Z_n-clock / STNO / nanolaser rings.
+
+**Probe + test (`mpa-conform/scripts/splay_cascade.py`, fig `splay_cascade.png`):** the frustrated-Kuramoto
+C₃ ring DOES self-light a Z₂ splay (120°, both basins exactly 50/50) with a **gapped** chiral relaxation —
+it passes all four *single-unit* filters. **But it does NOT cascade.** Coupling three splay-rings by an
+even-parity C₃-covariant inter-ring coupling and reducing onto the collective (per-ring global-phase)
+sector (Schur), the collective spectrum is **REAL — max|Im| = 0** — for covariant, uniform, AND achiral
+controls, at every κ. **No meta-cycle (+0).** (The naive "smallest-|Re|" readout reported 0.155 — that is
+the **intra-ring splay rotation**, intrinsic to a single ring, a fake-NaN artifact, not collective.)
+
+**Why — structural, the sharp result.** Seeding a meta-cycle needs an **antisymmetric** (complex-pair, so(3))
+part in the sub, so the Schur correction onto the collective is antisymmetric → a collective complex pair.
+The splay's chirality is **discrete** (the Z₂ firing order) with a **real** gapped linearization — *no*
+antisymmetric part — and an even-parity coupling of real-spectrum subs gives a **symmetric** collective
+Jacobian → real → +0. **Gapping-by-discreteness (the only route that self-lights AND gaps) kills the seed.**
+
+**THE TRIPLE OBSTRUCTION:** a cascade-closing substrate needs **self-light + gapped + complex-pair-seedable**,
+but the three are mutually frustrated — any *two* hold, never all three (in everything tried):
+- **homochiral** = self-light + seedable (complex pair), NOT gapped (weakly-damped, fragile — the #1 miss);
+- **Banach** = gapped + seedable, NOT self-light (drawn-in / synthetic);
+- **splay** = self-light + gapped, NOT seedable (discrete/real → +0).
+**Robustness (gapped) and seeding (antisymmetric complex pair) pull opposite ways for a self-lit substrate.**
+This is the real obstruction to closing `frustration-ascent`'s cascade — evidence toward its *bootstrap-blocked*
+✗ (the layer-2 generative bet may be structurally obstructed on self-lit substrates), sharper than "keep hunting."
+
+**Owed loopholes (before calling it a clean ✗):** (a) a *nonlinear* seed the linear-stability readout misses
+(the discrete chirality seeding a meta-cycle via a higher-order route); (b) a *base-only-self-lights* cascade
+where only the bottom level self-lights and higher levels are seeded by a complex-pair (Banach-like) sub. The
+splay stays a clean **single-unit** instance (self-light + gapped + BZ-realized) — it just does not platform.
