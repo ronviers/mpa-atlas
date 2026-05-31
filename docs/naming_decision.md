@@ -25,22 +25,25 @@ from a logic value to `k_frust`, a topological invariant. The three letters *are
 ## DECISION 1 — the honest identity (the line §0 opens with)
 
 > **MPA — a phenomenology of character in driven-dissipative systems.**
-> A *measurement discipline*: one coordinate system in which independently-established results are forced to
-> read together (tested by a collapse falsifier). An **effective description** — honestly, a better metaphor
-> than most, but a metaphor until real substrates give it footing — **not** claimed fundamental.
+> A *measurement discipline*: one coordinate system forcing established results to read together; an
+> **effective description** — not claimed fundamental.
+
+*(Ron's final wording, 2026-05-31. Tighter than the first draft: the earlier "a better metaphor than most, but
+a metaphor until real substrates give it footing" clause was cut — "effective description / phenomenology"
+already carries the full effective-not-fundamental humility **precisely**, so the metaphor clause was
+gilding. Say it once, exactly, don't hedge on top of words that already do the job.)*
 
 **Why this wording:**
 - **"phenomenology"** is the precise physics term for *effective-not-fundamental*, anti-pretentious **by
-  construction** (you call your own work a phenomenology to say "this is how it reads, not the final theory"),
-  and already in the engine's first line ("one phenomenology, two readings"). It is not a new claim — it
-  surfaces the framework's existing self-description. It also exactly matches the synthetic ceiling
+  construction**, and already in the engine's first line ("one phenomenology, two readings"). Not a new claim —
+  it surfaces the framework's existing self-description; matches the synthetic ceiling
   (`engine_readiness_assessment.md`).
+- **"effective description — not claimed fundamental"** is the whole humility, stated once. It does NOT
+  undersell (the framework has falsifiers and synthetic instances) and does NOT overclaim (data-gated on real
+  substrates) — "effective description" is the exact term that holds both.
 - **"character"** is the central coined noun (the audit's severity-A undefined term) — foregrounding it here
   doubles as its first definition-by-context.
-- **"measurement discipline, not a model"** is the engine's own most-modest self-framing (line 7) — lead with it.
-- **the "metaphor until footing" clause** honors Ron's brief exactly ("a better metaphor than most, should not
-  be pretentious") AND the readiness assessment's honesty — without underselling (the framework has falsifiers
-  and synthetic instances, which a mere metaphor lacks; "phenomenology" carries that nuance correctly).
+- **"measurement discipline"** is the engine's own most-modest self-framing (line 7) — lead with it.
 - Honors `feedback_no_anthropocentric_framing`: "character" here is the substrate-general deformation
   structure, not psychology — the §0 definition must make that explicit so the name can't be misread as
   personality/biology.
@@ -57,21 +60,35 @@ from a logic value to `k_frust`, a topological invariant. The three letters *are
   dynamics). A stranger told "Propositional Algebra" expects a logic and meets dynamics. So: expansion =
   etymology (stated once), identity = the phenomenology-of-character line (Decision 1).
 
-## DECISION 3 — flag, do not resolve: "Propositional" is vestigial
+## DECISION 3 — the new name is the CAPSTONE of the rewrite (Ron, 2026-05-31)
 
-The live work is **dynamics, not logic** — the propositional/logic framing is a fossil of the MPC era. A name
-faithful to current reality would not center "Propositional." BUT: renaming a published framework is a heavy,
-non-local act (citations, repos, DOI). **Flagged for a deliberate future decision WITH Ron**, explicitly out
-of scope for the §0 layer. Ron's standing `feedback_prefer_coined_names` may favor, eventually, a *coined
-display name* centered on **character** over any acronym expansion — but that is a branding decision for when
-the framework has real-substrate footing, not now. Until then: MPA stays, identity = Decision 1.
+The live work is **dynamics, not logic** — "Propositional" is a fossil of the MPC era, and a name faithful to
+current reality would not center it. **Decision: the framework gets its new name AFTER the rewrite, as the
+final act — "a new name puts a wrap on the project."** This is architecture, not just timing:
+- You don't name the finished thing until it's finished. The rewrite is what makes the framework finally
+  legible (the §0 layer + compelling prose); the **name is the capstone that says "this is now what it is."**
+- It resolves the "Propositional is vestigial" tension cleanly — the new name simply *is* the resolution,
+  earned by the rewrite, not a separate awkward rename decision bolted on.
+- **MPA stays as the working / citation handle THROUGH the entire rewrite** (published, DOI'd, cross-repo).
+  The coined name is the **last move**, chosen with Ron (his `feedback_prefer_coined_names` standing
+  preference applies — likely a coined display name centered on **character**, not an acronym expansion).
+- ⇒ **§0 carries NO naming weight.** It uses "MPA" plainly as the handle and states the lineage once. The
+  identity line (Decision 1) is the framing; the *name* itself is deferred to the capstone. This is freeing:
+  the layer doesn't have to solve the name, just use it.
 
 ## What the §0 layer should DO with this
 
-1. Open with the Decision-1 identity line (in the precise-naturalist voice — see `engine_layer_handoff.md`
-   §VOICE: declarative, names the object, no educator scaffold).
+1. Open with the Decision-1 identity line (precise-naturalist voice — see `engine_layer_handoff.md` §VOICE:
+   declarative, names the object, no educator scaffold).
 2. Define **character** immediately after (severity-A term; the identity line sets it up).
 3. State the lineage/deflation once (Decision 2) — as credential, not apology.
-4. Leave "Propositional" un-relitigated (Decision 3) — note it's vestigial only if a footnote is natural.
+4. Use "MPA" plainly as the handle; do NOT attempt a new name (Decision 3 — that is the rewrite's capstone).
+   A "Propositional is vestigial" footnote only if natural; otherwise leave it.
 5. Confirm the MPC→MPA etymology with Ron before stating it as fact (inferred here, not verified in canon —
    "MPA" is undefined in all live docs).
+
+## SEQUENCE IMPLICATION (update to the rewrite plan)
+
+The rewrite sequence (`vocabulary_refactor_spec.md` §Sequence) gains an explicit final step:
+**…→ first-contact §0 layer → public-facing prose rewrite → [CAPSTONE] the new name, chosen with Ron.**
+The name is no longer a mid-stream flagged decision; it is the deliberate last act that wraps the project.

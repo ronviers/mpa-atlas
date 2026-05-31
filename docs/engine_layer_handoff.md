@@ -130,22 +130,24 @@ across repos. Bring options, let Ron choose. (Note Ron's standing preference for
 descriptive accuracy — `feedback_prefer_coined_names` — which may favor a coined display name over a literal
 acronym expansion.)
 
-**DECIDED 2026-05-31 (Ron delegated; see `docs/naming_decision.md` — read it):** the name question was worked
-through with the lineage in hand. The framework **deflated** from *Metastable Propositional Calculus* (MPC — a
-full four-valued logic + separation theorem + quantum conjecture) to today's engine — *scaled down by its
-authors*, which is the **credential**, not an embarrassment. Locked recommendations:
-- **Identity (the §0 opening line):** *"MPA — a phenomenology of character in driven-dissipative systems. A
-  measurement discipline: one coordinate system forcing established results to read together; an effective
-  description — a better metaphor than most, but a metaphor until real substrates give it footing — not
-  claimed fundamental."* ("phenomenology" = the engine's own line-1 word, the precise effective-not-fundamental
-  term, matches the synthetic ceiling; anti-pretentious by construction.)
-- **Letters:** keep "MPA" as citation handle; state etymology (MPC Calculus → MPA Algebra, the Calculus→Algebra
-  shift = the first deflation) + the deflation **once, as credential**. Do NOT lead with the acronym expansion
-  ("Propositional Algebra" names only the structural half; the live soul is the character projection).
-- **"Propositional" is vestigial** (live work is dynamics, not logic) — FLAGGED for a deliberate future rename
-  decision WITH Ron, explicitly OUT of scope for §0.
-- **Confirm the MPC→MPA etymology with Ron** before stating it as fact — it is inferred (the lineage doc Ron
-  pasted + repo names `mpc-*`/`mpa-*`), not verified in canon ("MPA" is undefined in every live doc).
+**DECIDED 2026-05-31 (Ron; see `docs/naming_decision.md` — read it):** worked through with the lineage in
+hand. The framework **deflated** from *Metastable Propositional Calculus* (MPC — a full four-valued logic +
+separation theorem + quantum conjecture) to today's engine — *scaled down by its authors*, the **credential**,
+not an embarrassment. Final:
+- **Identity (the §0 opening line — Ron's wording):** *"MPA — a phenomenology of character in driven-dissipative
+  systems. A measurement discipline: one coordinate system forcing established results to read together; an
+  effective description — not claimed fundamental."* ("phenomenology" / "effective description" = the precise
+  effective-not-fundamental terms, the engine's own line-1 word, matching the synthetic ceiling; the earlier
+  "better metaphor / until footing" clause was cut as gilding.)
+- **The NEW NAME is the rewrite's CAPSTONE — deferred to the final act, chosen WITH Ron.** "A new name puts a
+  wrap on the project." So: **§0 carries NO naming weight** — it uses "MPA" plainly as the working/citation
+  handle and states the lineage once. Do NOT attempt a new name in §0. The capstone name (likely a coined,
+  character-centered display name per `feedback_prefer_coined_names`) is the deliberate LAST move, after the
+  prose rewrite. This resolves "Propositional is vestigial" cleanly — the new name *is* the resolution.
+- **Lineage in §0:** keep "MPA" as handle; state etymology (MPC Calculus → MPA Algebra, the Calculus→Algebra
+  shift = the first deflation) + the deflation **once, as credential**. Do NOT banner the acronym expansion.
+- **Confirm the MPC→MPA etymology with Ron** before stating it as fact — inferred (the lineage doc Ron pasted +
+  repo names `mpc-*`/`mpa-*`), not verified in canon ("MPA" is undefined in every live doc).
 
 ---
 
@@ -177,6 +179,9 @@ Per `vocabulary_refactor_spec.md` §Sequence:
    "tripwire," "fraying").
 4. **the first-contact layer (THIS handoff) → then the public-facing engine rewrite proper** — compelling
    prose, the §0 definitions, and (separate Ron decision) the telos preamble drawing on the parked north star.
+5. **[CAPSTONE] the new name** — chosen WITH Ron as the final act that wraps the project (a coined,
+   character-centered display name; MPA retained as citation handle). The name is deliberately LAST, not a
+   mid-stream decision — it is what says "this is now what it is" (`docs/naming_decision.md` Decision 3).
 
 **First action next session:** commit `docs/engine_definitional_gap_audit.md` (only uncommitted doc), then
 build §0 from it in the naturalist voice above, bringing the name-options to Ron before touching "MPA."
