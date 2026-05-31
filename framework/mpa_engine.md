@@ -1,5 +1,7 @@
 # MPA — ENGINE
 
+> **MPA — a phenomenology of character in driven-dissipative systems. A measurement discipline: one coordinate system forcing established results to read together; an effective description — not claimed fundamental.**
+
 One phenomenology, two readings on one finite-$D$ deformation of the Boolean ring: a **structural** projection (operator algebra) and a **continuous** projection (driven-dissipative dynamics), joined by the bridge identity $\lambda_A \approx L - G_0$. Every line below is a definition, a formula, a condition, a mapping, or a kill condition.
 
 ---
@@ -11,6 +13,28 @@ MPA is a **measurement discipline**, not a model. It forces independently-derive
 **Membership / self-test** (scale-invariant — binds MPA's own claims; I5 in `mpa_frontier.md`): a candidate is MPA iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds faithfully** — the binding preserves the import's logical type (a generic/∃ result is not bound as forced/∀, a necessary condition not as sufficient, topological genericity not as measure-typicality), and behavior at a degenerate point or boundary is **entailed from the interior structure**, never asserted at the limit. Fail any ⇒ systems thinking, not MPA.
 
 **"Forced" cashes out as:** iff-chain as architecture · explicit falsifier checklist · every dynamical quantity flows with the operating point (nothing hand-frozen).
+
+---
+
+## §0 — OBJECTS & DEFINITIONS
+
+First-contact dictionary: the load-bearing nouns, named before the formalism uses them, each pointing to where its rigor lives. This layer **defines; it adds no claim** (the engine read by someone who does not already hold the concepts).
+
+* **character** — the substrate-general structure of how a driven-dissipative system *holds, deforms, and circulates* under load. Not psychological; a measurable, two-faced deformation of the Boolean ring — an **amplitude** face (how much is held: $c/s/r$) and a **sign-topological** face (which way it circulates: protected current). What the framework measures. (→ TWO FACES, DEFORMATION GENERATORS.)
+* **substrate** — any driven-dissipative system MPA reads (structural glass, laser, surface-code memory, ecology, queue, market). Substrate-neutral by construction: one reading rule for all.
+* **ch** — the framework's unit, $1\,\text{ch}\equiv\ln2$ nats; the unit it *picks for itself* — one quantum of held character, forced twice over (one ch of *headroom* at the $Q$-peak $G_0/L{=}2$; one ch of *cost* at the erasure floor). Not chosen — the same $\ln2$ falls out from both faces. (→ `mpa_units.md` §1.)
+* **chit** — $\ln(G_0/L)$, headroom above threshold; the central character coordinate, read in ch via $\text{chit}/\ln2$. The spine — $c/s/r$ are its sign-and-size bands. (→ PARAMETERS; `mpa_units.md`.)
+* **NESS** — non-equilibrium steady state: stationary under continuous throughput (drive in, dissipation out), detailed balance broken. MPA's default object; equilibrium is the degenerate zero-drive case. (→ AXIOMS.)
+* **drive / dissipation** — *drive* = supplied work holding the system off equilibrium ($D=\Phi^*/\kappa$); *dissipation* = the balancing entropy export. Character exists only while the drive flows; MPA **metabolizes** the drive, never supplies it (the bootstrap constraint). (→ PARAMETERS.)
+* **Banach reference** — the analytically tunable *synthetic* substrate (a contraction-mapping NESS) used as the fixed reference character that real substrates are conformed *against*: the regenerable **ruler**, never the data (the reference is adjusted, the data is pristine). (→ conform layer; `pa:banach-fixed-point`.)
+* **holding** — a sustained NESS occupation of a mode/structure (the thing that is $c$, $s$, or $r$); *held* = maintained above threshold against decay. The unit of what a substrate keeps.
+* **trail** — the time-integrated record of a holding (its maintained NESS history); what coarse-grains up the tower and what $\tau_{obs}$ reads at a given scale.
+* **coherence** — how organized a holding stays under load; read by the triple $(\text{chit}, Q, I_{\text{pred}})$; lost by fraying.
+* **$k_{\text{frust}}$** — the signature of a *protected, drive-independent circulation* (a frustrated triad): a current that cannot relax to rest. "Frustration" = no global ordering satisfies all the signed couplings. (→ TOPOLOGICAL INVARIANT.)
+* **gauge** — a node-sign relabeling that leaves the physics unchanged; *gauge-invariant* = survives all relabelings (real structure); *gauge-irremovable* = a sign no relabeling can erase (the protected bit). (→ TWO FACES.)
+* **metabolize / subtractive** — MPA adds no mathematics; it *imports* established results and re-reads them in one coordinate system. All content is in the bindings and their over-determination, never in invented apparatus. (→ WHAT MPA IS.)
+
+*Lineage.* MPA is the deliberately scaled-down descendant of *Metastable Propositional Calculus* — a far larger earlier framework, cut back by its authors to this disciplined core. Most frameworks inflate; this one was peeled. The deflation is the credential, not an embarrassment.
 
 ---
 

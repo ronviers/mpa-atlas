@@ -1,5 +1,9 @@
 # Engine definitional-gap audit (2026-05-31)
 
+> **STATUS: APPLIED 2026-05-31.** The §0 — Objects & Definitions layer this audit specified is now in
+> `framework/mpa_engine.md` (top, above PARAMETERS). This doc is retained as the rationale of record for that
+> layer. The remaining value here is the per-term reasoning; the layer itself is canonical in the engine.
+
 **Method.** Read `mpa_engine.md` cold, as a stranger with modern tools would (e.g. an infographic-builder model
 asked to render "character flow"). Flag every term used in *load-bearing* position that the engine never
 *defines* — the assumed dictionary. The test that exposed it: an infographic model fed the engine renders the
