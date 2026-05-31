@@ -1,203 +1,108 @@
-# Handoff — adding the first-contact layer to the engine (read cold, next session)
+# Handoff — build the engine's first-contact layer (§0)
 
-**The job.** Give `mpa_engine.md` the definitional / first-contact layer it lacks, so it is **self-contained**
-— a stranger (human or an infographic-builder model) can read it and grasp what its nouns *mean*, not just
-manipulate its formulas. Today the engine is a dense reference card for people who already hold the concepts;
-fed to a modern tool it renders the *machinery* (flows, bifurcations, the deformation chart) and leaves every
-*noun* an empty center ("character" → arrows, "ch" → an unexplained tick, the Banach reference → absent). This
-session is the **groundwork**; the layer itself is written next session because it must be done with the
-rewrite's care, in a register-clean context, not a tool-colored one.
-
-This handoff is also the entry point to the **eventual public-facing engine rewrite** (the larger multistep
-goal: make the engine as compelling as the science). The first-contact layer is the first real step of that.
+**You are building this now.** Not groundwork, not a future task — your job this session is to write the §0
+definitional layer into `mpa_engine.md`. Everything below is to let you do that. (Earlier sessions did the
+groundwork and made the decisions; nothing is left to re-decide except where this doc says "ask Ron.")
 
 ---
 
-## THE DOCUMENT SET (everything the next session needs, all committed/pushed except where noted)
+## YOUR JOB (in order)
 
-Read in this order:
+1. **Read `framework/mpa_engine.md` cold.** Notice: it defines *symbols* but never its own *nouns* — "character"
+   (its own name), "ch" (its own unit), "Banach reference", "NESS", "drive/dissipation" are used heavily and
+   defined nowhere. A stranger (or an infographic tool) can manipulate the formulas but can't say what they mean.
 
-1. **`docs/engine_definitional_gap_audit.md`** — the core input. The complete inventory of undefined
-   load-bearing terms (severity A/B/C), each with a recommended one-line definition and a pointer to where its
-   rigor already lives. **This is the content of the layer.** *(uncommitted as of session end — commit first.)*
-2. **`docs/vocabulary_refactor_spec.md`** — the rename groundwork. "violation"→FD-ratio/FDR-departure,
-   "wall"→marginal-point/ceiling/bound (step 1 DONE in prose; keys held for step 2). Its §"Sequence for the
-   eventual full rewrite" is the master sequence this handoff slots into (the layer is step 4's opening move).
-3. **`docs/engine_readiness_assessment.md`** — what the engine IS vs ISN'T (claim skeleton complete +
-   synthetically vindicated; world-vindication blocked by a DATA gap, not a work gap). The layer must not
-   overclaim past this — every definition that touches vindication carries the honest asterisk.
-4. **`framework/mpa_engine.md`** — the target. Read it cold first, before the audit, to feel the gap yourself.
-5. **`framework/mpa_units.md`** — where **ch**, chit-in-ch, the forced unit, and the anchor set are defined.
-   The layer's "ch" / "chit" / unit definitions point here; do not duplicate, link.
-6. **`framework/mpa_fdr_treatment.md`** — where the two-frame structure, FD ratio, FDR-departure live in
-   long form. The layer's "two faces / drive / dissipation / NESS" definitions lean on this.
-7. **`architecture/MPA_Architectural_Block-In.md`** — the motivating frames (observer-as-scale-manager, the
-   three-layer architecture). Where the *why-we-think-this-way* meta lives; the layer borrows its framing
-   register, not its content.
-8. **The parked NORTH STAR** (memory: `project_syn3_alive_loop_northstar.md`) — the deep *why* (the
-   self-sustaining autopoietic "loop of the loop"; "character is always on"). PARKED/out-of-reach, but it is
-   what a telos preamble would draw on. Read it so the layer's voice knows what it is ultimately pointing at,
-   even if the preamble is deferred.
-9. **`CLAUDE.md` (mpa-atlas)** — the thin-RFC discipline. The layer must honor it (see "Discipline guardrail").
+2. **Read `docs/engine_definitional_gap_audit.md`.** It is the *content* of what you're writing: every undefined
+   load-bearing term, sorted A/B/C, each with a drafted one-line definition and a pointer to where its rigor
+   lives. You refine these into prose; you do not re-derive them.
 
----
+3. **Write a new `## §0 — Objects & Definitions` section at the TOP of `mpa_engine.md`** (above PARAMETERS):
+   - Open with the identity line (verbatim, it's settled):
+     > **MPA — a phenomenology of character in driven-dissipative systems. A measurement discipline: one
+     > coordinate system forcing established results to read together; an effective description — not claimed
+     > fundamental.**
+   - Then one plain sentence per term, each ending with a pointer to where rigor lives. Order: the 5 **A-terms**
+     first (character, ch, Banach reference, NESS, drive/dissipation — non-negotiable), then the **B-terms**
+     (chit + its ch↔character link, trail, holding, coherence, the why-two-faces line), then **C-terms** lightly
+     (substrate, metabolize/subtractive, k_frust-in-words, gauge, τ_obs).
+   - State the lineage **once** as a credential (see "Settled decisions" below).
+   - Target ~12–15 entries. If it bloats past the engine's density, move the C-terms to a `mpa_glossary.md`
+     companion — but A+B stay in the engine (a model fed only the engine must get them).
 
-## WHAT TO BUILD (the recommended shape — from the audit)
+4. **Thread the ch pointer** into every existing "ch" / "1 ch" usage already in the engine (OPERATORS R floor,
+   TWO BITS, THERMO↔INFO per-event row) so the unit stops floating.
 
-A **§0 — Objects & Definitions** section at the **top** of `mpa_engine.md` (above PARAMETERS), so a model fed
-only the engine reads the dictionary before the formalism. ~12–15 one-line entries:
-
-- **Severity-A (absent, central):** character · ch · Banach reference · NESS · drive/dissipation. *(non-negotiable)*
-- **Severity-B (under-defined):** chit (the word + its ch↔character links) · trail · holding · coherence · the
-  why-two-faces / why-two-bits framing line.
-- **Severity-C (light touch, one clause each):** substrate · metabolize/subtractive · k_frust-in-words · gauge
-  family · τ_obs. If §0 bloats, spin the C-tier into a `mpa_glossary.md` companion (but then ship them together
-  — a model fed only the engine must still get the A/B terms).
-
-Each entry: one plain sentence + a pointer to where rigor lives (`mpa_units.md` §1, TWO FACES, receipts,
-conform). The audit already drafts every one — refine, don't re-derive.
-
-**Then:** thread the **ch** pointer into every existing "ch" / "1 ch" usage in the engine (OPERATORS R floor,
-TWO BITS, THERMO↔INFO per-event row) so the unit stops floating.
+5. **Stop and show Ron** the §0 draft before committing. This is public-facing prose on a published framework;
+   he reviews voice and wording first.
 
 ---
 
-## VOICE — how the model writing the layer should find its register (the hard part; reason it, don't default)
+## SETTLED DECISIONS (do not re-open these)
 
-This is the question that decides whether the layer reads as compelling or as a textbook glossary. Guidance,
-with the reasoning, not just a verdict:
-
-**Do NOT anchor to "educator."** The educator voice ("Let's understand what character means!") is the default
-an LLM falls into for a definitions task, and it is wrong here for three reasons: (i) it condescends — MPA's
-audience is researchers who know dissipative physics, not students; (ii) it pads — educator voice explains
-*around* a thing; the engine's whole virtue is that it doesn't; (iii) it imports a register foreign to the
-dense, declarative engine, creating a seam. The §0 layer must read as *the same author* as the rest of the
-engine, only at first-contact altitude.
-
-**Anchor instead to: the precise naturalist.** The register that fits is the one MPA already half-has in its
-header ("MPA is a measurement discipline, not a model") — declarative, confident, substrate-neutral, *naming
-what is there*. A definition in this voice is not "character is the idea that…" but "**Character is** the
-substrate-general structure of how a driven-dissipative system holds, deforms, and circulates under load." It
-asserts the object into existence the way a good physics text asserts "entropy is…" — no hedging, no teaching
-scaffold, no apology. The model should write each definition as if naming a thing every competent reader will
-recognize once named — because that is exactly MPA's claim (these structures recur across the dissipative
-universe; MPA only gives them one coordinate system).
-
-**Can MPA speak for itself? — Partly, and it's the best move where it works.** The strongest definitions are
-the ones where the framework's own logic *forces* the definition rather than the author asserting it. Example:
-the ch is not "a unit we chose" — it is "the unit the framework picks for itself" (the Q-peak forces chit=ln2;
-the erasure floor forces the same ln2; one quantum, two faces). That definition *speaks for itself* — it shows
-the framework discovering its own unit. **Where a definition can be written as the framework forcing its own
-hand, do that** (it is also the most compelling, and the most honest — it shows rather than tells). Where it
-can't (e.g. "substrate" is just a scope word), a plain naturalist sentence suffices. So: **let MPA speak for
-itself wherever the object is forced; name plainly where it is conventional.** Do not fake self-emergence for a
-term that is merely a label — that is the cringe direction.
-
-**Calibration touchstones for the model:** the voice that closed the amplitude-autonomy bet ("the gain is
-external-frame of necessity") and the units doc's "the framework picks its own amplitude unit" — confident,
-forced-not-asserted, zero scaffold. The voice to AVOID: the NFL-tool register (explaining MPA *to* an outside
-field), and the educator register (explaining MPA *down* to a learner). The layer explains MPA *as itself, at
-first sight.*
+- **Identity line:** the verbatim block in step 3. Settled wording (Ron's). Don't rephrase it.
+- **The name is NOT your problem.** Use "MPA" plainly as the handle throughout. Do **not** invent or propose a
+  new name — the new name is the deliberate *final capstone* of the whole rewrite, chosen with Ron much later.
+  §0 carries zero naming weight.
+- **Lineage, stated once as credential (not apology):** MPA descends from *Metastable Propositional Calculus*
+  (MPC) — a far larger framework (a full four-valued logic + a separation theorem + a quantum conjecture) that
+  its authors **deliberately scaled down** to today's disciplined engine. Most frameworks inflate; this one was
+  cut back. That is the honesty signal — worth one sentence in §0, worn not hidden. (The Calculus→Algebra shift
+  in the acronym was itself the first such cut. "Propositional" is now vestigial since the live work is dynamics
+  not logic — but do NOT relitigate that; it resolves itself when the capstone name lands.)
 
 ---
 
-## THE NAME — "MPA" is undefined in canon, and may be off-putting; decide deliberately
+## VOICE (this decides whether §0 reads compelling or like a textbook glossary)
 
-**Finding (this session):** "MPA" appears throughout the framework but is **never once expanded or defined** —
-not in the engine, not in the block-in, nowhere live. The name has no canonical referent. (Historically it
-traces to the program's lineage; the live docs treat it as an opaque handle.)
+**Write as the same author as the rest of the engine — declarative, confident, naming what is there.** Not a
+teacher, not an explainer.
 
-**Why this matters for the layer:** the §0 layer is the first place a stranger meets the framework. An
-undefined three-letter acronym at the top of a dense formal document is a *cold open* — it reads as
-in-group jargon and can be off-putting before the reader reaches anything compelling. But renaming a published,
-DOI'd framework (Zenodo 10.5281/zenodo.20357550, 4-author byline) is a heavy, non-local act — not a next-session
-decision to make unilaterally.
-
-**Recommended handling (decide WITH Ron, do not auto-resolve):**
-- **Option 1 — define it, don't rename it.** Give "MPA" a one-line expansion in §0 that is *true to what it
-  does* and *not off-putting*. The framework is, in its own words, a measurement discipline reading how
-  driven-dissipative systems hold character — so an honest expansion exists in that direction. The §0 entry
-  would state it once, plainly, and move on. Lowest-cost, removes the cold-open, preserves the published name.
-  **(recommended starting point.)**
-- **Option 2 — a public-facing display name + "MPA" as the internal/technical handle.** Like many frameworks
-  carry a friendly name + a technical abbreviation. The display name does the first-contact work; "MPA" stays
-  for citations/internal use. Bigger move; a branding decision.
-- **Option 3 — leave "MPA" opaque, lean on the character of the work.** If the §0 definitions are compelling
-  enough, the acronym matters less. Riskier for cold readers.
-
-**Do NOT** invent an expansion and plant it as canon without Ron — the name is published and load-bearing
-across repos. Bring options, let Ron choose. (Note Ron's standing preference for *coined names* over
-descriptive accuracy — `feedback_prefer_coined_names` — which may favor a coined display name over a literal
-acronym expansion.)
-
-**DECIDED 2026-05-31 (Ron; see `docs/naming_decision.md` — read it):** worked through with the lineage in
-hand. The framework **deflated** from *Metastable Propositional Calculus* (MPC — a full four-valued logic +
-separation theorem + quantum conjecture) to today's engine — *scaled down by its authors*, the **credential**,
-not an embarrassment. Final:
-- **Identity (the §0 opening line — Ron's wording):** *"MPA — a phenomenology of character in driven-dissipative
-  systems. A measurement discipline: one coordinate system forcing established results to read together; an
-  effective description — not claimed fundamental."* ("phenomenology" / "effective description" = the precise
-  effective-not-fundamental terms, the engine's own line-1 word, matching the synthetic ceiling; the earlier
-  "better metaphor / until footing" clause was cut as gilding.)
-- **The NEW NAME is the rewrite's CAPSTONE — deferred to the final act, chosen WITH Ron.** "A new name puts a
-  wrap on the project." So: **§0 carries NO naming weight** — it uses "MPA" plainly as the working/citation
-  handle and states the lineage once. Do NOT attempt a new name in §0. The capstone name (likely a coined,
-  character-centered display name per `feedback_prefer_coined_names`) is the deliberate LAST move, after the
-  prose rewrite. This resolves "Propositional is vestigial" cleanly — the new name *is* the resolution.
-- **Lineage in §0:** keep "MPA" as handle; state etymology (MPC Calculus → MPA Algebra, the Calculus→Algebra
-  shift = the first deflation) + the deflation **once, as credential**. Do NOT banner the acronym expansion.
-- **Confirm the MPC→MPA etymology with Ron** before stating it as fact — inferred (the lineage doc Ron pasted +
-  repo names `mpc-*`/`mpa-*`), not verified in canon ("MPA" is undefined in every live doc).
+- **Avoid the educator register** ("Let's understand what character is…"). It condescends to a physics-literate
+  audience, it pads, and it clashes with the engine's density.
+- **Use the naturalist register:** "**Character is** the substrate-general structure of how a driven-dissipative
+  system holds, deforms, and circulates under load." Assert the object into existence the way a physics text
+  says "entropy is…". No hedging, no scaffold.
+- **Let the framework speak for itself where an object is *forced*.** The ch isn't "a unit we chose" — it's
+  "the unit the framework picks for itself" (the Q-peak forces chit=ln2; the erasure floor forces the same
+  ln2). Show the framework discovering its own structure. Where a term is just a label (e.g. "substrate"), a
+  plain sentence is fine — **don't fake self-emergence for a mere label** (that's the cringe direction).
+- **Touchstone to match:** the engine's own line 7 ("a measurement discipline, not a model") and the units doc's
+  "the framework picks its own amplitude unit." **Touchstone to avoid:** anything that sounds like explaining
+  MPA *to outsiders* or *down to learners*.
 
 ---
 
-## DISCIPLINE GUARDRAIL (so the layer doesn't get second-guessed)
+## GUARDRAILS
 
-- **This is NOT thickening the claims.** Thin-RFC discipline bars duplicating *derivations* and speculative
-  edge-casing; it never barred *defining your terms*. A self-contained engine requires its nouns defined. The
-  layer adds **no** new structure, **no** new falsifier, **no** redefinition of a coined object — it gives the
-  existing claims their dictionary. Say so in the layer's own framing if useful.
-- **Definitions point, don't duplicate.** Each entry links to where rigor lives; it does not re-derive.
-- **Honor the readiness asterisk.** Any definition touching vindication (character, the Banach reference,
-  the claims) carries the honest scope: synthetically vindicated, world-vindication data-gated (per
-  `engine_readiness_assessment.md`). Do not let the first-contact layer quietly overclaim.
-- **Character round-trip:** adding §0 is a definitional layer, not a change to what any substrate renders as —
-  it should not trigger the spec-stability character-test round-trip. Flag to Ron if uncertain; he can overrule.
-- **Coined-name preference** (`feedback_prefer_coined_names`) and **no-anthropocentric-framing**
-  (`feedback_no_anthropocentric_framing` — character is NOT a human-domain concept; substrate-general examples
-  only) both bind the layer's word choices.
+- **This is not thickening the claims.** Thin-RFC discipline bars duplicating derivations and speculative
+  edge-casing; it never barred *defining your terms*. §0 adds no new structure, no new falsifier, no
+  redefinition — it gives existing claims their dictionary. (If challenged, this is the defense.)
+- **Define by pointing, not duplicating.** Each entry links to where rigor lives (`mpa_units.md` §1, TWO FACES,
+  receipts, conform); it does not re-derive.
+- **Don't overclaim.** Any definition touching vindication (character, the claims, the Banach reference) stays
+  honest: synthetically vindicated, real-substrate vindication still owed (per `engine_readiness_assessment.md`).
+- **"character" is substrate-general, never psychological.** No personality/biology framing — substrate-neutral
+  examples only (`feedback_no_anthropocentric_framing`).
 
 ---
 
-## SEQUENCE (where this sits in the larger rewrite)
+## REFERENCE DOCS (read as needed, not front-to-back)
 
-Per `vocabulary_refactor_spec.md` §Sequence:
-1. ✅ vocab anchors retired (prose) — DONE this session.
-2. retire the stable keys (`wall-as-type-boundary`, `battery:wall-ladder`, receipts `§Wall`) in one
-   synchronized frontier↔receipts↔engine pass + I1 re-audit. *(can be done alongside or before the layer.)*
-3. second anchor-sweep for other register-cringe terms (candidates to *evaluate, not presume*: "killshot,"
-   "tripwire," "fraying").
-4. **the first-contact layer (THIS handoff) → then the public-facing engine rewrite proper** — compelling
-   prose, the §0 definitions, and (separate Ron decision) the telos preamble drawing on the parked north star.
-5. **[CAPSTONE] the new name** — chosen WITH Ron as the final act that wraps the project (a coined,
-   character-centered display name; MPA retained as citation handle). The name is deliberately LAST, not a
-   mid-stream decision — it is what says "this is now what it is" (`docs/naming_decision.md` Decision 3).
-
-**First action next session:** commit `docs/engine_definitional_gap_audit.md` (only uncommitted doc), then
-build §0 from it in the naturalist voice above, bringing the name-options to Ron before touching "MPA."
+- `docs/engine_definitional_gap_audit.md` — **the content** (read fully; step 2).
+- `framework/mpa_engine.md` — **the target** (read fully; step 1).
+- `framework/mpa_units.md` — where **ch** / chit / the forced unit live; your ch/chit definitions point here.
+- `framework/mpa_fdr_treatment.md` — where two-frame / FD-ratio / NESS live in long form.
+- `docs/engine_readiness_assessment.md` — the honest scope your definitions must not exceed.
+- `docs/naming_decision.md` — full reasoning behind the settled name decisions (only if you want the why).
+- `CLAUDE.md` (this repo) — thin-RFC discipline.
+- (Optional, for a later telos preamble — NOT this session) memory `project_syn3_alive_loop_northstar.md`.
 
 ---
 
-## SESSION STATE AT HANDOFF (so next session knows where things stand)
+## STATE (where the project stands — context, not tasks)
 
-- **frustration-ascent generative bet: CLOSED** (legal) — generative-of-chirality, parasitic-on-drive; amplitude
-  autonomy is external-frame/supplied, not minted. Engine carries the Mintability corollary + test-validity guard.
-- **Tier-B (two-frame exact magnitude identity + τ-reconciliation): CLOSED** — the last engine-internal close
-  available without substrate data. `τ-window-reconciliation` promoted.
-- **Vocab refactor step 1: DONE** (prose anchors retired; keys held).
-- **The tool (dissipative Rosetta):** SOP hardened across two NFL passes; procedure + meteorology exemplar
-  committed. NFL columns are productive-failure inputs, not landed columns.
-- **Engine readiness:** claim skeleton complete + synthetically vindicated; world-vindication DATA-gated (the
-  honest ceiling). Tier-A items all real-substrate-gated = parked, not failed.
-- **Definitional gap: AUDITED** (this session); layer deferred to next (this handoff).
-- All pushed except `engine_definitional_gap_audit.md` (commit next session).
+All committed and pushed. This session's predecessors closed: the frustration-ascent generative bet (legal),
+the Tier-B two-frame magnitude identity, vocab-refactor step 1 (retired "violation"/"wall" as prose anchors),
+and hardened the dissipative-Rosetta tool SOP. The engine's claim skeleton is complete and synthetically
+vindicated; real-substrate vindication is data-gated (parked, not failed). The §0 layer you're building is the
+first step of the eventual public-facing engine rewrite; the rewrite's final step is the capstone name.
