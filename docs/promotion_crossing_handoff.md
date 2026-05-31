@@ -128,7 +128,11 @@ moves (no engine edits, no receipts retag; battery entries don't mirror to recei
    **Methodological catch (fake-NaN):** the seed exponent $\kappa^{1.27}$ is grid-sensitive (a hand-drawn
    *isotropic* sub gives the same), so the qualitative closes/kills is the robust readout, not the exponent.
    **Does NOT cross.** Crossing needs a *less-stiff* self-lit substrate OR the `tilt_rescue.py` pull on a self-lit
-   stream.
+   stream. **>> THIS #1 THREAD CONTINUED into a full substrate-hunt (isotropy diagnosis → research ×2 →
+   splay → over-reach + outside correction → hybrid TRANSDUCTION → hybrid GENERATION). Net: the triple
+   obstruction is SAME-LEVEL not hierarchical; a stratified two-level cascade GENERATES a new autonomous
+   register. LIVE BATON for this thread: `mpa-atlas/docs/frustration_ascent_cascade_handoff.md` (next: full
+   end-to-end run + the coarse-graining-EMERGENCE test).**
 
 4. **#4 `wall-ladder` PLATEAU SIDE → INSTANCED on the chosen substrate (battery:wall-ladder plateau face).**
    `clv_tower.py` / `.png`. **Substrate chosen (Ron's "pick the substrate first" call): the coupled Stuart-Landau
