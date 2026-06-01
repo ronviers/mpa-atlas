@@ -311,13 +311,28 @@ established signed-graph theory (union of balanced graphs can be unbalanced), th
 circularity as the collapse demos. It is the **open** question, run: couple a system whose
 union graph is frustrated and test whether the resulting current's chirality is protected
 against *all* continuous deformations (dies only on rewiring), not merely around a chosen
-loop. Two clean, non-circular kills:
+loop. Two clean, non-circular kills — **both RUN 2026-06-01, neither fires** (synthetic, linear
+OU, N=3; `mpa-conform/scripts/chiral_protection.py`, `chiral_transfer.py`, `chiral_transfer_ness.py`):
 
 1. a circulation bit that **transfers continuously** between two coupled systems →
-   topological protection (B2) false, the two-bit split collapses;
+   topological protection (B2) false, the two-bit split collapses. **Outcome — refined, not
+   fired.** Ramping an inter-system coupling, the physical NESS current *magnitude* DOES bleed
+   continuously: modestly through a reciprocal (equilibrium) bridge (induced `J_B ~ 12%` of
+   `J_A` at strong coupling), and minted continuously — not pumped quantally — through a
+   non-reciprocal bridge (`⟨σ⟩` grows ×27). **But the topological *bit* does not transfer:**
+   A's chirality sign stays graph-locked, the bridge cannot reverse it. So the two-bit split
+   holds **at the level of the sign/affinity, not the current's localization** — the protected
+   object is the bit, not where the current sits.
 2. a coupling-created protected current whose chirality is **removable by smooth
    deformation while the frustrated triad persists** → protection is not inherited from the
-   graph, the B3 re-route fails, and the binding has no teeth.
+   graph, the B3 re-route fails, and the binding has no teeth. **Outcome — does not fire.**
+   The chirality *sign* (`= sign` of the cycle flux `g·Σeₑ`) survives **0/200** generic
+   graph-fixed deformations at amplitude `≫ g`, reversing **only** on rewiring (a cycle-
+   orientation flip, ≥2 edge signs). The EP / complex pair `w`, by contrast, **is** suppressible
+   (killed in 53/200 by a reciprocal gradient, the cycle intact) — confirming Family C: protection
+   inherits from the gauge-irremovable triad (the affinity), **not** from the EP. No conserved
+   *integer* charge appears (closed-loop holonomy stays sub-integer, ≤0.16), so the protection is
+   a **discrete graph-flux invariant**, not a Chern-like topological charge.
 
 ## Receipt ledger — status after outbound research (2026-06-01)
 
@@ -331,7 +346,11 @@ Imports (precondition verdicts):
    classical theorem (`[open]`).
 3. **Non-Hermitian topology / EP braiding** — **split.** Creation + transfer to classical
    Jacobians imported (`[est]`); EP-as-protection-source **not** supported → Family C
-   re-routed (above). Intrinsic finite-dim chirality protection `[open]`.
+   re-routed (above). Intrinsic finite-dim chirality protection **`[run, qualified]`** (was
+   `[open]`): the chirality *sign* is protected as a **discrete graph-flux invariant**
+   (gauge-irremovable; flips only on rewiring; the EP `w` is suppressible — re-route confirmed
+   directly), but **not** as a conserved *integer* charge (holonomy sub-integer). See
+   Measurement discipline′ kills 1–2.
 4. **Active-nematic defect braiding** — still owed (real-data bridge, P1).
 5. **Coupled-NESS stochastic thermodynamics / information flow** — still owed (P1).
 6. **Signed-network balance dynamics** — **imported** (`[est]`): union of balanced graphs
@@ -342,7 +361,9 @@ Bespoke bindings, post-research:
 - `gl(n,ℝ)` as *the* tangent space — still owed a second instance beyond RPS.
 - circulation bit ≡ decoherence-free subsystem — **receipted in pieces** (item 2).
 - Family C — **relocated**: not "EP creates a protected bit" but the binding (graph ⟺
-  spectral ⟺ thermodynamic, one carrier) + the open chirality-protection question.
+  spectral ⟺ thermodynamic, one carrier) + the chirality-protection question, now **run
+  (qualified)**: protection = the discrete graph-flux *sign*, not the EP and not an integer
+  charge. The **binding** itself (one unified theorem) remains the owed residual.
 - identity ≡ sustained protected-sector loop — still owed.
 
 Open limit of the framing itself:

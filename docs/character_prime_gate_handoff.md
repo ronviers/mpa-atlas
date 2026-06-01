@@ -122,6 +122,19 @@ Two, each `<1 hr` (time a probe first; cheap direct observables, no ensemble res
   frustrated-union system and test whether the minted current's chirality survives *all*
   continuous deformations (dies only on rewiring), not just a chosen loop. The `[open]`
   field question, run. It can come back no — and that strips the binding's teeth.
+  **— RUN 2026-06-01 (`mpa-conform/scripts/chiral_protection.py` + `chiral_transfer.py` +
+  `chiral_transfer_ness.py`; figs in `output/calibration/`). VERDICT: qualified YES, the
+  falsifier did NOT fire.** The chirality *sign* (= cycle-flux sign) survives 0/200 generic
+  graph-fixed deformations at amplitude ≫ g, reversing only on rewiring (cycle-orientation
+  flip). The EP / complex pair, by contrast, IS suppressible (killed in 53/200 by a reciprocal
+  gradient, cycle intact) — **confirming the Family-C re-route directly: protection is in the
+  gauge-irremovable triad/affinity, not the EP.** Ron's coupled-transfer probe sharpened it:
+  the physical current *magnitude* bleeds (modestly through an equilibrium bridge, minted
+  continuously through a non-reciprocal one) but the topological *bit* does not transfer
+  (A's sign stays graph-locked). No conserved *integer* charge (holonomy ≤0.16). **⇒ protection
+  is a discrete graph-flux invariant, not a Chern-like charge.** Two self-corrections caught en
+  route (vacuous v1 deformations; an `antisym(Ω)` artifact that re-read the bare generator —
+  fixed by the `C = ΩΣ` current). So `character_prime` promotes with the **cross-rule INTACT**.
 
 ## 6. Promotion criterion
 
@@ -155,11 +168,14 @@ in one cycle.
 
 ## 8. What would falsify the whole direction (kept sharp)
 
-- **The live one:** if Phase V-(b) shows the minted chirality is **removable by smooth
-  deformation while the frustrated triad persists** → protection is not graph-inherited, the
-  binding has no teeth, Family C's re-route fails, and `character_prime` promotes only with
-  the cross-rule **stripped** (weaker but honest). The whole direction now rides on this one
-  point.
+- **The live one — RESOLVED 2026-06-01, did NOT fire.** Phase V-(b) found the minted
+  chirality's *sign* is **not** removable by smooth deformation (0/200, reverses only on
+  rewiring) → protection **is** graph-inherited (the discrete flux invariant), the binding
+  keeps its teeth, Family C's re-route holds, and `character_prime` promotes with the cross-rule
+  **intact**. *Honest residual:* protection is the discrete *sign*, not the current's
+  localization (which bleeds) and not a conserved *integer* charge (holonomy sub-integer) — so
+  the claim is "discrete graph-flux protection," not "topological (Chern-like) protection." The
+  weaker-but-true statement, carried.
 - Row #1 already resolved: isostable doesn't reach the `s`-regime, but center-manifold does,
   so the framing survives with a regime-stratified receipt. *(closed)*
 - If the binding cannot be derived **and** no substrate exhibits it → character′′ is
@@ -170,11 +186,29 @@ Name these so the handoff cannot drift into assuming success.
 ---
 
 **Done-when:** Gate 1 ledger discharged, `character_prime` promoted to `framework/`.
-**Next action (Phase R is DONE):** Phase D/V on the single surviving question — derive the
-**binding** (graph ⟺ spectral ⟺ `𝒜`) from the gauge-irremovable side, and run **Phase
-V-(b)**, the chirality-protection test (the decisive, non-circular one; *not* the trivial
-complex-pair count). P1 intake rows (#4 defect-braiding data, #5 coupled-NESS thermo) remain
-optional support.
+**Next action (Phase R DONE, Phase V-(b) DONE 2026-06-01):** the decisive protection test is
+run (qualified pass, cross-rule intact). The remaining gate residue is **the binding** —
+derive graph ⟺ spectral ⟺ `𝒜` as one carrier from the gauge-irremovable side (no unified
+theorem exists; this is the contribution), plus the P1 intake rows (#4 defect-braiding data,
+#5 coupled-NESS thermo, optional support). Promotion to `framework/` is then a separate
+explicit decision (the binding is the last floating node per I2).
+**Reserved promotion names (chosen 2026-06-01, pending the actual file move):**
+`character_prime` → **`character_manifold.md`** (substrate-neutral; names the tangent-space/
+gl(n)/metric structure; alt considered: `character_morphospace` — more evocative but carries a
+morphology flavor the substrate-agnostic discipline resists). `character_double_prime` →
+**`character_composite.md`** (names the object without overclaiming; alts: `character_closure`
+collides with the existing `character_closure_derivation.md`; `character_emergence`
+pre-asserts the doubly-gated conclusion).
+**Engine refinement — APPLIED 2026-06-01 (Ron approved):** the V-(b) result refined receipts
+**§Topological-drain — k_frust invariant** — superseded "the invariant **is** the complex
+spectrum" → **the invariant is the broken-detailed-balance affinity `𝒜` (non-gradient/
+antisymmetric drift); the complex pair is its underdamped *signature*, suppressible to a real
+overdamped circulation (`𝒜≠0`, `J≠0`) without restoring detailed balance.** The third sharp
+falsifier was corrected ("J resolves to real spectrum" → "J resolves to a gradient/`𝒜→0`
+structure"). The **same correction's minimal scoping clause** was applied to **§Central
+commitment**'s spectral parenthetical (`𝒜≠0` iff non-gradient drift; the complex-pair iff holds
+for the canonical isotropic-damping triad only) — its load-bearing triad-necessity claim is
+untouched. No other promoted line affected.
 **Repo note (2026-06-01):** the framework set is now `character_*.md` and its prose is
 rebranded `MPA → Character`; this doc (in `docs/`) still says "MPA" pending a
 publication-aware pass.
