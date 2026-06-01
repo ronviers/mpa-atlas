@@ -123,7 +123,18 @@ N=3 is a reduction of a nonlinear 10-species CRN (enzyme folded to a pseudo-firs
 on FQE; O/F as baths) — rigorous confirmation wants a cross-check against the full COPASI model +
 review. But this is the **first real, measured substrate to instance the emergent-identity node**,
 and it is the legal structure exactly (passive equilibrium cycle + fuel-driven enzyme → minted,
-protected, sustained-as-run-loop). `[bespoke → real-instance candidate]`
+protected, sustained-as-run-loop).
+
+**Cross-check — CONFIRMED against the full nonlinear model (2026-06-01).** The candidate's one
+real risk (that the N=3 reduction is an artifact) is now closed: `mpa-conform/scripts/dna_ness_crosscheck.py`
+builds the **full nonlinear mass-action network** (all reactions, output O and enzyme E/FQE explicit),
+integrates it to NESS, and finds (i) the full network genuinely circulates (minting holds in the
+full model), (ii) the N=3 reduction reproduces the full per-quencher cycling rate to **ratio 1.002**
+(QSS valid, [FQE]/[FQ]≈0.5%), (iii) cutting the fuel collapses the circulation in **~2.8 min**,
+matching the SI's experimental ~3-min recovery. So the three components are **not** reduction
+artifacts. Remaining caveat: the chemostat idealization + omitted slow side-processes (waste
+inhibition / enzyme deactivation — the SI's own "drift" terms), which do not touch the core cycle.
+`[bespoke → real-instance CONFIRMED, pending review]`
 
 ## The cascade = iterated closure
 
@@ -196,10 +207,12 @@ is **poured**.
   charge. A real *second* instance of the J/EP separation is still owed (frontier
   `chirality-protection`).
 - emergent identity ≡ the new protected bit, sustained. **Synthetically demonstrated** (calibration,
-  `emergent_identity.py` + `_n4.py`) **and now a REAL-MEASURED candidate** — the Nicholas et al.
-  dissipative DNA system (*Angew.* 2025) passes all three components on experimentally-fitted rates
-  (`emergent_identity_dna_ness.py`; see §Emergent identity). A candidate, pending a full-nonlinear
-  COPASI cross-check + review; the first real substrate to instance the node.
+  `emergent_identity.py` + `_n4.py`) **and now a REAL-MEASURED instance, CONFIRMED** — the Nicholas
+  et al. dissipative DNA system (*Angew.* 2025) passes all three components on experimentally-fitted
+  rates (`emergent_identity_dna_ness.py`), and the N=3 reduction is **validated against the full
+  nonlinear network** (`dna_ness_crosscheck.py`: cycling-rate ratio 1.002; fuel-cut recovery ~2.8 min
+  matches experiment). The first real substrate to instance the node; pending Ron's review (the only
+  residual is the chemostat / omitted-slow-side-processes idealization).
 - alive loop ≡ a cyclic `⊗`-fixed-point. *(parked)*
 
 ⚠ CAVEAT — honest read of the whole layer: this is where the program is **most exposed**.
