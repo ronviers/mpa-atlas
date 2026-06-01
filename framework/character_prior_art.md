@@ -1,13 +1,13 @@
 # Character — PRIOR ART (import ledger)
 
-Claim boundary, stated by exclusion. Every object below is **imported, not MPA's** — MPA adds no object, only the reading (the falsifiable cross-substrate transfer) and the coined apparatus. What is *not* in this ledger is the residual MPA owns: the coined terms (chit, trail, holding, coherence, $c/s/r$, $k_{\text{frust}}$, the deformation / two-faces / two-bits framing, the central commitment, mpa-legal discipline), the readings that map each import onto a sustained-NESS substrate, and the falsifiers.
+Claim boundary, stated by exclusion. Every object below is **imported, not Character's** — Character adds no object, only the reading (the falsifiable cross-substrate transfer) and the coined apparatus. What is *not* in this ledger is the residual Character owns: the coined terms (chit, trail, holding, coherence, $c/s/r$, $k_{\text{frust}}$, the deformation / two-faces / two-bits framing, the central commitment, mpa-legal discipline), the readings that map each import onto a sustained-NESS substrate, and the falsifiers.
 
-Each row: `key` — **imported result** · *imports* (what is borrowed) · *MPA handle* (where it lands) · *adds* (the reading, owned). The `key` is the bare handle the receipts resolve against (no eponym in the engine/receipts layer; the name lives only here). Granularity is coarse: named/eponymous results only. Generic mathematical vocabulary is untracked — see TOOLKIT.
+Each row: `key` — **imported result** · *imports* (what is borrowed) · *Character handle* (where it lands) · *adds* (the reading, owned). The `key` is the bare handle the receipts resolve against (no eponym in the engine/receipts layer; the name lives only here). Granularity is coarse: named/eponymous results only. Generic mathematical vocabulary is untracked — see TOOLKIT.
 
 ---
 
 ## Algebra & contraction
-* `anf-ring` — **Reed–Muller / ANF over GF(2)** · imports: every Boolean function has a unique $\{\oplus,\land,1\}$ form, $\neg x=x\oplus1$ · handle: $\mathcal{M}_2$ ring · adds: MPA is its finite-$D$ deformation; $G_0$/chit is the deformation coordinate, not the unit $1$.
+* `anf-ring` — **Reed–Muller / ANF over GF(2)** · imports: every Boolean function has a unique $\{\oplus,\land,1\}$ form, $\neg x=x\oplus1$ · handle: $\mathcal{M}_2$ ring · adds: Character is its finite-$D$ deformation; $G_0$/chit is the deformation coordinate, not the unit $1$.
 * `banach-fixed-point` — **Banach fixed-point theorem** · imports: unique fixed point under contraction · handle: compression $\varepsilon=\|\mathcal{C}\|_{op}<1$ · adds: $\varepsilon$ *derived* as the IR linear-stability eigenvalue of the level map (not posited); the Wall is $\varepsilon\to1$.
 * `krein-rutman` — **Krein–Rutman theorem** · imports: isolated dominant eigenmode of a positive contracting operator · handle: trail-class metric $\rho([A],[B])$ · adds: distance between trail classes = dominant-eigenmode amplitude surviving $\varepsilon^{-n}$ rescaling.
 * `power-iteration` — **power iteration (von Mises)** · imports: rescaled-limit convergence to the dominant mode · handle: the $\lim_n\varepsilon^{-n}\|\mathcal{C}^n\cdot\|$ construction · adds: same.
@@ -144,6 +144,6 @@ Generic mathematical language used freely and owned by no one: Laplacian, Jacobi
 
 ---
 
-## RESIDUAL (what MPA owns — present here only by exclusion)
+## RESIDUAL (what Character owns — present here only by exclusion)
 
 Not importable, hence not listed above: the coined units and objects (the **ch** unit, chit, trail vector, holding, coherence, the $c/s/r$ regime semantics, $k_{\text{frust}}$ as a framework primitive, the deformation / two-faces / two-bits / bit-chit-correspondence architecture, the central commitment, the named substrate stakes); every *reading* (the "adds" column above); and every falsifier. The imports are the load-bearing skeleton borrowed wholesale; the reading is the only thing claimed.

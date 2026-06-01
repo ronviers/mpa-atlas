@@ -1,16 +1,16 @@
 # Character — ENGINE
 
-> **MPA — a phenomenology of character in driven-dissipative systems. A measurement discipline: one coordinate system forcing established results to read together; an effective description — not claimed fundamental.**
+> **Character — a phenomenology of character in driven-dissipative systems. A measurement discipline: one coordinate system forcing established results to read together; an effective description — not claimed fundamental.**
 
 One phenomenology, two readings on one finite-$D$ deformation of the Boolean ring: a **structural** projection (operator algebra) and a **continuous** projection (driven-dissipative dynamics), joined by the bridge identity $\lambda_A \approx L - G_0$. Every line below is a definition, a formula, a condition, a mapping, or a refutation condition.
 
 ---
 
-## WHAT MPA IS — forced consistency across dissipative registers
+## WHAT Character IS — forced consistency across dissipative registers
 
-MPA is a **measurement discipline**, not a model. It forces independently-derived imports to read **one** substrate parameter $\theta$ through fixed known maps, and tests the forcing by a **collapse falsifier** (`transport_law_steps.md`). It is **subtractive** — it imports and metabolizes, asserts no new machinery; the content is in the *bindings* and their over-determination, never in invented apparatus. The finite-$D$ Boolean deformation below is **the first register where closure was found, not the definition**: one degenerate point ($\text{Boolean}=\text{Markov}=\text{equilibrium}=\text{detailed balance}=X\!\equiv\!1=\mathcal{A}{=}0=\beta{=}1$) read from many sides.
+Character is a **measurement discipline**, not a model. It forces independently-derived imports to read **one** substrate parameter $\theta$ through fixed known maps, and tests the forcing by a **collapse falsifier** (`transport_law_steps.md`). It is **subtractive** — it imports and metabolizes, asserts no new machinery; the content is in the *bindings* and their over-determination, never in invented apparatus. The finite-$D$ Boolean deformation below is **the first register where closure was found, not the definition**: one degenerate point ($\text{Boolean}=\text{Markov}=\text{equilibrium}=\text{detailed balance}=X\!\equiv\!1=\mathcal{A}{=}0=\beta{=}1$) read from many sides.
 
-**Membership / self-test** (scale-invariant — binds MPA's own claims; I5 in `character_frontier.md`): a candidate is MPA iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds faithfully** — the binding preserves the import's logical type (a generic/∃ result is not bound as forced/∀, a necessary condition not as sufficient, topological genericity not as measure-typicality), and behavior at a degenerate point or boundary is **entailed from the interior structure**, never asserted at the limit. Fail any ⇒ systems thinking, not MPA.
+**Membership / self-test** (scale-invariant — binds Character's own claims; I5 in `character_frontier.md`): a candidate is Character iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds faithfully** — the binding preserves the import's logical type (a generic/∃ result is not bound as forced/∀, a necessary condition not as sufficient, topological genericity not as measure-typicality), and behavior at a degenerate point or boundary is **entailed from the interior structure**, never asserted at the limit. Fail any ⇒ systems thinking, not Character.
 
 **"Forced" cashes out as:** iff-chain as architecture · explicit falsifier checklist · every dynamical quantity flows with the operating point (nothing hand-frozen).
 
@@ -21,18 +21,18 @@ MPA is a **measurement discipline**, not a model. It forces independently-derive
 First-contact dictionary: the load-bearing nouns, named before the formalism uses them, each pointing to where its rigor lives. This layer **defines; it adds no claim** (the engine read by someone who does not already hold the concepts).
 
 * **character** — the substrate-general structure of how a driven-dissipative system *holds, deforms, and circulates* under load. Not psychological; a measurable, two-faced deformation of the Boolean ring — an **amplitude** face (how much is held: $c/s/r$) and a **sign-topological** face (which way it circulates: protected current). What the framework measures. (→ TWO FACES, DEFORMATION GENERATORS.)
-* **substrate** — any driven-dissipative system MPA reads (structural glass, laser, surface-code memory, ecology, queue, market). Substrate-neutral by construction: one reading rule for all.
+* **substrate** — any driven-dissipative system Character reads (structural glass, laser, surface-code memory, ecology, queue, market). Substrate-neutral by construction: one reading rule for all.
 * **ch** — the framework's unit, $1\,\text{ch}\equiv\ln2$ nats; the unit it *picks for itself* — one quantum of held character, forced twice over (one ch of *headroom* at the $Q$-peak $G_0/L{=}2$; one ch of *cost* at the erasure floor). Not chosen — the same $\ln2$ falls out from both faces. (→ `character_units.md` §1.)
 * **chit** — $\ln(G_0/L)$, headroom above threshold; the central character coordinate, read in ch via $\text{chit}/\ln2$. The spine — $c/s/r$ are its sign-and-size bands. (→ PARAMETERS; `character_units.md`.)
-* **NESS** — non-equilibrium steady state: stationary under continuous throughput (drive in, dissipation out), detailed balance broken. MPA's default object; equilibrium is the degenerate zero-drive case. (→ AXIOMS.)
-* **drive / dissipation** — *drive* = supplied work holding the system off equilibrium ($D=\Phi^*/\kappa$); *dissipation* = the balancing entropy export. Character exists only while the drive flows; MPA **metabolizes** the drive, never supplies it (the bootstrap constraint). (→ PARAMETERS.)
+* **NESS** — non-equilibrium steady state: stationary under continuous throughput (drive in, dissipation out), detailed balance broken. Character's default object; equilibrium is the degenerate zero-drive case. (→ AXIOMS.)
+* **drive / dissipation** — *drive* = supplied work holding the system off equilibrium ($D=\Phi^*/\kappa$); *dissipation* = the balancing entropy export. Character exists only while the drive flows; Character **metabolizes** the drive, never supplies it (the bootstrap constraint). (→ PARAMETERS.)
 * **Banach reference** — the analytically tunable *synthetic* substrate (a contraction-mapping NESS) used as the fixed reference character that real substrates are conformed *against*: the regenerable **ruler**, never the data (the reference is adjusted, the data is pristine). (→ conform layer; `pa:banach-fixed-point`.)
 * **holding** — a sustained NESS occupation of a mode/structure (the thing that is $c$, $s$, or $r$); *held* = maintained above threshold against decay. The unit of what a substrate keeps.
 * **trail** — the time-integrated record of a holding (its maintained NESS history); what coarse-grains up the tower and what $\tau_{obs}$ reads at a given scale.
 * **coherence** — how organized a holding stays under load; read by the triple $(\text{chit}, Q, I_{\text{pred}})$; lost by fraying.
 * **$k_{\text{frust}}$** — the signature of a *protected, drive-independent circulation* (a frustrated triad): a current that cannot relax to rest. "Frustration" = no global ordering satisfies all the signed couplings. (→ TOPOLOGICAL INVARIANT.)
 * **gauge** — a node-sign relabeling that leaves the physics unchanged; *gauge-invariant* = survives all relabelings (real structure); *gauge-irremovable* = a sign no relabeling can erase (the protected bit). (→ TWO FACES.)
-* **metabolize / subtractive** — MPA adds no mathematics; it *imports* established results and re-reads them in one coordinate system. All content is in the bindings and their over-determination, never in invented apparatus. (→ WHAT MPA IS.)
+* **metabolize / subtractive** — Character adds no mathematics; it *imports* established results and re-reads them in one coordinate system. All content is in the bindings and their over-determination, never in invented apparatus. (→ WHAT Character IS.)
 
 ---
 
@@ -70,7 +70,7 @@ Forgetting is not an operation: an unreinforced trail shrinks below the noise fl
 * **R** $:\mathcal{M}\to\mathcal{M}$ — sever to bath, cost $W_R/\kappa\ge\ln2\cdot H(A\mid\text{rest})$ (recovers the $1\,\text{ch}$ floor at $\kappa=k_BT\,\xi_{sub}$). **Limit $\to\neg$.**
 * $\top,\bot \to 1,0$.
 
-$\mathcal{M}_2$ ring $=\{\oplus{=}K,\ \land{=}C,\ 1{=}\top,\ \neg{=}\oplus1\}$. **MPA = finite-$D$ deformation of this ring.** Deformed piece = the involution: $R$'s irreversibility ($c\to r$, non-involutive at finite drive) is deformed $\neg$; deformation coordinate is the drive via chit, **not** the unit.
+$\mathcal{M}_2$ ring $=\{\oplus{=}K,\ \land{=}C,\ 1{=}\top,\ \neg{=}\oplus1\}$. **Character = finite-$D$ deformation of this ring.** Deformed piece = the involution: $R$'s irreversibility ($c\to r$, non-involutive at finite drive) is deformed $\neg$; deformation coordinate is the drive via chit, **not** the unit.
 
 Continuous shadows: **C_char** = adiabatic $\gamma:0\to\ll0$ while holding NESS (forced non-adiabatic $\Rightarrow$ chit$\to0$, $s$-strain, $\sigma$ spikes, modes may drop sub-threshold). **R_char** = quench (choke $G_0$ or open to bath $L\!\uparrow$; edge dissolves natively, $\gamma_{AB}\rho_A\rho_B\to0$).
 
@@ -128,13 +128,13 @@ Independence is load-bearing: the sign-face is the source of $k_{\text{frust}}$'
 * **Affinity** $\mathcal{A}:=\oint_C v/D=\ln(\prod_+k/\prod_-k)$ (nats), gauge-invariant. $\mathrm{spec}(M)$ complex-conjugate pair $\Leftrightarrow\mathcal{A}\ne0$.
 * Stationary state irreducibly NESS = topologically-forced circulating current, broken detailed balance. **Invariant = complex spectrum (irreducible rotation), not fixed-point non-existence.** Sub-regimes: $\mathrm{Re}<0$ stable circulating focus ($J\ne0$); $\mathrm{Re}>0$ repelling focus + attracting limit cycle.
 * **Affinity vs magnitude**: drive-independence lives in $\mathcal{A}$ (forced $\ne0\ \forall D$); magnitude $J_{ss}$ flows with chit.
-* **CENTRAL COMMITMENT** (a claim MPA holds as likely true; onset-necessity, *not* generativity, *not* determinism): protected circulation ($\mathcal{A}\ne0$, removable only by edge deletion) $\Rightarrow$ a triad in the coupling graph. The **topology $\to$ frame** direction of the two-frame iff-chain (self-probe defined $\Leftrightarrow J\ne0 \Leftrightarrow \mathcal{A}\ne0 \Leftrightarrow$ triad); the **frame $\to$ topology** direction is `TWO-FRAME CONSTRUCTION`. The iff-chain ties the two directions; each is independently testable. *(Refutation conditions: see FALSIFIERS.)*
+* **CENTRAL COMMITMENT** (a claim Character holds as likely true; onset-necessity, *not* generativity, *not* determinism): protected circulation ($\mathcal{A}\ne0$, removable only by edge deletion) $\Rightarrow$ a triad in the coupling graph. The **topology $\to$ frame** direction of the two-frame iff-chain (self-probe defined $\Leftrightarrow J\ne0 \Leftrightarrow \mathcal{A}\ne0 \Leftrightarrow$ triad); the **frame $\to$ topology** direction is `TWO-FRAME CONSTRUCTION`. The iff-chain ties the two directions; each is independently testable. *(Refutation conditions: see FALSIFIERS.)*
 
 ---
 
 ## TWO-FRAME CONSTRUCTION — the FDR reading
 
-*A claim MPA holds as likely true. Refutation conditions consolidated in FALSIFIERS.*
+*A claim Character holds as likely true. Refutation conditions consolidated in FALSIFIERS.*
 
 * **External frame** — amplitude $\times$ probe field $\to$ FD ratio $X$. **Substrate-conditional**: requires a probe matched to the substrate; defined wherever a probe couples.
 * **Self-probe frame** — current $J\times$ intrinsic affinity $\mathcal{A}$ (nats) $\to$ tightness $\mathcal{T}=\langle\sigma\rangle\mathrm{Var}(J)/(2\langle J\rangle^2)\ge1$; core $\mathrm{SNR}_J=\langle J\rangle^2/\mathrm{Var}(J)\le\langle\sigma\rangle/2$. **Intrinsic**: no probe; affinity in nats by construction.
@@ -147,7 +147,7 @@ ties the FDR reading to the topological claim in both directions:
   * `TRIAD/COMMIT` (**topology $\to$ frame**): protected circulation $\Rightarrow$ triad.
   * `CONSTRUCTION` (**frame $\to$ topology**): self-probe definedness $\Rightarrow$ triad.
 
-  What MPA adds over concurrent FDR↔TUR unifications: those connect the two frames without committing to triad topology, whereas here the topological claim follows from the frame's existence. *(Refutation conditions: see FALSIFIERS.)*
+  What Character adds over concurrent FDR↔TUR unifications: those connect the two frames without committing to triad topology, whereas here the topological claim follows from the frame's existence. *(Refutation conditions: see FALSIFIERS.)*
 
 ---
 

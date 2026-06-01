@@ -25,7 +25,7 @@ Field rules:
 
 - `<key>`: kebab-case, unique within this doc (including archived entries). No whitespace, no slashes, no quotes.
 - `[<status>]`: exactly one of `[noted]` / `[sketched]` / `[developed]` / `[archived]`. See STATUS LADDER.
-- **Builds on**: at least one pointer to a **specific named section** in a core doc. Format: `engine <SECTION>`, `receipts §<entry-name>`, `prior-art \`<pa-key>\``, `frontier \`<key>\``, `units §<n>`. Generic pointers like "the framework", "MPA", or "the deformation" are **invalid** — the entry must name what it uses.
+- **Builds on**: at least one pointer to a **specific named section** in a core doc. Format: `engine <SECTION>`, `receipts §<entry-name>`, `prior-art \`<pa-key>\``, `frontier \`<key>\``, `units §<n>`. Generic pointers like "the framework", "Character", or "the deformation" are **invalid** — the entry must name what it uses.
 - **Description**: descriptive language only (uses verbs like *render / demonstrate / apply / illustrate / compute / display / build / visualize / simulate / pedagogically present*). Avoids structural verbs (see ANTI-DRIFT Check 1). One paragraph; longer goes in `sketched` or earns a dedicated doc.
 - **Gates**: must be a concrete criterion, not a vibe. Example: "Move to `sketched` when a named substrate has been worked through." Not: "Move to `sketched` when more is clear."
 - **Gated on**: optional. Names the current blocker (e.g., "the verticals' reads working", "presentation pipeline online").
@@ -80,7 +80,7 @@ If yes → coined objects are owned by `character_engine.md` and the prior-art r
 
 ### Check 4 — anchor specificity test
 
-Does the `Builds on` field name **specific sections**, or does it use generic language ("the framework", "MPA", "the core", "the deformation calculus")?
+Does the `Builds on` field name **specific sections**, or does it use generic language ("the framework", "Character", "the core", "the deformation calculus")?
 
 If generic → the anchor doesn't constrain the entry. **Require specific section names before adding.** If the user can't name specific sections, the item probably isn't ready to be an application yet (it may be a framework-level idea that belongs in frontier steeping).
 
@@ -108,8 +108,8 @@ For an AI applying these rules to new items, here is the routing for common patt
 | Proposed new falsifier | "Here's a test that would kill the two-frame iff" | **frontier battery** or **engine FALSIFIERS**; not applications |
 | Proposed redefinition of a coined object | "Maybe ch should be ln 3 not ln 2" | Reject — ch is forced (`character_units.md §1`). Not anywhere unless a derivation error is found, in which case frontier `corrected`. |
 | Reveals a gap in the core | "Applying VDM to k_frust would need a new observable we don't have" | **frontier steeping** (the gap); then **applications** entry can build on the gap once it's filled |
-| Tool / library workflow | "Blender add-on for rendering MPA substrates" | **applications** with `External deps`, `noted` |
-| Vague idea, no anchor possible | "What if MPA applied to consciousness" | Reject from applications (no specific anchor). If it has a concrete mechanism + falsifier, route to **frontier steeping**. Otherwise the discipline rejects it. |
+| Tool / library workflow | "Blender add-on for rendering Character substrates" | **applications** with `External deps`, `noted` |
+| Vague idea, no anchor possible | "What if Character applied to consciousness" | Reject from applications (no specific anchor). If it has a concrete mechanism + falsifier, route to **frontier steeping**. Otherwise the discipline rejects it. |
 
 When a proposed item doesn't match any row above, default behavior:
 

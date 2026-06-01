@@ -1,6 +1,6 @@
 # Character — UNITS (non-dimensionalization standard)
 
-MPA is dimensionless by construction: chit $=\ln(G_0/L)$, $D=\Phi^*/\kappa$, $\gamma$ in $D$-units, $\beta_{\text{mem}}$, $Q$, $\mathcal{A}$ in nats — all ratios. That is the source of the cross-substrate power, not a gap. This standard fixes a small set of **non-arbitrary anchors** so runs are mutually consistent and cross-substrate-comparable, **without** pinning a universal physical scale (which would break substrate-neutrality). Each anchor is tagged **[FORCED]** (the math picks it; not a choice) or **[CONVENTION]** (a choice, stated). The base unit is **forced**; the rest is forced where it can be and honestly conventional where it can't.
+Character is dimensionless by construction: chit $=\ln(G_0/L)$, $D=\Phi^*/\kappa$, $\gamma$ in $D$-units, $\beta_{\text{mem}}$, $Q$, $\mathcal{A}$ in nats — all ratios. That is the source of the cross-substrate power, not a gap. This standard fixes a small set of **non-arbitrary anchors** so runs are mutually consistent and cross-substrate-comparable, **without** pinning a universal physical scale (which would break substrate-neutrality). Each anchor is tagged **[FORCED]** (the math picks it; not a choice) or **[CONVENTION]** (a choice, stated). The base unit is **forced**; the rest is forced where it can be and honestly conventional where it can't.
 
 ---
 
@@ -17,11 +17,11 @@ $\text{chit}=\ln2$ is **one ch of headroom** ($G_0/L=2$): the maximally-ringing 
 * **amplitude face** — one ch of headroom ($G_0/L=2$) is the Q-peak; **[FORCED]** by the RO algebra above;
 * **cost face** — one ch costs $\ln2$ nats; **[FORCED]** by the erasure floor (`pa:landauer`).
 
-This is a third forced appearance of the bit↔chit correspondence the engine already carries (the per-event row): it is not put in by hand. **The unit of MPA is the ch $\equiv\ln2$ nats** — the character bit, one quantum of held character, surfacing as both headroom and cost.
+This is a third forced appearance of the bit↔chit correspondence the engine already carries (the per-event row): it is not put in by hand. **The unit of Character is the ch $\equiv\ln2$ nats** — the character bit, one quantum of held character, surfacing as both headroom and cost.
 
 ---
 
-## 2. The anchor set (MPA-natural units)
+## 2. The anchor set (Character-natural units)
 
 * **Cost & information — the ch $\equiv\ln2$ nats.** **[FORCED unit]**, erasure-anchored. Report $\langle\sigma\rangle$-excess, the amplitude-bit erasure floor, channel capacity, $I_{\text{pred}}$, cryptic order $\chi$, and all erasure costs **in ch** (the topological sign flip is reversible — no flip-floor; §Two bits).
 * **Headroom (amplitude) — chit in ch**, $\text{chit}_{\text{ch}}=\text{chit}/\ln2$. Origin $\text{chit}=0$ **[FORCED]** (threshold, never attained); unit tick $\text{chit}=\ln2$ **[FORCED]** (Q-peak). So $\text{chit}_{\text{ch}}=1$ is *always* the peak-ringing point on every substrate.

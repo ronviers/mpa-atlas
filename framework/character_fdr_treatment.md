@@ -1,6 +1,6 @@
 # Character — FDR, gFDR, and the Two-Frame Structure
 
-**Scope.** How fluctuation–dissipation relations enter the character projection: the translation discipline that adopts them, the NESS-general form, the two conjugate frames it splits into, why those frames are the two faces of the Boolean→MPA deformation — with the **Central Commitment derived as the iff-chain's falsifiable direction** rather than asserted.
+**Scope.** How fluctuation–dissipation relations enter the character projection: the translation discipline that adopts them, the NESS-general form, the two conjugate frames it splits into, why those frames are the two faces of the Boolean→Character deformation — with the **Central Commitment derived as the iff-chain's falsifiable direction** rather than asserted.
 
 **Notation.**
 
@@ -23,7 +23,7 @@
 | chit | $\ln(G_0/L)$, measured in **ch** ($1\,\text{ch}\equiv\ln 2$ nats) |
 | $D$ vs $D_0$ | drive $\Phi^*/\kappa$ vs diffusion constant; the affinity integral uses $D_0$ |
 
-Eponym attribution: every borrowed result resolves to `character_prior_art.md` by its `pa:` key. The framework's own reading is identified by `(MPA)` only where the contrast would otherwise be ambiguous; otherwise the residual rule applies — what is not pointed at the ledger is owned.
+Eponym attribution: every borrowed result resolves to `character_prior_art.md` by its `pa:` key. The framework's own reading is identified by `(Character)` only where the contrast would otherwise be ambiguous; otherwise the residual rule applies — what is not pointed at the ledger is owned.
 
 ---
 
@@ -54,9 +54,9 @@ Direct transfers (Steps 1–3): $C, R, X$, the FD plot, the aging diagonal, the 
 
 No-transfer items (Step 4) and their imports (Step 5):
 
-- $T\to T_{\text{sub}}$ — mode- and history-dependent (no fixed reservoir temperature outside equilibrium). (MPA)
-- $X(t,t')\to X(t,t',\tau_{\text{obs}})$ — window-dependent (substrate-conditional reading rule F.2). (MPA)
-- passive → active probe — response feeds back through the maintenance dynamics; active band $|\omega-\omega_{RO}|\lesssim\gamma_{RO}$. (MPA)
+- $T\to T_{\text{sub}}$ — mode- and history-dependent (no fixed reservoir temperature outside equilibrium). (Character)
+- $X(t,t')\to X(t,t',\tau_{\text{obs}})$ — window-dependent (substrate-conditional reading rule F.2). (Character)
+- passive → active probe — response feeds back through the maintenance dynamics; active band $|\omega-\omega_{RO}|\lesssim\gamma_{RO}$. (Character)
 - equilibrium → degenerate $X\equiv1$ case.
 
 The decisive import is the velocity-form FDR-departure identity (`pa:harada-sasa`):
@@ -74,20 +74,20 @@ $$\underbrace{(\text{amplitude}\times h)\to X}_{\textbf{external frame}}\qquad\q
 $$\mathcal{T}=\langle\sigma\rangle\,\frac{\mathrm{Var}(J)}{2\langle J\rangle^{2}}\ge1,\qquad \mathrm{SNR}_J=\frac{\langle J\rangle^{2}}{\mathrm{Var}(J)}\le\frac{\langle\sigma\rangle}{2}.$$
   Dimensionless (affinity in nats). **Defined iff a current exists.**
 
-**Definedness asymmetry — the load-bearing fact (MPA).** The external frame is defined wherever a probe couples; the self-probe is defined iff a current exists ($k_{\text{frust}}$-bearing). This is what makes the self-probe **intrinsic** — no external probe, no substrate-matching — and the frame's *existence* is itself a topological diagnostic. The two frames are not parallel by construction; they coincide only on the subset of substrates where the self-probe is defined.
+**Definedness asymmetry — the load-bearing fact (Character).** The external frame is defined wherever a probe couples; the self-probe is defined iff a current exists ($k_{\text{frust}}$-bearing). This is what makes the self-probe **intrinsic** — no external probe, no substrate-matching — and the frame's *existence* is itself a topological diagnostic. The two frames are not parallel by construction; they coincide only on the subset of substrates where the self-probe is defined.
 
 **Bridge** (`pa:harada-sasa`): $\;V_{\text{ext}}=\langle\sigma\rangle=J\cdot\mathcal{A}.\;$ Holds at **verdict / onset**; the exact magnitude identity owes the velocity-form integral (open numerical-identity refinement).
 
-**Derivation — the Central Commitment, recovered (MPA).** From the definedness asymmetry plus standard machinery:
+**Derivation — the Central Commitment, recovered (Character).** From the definedness asymmetry plus standard machinery:
 $$\text{self-probe defined}\;\Longleftrightarrow\;J\ne0\;\Longleftrightarrow\;\mathcal{A}\ne0\;\Longleftrightarrow\;\triangle\ \text{in coupling graph}.$$
 - $J\ne0\Leftrightarrow\mathcal{A}\ne0$ by detailed-balance reversibility (`pa:kolmogorov-reversibility`); $\mathcal{A}=0$ is the gauge-balanced, real-spectrum case (`pa:signed-balance`).
-- $\mathcal{A}\ne0$ gauge-irremovable $\Leftrightarrow\triangle$ in the coupling graph: $N=2$ currents are gauge-removable; the minimal protected carrier is the imbalanced, non-reciprocal, chiral 3-cycle (MPA def; `pa:may-leonard` cyclic dynamics).
+- $\mathcal{A}\ne0$ gauge-irremovable $\Leftrightarrow\triangle$ in the coupling graph: $N=2$ currents are gauge-removable; the minimal protected carrier is the imbalanced, non-reciprocal, chiral 3-cycle (Character def; `pa:may-leonard` cyclic dynamics).
 
-The **Central Commitment** — *protected circulation ⇒ triad* — is the falsifiable direction of this iff-chain, **not an independent axiom**. The commitment is what the two-frame structure says about the world; the frame structure is what the iff-chain says about MPA. (Engine `TRIAD/COMMIT` and receipts §Central commitment carry the chain; this section is its derivation.)
+The **Central Commitment** — *protected circulation ⇒ triad* — is the falsifiable direction of this iff-chain, **not an independent axiom**. The commitment is what the two-frame structure says about the world; the frame structure is what the iff-chain says about Character. (Engine `TRIAD/COMMIT` and receipts §Central commitment carry the chain; this section is its derivation.)
 
 ## 5. Why these are the frames — the deformation's two faces
 
-The two frames are not parallel by accident: they are the two **independent faces** of the Boolean→MPA deformation, read as fluctuation–response.
+The two frames are not parallel by accident: they are the two **independent faces** of the Boolean→Character deformation, read as fluctuation–response.
 
 - **Amplitude face** — $\text{chit}/D$ drives $c\to s\to r$; observables $\alpha_s,P_s$ → external frame.
 - **Sign-topological face** — balance of the signed coupling graph (`pa:signed-balance`); order parameter $\mathcal{A}$ → self-probe frame.
@@ -123,4 +123,4 @@ Dynamical consequence: $k_{\text{frust}}$ — stationary state irreducibly NESS,
 
 ---
 
-*Imports* (all `pa:` keys → `character_prior_art.md`): `ck-aging`, `harada-sasa`, `tur`, `signed-balance`, `cycle-affinity`, `kolmogorov-reversibility`, `may-leonard`, `crooks-ft`. Everything else — the iff-chain derivation, the two-faces identification, $\triangle$ as minimal carrier, $k_{\text{frust}}$, the affinity-vs-magnitude split, the homochirality stake — is the residual MPA owns by the prior-art ledger's exclusion rule.
+*Imports* (all `pa:` keys → `character_prior_art.md`): `ck-aging`, `harada-sasa`, `tur`, `signed-balance`, `cycle-affinity`, `kolmogorov-reversibility`, `may-leonard`, `crooks-ft`. Everything else — the iff-chain derivation, the two-faces identification, $\triangle$ as minimal carrier, $k_{\text{frust}}$, the affinity-vs-magnitude split, the homochirality stake — is the residual Character owns by the prior-art ledger's exclusion rule.
