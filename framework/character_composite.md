@@ -1,16 +1,21 @@
 # Character_composite — emergence as the closure of character-space under coupling
 
-> **Status: DRAFT, staged in `docs/`. NOT canonical. Doubly gated** — reserved name
-> `character_composite` (was `character_double_prime` / "character′′"). Gated on
-> [`character_manifold.md`](../framework/character_manifold.md)'s receipt ledger *first* (now
-> **discharged** — Gate 1 promoted 2026-06-01), then on its own bespoke bindings below (Gate 2,
-> **open** — the active frontier). Built by applying the recorded Lift Move
-> ([`lift_treatment.md`](lift_treatment.md)) a second time, to `ℭ` itself.
+> **Status: PROMOTED to `framework/` 2026-06-01 — Gate 2 discharged.** Coined name
+> `character_composite` (was `character_double_prime` / "character′′"). Both gates now closed:
+> Gate 1 ([`character_manifold.md`](character_manifold.md)) promoted 2026-06-01, and this layer's
+> own bespoke ledger (below) discharged — the **binding** by import, the **protection** by V-(b),
+> and **emergent identity by a confirmed real-substrate instance** (the Nicholas et al. dissipative
+> DNA-NESS — `emergent_identity_dna_ness.py` passes all three components on measured rates, and the
+> full-nonlinear cross-check `dna_ness_crosscheck.py` confirms the reduction to ratio 1.002). The
+> **alive loop** is carried as the layer's **parked** target (the program's north star, out of
+> near-term reach by standing decision) — not a blocker, exactly as `character_manifold` carries the
+> Kauffman non-prestatability caveat. Built by applying the recorded Lift Move
+> ([`lift_treatment.md`](../docs/lift_treatment.md)) a second time, to `ℭ` itself.
 >
-> **This is the contribution-candidate layer**: the most bespoke, the least imported. It is
-> where MPA stops re-reading established results and proposes one. Treat every claim here as
-> owed a receipt or a kill; the second iteration is exactly where "floating" (metaphor
-> dressed as geometry) is the live danger.
+> **The contribution-candidate layer, now earned in.** This is where MPA stops re-reading and
+> *proposes* — emergence as the new protected bit, sustained — and the proposal now has its first
+> real receipt. **Honest scope:** ONE confirmed real instance (+ chemostat/idealization caveats),
+> the alive loop parked. An earned contribution with a receipt, not a law.
 
 ## How to read this
 
@@ -194,7 +199,7 @@ is **poured**.
 **`[est]` to verify the preconditions of:** operad/PROP closure · renormalization semigroup
 · Wilsonian emergent operators (IR).
 
-**`[bespoke]` owed a derivation or a kill** (the contribution lives here):
+**`[bespoke]` — now DISCHARGED** (the contribution earned its receipts; alive loop parked):
 
 - the **binding** — graph-frustration ⟺ thermodynamic `𝒜` ⟸ spectral, one carrier.
   **DISCHARGED by import** (Gate 1, receipts §binding): 2-way carrier (`signed-balance`/
@@ -206,24 +211,29 @@ is **poured**.
   graph-flux invariant (0/200 deformations, flips only on rewire), **not** a Chern-like integer
   charge. A real *second* instance of the J/EP separation is still owed (frontier
   `chirality-protection`).
-- emergent identity ≡ the new protected bit, sustained. **Synthetically demonstrated** (calibration,
-  `emergent_identity.py` + `_n4.py`) **and now a REAL-MEASURED instance, CONFIRMED** — the Nicholas
-  et al. dissipative DNA system (*Angew.* 2025) passes all three components on experimentally-fitted
-  rates (`emergent_identity_dna_ness.py`), and the N=3 reduction is **validated against the full
-  nonlinear network** (`dna_ness_crosscheck.py`: cycling-rate ratio 1.002; fuel-cut recovery ~2.8 min
-  matches experiment). The first real substrate to instance the node; pending Ron's review (the only
-  residual is the chemostat / omitted-slow-side-processes idealization).
-- alive loop ≡ a cyclic `⊗`-fixed-point. *(parked)*
+- emergent identity ≡ the new protected bit, sustained. **DISCHARGED — confirmed real-substrate
+  instance (2026-06-01).** The Nicholas et al. dissipative DNA-NESS (*Angew.* 2025) passes all three
+  components on experimentally-fitted rates (`emergent_identity_dna_ness.py`), and the N=3 reduction
+  is **validated against the full nonlinear network** (`dna_ness_crosscheck.py`: per-quencher
+  cycling-rate ratio 1.002, QSS valid; fuel-cut recovery ~2.8 min matches the SI's experimental
+  ~3-min recovery). First real substrate to instance the node. *Scope:* one confirmed instance +
+  chemostat/omitted-slow-side-process idealization (the SI's own drift terms; do not touch the core
+  cycle).
+- alive loop ≡ a cyclic `⊗`-fixed-point. **Parked** — the program's north star, carried as the
+  layer's recorded future target, not a discharge blocker (cf. `character_manifold`'s Kauffman caveat).
 
-⚠ CAVEAT — honest read of the whole layer: this is where the program is **most exposed**.
-The first lift re-coordinatized imports; this one proposes. Its value is real *only* if the
-bespoke list above earns receipts — otherwise it is the most elaborate floating in the
-program. That exposure is also why it is the contribution: it is the one place the lift
-asks the world a question the imports never had to answer.
+⚠ CAVEAT — honest read of the whole layer: this was where the program was **most exposed**.
+The first lift re-coordinatized imports; this one proposed. Its value was real *only if* the
+bespoke list earned receipts — and it has: binding imported, protection instanced (V-(b)),
+**emergent identity confirmed on a real substrate** (DNA-NESS, cross-check validated). The exposure
+paid off — the layer asked the world a question the imports never had to answer, and a real
+substrate answered. Standing honest limits (carried, not hidden): **one** confirmed instance; the
+chemostat/idealization caveat on that instance; and the **alive loop parked** (a recorded target,
+not a closed result). The contribution is earned, scoped — not universal.
 
 ---
 
-*Source:* the Lift Move ([`lift_treatment.md`](lift_treatment.md)) applied to
-[`character_manifold.md`](../framework/character_manifold.md). Promotes to `framework/` only
-when **both** ledgers are discharged — the manifold's (now done, Gate 1) and this one's (Gate 2,
-open). The reserved coined name on promotion is `character_composite`.
+*Source:* the Lift Move ([`lift_treatment.md`](../docs/lift_treatment.md)) applied to
+[`character_manifold.md`](character_manifold.md). **PROMOTED to `framework/` 2026-06-01** — both
+ledgers discharged (the manifold's, Gate 1; and this one's, Gate 2, with emergent identity confirmed
+on the DNA-NESS real substrate). The alive loop is carried as the parked future target.

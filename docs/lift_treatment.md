@@ -93,7 +93,7 @@ system of strata `{ℭ_n}` whose arrows are the coupling maps `ℭ_n → ℭ_{n+
 the content: **emergence is internal to character-space — the non-additivity of the up-map,
 not a jump to a higher ontology.**
 
-Full second application: [`character_composite.md`](character_composite.md). It is
+Full second application: [`character_composite.md`](../framework/character_composite.md). It is
 **doubly gated** — on `character_manifold`'s receipt ledger first (now discharged, Gate 1), then on its own bespoke
 bindings — and it is the layer where MPA stops re-reading and proposes.
 

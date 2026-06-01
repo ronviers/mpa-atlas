@@ -4,6 +4,13 @@
 > `character_prime` receipt ledger) so the morphospace lift can promote into `framework/`,
 > with a line of sight to **Gate 2** (the `character_double_prime` contribution layer).
 > Self-contained: a cold reader needs only this file plus the three it points to.
+>
+> **UPDATE 2026-06-01 — BOTH GATES CLOSED; this baton is spent.** Gate 1 promoted
+> (`framework/character_manifold.md`); Gate 2 closed out (`framework/character_composite.md`
+> promoted, emergent-identity discharged by the **Nicholas DNA-NESS real-substrate instance** +
+> full-nonlinear cross-check). Canonical record: `framework/character_composite.md` + the
+> `frustration-ascent` entry in `framework/character_frontier.md`. The alive loop remains the
+> parked program north star.
 
 ## 0. Where this sits
 
@@ -12,7 +19,7 @@ Three staged artifacts, none canonical:
 - [`character_manifold.md`](../framework/character_manifold.md) — the morphospace lift of `character.md`
   (point → manifold). Carries the **Gate 1** receipt ledger.
 - [`lift_treatment.md`](lift_treatment.md) — the lift recorded as a repeatable move.
-- [`character_composite.md`](character_composite.md) — the move applied a second time;
+- [`character_composite.md`](../framework/character_composite.md) — the move applied a second time;
   emergence as closure of `ℭ` under coupling. Carries **Gate 2**, and is *doubly* gated
   (Gate 1 first).
 
@@ -225,6 +232,6 @@ rebranded `MPA → Character`; this doc (in `docs/`) still says "MPA" pending a
 publication-aware pass.
 **Cross-refs:** [`character_manifold.md`](../framework/character_manifold.md) ·
 [`lift_treatment.md`](lift_treatment.md) ·
-[`character_composite.md`](character_composite.md) ·
+[`character_composite.md`](../framework/character_composite.md) ·
 `framework/character_frontier.md` (where surviving bespoke bindings get `steeping` entries once
 instanced) · `framework/character_receipts_engine.md` (where Phase-D derivations land).
