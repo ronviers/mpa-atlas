@@ -74,7 +74,7 @@ correction); apparatus conform `8a88c22`. Permanent home = frontier (staked-remo
    PUSHED 2026-05-30 (atlas `2c24f86`):** engine §TWO BITS corrected (free both ways, forward-only);
    receipts §Two bits `staked`→`corrected` (full lineage); frontier `staked:two-bits` removed +
    `flip-cost-across-zero` tombstone / `battery:sign-interior` / `wall-as-type-boundary` (ii) patched;
-   `mpa_units.md` + prior-art (`landauer`, `bennett-reversible`) stale pointers fixed. Same error family
+   `character_units.md` + prior-art (`landauer`, `bennett-reversible`) stale pointers fixed. Same error family
    as wall-forces-chaos: a quantity formulated at the degenerate boundary instead of entailed from the
    interior. (`staked:homochirality` + `central-commitment` unaffected — none asserts the $\ge1$ ch.)
 
@@ -322,7 +322,7 @@ then #4 (wall-ladder) once the cascade substrate is chosen — but Ron's steer i
 
 - The character-deformation-algebra baton (retired 2026-05-30, fully consumed) — its goal
   (`character-primitives` to `staked`) landed and then crossed staked→core; see receipts `§commit-line crossing`.
-- Crossing logged in `mpa_receipts_engine.md` `§commit-line crossing`; frontier reflects the new
+- Crossing logged in `character_receipts_engine.md` `§commit-line crossing`; frontier reflects the new
   ledger. Memory: `project_frustration_ascent_recursion.md`.
 
 ## DISCIPLINE

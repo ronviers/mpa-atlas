@@ -1,4 +1,4 @@
-# MPA — FDR, gFDR, and the Two-Frame Structure
+# Character — FDR, gFDR, and the Two-Frame Structure
 
 **Scope.** How fluctuation–dissipation relations enter the character projection: the translation discipline that adopts them, the NESS-general form, the two conjugate frames it splits into, why those frames are the two faces of the Boolean→MPA deformation — with the **Central Commitment derived as the iff-chain's falsifiable direction** rather than asserted.
 
@@ -23,7 +23,7 @@
 | chit | $\ln(G_0/L)$, measured in **ch** ($1\,\text{ch}\equiv\ln 2$ nats) |
 | $D$ vs $D_0$ | drive $\Phi^*/\kappa$ vs diffusion constant; the affinity integral uses $D_0$ |
 
-Eponym attribution: every borrowed result resolves to `mpa_prior_art.md` by its `pa:` key. The framework's own reading is identified by `(MPA)` only where the contrast would otherwise be ambiguous; otherwise the residual rule applies — what is not pointed at the ledger is owned.
+Eponym attribution: every borrowed result resolves to `character_prior_art.md` by its `pa:` key. The framework's own reading is identified by `(MPA)` only where the contrast would otherwise be ambiguous; otherwise the residual rule applies — what is not pointed at the ledger is owned.
 
 ---
 
@@ -123,4 +123,4 @@ Dynamical consequence: $k_{\text{frust}}$ — stationary state irreducibly NESS,
 
 ---
 
-*Imports* (all `pa:` keys → `mpa_prior_art.md`): `ck-aging`, `harada-sasa`, `tur`, `signed-balance`, `cycle-affinity`, `kolmogorov-reversibility`, `may-leonard`, `crooks-ft`. Everything else — the iff-chain derivation, the two-faces identification, $\triangle$ as minimal carrier, $k_{\text{frust}}$, the affinity-vs-magnitude split, the homochirality stake — is the residual MPA owns by the prior-art ledger's exclusion rule.
+*Imports* (all `pa:` keys → `character_prior_art.md`): `ck-aging`, `harada-sasa`, `tur`, `signed-balance`, `cycle-affinity`, `kolmogorov-reversibility`, `may-leonard`, `crooks-ft`. Everything else — the iff-chain derivation, the two-faces identification, $\triangle$ as minimal carrier, $k_{\text{frust}}$, the affinity-vs-magnitude split, the homochirality stake — is the residual MPA owns by the prior-art ledger's exclusion rule.

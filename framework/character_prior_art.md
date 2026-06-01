@@ -1,4 +1,4 @@
-# MPA — PRIOR ART (import ledger)
+# Character — PRIOR ART (import ledger)
 
 Claim boundary, stated by exclusion. Every object below is **imported, not MPA's** — MPA adds no object, only the reading (the falsifiable cross-substrate transfer) and the coined apparatus. What is *not* in this ledger is the residual MPA owns: the coined terms (chit, trail, holding, coherence, $c/s/r$, $k_{\text{frust}}$, the deformation / two-faces / two-bits framing, the central commitment, mpa-legal discipline), the readings that map each import onto a sustained-NESS substrate, and the falsifiers.
 

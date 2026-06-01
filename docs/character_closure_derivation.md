@@ -4,7 +4,7 @@
 figure `mpa-conform/output/calibration/character_closure.png`). This is the single move the promotion
 handoff named: turn the empirical generator **table** (`character_primitives.py`) into a derived,
 complete, closed **law**. Forced-not-fitted = *derivation, not tabulation*. The source for the
-eventual `mpa_receipts_engine.md` §deformation-generators receipt. Framework edits (the engine
+eventual `character_receipts_engine.md` §deformation-generators receipt. Framework edits (the engine
 operator + the frontier `battery → staked` move) are the **next** move, held for review.
 
 Structure follows Ron's four steps (2026-05-29): (1) formalize the algebra; (2) autonomous-symmetry
@@ -135,7 +135,7 @@ coarse-graining**, which is why the cascade re-renders the same character object
 
 ---
 
-## Gate check (against the character-primitives battery spec — falsifier now in [`../framework/mpa_receipts_engine.md`](../framework/mpa_receipts_engine.md) §deformation-generators)
+## Gate check (against the character-primitives battery spec — falsifier now in [`../framework/character_receipts_engine.md`](../framework/character_receipts_engine.md) §deformation-generators)
 
 - **(C) closure — DERIVED.** gl(3,ℝ) Cartan decomposition: exhaustive (dim 9 = 1+3+5) and closed
   (residual 3·10⁻¹⁶). Extensions close on named structures. A closure, not a catalogue. ✓
@@ -159,7 +159,7 @@ coarse-graining**, which is why the cascade re-renders the same character object
 
 ## The conditional operator (Step 4 — drafted, for the next-move engine edit)
 
-For `mpa_engine.md` as an `OPERATORS`-adjacent section "deformation generators":
+For `character_engine.md` as an `OPERATORS`-adjacent section "deformation generators":
 
 > **Deformation generators (conditional).** The linear deformations of the character-bearing drift are
 > gl(3,ℝ) = ℝ·I (damping) ⊕ so(3) (chirality mag+sign+orientation) ⊕ Sym₀ (splitting/detuning), Cartan-

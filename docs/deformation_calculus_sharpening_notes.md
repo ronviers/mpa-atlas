@@ -11,9 +11,9 @@ here is to over-capture; trim as pieces stabilize into compressed content or get
 discarded as honest false starts.
 
 Companion canonical files (do **not** lean on this note for operational lookups):
-[`../framework/mpa_engine.md`](../framework/mpa_engine.md) §Deformation
-calculus / §Owed work / §Asymptotic closure; [`../framework/mpa_receipts_engine.md`](../framework/mpa_receipts_engine.md)
-§Deformation calculus; [`../framework/mpa_fdr_treatment.md`](../framework/mpa_fdr_treatment.md);
+[`../framework/character_engine.md`](../framework/character_engine.md) §Deformation
+calculus / §Owed work / §Asymptotic closure; [`../framework/character_receipts_engine.md`](../framework/character_receipts_engine.md)
+§Deformation calculus; [`../framework/character_fdr_treatment.md`](../framework/character_fdr_treatment.md);
 the falsification battery [`../framework/archive/boolean_deformation_falsification_battery.md`](../framework/archive/boolean_deformation_falsification_battery.md).
 
 ---
@@ -138,10 +138,10 @@ Moyal throughout) and must be **owned as a reframe**: spine "quantum-type" langu
 ## 4. Reframe B — "character power series" via the FDR trick (user)
 
 Question: can the singular Thm 9 crossover be converted to a *character power series*, the
-way [`../framework/mpa_fdr_treatment.md`](../framework/mpa_fdr_treatment.md) handles a relation
+way [`../framework/character_fdr_treatment.md`](../framework/character_fdr_treatment.md) handles a relation
 that has no fixed-coefficient form?
 
-**The FDR trick (mpa_fdr_treatment §2–3, §5):** equilibrium FDR ties $C,R$ by the fixed
+**The FDR trick (character_fdr_treatment §2–3, §5):** equilibrium FDR ties $C,R$ by the fixed
 constant $1/T$. Out of equilibrium that constant doesn't exist — and the move is *not* to
 expand/bound it but to **re-read it as a slope on a parametric locus**: on the FD plot the
 local slope is $-X/T=-1/T_{\rm eff}$. The thing with no fixed-coefficient form becomes a

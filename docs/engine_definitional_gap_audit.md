@@ -1,10 +1,10 @@
 # Engine definitional-gap audit (2026-05-31)
 
 > **STATUS: APPLIED 2026-05-31.** The §0 — Objects & Definitions layer this audit specified is now in
-> `framework/mpa_engine.md` (top, above PARAMETERS). This doc is retained as the rationale of record for that
+> `framework/character_engine.md` (top, above PARAMETERS). This doc is retained as the rationale of record for that
 > layer. The remaining value here is the per-term reasoning; the layer itself is canonical in the engine.
 
-**Method.** Read `mpa_engine.md` cold, as a stranger with modern tools would (e.g. an infographic-builder model
+**Method.** Read `character_engine.md` cold, as a stranger with modern tools would (e.g. an infographic-builder model
 asked to render "character flow"). Flag every term used in *load-bearing* position that the engine never
 *defines* — the assumed dictionary. The test that exposed it: an infographic model fed the engine renders the
 **machinery** (flows, bifurcations, the deformation chart) confidently and the **nouns** as empty centers
@@ -13,7 +13,7 @@ asked to render "character flow"). Flag every term used in *load-bearing* positi
 **Root cause.** The engine opens "Every line below is a definition, a formula, a condition, a mapping, or a
 kill condition" — but it is a **dense reference card for people who already hold the concepts.** It has
 PARAMETERS (symbols), STATES, OPERATORS — all *formal*. It has **no first-contact layer**: no §0 objects, no
-glossary, no plain-language definition of its own central nouns. Those live scattered across `mpa_units.md`,
+glossary, no plain-language definition of its own central nouns. Those live scattered across `character_units.md`,
 the architectural block-in, receipts, and **parked memory** — never in the engine itself. The thin discipline
 correctly says *don't duplicate derivations*; it never said *don't define your terms*. The engine has overshot
 thin → into not-self-contained: a claim whose nouns are undefined ("character-bearing drift") is a claim plus
@@ -43,7 +43,7 @@ Severity: **A** = load-bearing AND absent/never-defined in the engine (worst —
 - **ch** *(severity A — the unit the whole framework is denominated in; appears 0× in the engine)*. **Recommended
   one-liner:** *ch ("character bit") = the framework's forced unit, 1 ch ≡ ln2 nats — one quantum of held
   character, surfacing on both faces: one ch of headroom (G₀/L=2, the Q-peak) and one ch of cost (the erasure
-  floor). (Rigor: `mpa_units.md` §1.)* — and every "1 ch" / "ch" already in the engine (OPERATORS R floor,
+  floor). (Rigor: `character_units.md` §1.)* — and every "1 ch" / "ch" already in the engine (OPERATORS R floor,
   TWO BITS, THERMO↔INFO per-event row) should point here.
 
 - **Banach substrate / Banach reference** *(severity A — appears 0× in the engine; the analytical reference the

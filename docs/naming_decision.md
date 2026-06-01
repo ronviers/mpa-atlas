@@ -10,7 +10,7 @@ delegated), exercising the discipline's pick-the-obvious-best-and-state-it rule.
 
 The framework **deflated** over its history — by its authors' own hand. Earlier incarnation: **Metastable
 Propositional Calculus (MPC)** — a four-valued logic (c/s/k/r), a Thermodynamic Separation Theorem, the frame
-problem, cognitive mappings, a quantum-measurement conjecture; vast scope. Today's `mpa_engine.md` is the
+problem, cognitive mappings, a quantum-measurement conjecture; vast scope. Today's `character_engine.md` is the
 scaled-down descendant: substrate-neutral, falsification-disciplined, "synthetically vindicated,
 world-vindication data-gated" (`engine_readiness_assessment.md`). **Most frameworks inflate; this one was
 repeatedly cut back.** That trajectory is the opposite of pretension and should be *worn*, not hidden — it is

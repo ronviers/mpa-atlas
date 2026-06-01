@@ -401,5 +401,5 @@ Hopf:
 - `homochiral_triad.py` / `homochiral_cascade.py` — the #1 self-lit substrate + the tilt-brittle joint.
 - `frustration_ascent.py` / `dynamical_tower.py` — the original b₁-growth (linear focus) + the inserted-SL tower.
 - Research: `cascade research and prompt.md` (rounds 1+2 + synthesis), `cascade outside opinions.md` (the transduction-vs-generation + bootstrap-blocked correction).
-- Frontier: `mpa_frontier.md` `frustration-ascent` entry carries the full lineage; prior-art `splay-state`, `goldstone-mode`, `benjamin-feir`, `esposito-coarse-graining`. Memory: `project_frustration_ascent_recursion.md`.
+- Frontier: `character_frontier.md` `frustration-ascent` entry carries the full lineage; prior-art `splay-state`, `goldstone-mode`, `benjamin-feir`, `esposito-coarse-graining`. Memory: `project_frustration_ascent_recursion.md`.
 - **No engine edits this whole thread** — all frontier/prior-art/doc tracking. The engine-review flag list (three-way cycle/affinity/current vocabulary; high-drive ceiling = structural stability; the asterisked platforming-recursion) is still owed Ron's review.

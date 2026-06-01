@@ -1,8 +1,8 @@
-# MPA — APPLICATIONS (downstream uses register)
+# Character — APPLICATIONS (downstream uses register)
 
-**Purpose.** Capture downstream applications of the framework — rendering, pedagogy, specific substrate workings, simulation protocols, implementations, presentations, computational notebooks — without contaminating the core's epistemic register. `mpa_frontier.md` tracks the framework's *development* (proven / owed / staked / exploratory); this doc tracks the framework's *uses*.
+**Purpose.** Capture downstream applications of the framework — rendering, pedagogy, specific substrate workings, simulation protocols, implementations, presentations, computational notebooks — without contaminating the core's epistemic register. `character_frontier.md` tracks the framework's *development* (proven / owed / staked / exploratory); this doc tracks the framework's *uses*.
 
-**Load-bearing rule (anti-drift).** Entries here **USE** the core; they do not **EXTEND** it. Any entry that would assert a new structural claim, propose a new falsifier or kill condition, or redefine a coined object belongs in `mpa_frontier.md` (steeping rung initially) or in `mpa_engine.md` (via the frontier promotion gates), **not here**. This rule is algorithmic — every proposed entry must pass the five ANTI-DRIFT checks below before being added.
+**Load-bearing rule (anti-drift).** Entries here **USE** the core; they do not **EXTEND** it. Any entry that would assert a new structural claim, propose a new falsifier or kill condition, or redefine a coined object belongs in `character_frontier.md` (steeping rung initially) or in `character_engine.md` (via the frontier promotion gates), **not here**. This rule is algorithmic — every proposed entry must pass the five ANTI-DRIFT checks below before being added.
 
 **This doc is self-describing.** Future authors (human or AI) read this doc cold, then apply the AUTHORING PROCEDURE to add items. No external context required.
 
@@ -45,14 +45,14 @@ Field rules:
 **Transitions (each requires a recorded trigger):**
 
 - `noted → sketched`: at least one concrete specific is added — an algorithm sketch, a named substrate worked through, pseudocode, a numerical estimate, or a chosen data format. Update the `Gates` field to reflect what would move it to `developed`.
-- `sketched → developed`: content has grown beyond ~500 words of substantive elaboration **AND** a dedicated treatment doc `mpa_<key>.md` is created (pattern set by `mpa_fdr_treatment.md`). The entry in this doc becomes a stub: schema fields + a one-line "see `mpa_<key>.md`".
+- `sketched → developed`: content has grown beyond ~500 words of substantive elaboration **AND** a dedicated treatment doc `mpa_<key>.md` is created (pattern set by `character_fdr_treatment.md`). The entry in this doc becomes a stub: schema fields + a one-line "see `mpa_<key>.md`".
 - `→ archived` (from any status): item is superseded by another entry, dropped after consideration, or determined irrelevant. Set status to `[archived]` and add a one-sentence reason in the `Description` field. **Do not delete archived entries** — tombstones prevent re-derivation.
 
 ---
 
 ## ANTI-DRIFT — the five checks (run on every proposed entry)
 
-Before adding any entry, run these five checks. **If any check fires, the entry has a structural component that does not belong here.** The correct response is to *split*: route the structural piece to `mpa_frontier.md` (typically the steeping rung) and keep only the application-side content in this doc.
+Before adding any entry, run these five checks. **If any check fires, the entry has a structural component that does not belong here.** The correct response is to *split*: route the structural piece to `character_frontier.md` (typically the steeping rung) and keep only the application-side content in this doc.
 
 ### Check 1 — verb test (structural language)
 
@@ -76,7 +76,7 @@ Does the entry redefine, extend, modify, or rename any of these coined framework
 
 > **the ch unit · chit · trail (and trail vector) · holding · coherence · the c/s/r regime semantics · k_frust · the two faces · the two bits · the bit-chit correspondence · the Central Commitment · the Two-Frame Construction · the deformation · mpa-legal · the chimeric sign · the Banach reference**
 
-If yes → coined objects are owned by `mpa_engine.md` and the prior-art residual. **Route any redefinition to frontier.**
+If yes → coined objects are owned by `character_engine.md` and the prior-art residual. **Route any redefinition to frontier.**
 
 ### Check 4 — anchor specificity test
 
@@ -106,7 +106,7 @@ For an AI applying these rules to new items, here is the routing for common patt
 | Computational notebook walking through ch derivation | "Jupyter notebook deriving 1 ch = ln 2 from Q-peak" | **applications**, `sketched` |
 | Proposed new framework structure | "I think there's a third face" | **frontier steeping** (pure-exploration); not applications |
 | Proposed new falsifier | "Here's a test that would kill the two-frame iff" | **frontier battery** or **engine FALSIFIERS**; not applications |
-| Proposed redefinition of a coined object | "Maybe ch should be ln 3 not ln 2" | Reject — ch is forced (`mpa_units.md §1`). Not anywhere unless a derivation error is found, in which case frontier `corrected`. |
+| Proposed redefinition of a coined object | "Maybe ch should be ln 3 not ln 2" | Reject — ch is forced (`character_units.md §1`). Not anywhere unless a derivation error is found, in which case frontier `corrected`. |
 | Reveals a gap in the core | "Applying VDM to k_frust would need a new observable we don't have" | **frontier steeping** (the gap); then **applications** entry can build on the gap once it's filled |
 | Tool / library workflow | "Blender add-on for rendering MPA substrates" | **applications** with `External deps`, `noted` |
 | Vague idea, no anchor possible | "What if MPA applied to consciousness" | Reject from applications (no specific anchor). If it has a concrete mechanism + falsifier, route to **frontier steeping**. Otherwise the discipline rejects it. |
@@ -131,7 +131,7 @@ When a user proposes adding an item to this doc:
 3. **Run all five ANTI-DRIFT checks** in order. For each check:
    - If it fires, stop and report which check fired.
    - Identify the structural piece(s) and the application piece(s).
-   - Propose a split: structural pieces go to `mpa_frontier.md`; application pieces stay here.
+   - Propose a split: structural pieces go to `character_frontier.md`; application pieces stay here.
    - Wait for user confirmation before making any edits.
    - If split-routing succeeds, the structural piece becomes a frontier entry first; the application entry here can then `Builds on` the new frontier item.
 

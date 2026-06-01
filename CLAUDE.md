@@ -8,7 +8,7 @@ Working in this repo means working under **thin-RFC discipline.** This document 
 
 ## Principle
 
-Exchange surfaces are written at gross-underengineering resolution by design. Half a page per object is the target. **Not less rigorous, not phoned-in** — deliberately thin *where standards bodies are thick*. The framework underneath (the [mpa_engine](framework/mpa_engine.md) + [mpa_receipts_engine](framework/mpa_receipts_engine.md) set) is dense (derivation-heavy); the protocols on top are thin; the total weight is correctly distributed.
+Exchange surfaces are written at gross-underengineering resolution by design. Half a page per object is the target. **Not less rigorous, not phoned-in** — deliberately thin *where standards bodies are thick*. The framework underneath (the [character_engine](framework/character_engine.md) + [character_receipts_engine](framework/character_receipts_engine.md) set) is dense (derivation-heavy); the protocols on top are thin; the total weight is correctly distributed.
 
 ## Justification
 
@@ -51,29 +51,29 @@ See [RFC-1 v0.2](rfcs/MPA-RFC-1_Spec-Object.md) for the canonical instance.
 
 The thin protocols work because the rigor is elsewhere:
 
-- **mpa_engine** → the *claims* axis: operator algebra, capacity bounds, FDR signatures, Compression Axiom, chit unit, two-mode kernel, heat-tax tower, five posits, adoption catalogue, consolidated falsifiers, regime ontology — densely stated. One phenomenology, two readings (STRUCTURAL + CHARACTER) joined at a shared spine; both apply to any substrate (glass, QEC, brain, behavioral, future).
-- **mpa_receipts_engine** → line-keyed justifications behind the engine claims (citation, composition, bespoke proof shard, or `unrecovered` marker), plus the CORRECTIONS & PROMOTED REFINEMENTS log and the prior-art map.
-- **mpa_frontier** → the maturity ledger / GATES state machine (steeping → sharpening → battery → staked → promoted) that quarantines provisional work.
-- **mpa_prior_art** → the borrowed-results axis: `pa:` keys, what each import borrows and what reading MPA adds.
+- **character_engine** → the *claims* axis: operator algebra, capacity bounds, FDR signatures, Compression Axiom, chit unit, two-mode kernel, heat-tax tower, five posits, adoption catalogue, consolidated falsifiers, regime ontology — densely stated. One phenomenology, two readings (STRUCTURAL + CHARACTER) joined at a shared spine; both apply to any substrate (glass, QEC, brain, behavioral, future).
+- **character_receipts_engine** → line-keyed justifications behind the engine claims (citation, composition, bespoke proof shard, or `unrecovered` marker), plus the CORRECTIONS & PROMOTED REFINEMENTS log and the prior-art map.
+- **character_frontier** → the maturity ledger / GATES state machine (steeping → sharpening → battery → staked → promoted) that quarantines provisional work.
+- **character_prior_art** → the borrowed-results axis: `pa:` keys, what each import borrows and what reading MPA adds.
 - **Architectural block-in** → cross-cutting decisions, the five foundational principles, multi-RFC framing
 - **Mechanical validation** (FDR round-trip checks, Theorem-9 checks, capacity envelope checks) → enforcement
 - **The RFC itself** → exchange contract, nothing else
 
-If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in mpa_engine (claims) / mpa_receipts_engine (derivations) / block-in (decisions), not here.
+If you find yourself writing derivation, motivation, or alternative-considered prose inside an RFC, it belongs in character_engine (claims) / character_receipts_engine (derivations) / block-in (decisions), not here.
 
-**Receipts discipline.** When a session proves, derives, or composes a result that becomes a line in `mpa_engine.md`, append a justification entry to [`framework/mpa_receipts_engine.md`](framework/mpa_receipts_engine.md) *in the same session*. Discipline rules (workflow, type tags, keying) live there. Lines whose proof tree is genuinely lost get an honest `unrecovered` marker — no fabricated reconstructions.
+**Receipts discipline.** When a session proves, derives, or composes a result that becomes a line in `character_engine.md`, append a justification entry to [`framework/character_receipts_engine.md`](framework/character_receipts_engine.md) *in the same session*. Discipline rules (workflow, type tags, keying) live there. Lines whose proof tree is genuinely lost get an honest `unrecovered` marker — no fabricated reconstructions.
 
-**`framework/` is canonical-only — not a scratchpad.** Everything in `framework/` (excluding `archive/`) is active/live canonical: the four-axis set `mpa_engine.md` (claims, the operational source of truth), `mpa_receipts_engine.md` (derivations), `mpa_frontier.md` (maturity ledger), `mpa_prior_art.md` (borrowed results), plus `mpa_applications.md`, `mpa_fdr_treatment.md`, `mpa_units.md`, and the methodology reference `translating_FDR_steps.md`. Working material — handoffs, planning/blocking docs, drafts, session notes, scratch, pasted exchanges — goes in `docs/`, never `framework/`. Superseded canonical docs go to `framework/archive/`. Do not stage scratch in `framework/`.
+**`framework/` is canonical-only — not a scratchpad.** Everything in `framework/` (excluding `archive/`) is active/live canonical: the four-axis set `character_engine.md` (claims, the operational source of truth), `character_receipts_engine.md` (derivations), `character_frontier.md` (maturity ledger), `character_prior_art.md` (borrowed results), plus `character_applications.md`, `character_fdr_treatment.md`, `character_units.md`, and the methodology reference `translating_FDR_steps.md`. Working material — handoffs, planning/blocking docs, drafts, session notes, scratch, pasted exchanges — goes in `docs/`, never `framework/`. Superseded canonical docs go to `framework/archive/`. Do not stage scratch in `framework/`.
 
 ## Forces pushing toward heavyweight (resist)
 
 These are the rationalizations that grow protocols from half a page to dozens:
 
 - *"What if a future implementer..."* — there is no future implementer. Single author per artifact. We version when one arrives.
-- *"For completeness we should enumerate..."* — completeness lives in mpa_engine / mpa_receipts_engine. Pointers, not duplication.
+- *"For completeness we should enumerate..."* — completeness lives in character_engine / character_receipts_engine. Pointers, not duplication.
 - *"It would be safer to spec the edge case..."* — edge cases live as compactification points, named once. Defense lives in mechanical validation, not in prose.
 - *"MUST / SHOULD / MAY granularity..."* — language of multi-stakeholder negotiation. We have one author. Declarative writing suffices.
-- *"This [Provisional] tag will help future maintainers..."* — it's a note-to-self disguised as a spec annotation. Move to the mpa_frontier ledger or mpa_receipts_engine's open-questions.
+- *"This [Provisional] tag will help future maintainers..."* — it's a note-to-self disguised as a spec annotation. Move to the character_frontier ledger or character_receipts_engine's open-questions.
 
 When you notice yourself reaching for one of these, that's a signal: stop, name the force, check whether it's actual stress (something broke) or anticipated stress (something might).
 
@@ -93,9 +93,9 @@ When you notice yourself reaching for one of these, that's a signal: stop, name 
 - Protocol-adjacent operational documents
 
 **Does not govern:**
-- **mpa_engine** — the operational source of truth; the full claim set (STRUCTURAL + CHARACTER readings on one spine). Allowed to be dense. Maintained dense, not thin.
-- **mpa_receipts_engine** — line-keyed justifications behind the engine claims, plus the corrections log and prior-art map. Append-only; grows with proof activity.
-- **mpa_frontier / mpa_prior_art / mpa_applications / mpa_fdr_treatment / mpa_units** — the rest of the four-axis canonical set + applications/treatment/units. Allowed to be dense.
+- **character_engine** — the operational source of truth; the full claim set (STRUCTURAL + CHARACTER readings on one spine). Allowed to be dense. Maintained dense, not thin.
+- **character_receipts_engine** — line-keyed justifications behind the engine claims, plus the corrections log and prior-art map. Append-only; grows with proof activity.
+- **character_frontier / character_prior_art / character_applications / character_fdr_treatment / character_units** — the rest of the four-axis canonical set + applications/treatment/units. Allowed to be dense.
 - **Architectural block-in** — meta-document, allowed to grow as principles consolidate. (But each principle inside should be tight.)
 - **READMEs, handoffs** — operational meta, written for clarity over brevity. (Still: short is better.)
 
@@ -105,9 +105,9 @@ If unsure whether something is a protocol or a meta-document: protocols specify 
 
 - [Architectural Block-In v0.2](architecture/MPA_Architectural_Block-In.md) — foundational principles section (five principles, including thin-RFC discipline as #5).
 - [RFC-S v0.2](rfcs/MPA-RFC-S_Scale-Management.md) — worked example of the discipline applied to a section that resisted thinning. RG flow as foundational structure (§0.6); compactification absorbs edge cases (§6); sheaves and coalgebras flagged as Tier-3 reserve (Appendix C). The v0.1 block-in is preserved at `MPA-RFC-S_Scale-Management_Block-In.md` as honest-scope reference.
-- [mpa_engine](framework/mpa_engine.md) — the operational source of truth (claims axis). RFCs point here for rigor. One phenomenology, two readings — STRUCTURAL (discrete operator algebra, finite-$D$ interior) and CHARACTER (continuous driven-dissipative dynamics: chit unit, two-mode kernel, heat-tax tower, gFDR signatures, five posits) — joined at the Boolean→MPA deformation spine. Claim-only; substrate-neutral.
-- [mpa_receipts_engine](framework/mpa_receipts_engine.md) — line-keyed justifications for the engine claims, the corrections log, and the prior-art map.
-- [mpa_frontier](framework/mpa_frontier.md) — maturity ledger / GATES state machine. [mpa_prior_art](framework/mpa_prior_art.md) — borrowed-results axis. Plus `mpa_applications.md`, `mpa_fdr_treatment.md`, `mpa_units.md`.
+- [character_engine](framework/character_engine.md) — the operational source of truth (claims axis). RFCs point here for rigor. One phenomenology, two readings — STRUCTURAL (discrete operator algebra, finite-$D$ interior) and CHARACTER (continuous driven-dissipative dynamics: chit unit, two-mode kernel, heat-tax tower, gFDR signatures, five posits) — joined at the Boolean→MPA deformation spine. Claim-only; substrate-neutral.
+- [character_receipts_engine](framework/character_receipts_engine.md) — line-keyed justifications for the engine claims, the corrections log, and the prior-art map.
+- [character_frontier](framework/character_frontier.md) — maturity ledger / GATES state machine. [character_prior_art](framework/character_prior_art.md) — borrowed-results axis. Plus `character_applications.md`, `character_fdr_treatment.md`, `character_units.md`.
 
 ## Origin
 
@@ -122,7 +122,7 @@ mpa-atlas is the upstream of the character test framework owned by
 mpa-conform. Canonical doc:
 [`H:/mpa-conform/conformer/tests/character/README.md`](../mpa-conform/conformer/tests/character/README.md).
 
-The engine's (`mpa_engine.md`) Character projection (universal two-mode kernel, gFDR signatures,
+The engine's (`character_engine.md`) Character projection (universal two-mode kernel, gFDR signatures,
 five-bucket regime classifier, heat-tax tower, chit unit, Compression Axiom)
 and RFC-S (scale-management semantics) are the **structures character tests
 verify substrates render *as*.** Real measurements are projected through these

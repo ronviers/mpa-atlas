@@ -1,6 +1,6 @@
 # Engine readiness assessment (2026-05-31)
 
-**Purpose.** Standing map of how close `mpa_engine` is to "ready," what is owed, and — the load-bearing
+**Purpose.** Standing map of how close `character_engine` is to "ready," what is owed, and — the load-bearing
 fact — **why most of what is owed cannot be closed by more work.** Written cold-readable as a handoff. No fork
 of the engine (see `dissipative_rosetta_procedure.md` context): one engine, the tool is a projection.
 

@@ -665,7 +665,7 @@ If you want, I can expand any of these into explicit equations or map them onto 
 ## SYNTHESIS — what the three models settle, and what was applied (2026-05-30)
 
 **Headline: MPA already owns most of this.** The affinity/current split, TUR, Harada–Sasa, Kuramoto,
-slaving are all already in `mpa_prior_art.md` (`cycle-affinity`, `tur`, `harada-sasa`, `kuramoto`,
+slaving are all already in `character_prior_art.md` (`cycle-affinity`, `tur`, `harada-sasa`, `kuramoto`,
 `slaving`). The research *confirms* those and delivers four corrections + one clean new home.
 
 **CONSENSUS (all three):**

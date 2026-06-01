@@ -1,4 +1,4 @@
-# MPA — ENGINE
+# Character — ENGINE
 
 > **MPA — a phenomenology of character in driven-dissipative systems. A measurement discipline: one coordinate system forcing established results to read together; an effective description — not claimed fundamental.**
 
@@ -10,7 +10,7 @@ One phenomenology, two readings on one finite-$D$ deformation of the Boolean rin
 
 MPA is a **measurement discipline**, not a model. It forces independently-derived imports to read **one** substrate parameter $\theta$ through fixed known maps, and tests the forcing by a **collapse falsifier** (`transport_law_steps.md`). It is **subtractive** — it imports and metabolizes, asserts no new machinery; the content is in the *bindings* and their over-determination, never in invented apparatus. The finite-$D$ Boolean deformation below is **the first register where closure was found, not the definition**: one degenerate point ($\text{Boolean}=\text{Markov}=\text{equilibrium}=\text{detailed balance}=X\!\equiv\!1=\mathcal{A}{=}0=\beta{=}1$) read from many sides.
 
-**Membership / self-test** (scale-invariant — binds MPA's own claims; I5 in `mpa_frontier.md`): a candidate is MPA iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds faithfully** — the binding preserves the import's logical type (a generic/∃ result is not bound as forced/∀, a necessary condition not as sufficient, topological genericity not as measure-typicality), and behavior at a degenerate point or boundary is **entailed from the interior structure**, never asserted at the limit. Fail any ⇒ systems thinking, not MPA.
+**Membership / self-test** (scale-invariant — binds MPA's own claims; I5 in `character_frontier.md`): a candidate is MPA iff it (i) carries a **collapse falsifier**, (ii) pins a **gauge-invariant parameter to a named degenerate point**, and (iii) **imports-and-binds faithfully** — the binding preserves the import's logical type (a generic/∃ result is not bound as forced/∀, a necessary condition not as sufficient, topological genericity not as measure-typicality), and behavior at a degenerate point or boundary is **entailed from the interior structure**, never asserted at the limit. Fail any ⇒ systems thinking, not MPA.
 
 **"Forced" cashes out as:** iff-chain as architecture · explicit falsifier checklist · every dynamical quantity flows with the operating point (nothing hand-frozen).
 
@@ -22,8 +22,8 @@ First-contact dictionary: the load-bearing nouns, named before the formalism use
 
 * **character** — the substrate-general structure of how a driven-dissipative system *holds, deforms, and circulates* under load. Not psychological; a measurable, two-faced deformation of the Boolean ring — an **amplitude** face (how much is held: $c/s/r$) and a **sign-topological** face (which way it circulates: protected current). What the framework measures. (→ TWO FACES, DEFORMATION GENERATORS.)
 * **substrate** — any driven-dissipative system MPA reads (structural glass, laser, surface-code memory, ecology, queue, market). Substrate-neutral by construction: one reading rule for all.
-* **ch** — the framework's unit, $1\,\text{ch}\equiv\ln2$ nats; the unit it *picks for itself* — one quantum of held character, forced twice over (one ch of *headroom* at the $Q$-peak $G_0/L{=}2$; one ch of *cost* at the erasure floor). Not chosen — the same $\ln2$ falls out from both faces. (→ `mpa_units.md` §1.)
-* **chit** — $\ln(G_0/L)$, headroom above threshold; the central character coordinate, read in ch via $\text{chit}/\ln2$. The spine — $c/s/r$ are its sign-and-size bands. (→ PARAMETERS; `mpa_units.md`.)
+* **ch** — the framework's unit, $1\,\text{ch}\equiv\ln2$ nats; the unit it *picks for itself* — one quantum of held character, forced twice over (one ch of *headroom* at the $Q$-peak $G_0/L{=}2$; one ch of *cost* at the erasure floor). Not chosen — the same $\ln2$ falls out from both faces. (→ `character_units.md` §1.)
+* **chit** — $\ln(G_0/L)$, headroom above threshold; the central character coordinate, read in ch via $\text{chit}/\ln2$. The spine — $c/s/r$ are its sign-and-size bands. (→ PARAMETERS; `character_units.md`.)
 * **NESS** — non-equilibrium steady state: stationary under continuous throughput (drive in, dissipation out), detailed balance broken. MPA's default object; equilibrium is the degenerate zero-drive case. (→ AXIOMS.)
 * **drive / dissipation** — *drive* = supplied work holding the system off equilibrium ($D=\Phi^*/\kappa$); *dissipation* = the balancing entropy export. Character exists only while the drive flows; MPA **metabolizes** the drive, never supplies it (the bootstrap constraint). (→ PARAMETERS.)
 * **Banach reference** — the analytically tunable *synthetic* substrate (a contraction-mapping NESS) used as the fixed reference character that real substrates are conformed *against*: the regenerable **ruler**, never the data (the reference is adjusted, the data is pristine). (→ conform layer; `pa:banach-fixed-point`.)

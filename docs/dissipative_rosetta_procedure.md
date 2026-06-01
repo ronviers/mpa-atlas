@@ -398,6 +398,6 @@ and decides any new-structure flags through the framework's own gate — none au
 
 *Placement note (for the integrator, not the outside model): this procedure is a working/method doc in
 `docs/`. The columns it produces are **applications**-register artifacts (use the core, do not extend it) and
-land via `mpa_applications.md`'s authoring procedure + anti-drift checks. New-structure flags route to
-`mpa_frontier.md` steeping, never auto-added. Whether the assembled Rosetta earns a standalone `mpa_rosetta.md`
+land via `character_applications.md`'s authoring procedure + anti-drift checks. New-structure flags route to
+`character_frontier.md` steeping, never auto-added. Whether the assembled Rosetta earns a standalone `mpa_rosetta.md`
 is a `developed`-grade decision once ≥2 columns (one tight `S`, one `C`) exist.*

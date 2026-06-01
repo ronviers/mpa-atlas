@@ -132,7 +132,7 @@ real network actually looks like ([[feedback_single_move_design]]).
 
 ## HOW IT CONNECTS TO THE FRONTIER (why this is the move that matters)
 
-- **This is the real-substrate INSTANCE the gate requires.** `frustration-ascent` (mpa_frontier,
+- **This is the real-substrate INSTANCE the gate requires.** `frustration-ascent` (character_frontier,
   now `sharpening`) crosses toward `promoted` only with *"a real cross-substrate instance — a
   synthetic pass is calibration, never vindication."* syn3's alive-loop is that instance. The
   standing "which real substrate" decision was never really open: it was always the minimal cell.

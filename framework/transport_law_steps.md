@@ -1,9 +1,9 @@
 # The Transport-Law Method — Six Steps (extending predictions)
 
 The **outbound** recipe, twin to the inbound translation recipe (`translating_FDR_steps.md`,
-`mpa_fdr_treatment.md`). Translation brings an import *into* the framework; this gets predictions
+`character_fdr_treatment.md`). Translation brings an import *into* the framework; this gets predictions
 *out* of imports already adopted. Provenance tags: **[est.]** = established literature (resolves to a
-`pa:` key in `mpa_prior_art.md`), **[MPA]** = the framework's own binding.
+`pa:` key in `character_prior_art.md`), **[MPA]** = the framework's own binding.
 
 The unit of predictive content is **not** a claim "X = Y." It is the **transport map**: one substrate
 parameter $\theta$, read in several registers through fixed *known* functions $f_i$, so that a measurement
@@ -15,7 +15,7 @@ A numerical identity is the degenerate special case where the maps happen to agr
 ## Why it works — what lets MPA surface correct structure
 
 This is the load-bearing claim; the recipe is its mechanization. MPA surfaces correct things — the
-transport law, the frustrated triad it "dragged into the light" (`mpa_fdr_treatment.md` §4–5) — for four
+transport law, the frustrated triad it "dragged into the light" (`character_fdr_treatment.md` §4–5) — for four
 interlocking reasons, none of them luck:
 
 1. **One degeneracy, read from many sides.** Boolean ($D\to\infty$), Markov, equilibrium, detailed
@@ -50,7 +50,7 @@ gauge-invariant departure from one named degeneracy) emits precisely the structu
 dissipative universe — anomalous exponents, limit cycles, frustrated cycles, complex spectral pairs — and
 its filters (over-determination + the two-reading cross-check + the mpa-legal "does it flow or sit inert"
 audit) reject the rest. **The failure mode is named:** where a binding cannot be over-determined, the filter
-is blind. The gate ledger (`mpa_frontier.md`) and the corrections log keep proposals in the filterable
+is blind. The gate ledger (`character_frontier.md`) and the corrections log keep proposals in the filterable
 regime. **[MPA]**
 
 ---
@@ -80,7 +80,7 @@ falsifiable register disagreement.*
 **Step 6 — Pre-register the collapse falsifier; run it on one substrate across $\ge2$ registers.** If the
 inferred $\theta$'s fail to agree through the maps, the law is falsified for that substrate class. *Guards:
 false closure — a transport law with no collapse test is metaphor.* Candidates enter the gate machine at
-`steeping` (`mpa_frontier.md`) and only stake on a surviving collapse test.
+`steeping` (`character_frontier.md`) and only stake on a surviving collapse test.
 
 ---
 
@@ -109,7 +109,7 @@ exponent" identity was the $\beta=1$ point mistaken for the whole law (correctio
 
 ---
 
-## Candidate bundles (open — `mpa_frontier.md` `steeping`)
+## Candidate bundles (open — `character_frontier.md` `steeping`)
 
 - **$\varepsilon$-hub (distance-to-Wall).** Registers: FDR aging $\beta_{\text{mem}}\approx1-\varepsilon$
   (P1, engine) · heat-tax $\alpha(\varepsilon)=\alpha_0(1-\varepsilon)$ (§6) · avalanche branching $\to1$
@@ -124,12 +124,12 @@ exponent" identity was the $\beta=1$ point mistaken for the whole law (correctio
   phase-lock suppression. (RO and phase-locking are both on the testbeds — start here per leverage + cost.)
 - **triad-hub (on/off-valued, not exponent-valued).** The two-frame construction is *already* a transport
   law of this flavor and `staked`: self-probe definedness $\Leftrightarrow J\ne0\Leftrightarrow\mathcal{A}
-  \ne0\Leftrightarrow\triangle$ (`mpa_fdr_treatment.md` §4). It shows the schema is not exponent-specific —
+  \ne0\Leftrightarrow\triangle$ (`character_fdr_treatment.md` §4). It shows the schema is not exponent-specific —
   any iff-chain across registers is a transport law, and its collapse falsifier is the iff-chain break.
 
 ---
 
-*Imports* (all `pa:` keys → `mpa_prior_art.md`): `ck-aging`, `pottier-fdr`, `caputo-fractional`,
+*Imports* (all `pa:` keys → `character_prior_art.md`): `ck-aging`, `pottier-fdr`, `caputo-fractional`,
 `fbm-queueing`, `kingman`, `ctrw`. Everything else — the transport-map framing, the six-step filter, the
 over-determination-as-sieve reading, the $\varepsilon$/chit-hub bundles — is the residual MPA owns by the
 prior-art ledger's exclusion rule.

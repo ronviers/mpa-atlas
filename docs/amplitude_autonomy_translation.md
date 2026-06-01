@@ -1,7 +1,7 @@
 # Translation worked example — "continuous-amplitude autonomy"
 
 **What this is.** The six-step inbound translation (`framework/translating_FDR_steps.md`, detailed in
-`framework/mpa_fdr_treatment.md`) applied to the object **continuous-amplitude autonomy** — a collective
+`framework/character_fdr_treatment.md`) applied to the object **continuous-amplitude autonomy** — a collective
 amplitude coordinate possessing its *own* sustained self-gain, `Ẋ = a_eff·X + bX³ + …` with `Re(a_eff)>0`,
 surviving removal of external drive. This is the quantity the cascade thread (`frustration_ascent_cascade_handoff.md`)
 found could only ever be *inserted* (2A μ, 2B G_SELF, transduction-wall, `a_eff = μ+2κ` δ-independent). The
@@ -13,7 +13,7 @@ external axiom.** Provenance: **[est.]** literature (→ `pa:` key), **[MPA]** f
 
 **Step 1 — deep commonality.** Strip the substrate: what stochastic-process relation is "amplitude autonomy"?
 It is a statement about the **amplitude face** of the Boolean→MPA deformation read as fluctuation–response.
-That face is, by the framework's own assignment (`mpa_fdr_treatment.md` §5): *chit/D drives c→s→r; observables
+That face is, by the framework's own assignment (`character_fdr_treatment.md` §5): *chit/D drives c→s→r; observables
 α_s, P_s; the **external frame** (amplitude×h)→X.* "Autonomy" = the response carries a **self-sustaining (gain)
 component**: not `R(t,t')=(X/T)∂_{t'}C·θ` relaxing back (X≡1, purely restoring), but a positive growth rate in
 the amplitude register. So the object is: *a sustained `Re(a_eff)>0` living in the external/amplitude frame.* **[est.** FDR object; **MPA** assignment]
@@ -27,7 +27,7 @@ fixed-T assumptions: the amplitude gain is pinned to an *external constant*, nev
 
 **Step 3 — filter into buckets (the decisive step).** The character filter: *objects exist only during
 sustained NESS traversal; the self-probe is **defined iff a current exists**.* The two-frame definedness
-asymmetry (`mpa_fdr_treatment.md` §4) is the sieve:
+asymmetry (`character_fdr_treatment.md` §4) is the sieve:
 
 | frame | reference | definedness |
 |---|---|---|
@@ -87,7 +87,7 @@ cascade verdict (generative-of-organization/chirality, parasitic-on-drive) **der
 mpa-legal "no constant" rule is recovered as a *theorem of the two-frame definedness asymmetry* — a character
 self-gain must be intrinsic; the only intrinsic frame carries 𝒜, not amplitude; therefore amplitude gain is
 external/constant of necessity. (Same shape as the Central Commitment being the falsifiable direction of the
-iff-chain rather than an axiom, `mpa_fdr_treatment.md` §4.)
+iff-chain rather than an axiom, `character_fdr_treatment.md` §4.)
 
 **What MPA owns here (residual rule).** Imports re-read: the FDR object, two-frame definedness asymmetry,
 Harada–Sasa bridge, Schnakenberg/chit grounding (all existing `pa:` keys). MPA's binding = the **identification
@@ -101,11 +101,11 @@ Three independent legs collapse to one verdict → not metaphor.
 ## Proposed canonical placement (HELD for Ron — not yet applied)
 
 This is a derivation-of-record. Candidate landings, smallest-footprint first:
-1. **`mpa_receipts_engine.md`** — a line-keyed receipt: "amplitude-autonomy is external-frame ⇒ gain is an
+1. **`character_receipts_engine.md`** — a line-keyed receipt: "amplitude-autonomy is external-frame ⇒ gain is an
    external constant (Step-3 definedness asymmetry + Harada–Sasa ⟨σ⟩=J·𝒜 carrying no amplitude term)";
    keys `pa:harada-sasa`, `pa:tur`, `pa:crooks-ft`. **Recommended** — it is a justification behind an existing
    claim, append-only, low weight.
-2. **`mpa_fdr_treatment.md` §5 (affinity vs magnitude)** — one clause sharpening the split: *the gain
+2. **`character_fdr_treatment.md` §5 (affinity vs magnitude)** — one clause sharpening the split: *the gain
    coefficient (Re) is external-frame and constant; only 𝒜 (and J's magnitude) flow.* Tightens an existing
    paragraph, no new object. Weightier (canonical FDR doc) → gate on review.
 3. **No engine edit** — the engine's `DEFORMATION GENERATORS` / two-frame text already carries the structure;

@@ -1,7 +1,7 @@
 # Engine §0 layer — DONE (2026-05-31)
 
 **This handoff is retired.** The task it described — adding the first-contact `§0 — Objects & Definitions` layer
-to the engine — is **complete**. The layer is now in `framework/mpa_engine.md` (top, above PARAMETERS): the
+to the engine — is **complete**. The layer is now in `framework/character_engine.md` (top, above PARAMETERS): the
 settled identity line, the load-bearing nouns defined inline (character, ch, chit, NESS, drive/dissipation,
 Banach reference, holding, trail, coherence, k_frust, gauge, metabolize), and the one-line lineage note.
 

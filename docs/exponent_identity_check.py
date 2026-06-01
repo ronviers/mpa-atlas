@@ -1,7 +1,7 @@
 """
 Three-way s-exponent identity check (closed-form adjudication).
 
-MPA engine claim (mpa_receipts_engine.md S9, boxed):
+MPA engine claim (character_receipts_engine.md S9, boxed):
     alpha_s = beta_mem = anomalous heavy-traffic exponent
 under the "common-exponent condition" (memory kernel and load-arrival
 process share one anomalous-diffusion exponent).

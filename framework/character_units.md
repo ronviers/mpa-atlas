@@ -1,4 +1,4 @@
-# MPA — UNITS (non-dimensionalization standard)
+# Character — UNITS (non-dimensionalization standard)
 
 MPA is dimensionless by construction: chit $=\ln(G_0/L)$, $D=\Phi^*/\kappa$, $\gamma$ in $D$-units, $\beta_{\text{mem}}$, $Q$, $\mathcal{A}$ in nats — all ratios. That is the source of the cross-substrate power, not a gap. This standard fixes a small set of **non-arbitrary anchors** so runs are mutually consistent and cross-substrate-comparable, **without** pinning a universal physical scale (which would break substrate-neutrality). Each anchor is tagged **[FORCED]** (the math picks it; not a choice) or **[CONVENTION]** (a choice, stated). The base unit is **forced**; the rest is forced where it can be and honestly conventional where it can't.
 
@@ -70,4 +70,4 @@ $dt_{\max}$ shrinks as $\text{chit}$ climbs (the $e^{\text{chit}}$ factor) — t
 
 ---
 
-*Imports* (`pa:` keys → `mpa_prior_art.md`): the cost floor `landauer`; the RO form the Q-peak is computed from `relaxation-oscillation`. The Q-peak location ($\text{chit}=\ln2$) is owned reading — a consequence of the framework's own corrected formula. *Frontier:* this standard is the recorded promotion trigger for `dimensionless-substrate` (steeping → sharpening) in `mpa_frontier.md`.
+*Imports* (`pa:` keys → `character_prior_art.md`): the cost floor `landauer`; the RO form the Q-peak is computed from `relaxation-oscillation`. The Q-peak location ($\text{chit}=\ln2$) is owned reading — a consequence of the framework's own corrected formula. *Frontier:* this standard is the recorded promotion trigger for `dimensionless-substrate` (steeping → sharpening) in `character_frontier.md`.

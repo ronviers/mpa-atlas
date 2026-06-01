@@ -29,17 +29,17 @@ literature says "violation"; MPA reads it as a ratio/departure (imports-and-meta
 ### Live instances (old → new)
 | file | old | new |
 |---|---|---|
-| `mpa_engine.md` L119 | "violation factor $X$" | "fluctuation–dissipation ratio $X$" |
-| `mpa_engine.md` L179, L188 (×2), L202 | "$\int$FDR-violation" | "$\int$FDR-departure" |
-| `mpa_engine.md` L188 | "the violation factor running through…" | "the FD ratio running through…" |
-| `mpa_fdr_treatment.md` L12 | "external-frame violation factor" | "external-frame FD ratio" |
-| `mpa_fdr_treatment.md` L19 | "self-frame violation factor" | "self-frame FD ratio" |
-| `mpa_fdr_treatment.md` L21 | "integrated external FDR-violation" | "integrated external FDR-departure" |
-| `mpa_fdr_treatment.md` L41, L62, L64, L68 | "FDR-violation (identity/is the dissipation/and precision-cost)" | "FDR-departure …" |
-| `mpa_fdr_treatment.md` L47 | "inserts a violation factor $X$" | "inserts a fluctuation–dissipation ratio $X$" |
-| `mpa_receipts_engine.md` (FDR-violation mentions) | "FDR-violation" | "FDR-departure" |
-| `mpa_frontier.md` (FDR-violation mentions) | "FDR-violation" | "FDR-departure" |
-| `mpa_prior_art.md` (`harada-sasa` gloss) | keep "violation" ONCE as the literature's term, in quotes | — |
+| `character_engine.md` L119 | "violation factor $X$" | "fluctuation–dissipation ratio $X$" |
+| `character_engine.md` L179, L188 (×2), L202 | "$\int$FDR-violation" | "$\int$FDR-departure" |
+| `character_engine.md` L188 | "the violation factor running through…" | "the FD ratio running through…" |
+| `character_fdr_treatment.md` L12 | "external-frame violation factor" | "external-frame FD ratio" |
+| `character_fdr_treatment.md` L19 | "self-frame violation factor" | "self-frame FD ratio" |
+| `character_fdr_treatment.md` L21 | "integrated external FDR-violation" | "integrated external FDR-departure" |
+| `character_fdr_treatment.md` L41, L62, L64, L68 | "FDR-violation (identity/is the dissipation/and precision-cost)" | "FDR-departure …" |
+| `character_fdr_treatment.md` L47 | "inserts a violation factor $X$" | "inserts a fluctuation–dissipation ratio $X$" |
+| `character_receipts_engine.md` (FDR-violation mentions) | "FDR-violation" | "FDR-departure" |
+| `character_frontier.md` (FDR-violation mentions) | "FDR-violation" | "FDR-departure" |
+| `character_prior_art.md` (`harada-sasa` gloss) | keep "violation" ONCE as the literature's term, in quotes | — |
 
 **Keep one literal "violation"**: in the `pa:harada-sasa` prior-art gloss, as `"violation of the FDT"` in
 quotes — that IS the imported result's name; deleting it hides the provenance. Everywhere else → ratio/departure.
@@ -61,24 +61,24 @@ conflate them. Plus it appears in stable KEYS (handled separately below).
    is a DIFFERENT object — a hard occupancy cutoff, not the RG marginal point. → keep **"hard cutoff" /
    "ceiling"** (already uses "ceiling" alongside). "hard-wall substrate" → "hard-cutoff substrate";
    "Capacity wall" (falsifier name) → "Capacity ceiling."
-3. **The "dt wall" in units** (`mpa_units.md` L58, integrator timestep bound). → "the dt **bound**" / "the
+3. **The "dt wall" in units** (`character_units.md` L58, integrator timestep bound). → "the dt **bound**" / "the
    stiffness bound." Trivial, prose-only.
 
 ### Live instances (old → new) — PROSE
 | file | old | new |
 |---|---|---|
-| `mpa_engine.md` L25 | "$\varepsilon\ge1$ = Wall" | "$\varepsilon\ge1$ = the marginal point" |
-| `mpa_engine.md` L161 | "Dynamic conjugate (same wall)" | "(same ceiling)" |
-| `mpa_engine.md` L164 | "hard-wall substrate" (×2) | "hard-cutoff substrate" |
-| `mpa_engine.md` L168 (heading) | "COMPRESSION / WALL" | "COMPRESSION / THE MARGINAL POINT" |
-| `mpa_engine.md` L173 | "**WALL** ($\varepsilon\ge1$)" | "**MARGINAL POINT** ($\varepsilon\ge1$)" |
-| `mpa_engine.md` L175 | "Wall = loss of normal hyperbolicity"; "Post-Wall" | "The marginal point = loss of normal hyperbolicity"; "Past marginal" |
-| `mpa_engine.md` L228 | "$\varepsilon\to1$@Wall" | "$\varepsilon\to1$@marginal" |
-| `mpa_engine.md` L291 | "Capacity wall"; "hard-wall" | "Capacity ceiling"; "hard-cutoff" |
-| `mpa_engine.md` L296 | "Wall closure-loss"; "at the Wall"; "Post-Wall" | "Marginal closure-loss"; "at the marginal point"; "Past marginal" |
-| `mpa_engine.md` L297 | "near the Wall" | "near the marginal point" |
-| `mpa_units.md` L58 | "the dt wall" | "the dt bound" |
-| `mpa_frontier.md` / `mpa_receipts_engine.md` | prose "Wall" (NON-key) | "marginal point" (per context) |
+| `character_engine.md` L25 | "$\varepsilon\ge1$ = Wall" | "$\varepsilon\ge1$ = the marginal point" |
+| `character_engine.md` L161 | "Dynamic conjugate (same wall)" | "(same ceiling)" |
+| `character_engine.md` L164 | "hard-wall substrate" (×2) | "hard-cutoff substrate" |
+| `character_engine.md` L168 (heading) | "COMPRESSION / WALL" | "COMPRESSION / THE MARGINAL POINT" |
+| `character_engine.md` L173 | "**WALL** ($\varepsilon\ge1$)" | "**MARGINAL POINT** ($\varepsilon\ge1$)" |
+| `character_engine.md` L175 | "Wall = loss of normal hyperbolicity"; "Post-Wall" | "The marginal point = loss of normal hyperbolicity"; "Past marginal" |
+| `character_engine.md` L228 | "$\varepsilon\to1$@Wall" | "$\varepsilon\to1$@marginal" |
+| `character_engine.md` L291 | "Capacity wall"; "hard-wall" | "Capacity ceiling"; "hard-cutoff" |
+| `character_engine.md` L296 | "Wall closure-loss"; "at the Wall"; "Post-Wall" | "Marginal closure-loss"; "at the marginal point"; "Past marginal" |
+| `character_engine.md` L297 | "near the Wall" | "near the marginal point" |
+| `character_units.md` L58 | "the dt wall" | "the dt bound" |
+| `character_frontier.md` / `character_receipts_engine.md` | prose "Wall" (NON-key) | "marginal point" (per context) |
 
 ### KEYS — DO NOT rename this session (stable identifiers, cross-ref'd under bridge-invariant I1)
 These read as identifiers in backticks, NOT prose, so they do **not** re-anchor a rewrite. Renaming them
@@ -96,9 +96,9 @@ sequenced step, not worth breaking I1 under time pressure:
 
 ## EXECUTION LOG (step 1, done 2026-05-31)
 
-Renamed **prose** in the live set: `mpa_engine.md` (all 10 "wall" + 5 "violation" → marginal point / ceiling /
-hard-cutoff / FD ratio / FDR-departure), `mpa_fdr_treatment.md` (8 "violation" → FD ratio / FDR-departure),
-`mpa_units.md` (2 "wall" → bound), `mpa_receipts_engine.md` (2 FDR-violation → FDR-departure). Engine verified
+Renamed **prose** in the live set: `character_engine.md` (all 10 "wall" + 5 "violation" → marginal point / ceiling /
+hard-cutoff / FD ratio / FDR-departure), `character_fdr_treatment.md` (8 "violation" → FD ratio / FDR-departure),
+`character_units.md` (2 "wall" → bound), `character_receipts_engine.md` (2 FDR-violation → FDR-departure). Engine verified
 clean of both anchors (one residual was a Tier-B line authored earlier this session — fixed).
 
 **Deliberately NOT renamed (scope discipline):**
