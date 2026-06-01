@@ -33,11 +33,14 @@ settled the mechanism: the minting is the **union-graph frustration rule (Family
 established and robustly protected; the **EP (Family C) is the spectral onset signature,
 not the source of protection.** The cascade is a path through strata; the alive loop is a
 *cyclic* path (a composite among its own drivers); the marginal point is where the
-inductive limit fails to converge. The proposal narrows accordingly: the *existence* of
-minted protected structure is now imported (signed-graph theory) — **the contribution is
-the binding** (graph ⟺ spectral ⟺ thermodynamic, one carrier) and the **open question** of
-whether the minted chirality is protected in a generic finite-dimensional dissipative
-system.
+inductive limit fails to converge. The proposal narrows accordingly (status 2026-06-01): the
+*existence* of minted protected structure is imported (signed-graph theory), **and the binding**
+(graph ⟺ 𝒜 ⟸ spectral, one carrier) **is now discharged — by import, not derivation** (Gate 1,
+receipts §binding); the **protection** question is answered by V-(b) (the minted chirality's sign
+is a *discrete graph-flux* invariant — protected, but **not** Chern-like). So the residual
+contribution is no longer the binding (imported) but the **identity reading** — that the minted
+protected bit, sustained only while coupled, *is* emergent identity — plus a real emergent
+instance carrying it.
 
 ## The object and the closure map
 
@@ -92,7 +95,18 @@ By the `character_prime` reading, identity is the protected sector. At the compo
 the new protected bit **is** the emergent identity — present in `A ⊗ B`, absent in `A` and
 `B` alone, and **sustained only while `⊗` is maintained.** Dissolve the coupling and the
 emergent identity vanishes (the parts revert; nothing is stored). Substrate-general.
-`[bespoke]`
+`[bespoke — synthetically demonstrated 2026-06-01]`
+
+**Synthetic demonstration** (`mpa-conform/scripts/emergent_identity.py`, calibration-grade): on a
+minimal 3-state driven Markov composite the three falsifiable components cohere — (1) **minting**
+(two non-frustrated parts — a path 0-1-2 and an edge 2-0 — couple into a union cycle with 𝒜=3F≠0,
+J≠0; neither part carries it), (2) **protection** (sign(𝒜) is reciprocal-deformation-invariant,
+0/400 flips at large amplitude, flips only on rewire — the discrete graph-flux bit), (3)
+**sustained identity** (the current is a NESS run loop: kill the drive *or* the coupling and J→0,
+nothing latched). This is the **legal complement** to `hybrid_generation.py`'s parasitic latch
+(a held bistable bit + an inserted μ>0 gain — receipts §amplitude-autonomy): there the bit is
+*stored*; here it is a *run loop*. Calibration only — the minting is by construction; a **real
+emergent** instance is still owed (= the frustration-ascent joint instance).
 
 ## The cascade = iterated closure
 
@@ -143,22 +157,30 @@ Emergence-as-honorific is unfalsifiable; emergence-as-closure-non-additivity is 
 
 ## Receipt ledger′′ — doubly gated
 
-**Gate 0:** discharge `character_prime`'s ledger first. After the 2026-06-01 research it is
-**largely cleared** — isostable substituted (center-manifold near threshold), DFS imported
-in pieces, EP creation/transfer imported, signed-balance minting imported; what remains is
-the *protection* question (open) plus the P1 items (defect-braiding data, coupled-NESS
-thermodynamics). This layer's floor is now mostly poured.
+**Gate 0:** `character_manifold`'s ledger (was `character_prime`) — **DISCHARGED**, promoted to
+`framework/` 2026-06-01 (Gate 1). The binding closed by import-composition (receipts §binding);
+the protection question is answered by V-(b) (discrete graph-flux, not Chern). The P1 items
+(defect-braiding data, coupled-NESS thermodynamics) remain optional support. This layer's floor
+is **poured**.
 
 **`[est]` to verify the preconditions of:** operad/PROP closure · renormalization semigroup
 · Wilsonian emergent operators (IR).
 
 **`[bespoke]` owed a derivation or a kill** (the contribution lives here):
 
-- the **binding** — graph-frustration ⟺ spectral complex-pair ⟺ thermodynamic `𝒜` as one
-  minimal carrier (research confirmed no unified theorem connects them).
+- the **binding** — graph-frustration ⟺ thermodynamic `𝒜` ⟸ spectral, one carrier.
+  **DISCHARGED by import** (Gate 1, receipts §binding): 2-way carrier (`signed-balance`/
+  `frustration` ⟺ `cycle-affinity`/`kolmogorov-reversibility`) + 1-way spectral signature
+  (`reversible-spectrum`); the weld is the owned reading. No unified *theorem*, but every leg
+  established.
 - the **protection** — is the minted chirality protected in a generic finite-dimensional
-  dissipative system? (the `[open]` field question; graph-frustration side = derivation route).
-- emergent identity ≡ the new protected bit, sustained.
+  dissipative system? **Answered (V-(b), qualified yes):** the affinity *sign* is a discrete
+  graph-flux invariant (0/200 deformations, flips only on rewire), **not** a Chern-like integer
+  charge. A real *second* instance of the J/EP separation is still owed (frontier
+  `chirality-protection`).
+- emergent identity ≡ the new protected bit, sustained. **Synthetically demonstrated** (calibration,
+  `mpa-conform/scripts/emergent_identity.py`); a **real emergent** instance is the live owed item
+  (= the frustration-ascent joint instance).
 - alive loop ≡ a cyclic `⊗`-fixed-point. *(parked)*
 
 ⚠ CAVEAT — honest read of the whole layer: this is where the program is **most exposed**.
