@@ -1,7 +1,7 @@
 # MPA — The Lift Move (object → space of objects), recorded
 
 > **Status: staged in `docs/`. Methodology record of a move that produced a still-staged
-> artifact ([`character_prime.md`](character_prime.md)).** Written in the register of
+> artifact ([`character_manifold.md`](../framework/character_manifold.md), promoted 2026-06-01).** Written in the register of
 > [`framework/character_fdr_treatment.md`](../framework/character_fdr_treatment.md) — but held out of
 > `framework/` because the move's output is itself not yet earned into canonical.
 
@@ -20,7 +20,7 @@ discipline that guards it step by step, what it imports versus owns — with
 | `T_χℭ` | tangent space at `χ` (the deformation algebra, read as geometry) |
 | `⊗ : ℭ×ℭ→ℭ` | the coupling/closure map — propinquity-induced rewiring |
 | `′` | the lift (point → space); `Tℭ` is the tangent-bundle reading |
-| `[est]` / `[bespoke]` / `▶ INTAKE` / `⚠ CAVEAT` | provenance + research markers (as in `character_prime.md`) |
+| `[est]` / `[bespoke]` / `▶ INTAKE` / `⚠ CAVEAT` | provenance + research markers (as in `character_manifold.md`) |
 
 Residual rule (as in the engine): what is not pointed at an import is owned.
 
@@ -81,7 +81,7 @@ where its own contribution sits.*
 | measurement / open interval | isolation = the boundary of `ℭ` | `[est]` |
 | (implicit) | identity = the protected coordinates, sustained | `[bespoke]` |
 
-Full artifact + its receipt ledger: [`character_prime.md`](character_prime.md).
+Full artifact + its receipt ledger: [`character_manifold.md`](../framework/character_manifold.md).
 
 ## 4. The move iterated — `character′′`
 
@@ -93,8 +93,8 @@ system of strata `{ℭ_n}` whose arrows are the coupling maps `ℭ_n → ℭ_{n+
 the content: **emergence is internal to character-space — the non-additivity of the up-map,
 not a jump to a higher ontology.**
 
-Full second application: [`character_double_prime.md`](character_double_prime.md). It is
-**doubly gated** — on `character_prime`'s receipt ledger first, then on its own bespoke
+Full second application: [`character_composite.md`](character_composite.md). It is
+**doubly gated** — on `character_manifold`'s receipt ledger first (now discharged, Gate 1), then on its own bespoke
 bindings — and it is the layer where MPA stops re-reading and proposes.
 
 ## 5. Falsifier of the move
@@ -114,4 +114,4 @@ caught by Step 4's markers:
 moduli space / jet-prolongation. The residual MPA owns is the recognition that
 `character.md` was pre-coordinatized to admit the move in a single pass, the specific
 section-by-section readings, and the gap map those readings expose. `character′`'s own
-imports are ledgered in [`character_prime.md`](character_prime.md).
+imports are ledgered in [`character_manifold.md`](../framework/character_manifold.md).

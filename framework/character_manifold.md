@@ -1,11 +1,13 @@
-# Character′ — the morphospace lift of `character`
+# Character — the morphospace lift (`character_manifold`)
 
-> **Status: DRAFT, staged in `docs/`. NOT canonical, NOT in `framework/`.**
-> This is a single-move lift of [`framework/character.md`](../framework/character.md):
-> every quantity re-read as *structure on the manifold of characters* rather than a
-> property of one NESS. It is held out of `framework/` deliberately — the lift leans on
-> imports whose preconditions are unverified and on one bespoke binding with no receipt.
-> Promotion waits on the intake research this draft maps out.
+> **Status: PROMOTED to `framework/` 2026-06-01 — Gate 1 discharged.** Coined name
+> `character_manifold` (was `character_prime` / "character′"). This is a single-move lift of
+> [`character.md`](character.md): every quantity re-read as *structure on the manifold of
+> characters* rather than a property of one NESS. Gate 1's receipt ledger is discharged — the
+> last node (the binding) closed by import-composition (receipts §binding); the Kauffman
+> non-prestatability caveat is carried as a recorded scope boundary, not a debt.
+> *(The `▶ INTAKE` / `[bespoke]` drafting markers below are now answered by Phase R; a
+> scaffolding-cleanup pass to fully canonicalize the prose is deferred, tracked separately.)*
 
 ## How to read this
 
@@ -15,7 +17,7 @@ It can be a single move precisely because `character.md` is already coordinatize
 right objects — the affinity `a` is already a coordinate, the deformation algebra
 `gl(3,ℝ)` is already a tangent space. Nothing is invented here; the existing document is
 re-pointed at the manifold. The honest symbol is not a derivative but the lift to the
-**tangent bundle**, `Tℭ`; "character′" is shorthand.
+**tangent bundle**, `Tℭ`; the coined name is `character_manifold` ("character′" is the drafting shorthand).
 
 Marker key (this draft is also the research map):
 
@@ -372,5 +374,5 @@ Open limit of the framing itself:
 
 ---
 
-*Source:* [`framework/character.md`](../framework/character.md). This draft is the lift,
-not a replacement; it promotes to `framework/` only when the ledger above is discharged.
+*Source:* [`character.md`](character.md). This is the lift, not a replacement — promoted to
+`framework/` 2026-06-01 once the ledger above was discharged (Gate 1).

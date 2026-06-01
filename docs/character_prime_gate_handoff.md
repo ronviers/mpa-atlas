@@ -9,10 +9,10 @@
 
 Three staged artifacts, none canonical:
 
-- [`character_prime.md`](character_prime.md) — the morphospace lift of `character.md`
+- [`character_manifold.md`](../framework/character_manifold.md) — the morphospace lift of `character.md`
   (point → manifold). Carries the **Gate 1** receipt ledger.
 - [`lift_treatment.md`](lift_treatment.md) — the lift recorded as a repeatable move.
-- [`character_double_prime.md`](character_double_prime.md) — the move applied a second time;
+- [`character_composite.md`](character_composite.md) — the move applied a second time;
   emergence as closure of `ℭ` under coupling. Carries **Gate 2**, and is *doubly* gated
   (Gate 1 first).
 
@@ -99,8 +99,16 @@ For bindings Phase R leaves bespoke, either a **bespoke proof shard** (the frame
 derivation; append to the receipts engine and add a `steeping` entry to `character_frontier.md`)
 or a **kill**. Post-research, the residue is:
 
-- the **binding** — graph-frustration ⟺ spectral complex-pair ⟺ thermodynamic `𝒜` as one
-  minimal carrier ← the residual the research left undrawn (no unified theorem exists).
+- the **binding** — graph-frustration ⟺ thermodynamic `𝒜` (two-way) ⟸ spectral complex-pair
+  (one-way signature) as one minimal carrier. **DISCHARGED-BY-IMPORT 2026-06-01** (receipts
+  §binding; prior-art `reversible-spectrum`): not a bespoke proof — the carrier composes from
+  standing imports (`signed-balance`/`frustration` ⟺ `cycle-affinity`/`kolmogorov-reversibility`)
+  + one new import (`reversible-spectrum`: DB generators are self-adjoint ⇒ real spectrum, so a
+  complex pair ⇒ `𝒜`≠0, but **not** conversely). The only owned step is the weld
+  (Harary-frustration ≡ Schnakenberg gauge-irremovable cycle), a reading. So "no unified theorem
+  exists" was too pessimistic — there is no single paper, but every leg is established. (This
+  corrects an outside model's three-way-iff overstatement; its own sources — Potoyan–Wolynes
+  "may", Andrieux real-spectrum at N<5 — give the one-way reading.)
 - the **protection** — is the minted current's chirality protected in a generic
   finite-dimensional dissipative system? ← the `[open]` question; derive from the
   graph-frustration (gauge-irremovable) side.
@@ -186,12 +194,15 @@ Name these so the handoff cannot drift into assuming success.
 ---
 
 **Done-when:** Gate 1 ledger discharged, `character_prime` promoted to `framework/`.
-**Next action (Phase R DONE, Phase V-(b) DONE 2026-06-01):** the decisive protection test is
-run (qualified pass, cross-rule intact). The remaining gate residue is **the binding** —
-derive graph ⟺ spectral ⟺ `𝒜` as one carrier from the gauge-irremovable side (no unified
-theorem exists; this is the contribution), plus the P1 intake rows (#4 defect-braiding data,
-#5 coupled-NESS thermo, optional support). Promotion to `framework/` is then a separate
-explicit decision (the binding is the last floating node per I2).
+**Next action (Phase R DONE, Phase V-(b) DONE, binding DISCHARGED-BY-IMPORT 2026-06-01):**
+the decisive protection test ran (qualified pass, cross-rule intact) **and** the binding — the
+last gate residue — closed by import-composition rather than bespoke derivation (receipts §binding;
+prior-art `reversible-spectrum`; corrects an outside model's three-way-iff down to the framework's
+own 2-way-carrier + 1-way-signature). **No node floats.** Promotion of `character_prime` →
+`character_manifold.md` is therefore **licensed**, pending only the explicit file-move decision
+(held for review — the move crosses the commit line). Optional, non-blocking: the P1 intake rows
+(#4 defect-braiding data, #5 coupled-NESS thermo) strengthen the binding's footing but are not
+required for promotion.
 **Reserved promotion names (chosen 2026-06-01, pending the actual file move):**
 `character_prime` → **`character_manifold.md`** (substrate-neutral; names the tangent-space/
 gl(n)/metric structure; alt considered: `character_morphospace` — more evocative but carries a
@@ -212,8 +223,8 @@ untouched. No other promoted line affected.
 **Repo note (2026-06-01):** the framework set is now `character_*.md` and its prose is
 rebranded `MPA → Character`; this doc (in `docs/`) still says "MPA" pending a
 publication-aware pass.
-**Cross-refs:** [`character_prime.md`](character_prime.md) ·
+**Cross-refs:** [`character_manifold.md`](../framework/character_manifold.md) ·
 [`lift_treatment.md`](lift_treatment.md) ·
-[`character_double_prime.md`](character_double_prime.md) ·
+[`character_composite.md`](character_composite.md) ·
 `framework/character_frontier.md` (where surviving bespoke bindings get `steeping` entries once
 instanced) · `framework/character_receipts_engine.md` (where Phase-D derivations land).

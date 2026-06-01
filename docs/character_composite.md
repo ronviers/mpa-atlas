@@ -1,8 +1,10 @@
-# Character′′ — emergence as the closure of character-space under coupling
+# Character_composite — emergence as the closure of character-space under coupling
 
-> **Status: DRAFT, staged in `docs/`. NOT canonical. Doubly gated** — on
-> [`character_prime.md`](character_prime.md)'s receipt ledger *first*, then on its own
-> bespoke bindings below. Built by applying the recorded Lift Move
+> **Status: DRAFT, staged in `docs/`. NOT canonical. Doubly gated** — reserved name
+> `character_composite` (was `character_double_prime` / "character′′"). Gated on
+> [`character_manifold.md`](../framework/character_manifold.md)'s receipt ledger *first* (now
+> **discharged** — Gate 1 promoted 2026-06-01), then on its own bespoke bindings below (Gate 2,
+> **open** — the active frontier). Built by applying the recorded Lift Move
 > ([`lift_treatment.md`](lift_treatment.md)) a second time, to `ℭ` itself.
 >
 > **This is the contribution-candidate layer**: the most bespoke, the least imported. It is
@@ -12,7 +14,7 @@
 
 ## How to read this
 
-Same markers as `character_prime.md` (`[est:]` / `[bespoke]` / `▶ INTAKE` / `⚠ CAVEAT`).
+Same markers as `character_manifold.md` (`[est:]` / `[bespoke]` / `▶ INTAKE` / `⚠ CAVEAT`).
 The operation is identical to the first lift, applied to `ℭ`. The structural fact that
 makes it the *same* move rather than a new one: **`⊗ : ℭ×ℭ → ℭ`** — the output of a
 coupling event is again a character. Character-space is closed under coupling, so the lift
@@ -168,6 +170,6 @@ asks the world a question the imports never had to answer.
 ---
 
 *Source:* the Lift Move ([`lift_treatment.md`](lift_treatment.md)) applied to
-[`character_prime.md`](character_prime.md). Promotes to `framework/` only when **both**
-ledgers — prime's and this one's — are discharged. If it ever earns in, it deserves a
-coined name (the emergence-closure is not "double-prime" forever).
+[`character_manifold.md`](../framework/character_manifold.md). Promotes to `framework/` only
+when **both** ledgers are discharged — the manifold's (now done, Gate 1) and this one's (Gate 2,
+open). The reserved coined name on promotion is `character_composite`.
