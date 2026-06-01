@@ -170,7 +170,14 @@ Name these so the handoff cannot drift into assuming success.
 ---
 
 **Done-when:** Gate 1 ledger discharged, `character_prime` promoted to `framework/`.
-**Next action:** dispatch the Phase R P0 rows (#1, #3, #2).
+**Next action (Phase R is DONE):** Phase D/V on the single surviving question — derive the
+**binding** (graph ⟺ spectral ⟺ `𝒜`) from the gauge-irremovable side, and run **Phase
+V-(b)**, the chirality-protection test (the decisive, non-circular one; *not* the trivial
+complex-pair count). P1 intake rows (#4 defect-braiding data, #5 coupled-NESS thermo) remain
+optional support.
+**Repo note (2026-06-01):** the framework set is now `character_*.md` and its prose is
+rebranded `MPA → Character`; this doc (in `docs/`) still says "MPA" pending a
+publication-aware pass.
 **Cross-refs:** [`character_prime.md`](character_prime.md) ·
 [`lift_treatment.md`](lift_treatment.md) ·
 [`character_double_prime.md`](character_double_prime.md) ·
