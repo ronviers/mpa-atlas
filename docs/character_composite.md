@@ -108,6 +108,23 @@ nothing latched). This is the **legal complement** to `hybrid_generation.py`'s p
 *stored*; here it is a *run loop*. Calibration only — the minting is by construction; a **real
 emergent** instance is still owed (= the frustration-ascent joint instance).
 
+**REAL-MEASURED instance — candidate (2026-06-01).** A published dissipative DNA system (Nicholas
+et al., *Angew. Chem.* 2025, [10.1002/anie.202512967](https://onlinelibrary.wiley.com/doi/10.1002/anie.202512967)),
+reduced to the quencher's N=3 states (OQ, FQ, Q) and run through the protocol
+(`mpa-conform/scripts/emergent_identity_dna_ness.py`, measured SI Tables S4/S5, Exp. Fig. 2b),
+**passes all three components on experimentally-fitted rate constants** (not hand-set): Module A
+(reversible DNA hybridization) is detailed-balanced — *the SI itself enforces it* (𝒜≈0) — and the
+RNase-H fuel-hydrolysis drain mints a protected NESS circulation (𝒜≈+14.5 nats; sign drive-locked
+by the irreversible enzyme; current collapses when the enzyme/fuel is removed — **observed
+experimentally**, the system returns to equilibrium ~3 min after fuel is cut). Crucially the
+**affinity uses only measured constants** ([F],[O] cancel around the cycle), so minting + protection
+are not modelling artifacts. **Honest residual (why it is a *candidate*, not a closed discharge):**
+N=3 is a reduction of a nonlinear 10-species CRN (enzyme folded to a pseudo-first-order drain, QSS
+on FQE; O/F as baths) — rigorous confirmation wants a cross-check against the full COPASI model +
+review. But this is the **first real, measured substrate to instance the emergent-identity node**,
+and it is the legal structure exactly (passive equilibrium cycle + fuel-driven enzyme → minted,
+protected, sustained-as-run-loop). `[bespoke → real-instance candidate]`
+
 ## The cascade = iterated closure
 
 A path `ℭ_n → ℭ_{n+1} → …` through strata. Each up-step *may* add a protected bit — but
@@ -179,8 +196,10 @@ is **poured**.
   charge. A real *second* instance of the J/EP separation is still owed (frontier
   `chirality-protection`).
 - emergent identity ≡ the new protected bit, sustained. **Synthetically demonstrated** (calibration,
-  `mpa-conform/scripts/emergent_identity.py`); a **real emergent** instance is the live owed item
-  (= the frustration-ascent joint instance).
+  `emergent_identity.py` + `_n4.py`) **and now a REAL-MEASURED candidate** — the Nicholas et al.
+  dissipative DNA system (*Angew.* 2025) passes all three components on experimentally-fitted rates
+  (`emergent_identity_dna_ness.py`; see §Emergent identity). A candidate, pending a full-nonlinear
+  COPASI cross-check + review; the first real substrate to instance the node.
 - alive loop ≡ a cyclic `⊗`-fixed-point. *(parked)*
 
 ⚠ CAVEAT — honest read of the whole layer: this is where the program is **most exposed**.
