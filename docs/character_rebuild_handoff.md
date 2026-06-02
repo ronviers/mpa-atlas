@@ -50,11 +50,13 @@ is what makes the claim falsifiable-in-public. This is not cosmetics — checkab
    `c/s/r`-as-jargon. Use standard terms (cycle affinity, frustrated cycle, marginal point /
    loss of normal hyperbolicity, threshold regimes). Keep only the genuinely-needed coinages —
    **character** (the umbrella) and **the forcing** (onto one parameter) — and define them in
-   standard terms.
+   standard terms. **Also avoid the word "emergence"** — the abused noun `character.md` itself flags;
+   say what is meant precisely (composition under coupling, coupling-induced minting, the closure,
+   non-additivity).
 4. **Lead with the testable claim**; state falsifiers as kill conditions on named substrates.
 5. **Honest scope** (§5) stated plainly: the contribution is the *forcing onto one parameter* + the
-   *over-determination that makes the alignment a test* + the *emergence reading*. Everything else is
-   imported — say so.
+   *over-determination that makes the alignment a test* + the *composition reading* (what coupling
+   mints). Everything else is imported — say so.
 6. **Measurement discipline:** observables in open intervals; boundaries `{0,1,∞}` only as limits;
    no inert constants (every quantity flows with the operating point).
 
@@ -74,9 +76,11 @@ a maintained parallel).
 
 Consequences (integration points; recommendation + Ron-confirm where noted):
 
-- **Home.** The scientific corpus is canonical in **`character-framework`** (the live home — public
-  *and* dev); **`mpa-atlas/framework` becomes legacy** (the old engine register, frozen as lineage).
-  *(Recommended; confirm with Ron.)*
+- **Home (CONFIRMED, Ron 2026-06-01).** The scientific corpus is canonical in **`character-framework`**
+  (the live home — public *and* dev), in a new **`framework/`** folder. **`mpa-atlas` and every
+  `mpa-*` sibling are legacy**, frozen as lineage. Sequencing (Ron): **stand up the new `framework/`
+  structure first** — a stable SoT — before relying on it; the legacy repos stay frozen-in-place,
+  nothing is torn down, they just stop being where the work lives.
 - **No parallel maintenance.** New dev lands in the scientific document **only**. **Do not edit the
   engine going forward** — freezing it is what prevents the divergence that caused this. (This
   *supersedes* the earlier "engine is the kept internal corpus.")
@@ -97,7 +101,7 @@ Consequences (integration points; recommendation + Ron-confirm where noted):
 | source (in `mpa-atlas/framework/` unless noted) | role | register caveat |
 |---|---|---|
 | `character.md` | **the basis** — point-level (one NESS), already clean | mostly done; update validation line (§4) |
-| `character_composite.md`, `character_manifold.md` | source for the lifts + emergence | OLD register — re-express, don't copy |
+| `character_composite.md`, `character_manifold.md` | source for the two lifts (the trio's other two) | OLD register — re-express, don't copy |
 | `character_fdr_treatment.md` | source for the two-frame method behind the lifts | OLD register (uses dead `ch`, engine keys) — **mine for rigor, do not anchor** |
 | `character_prior_art.md` | the named attributions (rule §1.2) | reference |
 | `character_receipts_engine.md`, `character_frontier.md` | what's earned vs provisional (honest-scope §5) | reference |
@@ -109,34 +113,39 @@ Consequences (integration points; recommendation + Ron-confirm where noted):
    in register). Two edits: (a) **validation line** — it says "awaits experimental data"; update to
    "one real instance at the composite layer (a fuel-driven DNA reaction network; Nicholas et al.
    2025), with synthetic validation elsewhere"; (b) light polish for any residual coined term.
-2. **`character_emergence.md` (NEW — the headline-value section, clean register)** — the two lifts
-   (space of characters = manifold; closure = emergence under coupling), the **minting claim**
-   (coupling produces a protected circulation neither part had = a discrete graph-flux invariant,
-   sustained by drive, not stored, not Chern-like), the **two-frame method** behind it (mined from
-   `character_fdr_treatment.md`), and the **one real instance** (the DNA-NESS: detailed-balanced DNA
-   hybridization cycle driven by RNase-H fuel hydrolysis; minted affinity; run-loop collapses on fuel
-   removal — observed experimentally; confirmed against the full non-linear model to cycling-rate
-   ratio 1.002). State the idealizations (N=3 reduction, chemostat) plainly. This is the most-exposed
-   layer — write it clean *and* honestly scoped.
-3. **`README.md` (landing)** — the accessible front door (value-forward but honest): what a character
-   is, why it's interesting (emergence made testable), the unification, "if it continues to check
-   out" (conditional implications), honest scope. **Points at `character.md` + `character_emergence.md`
-   as "start here"** — both now in-repo and in register. (The hollowed primer's value-forward
-   *content* was good; its register and its link targets were wrong. Reuse the content shape, fix
-   both.)
-4. *(optional)* a self-contained **imports list** in `character-framework` so the public repo carries
-   its own provenance (or link `character_prior_art.md`).
+2. **`character_manifold.md` (the space)** — rewrite the morphospace lift in scientific register: how
+   characters sit next to each other (proximity), and the two sectors of a character — the continuous
+   *population* sector and the discrete *circulation* sector — as the tangent structure of the space.
+   Mine the old-register `character_manifold.md` for content, `character_fdr_treatment.md` for the
+   two-frame method. Geometry of the space; **do not use "emergence."**
+3. **`character_composite.md` (the closure)** — rewrite in scientific register: composition under
+   coupling (`⊗ : ℭ×ℭ → ℭ`), the **minting claim** (coupling produces a protected circulation neither
+   part had — a discrete graph-flux invariant, sustained by drive, not stored, not Chern-like), the
+   two-frame method behind it, and the **one real instance** (the DNA-NESS: a detailed-balanced DNA
+   hybridization cycle driven by RNase-H fuel hydrolysis; minted affinity; the current collapses when
+   the fuel is cut — observed experimentally; confirmed against the full non-linear model to
+   cycling-rate ratio 1.002). State the idealizations (N=3 reduction, chemostat) plainly. **The
+   most-exposed layer — clean *and* honestly scoped, and NOT the word "emergence"** (composition /
+   coupling-induced minting / the closure).
+4. **`README.md` (landing)** — accessible front door (value-forward but honest): what a character is,
+   why it's interesting (a *testable* account of what coupling mints — avoid "emergence"), the
+   unification, "if it continues to check out" (conditional implications), honest scope. **Points at
+   the trio (`character.md` · `character_manifold.md` · `character_composite.md`) as "start here."**
+   Reuse the hollowed primer's value-forward content shape; fix its register and its link targets.
+5. *(optional)* a self-contained **imports list** in `character-framework` so the repo carries its own
+   provenance (or link `character_prior_art.md`).
 
 ## 5. Honest-scope requirements (carry these — they are load-bearing post-retraction)
 
 - **One** real instance (DNA-NESS); the rest synthetically vindicated.
 - The central **β data-collapse test has not been run on real data**.
-- The emergence/composite layer is the **most exposed**; write it clean but with idealizations
-  stated (N=3 reduction of a nonlinear CRN, chemostat, enzyme QSS).
+- The **composite layer** (the closure) is the **most exposed**; write it clean but with idealizations
+  stated (N=3 reduction of a nonlinear CRN, chemostat, enzyme QSS). Avoid "emergence" throughout.
 - The **alive loop** (self-sustaining recursive circulation — the deepest target) is **named,
   parked, work continues** — not claimed.
-- The contribution is **small and honest**: a coordinate system + a falsifiable test + the emergence
-  reading + one receipt. Be at peace with that scope — it is *why* it is less "not even wrong."
+- The contribution is **small and honest**: a coordinate system + a falsifiable test + the composition
+  reading (what coupling mints) + one receipt. Be at peace with that scope — it is *why* it is less
+  "not even wrong."
 - Do not overclaim. When an outside (yes-and) model supplies implications, downgrade them to what is
   earned (the prior pattern: "architecture complete" → "built end to end"; "mechanized the
   definition of identity" → "a candidate, precise enough to be wrong, instanced once").
@@ -165,8 +174,8 @@ Consequences (integration points; recommendation + Ron-confirm where noted):
 
 1. **[DONE]** Hollow out `character-framework` (stub README; commit `70b3981`).
 2. Migrate `character.md` → `character-framework`; update the validation line (§4.1); light register polish.
-3. Write `character_emergence.md` (§4.2) — clean register; the lifts + minting + two-frame method + the DNA-NESS instance + idealizations. **Look at it together before finalizing** (most-exposed layer).
-4. Write the README landing (§4.3) — value-forward, honest, pointing at the two clean docs.
+3. Rewrite `character_manifold.md` (the space) and `character_composite.md` (the closure) in scientific register (§4.2–4.3) — the two lifts + the minting claim + two-frame method + the DNA-NESS instance + idealizations; **no "emergence."** **Look at `character_composite.md` together before finalizing** (most-exposed layer).
+4. Write the README landing (§4.4) — value-forward, honest, pointing at the trio.
 5. *(optional)* the self-contained imports list (§4.4).
 6. Tag `character-framework` **`v0.1`** (the clean public snapshot).
 7. **Establish the SoT transition (§2):** freeze the engine as legacy (no further edits); record that
@@ -177,8 +186,9 @@ Consequences (integration points; recommendation + Ron-confirm where noted):
 ## 8. Done-when
 
 `character-framework` presents the framework **entirely in the scientific register** —
-`character.md` (basis, validation updated) + `character_emergence.md` (lifts/emergence/instance) +
-README (landing) — no coined-noun debris, honest scope throughout, every import named, self-contained
+the trio — `character.md` (basis, validation updated) + `character_manifold.md` (the space) +
+`character_composite.md` (the closure + the DNA-NESS instance) — + README (landing): no coined-noun
+debris, no "emergence," honest scope throughout, every import named, self-contained
 (no dependence on old-register docs). And this corpus is **established as the new internal / dev
 source of truth**: the engine register is frozen-legacy in `mpa-atlas`, new dev lands only in the
 scientific document, and the `conform` dependency transition is planned (§2). One register, public
@@ -186,6 +196,6 @@ and internal, going forward — the divergence that caused this cannot recur.
 
 **Cross-refs:** [`character.md`](../framework/character.md) (the basis/register) ·
 [`character_fdr_treatment.md`](../framework/character_fdr_treatment.md) (lift method, mine for rigor) ·
-[`character_composite.md`](../framework/character_composite.md) (emergence source) ·
+[`character_composite.md`](../framework/character_composite.md) (the closure — composite source) ·
 [`character_prior_art.md`](../framework/character_prior_art.md) (the named imports) ·
 `mpa-conform/scripts/dna_ness_crosscheck.py` + `docs/dna_ness_source.md` (the real instance).
