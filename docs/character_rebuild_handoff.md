@@ -33,7 +33,9 @@ is what makes the claim falsifiable-in-public. This is not cosmetics — checkab
   was old-register debris). It now holds only a stub README + LICENSE.
 - **Nothing substantive is being redone.** The results (both gate closures, the binding-by-import,
   the DNA-NESS real instance + its full-nonlinear cross-check) are register-independent and stand.
-  This rebuild is presentation only.
+  But this is **more than a storefront**: the rebuilt scientific document becomes the **new
+  internal / dev source of truth** (§2) — dev continues on it, and the engine register is retired.
+  What is redone is the *register*, not the *results*.
 
 ## 1. The register (non-negotiable rules, distilled from `character.md`)
 
@@ -56,17 +58,39 @@ is what makes the claim falsifiable-in-public. This is not cosmetics — checkab
 6. **Measurement discipline:** observables in open intervals; boundaries `{0,1,∞}` only as limits;
    no inert constants (every quantity flows with the operating point).
 
-## 2. Target architecture (public vs internal)
+## 2. One register, not two — the architecture (CORRECTED, Ron 2026-06-01)
 
-- **`character-framework` (PUBLIC, scientific register):** the clean home. Houses the rebuilt
-  `character.md` (basis), the emergence/lifts writeup, the real-instance writeup, and the README
-  landing. Self-contained — the public face must NOT depend on old-register docs.
-- **`mpa-atlas` (INTERNAL dev corpus):** `character_engine.md` (+ receipts, frontier, prior-art,
-  fdr_treatment, composite, manifold) stay here as the dense working back-room. They do not need
-  cleaning to be legitimate — they need to stop being the public face.
-- **Do NOT move `character_engine.md` out of `mpa-atlas`.** `mpa-conform` reads it directly
-  (`mpa-conform/conformer` deps; see mpa-conform/CLAUDE.md "What this repo reads from"). `character.md`,
-  by contrast, has no downstream readers and is the natural seed of the public home.
+An earlier draft of this section split the world into a clean *public* register (`character-framework`)
+over a dense *internal* engine register (`mpa-atlas`) kept as the back room. **That is wrong — and it
+is precisely what failed to propagate.** The scientific register was meant to become the **new
+internal / dev register**; instead dev kept running on the engine's coined-noun register, and the two
+diverged. Do not re-create that split.
+
+**There is one register going forward: scientific.** The rebuilt scientific-register document is
+**both the public face and the internal / dev source of truth.** Development continues **on the
+public-facing document** — new instances, refinements, eventually the alive loop — written in the
+scientific register. The engine's coined-noun register is **retired to legacy** (frozen lineage, not
+a maintained parallel).
+
+Consequences (integration points; recommendation + Ron-confirm where noted):
+
+- **Home.** The scientific corpus is canonical in **`character-framework`** (the live home — public
+  *and* dev); **`mpa-atlas/framework` becomes legacy** (the old engine register, frozen as lineage).
+  *(Recommended; confirm with Ron.)*
+- **No parallel maintenance.** New dev lands in the scientific document **only**. **Do not edit the
+  engine going forward** — freezing it is what prevents the divergence that caused this. (This
+  *supersedes* the earlier "engine is the kept internal corpus.")
+- **`conform` transition.** `mpa-conform` reads `mpa-atlas/framework/character_engine.md` for its
+  substrate-conditional reading rules + class definitions. The engine is **frozen, not deleted**, so
+  `conform` keeps reading the frozen copy **during the transition**; it repoints to the scientific
+  SoT once that document is operationally complete enough to carry those rules. A deliberate
+  transition, not a flag-day.
+- **Scope consequence (important).** Because the scientific document is now the *dev SoT*, it must —
+  over continued dev — absorb the engine's *operational* content (the two-mode kernel, the regime
+  classifier, the gFDR signatures, the reading rules `conform` needs) **in scientific register**.
+  The current rebuild (§4) is the **seed**; dev grows it into operational completeness. The rebuild
+  is not a presentation layer over a separate corpus — it is the first increment of the new working
+  source of truth.
 
 ## 3. Source materials (what to mine, from where)
 
@@ -126,7 +150,10 @@ is what makes the claim falsifiable-in-public. This is not cosmetics — checkab
   the register.
 - **The engine's pre-existing uncommitted WIP** (a c-regime τ_obs line in `character_engine.md`) —
   leave it untouched; do not entangle it in commits (it has been excluded all along).
-- **Do not move the engine** (conform reads it).
+- **Do not *edit* the engine going forward — freeze it.** Parallel maintenance of two registers is
+  exactly the divergence that caused this. The engine is frozen-legacy (not deleted): `conform` reads
+  the frozen copy during the transition (§2), then repoints to the scientific SoT. New dev lands in
+  the scientific document only.
 - **The dead-`ch` references in the live corpus** (engine §0 ch/chit nouns, `character_applications`,
   frontier batteries, README/CLAUDE inventories) are reconciled when the *internal* corpus gets its
   own register pass — NOT required for the public rebuild, but logged: the public face simply does
@@ -142,14 +169,20 @@ is what makes the claim falsifiable-in-public. This is not cosmetics — checkab
 4. Write the README landing (§4.3) — value-forward, honest, pointing at the two clean docs.
 5. *(optional)* the self-contained imports list (§4.4).
 6. Tag `character-framework` **`v0.1`** (the clean public snapshot).
-7. **(Later, deliberate, Ron's go)** the re-publication decision.
+7. **Establish the SoT transition (§2):** freeze the engine as legacy (no further edits); record that
+   dev now lands in the scientific corpus; plan the `conform` repoint for when the scientific document
+   is operationally complete. (`mpa-atlas/framework` → legacy is a Ron-confirm point.)
+8. **(Later, deliberate, Ron's go)** the re-publication decision.
 
 ## 8. Done-when
 
 `character-framework` presents the framework **entirely in the scientific register** —
 `character.md` (basis, validation updated) + `character_emergence.md` (lifts/emergence/instance) +
 README (landing) — no coined-noun debris, honest scope throughout, every import named, self-contained
-(no dependence on old-register docs). The engine et al. remain the internal dev corpus in `mpa-atlas`.
+(no dependence on old-register docs). And this corpus is **established as the new internal / dev
+source of truth**: the engine register is frozen-legacy in `mpa-atlas`, new dev lands only in the
+scientific document, and the `conform` dependency transition is planned (§2). One register, public
+and internal, going forward — the divergence that caused this cannot recur.
 
 **Cross-refs:** [`character.md`](../framework/character.md) (the basis/register) ·
 [`character_fdr_treatment.md`](../framework/character_fdr_treatment.md) (lift method, mine for rigor) ·
