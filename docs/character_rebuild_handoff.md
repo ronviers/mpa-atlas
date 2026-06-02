@@ -59,6 +59,12 @@ is what makes the claim falsifiable-in-public. This is not cosmetics — checkab
    mints). Everything else is imported — say so.
 6. **Measurement discipline:** observables in open intervals; boundaries `{0,1,∞}` only as limits;
    no inert constants (every quantity flows with the operating point).
+7. **Density by function (Ron's calibration 2026-06-01).** The **trio** (`character.md` +
+   `character_manifold.md` + `character_composite.md`) is the canonical statement — read **tight**,
+   `character.md`'s density, every line load-bearing. **Support docs** (`character_fdr_treatment.md`,
+   `character_translation_method.md`) are depth/derivation — lengthy prose is *correct* there (they
+   show the work), but tight-for-a-depth-doc (no slack). Don't force the trio's density on a
+   derivation, or a derivation's length on the trio.
 
 ## 2. One register, not two — the architecture (CORRECTED, Ron 2026-06-01)
 
@@ -174,7 +180,12 @@ Consequences (integration points; recommendation + Ron-confirm where noted):
 
 1. **[DONE]** Hollow out `character-framework` (stub README; commit `70b3981`).
 2. Migrate `character.md` → `character-framework`; update the validation line (§4.1); light register polish.
-3. Rewrite `character_manifold.md` (the space) and `character_composite.md` (the closure) in scientific register (§4.2–4.3) — the two lifts + the minting claim + two-frame method + the DNA-NESS instance + idealizations; **no "emergence."** **Look at `character_composite.md` together before finalizing** (most-exposed layer).
+3. **[support docs DONE]** `character_fdr_treatment.md` + `character_translation_method.md` refactored
+   into `character-framework/framework/` at depth-density (§1.7). Then rewrite the **trio's**
+   `character_manifold.md` (the space) and `character_composite.md` (the closure) — **tight,
+   `character.md` density (§1.7), NOT depth-density** — the two lifts + the minting claim + the
+   DNA-NESS instance + idealizations; **no "emergence."** **Look at `character_composite.md` together**
+   (most-exposed layer).
 4. Write the README landing (§4.4) — value-forward, honest, pointing at the trio.
 5. *(optional)* the self-contained imports list (§4.4).
 6. Tag `character-framework` **`v0.1`** (the clean public snapshot).
