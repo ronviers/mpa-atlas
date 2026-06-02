@@ -4,6 +4,15 @@
 > *scientific register* — the register exemplified by [`framework/character.md`](../framework/character.md),
 > not the engine's coined-noun register. Self-contained: a cold reader needs only this file plus the
 > docs it names. **Read `character.md` first** and match its register exactly; that is the whole point.
+>
+> **STATUS / pick up here (2026-06-01):** **DONE** — `character-framework` hollowed (`70b3981`);
+> `character.md` migrated + validation updated (`d2eb766`); both **support docs** refactored to
+> depth-density — `character_fdr_treatment.md` (`313a10f`) + `character_translation_method.md`
+> (`3d0545e`); density rule calibrated (§1.7: trio tight, support depth). **NEXT** — rewrite the
+> trio's `character_manifold.md` (the space) + `character_composite.md` (the closure) **tight**
+> (`character.md` density, §1.7), **no "emergence"**, **look-together on `character_composite.md`**
+> (most-exposed); then the README landing (§4.4); then tag `v0.1`. Home = `character-framework/framework/`;
+> all `mpa-*` legacy/frozen.
 
 ---
 
@@ -179,7 +188,8 @@ Consequences (integration points; recommendation + Ron-confirm where noted):
 ## 7. Sequence
 
 1. **[DONE]** Hollow out `character-framework` (stub README; commit `70b3981`).
-2. Migrate `character.md` → `character-framework`; update the validation line (§4.1); light register polish.
+2. **[DONE]** Migrate `character.md` → `character-framework/framework/` (commit `d2eb766`); validation
+   lines updated for the one real instance; "emerge" scrubbed.
 3. **[support docs DONE]** `character_fdr_treatment.md` + `character_translation_method.md` refactored
    into `character-framework/framework/` at depth-density (§1.7). Then rewrite the **trio's**
    `character_manifold.md` (the space) and `character_composite.md` (the closure) — **tight,
